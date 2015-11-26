@@ -79,11 +79,17 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+
 header {
     text-align: center;
     color: #fff;
-    background: rgba(17, 73, 103, 0.83);
+    background: rgb(1, 12, 37);
+    background: url("../img/fondo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
+
 
 header .container {
     padding-top: 100px;
@@ -183,7 +189,11 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: #092275;
+    background: url("../img/fondo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 
 section.success a,
