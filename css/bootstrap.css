@@ -2880,7 +2880,7 @@ select[multiple].form-group-lg .form-control {
 }
 .has-error .input-group-addon {
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: #ffffff; 
   background-color: #e74c3c;
 }
 .has-error .form-control-feedback {
