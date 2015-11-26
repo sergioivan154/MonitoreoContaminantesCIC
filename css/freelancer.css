@@ -187,6 +187,15 @@ section h2 {
     font-size: 3em;
 }
 
+section.cic {
+    color: #fff;
+    background: #092275;
+    background: url("../img/cic.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
 section.success {
     color: #fff;
     background: #092275;
