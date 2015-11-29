@@ -110,7 +110,7 @@ header .intro-text .name {
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
+    font-size: 1.75em;
     font-weight: 300;
     text-align: justify;
     
@@ -204,6 +204,16 @@ section.success {
     background-size:cover;
     background-position:center;
 }
+
+section.significadologo {
+    color: #fff;
+    background: #092275;
+    background: url("../img/piramide.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
 
 section.success a,
 section.success a:hover,
