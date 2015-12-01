@@ -398,19 +398,12 @@
                     </table>
                 </div>
     		</div>
-    		<div class="row">
-
-                    <div class="col-lg-6 text-center">
+    	<br>
+    	<div class="row">		
+    			<div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
                     <h3>Prototipo para exteriores</h3>
                         <hr><br>
-                    </div>
-    				<div class="col-lg-6 text-center">
-                        <h3>Prototipo para interiores</h3>
-                        <hr><br>
-                    </div>
-                </div>
-    	<div class="row">		
-    			<div id="CarExterior" class="col-lg-6 carousel slide">
+                    
     				  <ol class="carousel-indicators">
     					<li data-target="#CarExterior" data-slide-to="0" class="active"></li>
     					<li data-target="#CarExterior" data-slide-to="1"></li>
@@ -441,10 +434,11 @@
     				  <a class="carousel-control left" href="#CarExterior" data-slide="prev">&lsaquo;</a>
     				  <a class="carousel-control right" href="#CarExterior" data-slide="next">&rsaquo;</a>
     				</div>
-    				
-    				
-    				<div id="CarInterior" class="col-lg-6 carousel slide">
-    				  <ol class="carousel-indicators">
+    				<div class="col-lg-1"> </div>
+    				<div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
+    		          <h3>Prototipo para interiores</h3>
+                        <hr><br>
+            		  <ol class="carousel-indicators">
     					<li data-target="#CarInterior" data-slide-to="0" class="active"></li>
     					<li data-target="#CarInterior" data-slide-to="1"></li>
     					<li data-target="#CarInterior" data-slide-to="2"></li>
@@ -517,7 +511,7 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col">
                         <h3>Ubicación</h3>
                         <p>Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal<br>Col. Nueva Industrial Vallejo,<br>Del. Gustavo A. Madero<br>C.P. 07738, México D.F.</p>
                     </div>
@@ -778,5 +772,23 @@
     <script src="js/contact_me.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+
+    <script type='text/javascript'>
+    $(document).ready(function() {
+         $('#CarExterior').carousel({
+             interval: 2000,
+
+
+         })
+    });  </script>  
+    
+    <script type='text/javascript'>
+    $(document).ready(function() {
+         $('#CarInterior').carousel({
+             interval: 2000
+         })
+    }); 
+    </script>
+
     </body>
 </html>
