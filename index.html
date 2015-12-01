@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +17,8 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="engine3/style.css" />
+    <script type="text/javascript" src="engine3/jquery.js"></script>
     <link href="img/profile.png" rel="icon" type="image/jpeg" />
 </head>
 
@@ -166,7 +163,6 @@
                             <div class="col-lg-4 col-lg-offset-2">
                                 <p>El proyecto se realizó en el Centro de Investigación en Computación
 									CIC, a partir de Mayo
-									Breve descripción de elementos utilizados
 								</p>
                             </div>
 						</div>
@@ -176,7 +172,7 @@
 
 				<div class="row">
 
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -187,7 +183,7 @@
 						</a>
 					</div>
 
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -197,7 +193,7 @@
 							<img src="img/exterior/3.jpg" class="img-responsive" alt="">
 						</a>
 					</div>
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -207,7 +203,7 @@
 							<img src="img/portfolio/circus.png" class="img-responsive" alt="">
 						</a>
 					</div>
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -217,7 +213,7 @@
 							<img src="img/portfolio/game.png" class="img-responsive" alt="">
 						</a>
 					</div>
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -227,7 +223,7 @@
 							<img src="img/portfolio/safe.png" class="img-responsive" alt="">
 						</a>
 					</div>
-					<div class="col-sm-4 portfolio-item">
+					<div class="col-lg-4 col-sm-12 portfolio-item">
 						<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
@@ -237,11 +233,11 @@
 							<img src="img/portfolio/submarine.png" class="img-responsive" alt="">
 						</a>
 					</div> 
-					<div class="col-sm-4 portfolio-item">
+					<!--<div class="col-lg-4 col-sm-12 portfolio-item">
 						<br/>
 						<br/>
 						<button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
-					</div>  
+					</div>-->  
 				</div>
 			</div>
     </section>
@@ -296,13 +292,18 @@
                    <figcaption><h5>Nombre: Argüelles Cruz José Amadeo<br/>Cargo: Director del proyecto<br/>Aportaciones: Coordinación<br/>Institución: CIC<br/>Correo: jamadeo@cic.ipn.mx<br/><br/></h5></figcaption>
                 </div>
 
-                <div class="col-sm-4 portfolio-item">
-                   
-                </div>
+                
                 <div class="col-sm-4 portfolio-item">
                    <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/profile.png" alt="">
-                   <figcaption><h5>Nombre: Cajero Lazaro María Isabel<br/>Cargo: <br/>Aportaciones: <br/>Institución: ESIMEZ<br/>Correo: mcajerol0900@alumno.ipn.mx <br/><br/></h5></figcaption>
+                   <figcaption><h5>Nombre: Cajero Lázaro María Isabel<br/>Cargo: <br/>Aportaciones: <br/>Institución: UPIICSA<br/>Correo: mcajerol0900@alumno.ipn.mx <br/><br/></h5></figcaption>
                 </div>
+
+                <div class="col-sm-4 portfolio-item">
+                   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
+                   <figcaption><h5>Nombre: Sánchez Meraz Miguel<br/>Cargo: <br/>Aportaciones: <br/>Institución: ESIMEZ<br/>Correo: mmeraz@ipn.mx <br/><br/></h5></figcaption>
+
+                </div>
+
 			</div>
         </div>
 
@@ -490,21 +491,63 @@
 		
 
 
+<br><br>
+<span class="mono">
+<div class="container"><h1>Galeria</h1><hr></div>
+<div id="wowslider-container3">
+    <div class="ws_images"><ul>
+        <li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
+        <li><img src="img/montajee/2.jpg" alt="2" title="2" id="wows3_1"/></li>
+        <li><img src="img/montajee/3.jpg" alt="3" title="3" id="wows3_2"/></li>
+        <li><img src="img/montajee/4.jpg" alt="4" title="4" id="wows3_3"/></li>
+        <li><img src="img/montajee/5.jpg" alt="5" title="5" id="wows3_4"/></li>
+        <li><img src="img/montajee/6.jpg" alt="6" title="6" id="wows3_5"/></li>
+        <li><img src="img/montajee/7.jpg" alt="7" title="7" id="wows3_6"/></li>
+        <li><img src="img/montajee/8.jpg" alt="8" title="8" id="wows3_7"/></li>
+        <li><img src="img/montajee/9.jpg" alt="9" title="9" id="wows3_8"/></li>
+        <li><img src="img/pruebase/1.jpg" alt="1" title="1" id="wows3_9"/></li>
+        <li><img src="img/pruebase/2.jpg" alt="2" title="2" id="wows3_10"/></li>
+        <li><img src="img/pruebase/3.jpg" alt="3" title="3" id="wows3_11"/></li>
+        <li><img src="img/exterior/1.jpg" alt="1" title="1" id="wows3_12"/></li>
+        <li><img src="img/exterior/2.jpg" alt="2" title="2" id="wows3_13"/></li>
+        <li><img src="img/exterior/3.jpg" alt="3" title="3" id="wows3_14"/></li>
+        <li><img src="img/montajei/1.jpg" alt="1" title="1" id="wows3_15"/></li>
+        <li><img src="img/montajei/2.jpg" alt="2" title="2" id="wows3_16"/></li>
+        <li><img src="img/montajei/3.jpg" alt="3" title="3" id="wows3_17"/></li>
+        <li><img src="img/montajei/4.jpg" alt="4" title="4" id="wows3_18"/></li>
+        <li><img src="img/montajei/5.jpg" alt="jquery carousel" title="5" id="wows3_19"/></li>
+        <li><img src="img/montajei/6.jpg" alt="6" title="6" id="wows3_20"/></li>
+    </ul></div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="1"><span><img src="img/montajee/1.jpg" alt="1"/>1</span></a>
+            <a href="#" title="2"><span><img src="img/montajee/2.jpg" alt="2"/>2</span></a>
+            <a href="#" title="3"><span><img src="img/montajee/3.jpg" alt="3"/>3</span></a>
+            <a href="#" title="4"><span><img src="img/montajee/4.jpg" alt="4"/>4</span></a>
+            <a href="#" title="5"><span><img src="img/montajee/5.jpg" alt="5"/>5</span></a>
+            <a href="#" title="6"><span><img src="img/montajee/6.jpg" alt="6"/>6</span></a>
+            <a href="#" title="7"><span><img src="img/montajee/7.jpg" alt="7"/>7</span></a>
+            <a href="#" title="8"><span><img src="img/montajee/8.jpg" alt="8"/>8</span></a>
+            <a href="#" title="9"><span><img src="img/montajee/9.jpg" alt="9"/>9</span></a>
+            <a href="#" title="1"><span><img src="img/pruebase/1.jpg" alt="1"/>10</span></a>
+            <a href="#" title="2"><span><img src="img/pruebase/2.jpg" alt="2"/>11</span></a>
+            <a href="#" title="3"><span><img src="img/pruebase/3.jpg" alt="3"/>12</span></a>
+            <a href="#" title="1"><span><img src="img/exterior/1.jpg" alt="1"/>13</span></a>
+            <a href="#" title="2"><span><img src="img/exterior/2.jpg" alt="2"/>14</span></a>
+            <a href="#" title="3"><span><img src="img/exterior/3.jpg" alt="3"/>15</span></a>
+            <a href="#" title="1"><span><img src="img/montajei/1.jpg" alt="1"/>16</span></a>
+            <a href="#" title="2"><span><img src="img/montajei/2.jpg" alt="2"/>17</span></a>
+            <a href="#" title="3"><span><img src="img/montajei/3.jpg" alt="3"/>18</span></a>
+            <a href="#" title="4"><span><img src="img/montajei/4.jpg" alt="4"/>19</span></a>
+            <a href="#" title="5"><span><img src="img/montajei/5.jpg" alt="5"/>20</span></a>
+            <a href="#" title="6"><span><img src="img/montajei/6.jpg" alt="6"/>21</span></a>
+        </div>
+    </div>
+    <div class="ws_shadow"></div>
+</div>  
+</span> 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	
     <!-- Footer -->
     <footer class="text-center">
@@ -790,5 +833,9 @@
     }); 
     </script>
 
+	<script type="text/javascript" src="engine3/wowslider.js"></script>
+	<script type="text/javascript" src="engine3/script.js"></script>
+
+	
     </body>
 </html>
