@@ -45,9 +45,9 @@
                     <li class="page-scroll">
                         <a href="#objetivo">Objetivo</a>
                     </li>
-                    <!--<li class="page-scroll">
+                    <li class="page-scroll">
                         <a href="#donde">Dónde se realiza</a>
-                    </li>-->
+                    </li>
                     <li class="page-scroll">
                         <a href="#participantes">Quienes participan</a>
                     </li>
