@@ -335,7 +335,10 @@
                              var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
 
                             var myLatLng = {lat: 19.503298, lng: -99.147772};
-
+                            var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
+                            var myLatLngSensor2 = {lat: 19.503039, lng: -99.147858};
+                            var myLatLngSensor3 = {lat: 19.503311, lng: -99.147888};
+ 
                               map = new google.maps.Map(document.getElementById('map'), {
                                 center: myLatLng,
                                 styles: styleArray,
@@ -343,41 +346,84 @@
 
                               });
 
-
- 								function addMarker(info) {
-									var infowindow = new google.maps.InfoWindow({
-								    	content: info
-							  		});
-
-
-	                           // Create a marker and set its position.
-	                              var marker = new google.maps.Marker({
+                              infoString = "";
+  // Create a marker and set its position.
+  // 							marcador 1
+	                              var marker1 = new google.maps.Marker({
 	                                map: map,
-	                                position: myLatLng,
+	                                position: myLatLngSensor1,
 	                                animation: google.maps.Animation.DROP,
 	                                clickable: true,
 	                                title: 'Centro de Investigación en Computación'
 	                              });
 
-								 marker.addListener('click', function() {
-									contentString =info
-								   	infowindow.setContent(contentString);
-								    infowindow.open(map, marker);
+	                              var infowindow1 = new google.maps.InfoWindow({
+								    	content: infoString
+							  		});
 
+	                               marker1.addListener('click', function() {
+								    infowindow1.open(map, marker1);
 								  });
 
 
- 								
+	                            // marcador 2
+	                            var marker2 = new google.maps.Marker({
+	                                map: map,
+	                                position: myLatLngSensor2,
+	                                animation: google.maps.Animation.DROP,
+	                                clickable: true,
+	                                title: 'Centro de Investigación en Computación'
+	                              });
+
+	                              var infowindow2 = new google.maps.InfoWindow({
+								    	content: infoString
+							  		});
+
+	                               marker2.addListener('click', function() {
+								    infowindow2.open(map, marker2);
+								  });
+	                            // marcador 3
+	                            var marker3 = new google.maps.Marker({
+	                                map: map,
+	                                position: myLatLngSensor3,
+	                                animation: google.maps.Animation.DROP,
+	                                clickable: true,
+	                                title: 'Centro de Investigación en Computación'
+	                              });
+
+	                              var infowindow3 = new google.maps.InfoWindow({
+								    	content: infoString
+							  		});
+
+	                               marker3.addListener('click', function() {
+								    infowindow3.open(map, marker3);
+								  });
 
 
-                            }
+
+ 								function addInfoSensor1(info)
+ 								{
+									infowindow1.setContent(info);
+                            	}
+
+                            	function addInfoSensor2(info)
+ 								{
+									infowindow2.setContent(info);
+                            	}
+
+                            	function addInfoSensor3(info)
+ 								{
+									infowindow3.setContent(info);
+                            	}
 
 
 							<?php
 								$dbhost =  "localhost" ;
 								$dbuser = "airmxgen_meshliu";
 								$dbpass = "libelium2007";
-								$sensor1 = "dato";
+								$sensor1 = "";
+								$sensor2 = "";
+								$sensor3 = "";
 								
 								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 								if(! $conn )
@@ -385,7 +431,9 @@
 								  $sensor1 = "No hay conexion";	
 								  die("Could not connect:" . mysql_error());
 								}
-								$sql = "SELECT * FROM sensorParser   ORDER BY sensorParser.timestamp  DESC limit 5";
+								
+								//query para sensor 1
+								$sql = "SELECT * FROM sensorParser  where id_wasp = 1 ORDER BY sensorParser.timestamp  DESC limit 9 ";
 
 								mysql_select_db("airmxgen_meshliu");
 								$retval = mysql_query( $sql, $conn );
@@ -397,21 +445,55 @@
 								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 								{
 
-								    $sensor1 = 
-								         " Elemento:{$row['sensor']}  <br/> " .
-								         " Valor: {$row['value']} <br/> " .
-								         " timestamp: {$row['timestamp' ]} <br/> ";
-
-
-
-								         
-
+								    $sensor1 = $sensor1.
+								         " {$row['sensor']}:{$row['value']} <br/> " ;
 								} 
 
+									$sensor1 = $sensor1."Sensor 1";
+								echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
 
-								echo ("addMarker('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
 
-								    
+								//query para sensor 2
+								$sql = "SELECT * FROM sensorParser  where id_wasp = 2  ORDER BY sensorParser.timestamp  DESC limit 6";
+
+								mysql_select_db("airmxgen_meshliu");
+								$retval = mysql_query( $sql, $conn );
+								if(! $retval )
+								{
+								  $sensor1 = "No hay información";
+								  die("Could not get data: ". mysql_error());
+								}
+								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+								{
+
+								    $sensor2 = $sensor2.
+								         " {$row['sensor']}:{$row['value']} <br/> " ;
+								} 
+									$sensor2 = $sensor2."Sensor 2";
+
+								echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+
+								//query para sensor 3
+								$sql = "SELECT * FROM sensorParser where id_wasp in (3,4)   ORDER BY sensorParser.timestamp DESC limit 12";
+
+								mysql_select_db("airmxgen_meshliu");
+								$retval = mysql_query( $sql, $conn );
+								if(! $retval )
+								{
+								  $sensor1 = "No hay información";
+								  die("Could not get data: ". mysql_error());
+								}
+								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+								{
+
+								    $sensor3 = $sensor3.
+								    " {$row['sensor']}:{$row['value']} <br/> " ;
+								} 
+								$sensor3 = $sensor3."Sensor 3 - General";
+
+
+								echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+
 								mysql_close($conn);
 							?>
  
