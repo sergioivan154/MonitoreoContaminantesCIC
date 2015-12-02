@@ -310,7 +310,50 @@
     </section>
   
   <!-- Mapa  -->
-  
+  <?php
+								$dbhost =  "localhost" ;
+								$dbuser = "airmxgen_meshliu";
+								$dbpass = "libelium2007";
+								$sensor1 = "dato";
+								 
+								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+								if(! $conn )
+								{
+
+								  $sensor1 = "No hay conexion";	
+								  die("Could not connect:" . mysql_error());
+								}
+								$sql = "SELECT * FROM sensorParser  WHERE Date(sensorParser.timestamp) = CURDATE()  ORDER BY sensorParser.timestamp  DESC limit 5";
+
+								mysql_select_db("airmxgen_meshliu");
+								$retval = mysql_query( $sql, $conn );
+								if(! $retval )
+								{
+								  $sensor1 = "No hay información";
+								  die("Could not get data: ". mysql_error());
+								}
+								
+								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+								{
+
+echo $sql ;
+								    $sensor1 = 
+								         " Elemento:{$row['sensor']}  <br/> " .
+								         " Valor: {$row['value']} <br/> " .
+								         " timestamp: {$row['timestamp' ]} <br/> " ;
+
+
+								   
+
+								    
+								      echo $sensor1;
+								         
+
+								} 
+								echo ("addMarker($sensor1);\n");
+								mysql_close($conn);
+							?>
+ 
     <section class="success"  id="mapa">
     
      <div class="container">
@@ -373,48 +416,7 @@
                             }
 
 
-							<?php
-								$dbhost =  "localhost" ;
-								$dbuser = "airmxgen_meshliu";
-								$dbpass = "libelium2007";
-								$sensor1 = "dato";
-								
-								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-								if(! $conn )
-								{
-								  $sensor1 = "No hay conexion";	
-								  die("Could not connect:" . mysql_error());
-								}
-								$sql = "SELECT * FROM sensorParser   ORDER BY sensorParser.timestamp  DESC limit 5";
 
-								mysql_select_db("airmxgen_meshliu");
-								$retval = mysql_query( $sql, $conn );
-								if(! $retval )
-								{
-								  $sensor1 = "No hay información";
-								  die("Could not get data: ". mysql_error());
-								}
-								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-								{
-
-								    $sensor1 = 
-								         " Elemento:{$row['sensor']}  <br/> " .
-								         " Valor: {$row['value']} <br/> " .
-								         " timestamp: {$row['timestamp' ]} <br/> ";
-
-
-
-								         
-
-								} 
-
-
-								echo ("addMarker('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-
-								    
-								mysql_close($conn);
-							?>
- 
 
 								
 							}	
