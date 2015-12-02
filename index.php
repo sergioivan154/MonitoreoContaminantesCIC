@@ -284,7 +284,7 @@
                     <figcaption><h5>Nombre: Romero Hernández Monserrat<br/>Cargo: Desarrollador Web<br/>Aportaciones: sitio web<br/>Institución: CIC<br/>Correo: rhdezmonserrat@gmail.com<br/><br/></h5></figcaption>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.png" alt="">
+                    <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
                     <figcaption><h5>Nombre: Solórzano Alor Eduardo<br/>Cargo: <br/>Aportaciones: <br/>Institución: CIDETEC<br/>Correo: eduardosolorzano22@hotmail.com<br/><br/></h5></figcaption>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -294,7 +294,7 @@
 
                 
                 <div class="col-sm-4 portfolio-item">
-                   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/profile.png" alt="">
+                   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
                    <figcaption><h5>Nombre: Cajero Lázaro María Isabel<br/>Cargo: <br/>Aportaciones: <br/>Institución: UPIICSA<br/>Correo: mcajerol0900@alumno.ipn.mx <br/><br/></h5></figcaption>
                 </div>
 
