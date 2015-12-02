@@ -147,7 +147,7 @@
 
 <br>
     <!-- Quienes participan -->
- <!--   <section class="cic" id="donde">
+   <section class="cic" id="donde">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -235,9 +235,9 @@
 						<br/>
 						<button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
 					</div>-->  
-				<!--</div>
+				<</div>
 			</div>
-    </section>-->
+    </section>
 
   <!-- About Section -->
     <section  id="participantes">
