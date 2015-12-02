@@ -162,7 +162,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-lg-offset-2">
                                 <p>El proyecto se realizó en el Centro de Investigación en Computación
-									CIC, a partir de Mayo
+									CIC, a partir de Mayo.
 								</p>
                             </div>
 						</div>
@@ -172,67 +172,64 @@
 
 				<div class="row">
 
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+
+                    <div class="col-lg-4 col-sm-12 portfolio-item">
+						<a href="#portfolio1" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="img/montajee/6.jpg" class="img-responsive" alt="">
+							<img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
+						</a>
+					</div>
+                    
+                    <div class="col-lg-4 col-sm-12 portfolio-item">
+                        <a href="#portfolio4" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/dispositivos/xbee.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    
+				    <div class="col-lg-4 col-sm-12 portfolio-item">
+                        <a href="#portfolio2" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/dispositivos/entorno.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    
+					<div class="col-lg-4 col-sm-12 portfolio-item">
+                        <a href="#portfolio3" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/dispositivos/gassensor.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 portfolio-item">
+						<a href="#portfolio5" class="portfolio-link" data-toggle="modal">
+							<div class="caption">
+								<div class="caption-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div>
+							<img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
 						</a>
 					</div>
 
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/exterior/3.jpg" class="img-responsive" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/portfolio/circus.png" class="img-responsive" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/portfolio/game.png" class="img-responsive" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/portfolio/safe.png" class="img-responsive" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-						</a>
-					</div> 
+
+                    
 					<!--<div class="col-lg-4 col-sm-12 portfolio-item">
 						<br/>
 						<br/>
@@ -685,8 +682,7 @@
 
 
 <section id="resultados">
-	<div class ="container">
-		<div class="row">
+	<div class ="row container">
 			<h2> Resultados del proyecto <h2>
                 <hr> 
 			<h3> Referencias de articulos</h3>
@@ -707,10 +703,6 @@
             </h3>
             </UL>
 		</div>	
-		<div class="row">
-			
-		</div>
-	</div>
 </section>
 		
 
@@ -804,7 +796,7 @@
     </div>
 
     <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolio1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -816,24 +808,54 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/montajee/1.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+                            <h2>Waspmote</h2>
+                            <img src="img/dispositivos/waspmote.png " class="img-responsive img-centered" alt="">
+                            <p><class="skills">Es una plataforma de software libre, que además de contar con
+                             características propias como se muestra en la tabla, se caracteriza
+                              por tener una gama de placas diseñadas específicamente para aplicaciones
+                              que involucren obtener datos del entorno que nos rodea.
+                            </p>
+                            <p>
+                            El gateway Meshliumel (elemeto en el centro) permite tener una base de
+                            datos local, adempas cuenta con una interfaz gráfica para la visualización
+                            de los datos obtenido por los nodos (elementos que lo rodean).
+                            Cabe mencionar que para acceder al sistema, solo es necesario contar
+                            con una conexión a internet y un navegador.
+                        </p>
+                            <div class="table-responsive">
+                    <table class="table skills">                
+                        <tr>
+                            <th><center>Características</center></th>
+                            <th><center>Waspmote</center></th>
+                        </tr>
+                        <tr>
+                            <td><center>Microcontrolador</center></td>
+                            <td><center>ATmega 1281</center></td>
+                        </tr>
+                            <td><center>SRAM</center></td>
+                            <td><center>8 KB</center></td>                            
+                        </tr>
+                            <td><center>Almacenamiento<sub>2</center></sub></td>
+                            <td><center>Micro - SD</center></td>                            
+                        </tr>
+                            <td><center>Dimensiones<sub>2</center></sub></td>
+                            <td><center>76.5 x 51 x 13 mm</center></td>                            
+                        </tr>
+                            <td><center>Reloj</center></sub></td>
+                            <td><center>RTC (32 KHz)</center></td>                            
+                        </tr>
+                            <td rowspan="3" style="vertical-align:middle;"><center>Consumo</center></sub></td>
+                            <td><center>ON: 15mA</center></td>                            
+                        </tr>
+                            <td><center>Sleep: 55 &microA</center></td>                            
+                        </tr>
+                            <td><center>Hibernate: 0.07 &microA</center></td>                            
+
+                    </table>
+                </div>
+            </div>
+        <br>
+
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -841,7 +863,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolio3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -853,24 +875,15 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+                            <h2>Gas sensor board</h2>
+                            <img src="img/dispositivos/gassensor.png" class="img-responsive img-centered" alt="">
+                            <p><class="skills">Es un tarjeta de conversión de datos analógicos a digital. 
+                                En la imagen podemos apreciar las terminales para los diferentes sensores
+                                de contaminantes atmosféricos, entre los más importantes se encuentran: 
+                                NO<sub>2</sub>, CO, CO<sub>2</sub>, O<sub>3</sub>, VOC (Compuestos 
+                                Orgánicos Volátiles), CH, CH<sub>4</sub>, además de contar con terminales 
+                                para los sensores de humedad y temperatura.
+                            </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -878,7 +891,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolio4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -890,24 +903,19 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+                            <h2>Módulo de comunicación (Xbee)</h2>
+                            <img src="img/dispositivos/xbee.png" class="img-responsive img-centered" alt="">
+                            <p>Se desarrolló una red de sensores inalámbricos con 3 nodos, donde
+                                cada nodo es una plataforma de cómputo móvil Waspmote, que es capaz
+                                de comunicarse a través del protocolo ZigBee.
+                                El protocolo ZigBee es ampliamente utilizado en la comunicación entre
+                                nodos de sensores de ciudades inteligentes, ya que la tecnología fue 
+                                desarrollada para la transmición de pequeñas cantidades de datos
+                                sobre una distancia corta con un pequeño consumo de energía.
+                                sus características
+                                Cada nodo envía la información a un gateway llamado Meshlium
+                                </p>
+                                <br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -915,7 +923,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolio2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -927,24 +935,8 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+                            <h2>Ejemplo de placas Waspmote</h2>
+                            <img src="img/dispositivos/entorno.png" class="img-responsive img-centered" alt="">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -952,7 +944,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolio5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -964,61 +956,14 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+                            <h2>Rider LiPo Pro</h2>
+                            <img src="img/dispositivos/lipro.jpg" class="img-responsive img-centered" alt="">
+                            <p>Es una tarjeta de gestión de energía. Identifica el nivel
+                             energético almacenado en la pila; cuando éste valor es bajo, 
+                             permite la recarga de la batería a través del paso de energía
+                             del panel solar; si éste valor es alto, alimenta al módulo
+                             con la energía almacenada en la pila.
+                            </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
