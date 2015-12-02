@@ -45,9 +45,9 @@
                     <li class="page-scroll">
                         <a href="#objetivo">Objetivo</a>
                     </li>
-                    <li class="page-scroll">
+                    <!--<li class="page-scroll">
                         <a href="#donde">Dónde se realiza</a>
-                    </li>
+                    </li>-->
                     <li class="page-scroll">
                         <a href="#participantes">Quienes participan</a>
                     </li>
@@ -147,7 +147,7 @@
 
 <br>
     <!-- Quienes participan -->
-    <section class="cic" id="donde">
+ <!--   <section class="cic" id="donde">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -238,9 +238,9 @@
 						<br/>
 						<button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
 					</div>-->  
-				</div>
+				<!--</div>
 			</div>
-    </section>
+    </section>-->
 
   <!-- About Section -->
     <section  id="participantes">
@@ -324,8 +324,6 @@
             <div class="row">
                  <div id="map">
                      
-                 </div>
-
 
                         <script type="text/javascript">
 
@@ -338,7 +336,8 @@
                             var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
                             var myLatLngSensor2 = {lat: 19.503039, lng: -99.147858};
                             var myLatLngSensor3 = {lat: 19.503311, lng: -99.147888};
- 
+                            var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
+  
                               map = new google.maps.Map(document.getElementById('map'), {
                                 center: myLatLng,
                                 styles: styleArray,
@@ -400,6 +399,24 @@
 								  });
 
 
+	                                 // marcador 4
+	                            var marker4 = new google.maps.Marker({
+	                                map: map,
+	                                position: myLatLngSensor4,
+	                                animation: google.maps.Animation.DROP,
+	                                clickable: true,
+	                                title: 'Centro de Investigación en Computación'
+	                              });
+
+	                              var infowindow4 = new google.maps.InfoWindow({
+								    	content: infoString
+							  		});
+
+	                               marker4.addListener('click', function() {
+								    infowindow4.open(map, marker4);
+								  });
+
+
 
  								function addInfoSensor1(info)
  								{
@@ -416,6 +433,11 @@
 									infowindow3.setContent(info);
                             	}
 
+                            	function addInfoSensor4(info)
+ 								{
+									infowindow4.setContent(info);
+                            	}
+
 
 							<?php
 								$dbhost =  "localhost" ;
@@ -424,6 +446,7 @@
 								$sensor1 = "";
 								$sensor2 = "";
 								$sensor3 = "";
+								$sensor4 = "";
 								
 								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 								if(! $conn )
@@ -474,7 +497,7 @@
 								echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
 
 								//query para sensor 3
-								$sql = "SELECT * FROM sensorParser where id_wasp in (3,4)   ORDER BY sensorParser.timestamp DESC limit 12";
+								$sql = "SELECT * FROM sensorParser where id_wasp  = 3  ORDER BY sensorParser.timestamp DESC limit 6";
 
 								mysql_select_db("airmxgen_meshliu");
 								$retval = mysql_query( $sql, $conn );
@@ -489,10 +512,31 @@
 								    $sensor3 = $sensor3.
 								    " {$row['sensor']}:{$row['value']} <br/> " ;
 								} 
-								$sensor3 = $sensor3."Sensor 3 - General";
+								$sensor3 = $sensor3."Sensor 3";
 
 
 								echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+
+								//query para sensor 4
+								$sql = "SELECT * FROM sensorParser where id_wasp = 4   ORDER BY sensorParser.timestamp DESC limit 6";
+
+								mysql_select_db("airmxgen_meshliu");
+								$retval = mysql_query( $sql, $conn );
+								if(! $retval )
+								{
+								  $sensor4 = "No hay información";
+								  die("Could not get data: ". mysql_error());
+								}
+								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+								{
+
+								    $sensor4 = $sensor4.
+								    " {$row['sensor']}:{$row['value']} <br/> " ;
+								} 
+								$sensor4 = $sensor4."Sensor 4 - General";
+
+
+								echo ("addInfoSensor4('<div style = \'color: #000000\'>".json_encode($sensor4)."</div>');\n");
 
 								mysql_close($conn);
 							?>
@@ -507,6 +551,10 @@
                                 <script async defer
                                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
                         </script>
+                        
+                 </div>
+
+
             </div>
         </div>
         <div class="row">
@@ -529,7 +577,7 @@
     		<div class="row">
     			<h2>Tabla de índice</h2>
     			<hr> <br>
-    			<div class="table-responsive">
+    			<div class="table-responsive row">
                     <table class="table">                
                         <tr>
                             <th> </th>
@@ -555,6 +603,18 @@
                         </tr>
                     </table>
                 </div>
+                    <div class="row">
+                <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Sensor</th>
+                            <th>Rasgo</th>
+                            <th>Valores</th>
+                        </tr>
+                    </thead>
+            </table>
+            </div>
     		</div>
     	<br>
     	<div class="row">		
@@ -620,6 +680,7 @@
     				</div>
     			</div>
     		</div>
+
     </section>
 
 
@@ -630,13 +691,19 @@
                 <hr> 
 			<h3> Referencias de articulos</h3>
             <hr>
-            
+
             <UL type=square>
-            <h3><LI> Solórzano, E., Sastre, E., & Argüelles, A.. (2015, Octubre 16). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con computo móvil y TIC´s. -, -, -.
+            <h3><LI> Eduardo Solorzano Alor, Amadeo José Argüelles Cruz and Maria Isabel Cajero Lázaro (2015). An
+					Embbeded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-
+					28, 2015.</LI>
             <br><br>
-            <LI> Solórzano, E., Argüelles, A., Cajero, M., & Sánchez M. (2015, Octubre 25 ). An Embedded System Application for Data Collection of Atmospheric Pollutants with a Classification Approach. Springer LNAI, -, -.
+            <LI> Miguel Sánchez Meraz, Felipe Ramírez Castañeda and Amadeo J. Argüelles Cruz (2015). Frame standardization for Smart Cities monitoring applications. ISC2-2015, First IEEE International
+				 Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
             <br><br>
-            <LI>Solórzano, E., Argüelles, A., & Cajero, M. (2015, Octubre 26). An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. IEEE Smart Cities Steering Committee, -, -.
+            <LI>Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmosferic Pollutants
+				with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
+				<br/><br/>
+			<LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.</LI>
             </h3>
             </UL>
 		</div>	
@@ -961,6 +1028,7 @@
     </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
@@ -979,7 +1047,23 @@
              interval: 2000,
 
 
-         })
+         });
+
+         var dataTable = $('#employee-grid').DataTable( {
+                    "processing": true,
+                    "serverSide": true,
+                    "ajax":{
+                        url :"employee-grid-data.php", // json datasource
+                        type: "post",  // method  , by default get
+                        error: function(){  // error handling
+                            $(".employee-grid-error").html("");
+                            $("#employee-grid").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
+                            $("#employee-grid_processing").css("display","none");
+                            
+                        }
+                    }
+                } );
+
     });  </script>  
     
     <script type='text/javascript'>
