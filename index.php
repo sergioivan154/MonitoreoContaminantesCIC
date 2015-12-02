@@ -311,7 +311,38 @@
   
   <!-- Mapa  -->
   
-   <section class="success"  id="mapa">
+    <section class="success"  id="mapa">
+    <?php
+$dbhost =  "localhost" ;
+$dbuser = "airmxgen_meshliu";
+$dbpass = "libelium2007";
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+if(! $conn )
+{
+  die("Could not connect:" . mysql_error());
+}
+$sql = "SELECT * FROM sensorParser  WHERE Date(sensorParser.timestamp) = CURDATE()  ORDER BY sensorParser.timestamp  DESC limit 5";
+
+mysql_select_db("airmxgen_meshliu");
+$retval = mysql_query( $sql, $conn );
+if(! $retval )
+{
+  die("Could not get data: ". mysql_error());
+}
+while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+{
+
+    echo "<div style= color: #000;background: #f0f0f4;>".
+         " Elemento:{$row['sensor']}  <br> " .
+         " Valor: {$row['value']} <br> " .
+         " timestamp: {$row['timestamp' ]} <br> " .
+         " <br> ".
+         "<div> ";
+
+} 
+
+mysql_close($conn);
+?>
      <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -321,7 +352,11 @@
                 </div>
             </div>
             <div class="row">
-                 <div id="map"></div>
+                 <div id="map">
+                     
+                 </div>
+
+
                         <script type="text/javascript">
 
                             var map;
@@ -338,13 +373,37 @@
 
                               });
 
+
+
+var contentString = "";
+
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+
                            // Create a marker and set its position.
                               var marker = new google.maps.Marker({
                                 map: map,
                                 position: myLatLng,
+                                animation: google.maps.Animation.DROP,
+                                clickable: true,
                                 title: 'Centro de Investigación en Computación'
                               });
+
+ marker.addListener('click', function() {
+contentString ="<div style = 'color: #000;'> Hola </div>"
+    infowindow.open(map, marker);
+
+  });
+
+
+
                             }
+
+
+
 
                                 </script>
                                 <script async defer
@@ -353,15 +412,15 @@
             </div>
         </div>
         <div class="row">
-           
+
         </div>
         
      </section>
 
      <!-- About Section -->
-	<br>
+    <br>
 
-			
+            
 </div>
 </section>
  
