@@ -36,21 +36,39 @@
                 </button>
                 <img src="img/header1.png"  height="47" width="447" href="#page-top" class="img-responsive" alt="">
             </div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <div>
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                <ul class="nav navbar-nav ">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+
+                    
                     <li class="page-scroll">
                         <a href="#objetivo">Objetivo</a>
                     </li>
+                    
                     <li class="page-scroll">
-                        <a href="#donde">Dónde se realiza</a>
+                        <a href="#donde"> Lugar </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#participantes">Quienes participan</a>
+                        <a href="#participantes"> Participantes </a>
                     </li>
+
+                     <li class="page-scroll">
+                     <a href="#productos">Productos del Modulo</a>
+                    </li>
+
+                    <li class="page-scroll">
+                     <a href="#resultados">Articulos</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#Prototipo">Prototipos</a>
+                    </li>
+
                     <li class="page-scroll">
                         <a href="#mapa">Mapa</a>
                     </li>
@@ -66,63 +84,94 @@
 
     <!-- Header -->
     <header>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
                     <a href="#significado" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
-						<div class="intro-text">
+                        <div class="intro-text">
                             <span class="name">¿Qué es?</span>
                             <hr>
                             <span class="skills">Es un proyecto en el cual se pretende implementar las TIC´s en una area de oportunidad como lo es el tema de los contaminantes atmosféricos, y el consumo de energía eléctrica, para ayudar a los ciudadanos a disfrutar de la información para tomar decisiones. 
                             Este es el principio de una ciudad inteligente. 
-							</span>
+                            </span>
                         </div>
                 </div>
             </div>
         </div>
     </header> 
-	
-	<section id="objetivo">
+
+
+    <section id="productos">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Proyecto Multidisciplinario
+                    </h1>
+                    <hr> 
+                    <div class="intro-text">
+                        <span class="skills">
+                        Desarrollo de un Prototipo de Ciudad Inteligente para la Ciudad de México. 
+                        </span>
+                        <br><br><br><br>
+                       <h1>Módulo Proyecto 
+                        </h1>
+                        <hr> 
+                            <span class="skills">
+                            SIP-20150287
+                            Monitoreo de Contaminantes Atmosféricos y Eficiencia Energética en Alumbrado Público.
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+    
+        </div>
+    </section>
+    
+
+    
+    <section id="objetivo">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
                     <h1>¿Por qué se realizó el proyecto?
-					</h1>
+                    </h1>
                     <hr> 
                     <div class="intro-text">
                         <span class="skills">
-						En los últimos años, el aumento de procesos industriales en los que se involucran la combustión de hidrocarburos, además de la adquisición desmesurada de automóviles (debido a la facilidad del financiamiento de la compra de los mismos), han originado que la contaminación atmosférica aumente considerablemente afectando la salud y el ritmo de las actividades cotidianas de los ciudadanos. 
-						Debido a eso, es necesario ofrecer al usuario información que le sea útil el entorno en donde se mueve para que tomes sus cuidados y precauciones. 
+                        En los últimos años, el aumento de procesos industriales en los que se involucran la combustión de hidrocarburos, además de la adquisición desmesurada de automóviles (debido a la facilidad del financiamiento de la compra de los mismos), han originado que la contaminación atmosférica aumente considerablemente afectando la salud y el ritmo de las actividades cotidianas de los ciudadanos. 
+                        Debido a eso, es necesario ofrecer al usuario información que le sea útil el entorno en donde se mueve para que tomes sus cuidados y precauciones. 
                         </span>
                         <br><br><br><br>
-					   <h1>Objetivo del proyecto
-						</h1>
-						<hr> 
-							<span class="skills">
-							Desarrollo de un prototipo de monitoreo de contaminantes atmosféricos presentes en el aire y eficiencia de consumo de energía de infraestructura presentes en el aire y eficiencia de consumo de energía de infraestructura
-							de alumbrado público en la Ciudad de México.
-							</span>
-					</div>
+                       <h1>Objetivo del proyecto
+                        </h1>
+                        <hr> 
+                            <span class="skills">
+                            Desarrollo de un prototipo de monitoreo de contaminantes atmosféricos presentes en el aire y eficiencia de consumo de energía de infraestructura presentes en el aire y eficiencia de consumo de energía de infraestructura
+                            de alumbrado público en la Ciudad de México.
+                            </span>
+                    </div>
                 </div>
             </div>
-			<br>
-			<br>
-			<div class = col-sm-4>
-				<center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
-				</button></center>
-			</div>
-			<div class = col-sm-4>
-				<center><button onclick="location.href='http://www.aire.df.gob.mx/default.php'" target="_blank" class="btn btn-success btn-lg">SIMAT
-				</button></center>
-			</div>
-			<div class = col-sm-4>
-				<center><button onclick="location.href='http://www.pnuma.org/'" target="_blank" class="btn btn-success btn-lg">PNUMA
-				</button></center>
-			</div>
-			
+            <br>
+            <br>
+            <div class = col-sm-4>
+                <center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
+                </button></center>
+            </div>
+            <div class = col-sm-4>
+                <center><button onclick="location.href='http://www.aire.df.gob.mx/default.php'" target="_blank" class="btn btn-success btn-lg">SIMAT
+                </button></center>
+            </div>
+            <div class = col-sm-4>
+                <center><button onclick="location.href='http://www.pnuma.org/'" target="_blank" class="btn btn-success btn-lg">PNUMA
+                </button></center>
+            </div>
+            
         </div>
     </section>
-	
+    
 
     <section class="significadologo" id="significado">
         <div class="container">
@@ -135,14 +184,14 @@
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 skills">
                     <p>El logotipo es un pictograma Náhuatl que significa Nariz, al igual que el nombre. Se trata de representar el propósito del  modulo que es la detección de contaminantes atmosféricos al “Oler” o sensarlos. 
-					¿Por qué se decidió usar la lengua náhuatl?:
-					Al ser un dispositivo y proyecto desarrollado en México, se decidió tomar parte nuestras raíces, tomando el nombre en Náhualt.
-					</p>
-				</div>
-				<div class="col-lg-5 col-lg-offset-1">
-						<p><img class="img-responsive imagen-redonda" src="img/profile.png" alt="Yakatl"></p>
-				</div>
-			</div>
+                    ¿Por qué se decidió usar la lengua náhuatl?:
+                    Al ser un dispositivo y proyecto desarrollado en México, se decidió tomar parte nuestras raíces, tomando el nombre en Náhualt.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-1">
+                        <p><img class="img-responsive imagen-redonda" src="img/profile.png" alt="Yakatl"></p>
+                </div>
+            </div>
     </section>
 
 <br>
@@ -152,37 +201,37 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Centro de Investigación en Computación
-					</h2>
+                    </h2>
                     <hr>
-					<div class="container">
+                    <div class="container">
                         <div class="col-lg-4 col-lg-offset-2">
                             <p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-							</p>
+                            </p>
                         </div>
                         <div class="row">
                             <div class="col-lg-4 col-lg-offset-2">
                                 <p>El proyecto se realizó en el Centro de Investigación en Computación
-									CIC, a partir de Mayo.
-								</p>
+                                    CIC, a partir de Mayo.
+                                </p>
                             </div>
-						</div>
-					</div>
+                        </div>
+                    </div>
                 <hr>
-				</div>
+                </div>
 
-				<div class="row">
+                <div class="row">
 
 
                     <div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolio1" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
-						</a>
-					</div>
+                        <a href="#portfolio1" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
                     
                     <div class="col-lg-4 col-sm-12 portfolio-item">
                         <a href="#portfolio4" class="portfolio-link" data-toggle="modal">
@@ -195,7 +244,7 @@
                         </a>
                     </div>
                     
-				    <div class="col-lg-4 col-sm-12 portfolio-item">
+                    <div class="col-lg-4 col-sm-12 portfolio-item">
                         <a href="#portfolio2" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
@@ -206,7 +255,7 @@
                         </a>
                     </div>
                     
-					<div class="col-lg-4 col-sm-12 portfolio-item">
+                    <div class="col-lg-4 col-sm-12 portfolio-item">
                         <a href="#portfolio3" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
@@ -218,31 +267,30 @@
                     </div>
 
                     <div class="col-lg-4 col-sm-12 portfolio-item">
-						<a href="#portfolio5" class="portfolio-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
-						</a>
-					</div>
+                        <a href="#portfolio5" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
 
 
                     
-					<!--<div class="col-lg-4 col-sm-12 portfolio-item">
-						<br/>
-						<br/>
-						<button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
-					</div>-->  
-				<</div>
-			</div>
+                    <!--<div class="col-lg-4 col-sm-12 portfolio-item">
+                        <br/>
+                        <br/>
+                        <button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
+                    </div>-->  
+                <</div>
+            </div>
     </section>
 
-  <!-- About Section -->
-    <section  id="participantes">
+   <section  id="participantes">
         <div class="container">
-            <h2>¿Quiénes participan?<h2>
+            <h2>¿Quiénes participan?</h2>
             <div class="row">
                 <div class="col-lg-12 text">
                     <h1>Instituciones</h1>
@@ -252,56 +300,210 @@
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-1">
                      <p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-						<br/>El Centro de Investigación en Computación a través del Laboratorio de Redes Neuronales 
-						y Cómputo no Convencional
-					 </p>
+                        <br/>El Centro de Investigación en Computación a través del Laboratorio de Redes Neuronales y Cómputo no Convencional
+                     </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2">
-					<p><a href="http://www.esimez.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/esime.png" alt=""></a>
-						 <br/>La Escuela Superior de Ingeniería Mecánica Eléctrica unidad Zacatenco
-							
-							
-					</p>
+                    <p><a href="http://www.esimez.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/esime.png" alt=""></a>
+                         <br/>La Escuela Superior de Ingeniería Mecánica Eléctrica unidad Zacatenco                    
+                    </p>
                 </div>
             </div>
         </div>
         
         <div class="container">
-           <div class="row">
-            <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
                     <h2>Personas</h2>
                     <hr >
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
-                     <figcaption><h5>Nombre: López Monzón Sergio Iván<br/>Cargo: Desarrollador Web<br/>Aportaciones: sitio web<br/>Institución: CIC<br/>Correo: sergioivan154@gmail.com<br/><br/></h5></figcaption>
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: López Monzón Sergio Iván
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIC
+                                        <br/>Correo: sergioivan154@gmail.com
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Romero Hernández Monserrat
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIC
+                                        <br/>Correo: rhdezmonserrat@gmail.com
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Solórzano Alor Eduardo
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIDETEC
+                                        <br/>Correo: eduardosolorzano22@hotmail.com
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
-                    <figcaption><h5>Nombre: Romero Hernández Monserrat<br/>Cargo: Desarrollador Web<br/>Aportaciones: sitio web<br/>Institución: CIC<br/>Correo: rhdezmonserrat@gmail.com<br/><br/></h5></figcaption>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
-                    <figcaption><h5>Nombre: Solórzano Alor Eduardo<br/>Cargo: <br/>Aportaciones: <br/>Institución: CIDETEC<br/>Correo: eduardosolorzano22@hotmail.com<br/><br/></h5></figcaption>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                   <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
-                   <figcaption><h5>Nombre: Argüelles Cruz José Amadeo<br/>Cargo: Director del proyecto<br/>Aportaciones: Coordinación<br/>Institución: CIC<br/>Correo: jamadeo@cic.ipn.mx<br/><br/></h5></figcaption>
-                </div>
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Argüelles Cruz José Amadeo
+                                        <br/>Cargo: Director del proyecto
+                                        <br/>Aportaciones: Coordinación
+                                        <br/>Institución: CIC
+                                        <br/>Correo: jamadeo@cic.ipn.mx
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
 
+                    
+                    
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Cajero Lázaro María Isabel
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: UPIICSA
+                                        <br/>Correo: mcajerol0900@alumno.ipn.mx 
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
                 
-                <div class="col-sm-4 portfolio-item">
-                   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
-                   <figcaption><h5>Nombre: Cajero Lázaro María Isabel<br/>Cargo: <br/>Aportaciones: <br/>Institución: UPIICSA<br/>Correo: mcajerol0900@alumno.ipn.mx <br/><br/></h5></figcaption>
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Sánchez Meraz Miguel
+                                        <br/>Cargo: Profesor
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: ESIMEZ
+                                        <br/>Correo: mmeraz@ipn.mx              
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+
+                    </div>
                 </div>
 
-                <div class="col-sm-4 portfolio-item">
-                   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
-                   <figcaption><h5>Nombre: Sánchez Meraz Miguel<br/>Cargo: <br/>Aportaciones: <br/>Institución: ESIMEZ<br/>Correo: mmeraz@ipn.mx <br/><br/></h5></figcaption>
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
+                        <figcaption>
+                                    <h5>Nombre: Yáñez Márquez Cornelio
+                                        <br/>Cargo: Profesor
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIC 
+                                        <br/>Correo: cyanez@cic.ipn.mx                         
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+
+                    </div>    
+                    
+                  
+
+                    <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
+                       <figcaption>
+                                    <h5>Nombre: Vázquez Bernal Fernando
+                                        <br/>Cargo: Profesor
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIC
+                                        <br/>Correo: fvazquez@mail.cic.ipn.mx                               
+                                        <br/>
+                                        <br/>
+                                    </h5></figcaption>
+
+                    </div>
+
+<div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
+                       <figcaption>
+                                    <h5>Nombre: Fócil Arias Carolina
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: CIC 
+                                        <br/>Correo:                                  
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
 
                 </div>
+                <div class="row">
+                    
 
-			</div>
+                   
+
+                    <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
+                       <figcaption>
+                                    <h5>Nombre: Garcia Santana Johnathan
+                                        <br/>Cargo: Participante
+                                        <br/>Aportaciones: 
+                                        <br/>Institución: UTFV 
+                                        <br/>Correo: john.garcia.san@gmail.com                        
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
+                       <figcaption>
+                                <h5>Nombre: Chávez Argüello Oscar Roberto
+                                    <br/>Cargo: Participante
+                                    <br/>Aportaciones: 
+                                    <br/>Institución: CIC
+                                    <br/>Correo: oscar_arguelloipn@yahoo.com                        
+                                    <br/>
+                                    <br/>
+                                </h5>
+                        </figcaption>
+                    </div>
+
+                    <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
+                       <figcaption>
+                                <h5>Nombre: Rosales Pérez Jhairo Margil
+                                    <br/>Cargo: Profesor
+                                    <br/>Aportaciones: 
+                                    <br/>Institución: CIC
+                                    <br/>Correo: jhairo@cic.ipn.mx                      
+                                    <br/>
+                                    <br/>
+                                </h5>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="row">
+                    
+
+                   
+                </div> <!-- hay espacio para una imagen mas en este row-->
+            </div>
         </div>
 
     </section>
@@ -325,6 +527,28 @@
                         <script type="text/javascript">
 
                             var map;
+
+var marker = new google.maps.Marker({
+    position: map.getCenter(),
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 10
+    },
+    draggable: true,
+    map: map
+  });
+
+var goldStar = {
+    path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+    fillColor: 'yellow',
+    fillOpacity: 0.8,
+    scale: 1,
+    strokeColor: 'gold',
+    strokeWeight: 14
+  };
+
+
+
                             function initMap() {
 
                              var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
@@ -334,6 +558,7 @@
                             var myLatLngSensor2 = {lat: 19.503039, lng: -99.147858};
                             var myLatLngSensor3 = {lat: 19.503311, lng: -99.147888};
                             var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
+                            var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
   
                               map = new google.maps.Map(document.getElementById('map'), {
                                 center: myLatLng,
@@ -344,203 +569,385 @@
 
                               infoString = "";
   // Create a marker and set its position.
-  // 							marcador 1
-	                              var marker1 = new google.maps.Marker({
-	                                map: map,
-	                                position: myLatLngSensor1,
-	                                animation: google.maps.Animation.DROP,
-	                                clickable: true,
-	                                title: 'Centro de Investigación en Computación'
-	                              });
+  //                            marcador 1
+                                  var marker1 = new google.maps.Marker({
+                                    map: map,
+                                    position: myLatLngSensor1,
+                                    animation: google.maps.Animation.DROP,
+                                    icon: {
+                                      path: google.maps.SymbolPath.CIRCLE,
+                                      fillColor: 'red',
+                                        fillOpacity: 0.8,
+                                        scale: 10,
+                                        strokeColor: 'black',
+                                        strokeWeight: 5
+                                    },
+                                    clickable: true,
+                                    title: 'Centro de Investigación en Computación'
+                                  });
 
-	                              var infowindow1 = new google.maps.InfoWindow({
-								    	content: infoString
-							  		});
+                                  var infowindow1 = new google.maps.InfoWindow({
+                                        content: infoString
+                                    });
 
-	                               marker1.addListener('click', function() {
-								    infowindow1.open(map, marker1);
-								  });
+                                  
 
+                                   marker1.addListener('click', function() {
 
-	                            // marcador 2
-	                            var marker2 = new google.maps.Marker({
-	                                map: map,
-	                                position: myLatLngSensor2,
-	                                animation: google.maps.Animation.DROP,
-	                                clickable: true,
-	                                title: 'Centro de Investigación en Computación'
-	                              });
-
-	                              var infowindow2 = new google.maps.InfoWindow({
-								    	content: infoString
-							  		});
-
-	                               marker2.addListener('click', function() {
-								    infowindow2.open(map, marker2);
-								  });
-	                            // marcador 3
-	                            var marker3 = new google.maps.Marker({
-	                                map: map,
-	                                position: myLatLngSensor3,
-	                                animation: google.maps.Animation.DROP,
-	                                clickable: true,
-	                                title: 'Centro de Investigación en Computación'
-	                              });
-
-	                              var infowindow3 = new google.maps.InfoWindow({
-								    	content: infoString
-							  		});
-
-	                               marker3.addListener('click', function() {
-								    infowindow3.open(map, marker3);
-								  });
+                                    infowindow1.open(map, marker1);
+                                  });
 
 
-	                                 // marcador 4
-	                            var marker4 = new google.maps.Marker({
-	                                map: map,
-	                                position: myLatLngSensor4,
-	                                animation: google.maps.Animation.DROP,
-	                                clickable: true,
-	                                title: 'Centro de Investigación en Computación'
-	                              });
+                                // marcador 2
+                                var marker2 = new google.maps.Marker({
+                                    map: map,
+                                    position: myLatLngSensor2,
+                                    animation: google.maps.Animation.DROP,
+                                    icon: {
+                                      path: google.maps.SymbolPath.CIRCLE,
+                                      fillColor: 'green',
+                                        fillOpacity: 0.8,
+                                        scale: 10,
+                                        strokeColor: 'black',
+                                        strokeWeight: 5
+                                    },
+                                    clickable: true,
+                                    title: 'Centro de Investigación en Computación'
+                                  });
 
-	                              var infowindow4 = new google.maps.InfoWindow({
-								    	content: infoString
-							  		});
+                                  var infowindow2 = new google.maps.InfoWindow({
+                                        content: infoString
+                                    });
 
-	                               marker4.addListener('click', function() {
-								    infowindow4.open(map, marker4);
-								  });
+                                   marker2.addListener('click', function() {
+                                    infowindow2.open(map, marker2);
+                                  });
+                                // marcador 3
+                                var marker3 = new google.maps.Marker({
+                                    map: map,
+                                    position: myLatLngSensor3,
+                                    animation: google.maps.Animation.DROP,
+                                    icon: {
+                                      path: google.maps.SymbolPath.CIRCLE,
+                                      fillColor: 'yellow',
+                                        fillOpacity: 0.8,
+                                        scale: 10,
+                                        strokeColor: 'black',
+                                        strokeWeight: 5
+                                    },
+                                    clickable: true,
+                                    title: 'Centro de Investigación en Computación'
+                                  });
 
+                                  var infowindow3 = new google.maps.InfoWindow({
+                                        content: infoString
+                                    });
 
-
- 								function addInfoSensor1(info)
- 								{
-									infowindow1.setContent(info);
-                            	}
-
-                            	function addInfoSensor2(info)
- 								{
-									infowindow2.setContent(info);
-                            	}
-
-                            	function addInfoSensor3(info)
- 								{
-									infowindow3.setContent(info);
-                            	}
-
-                            	function addInfoSensor4(info)
- 								{
-									infowindow4.setContent(info);
-                            	}
-
-
-							<?php
-								$dbhost =  "localhost" ;
-								$dbuser = "airmxgen_meshliu";
-								$dbpass = "libelium2007";
-								$sensor1 = "";
-								$sensor2 = "";
-								$sensor3 = "";
-								$sensor4 = "";
-								
-								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-								if(! $conn )
-								{
-								  $sensor1 = "No hay conexion";	
-								  die("Could not connect:" . mysql_error());
-								}
-								
-								//query para sensor 1
-								$sql = "SELECT * FROM sensorParser  where id_wasp = 1 ORDER BY sensorParser.timestamp  DESC limit 9 ";
-
-								mysql_select_db("airmxgen_meshliu");
-								$retval = mysql_query( $sql, $conn );
-								if(! $retval )
-								{
-								  $sensor1 = "No hay información";
-								  die("Could not get data: ". mysql_error());
-								}
-								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-								{
-
-								    $sensor1 = $sensor1.
-								         " {$row['sensor']}:{$row['value']} <br/> " ;
-								} 
-
-									$sensor1 = $sensor1."Sensor 1";
-								echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                   marker3.addListener('click', function() {
+                                    infowindow3.open(map, marker3);
+                                  });
 
 
-								//query para sensor 2
-								$sql = "SELECT * FROM sensorParser  where id_wasp = 2  ORDER BY sensorParser.timestamp  DESC limit 6";
+                                     // marcador 4
+                                var marker4 = new google.maps.Marker({
+                                    map: map,
+                                    position: myLatLngSensor4,
+                                    animation: google.maps.Animation.DROP,
+                                    icon: {
+                                      path: google.maps.SymbolPath.CIRCLE,
+                                      fillColor: 'white',
+                                        fillOpacity: 0.8,
+                                        scale: 10,
+                                        strokeColor: 'black',
+                                        strokeWeight: 5
+                                    },
+                                    clickable: true,
+                                    title: 'Centro de Investigación en Computación'
+                                  });
 
-								mysql_select_db("airmxgen_meshliu");
-								$retval = mysql_query( $sql, $conn );
-								if(! $retval )
-								{
-								  $sensor1 = "No hay información";
-								  die("Could not get data: ". mysql_error());
-								}
-								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-								{
+                                  var infowindow4 = new google.maps.InfoWindow({
+                                        content: infoString
+                                    });
 
-								    $sensor2 = $sensor2.
-								         " {$row['sensor']}:{$row['value']} <br/> " ;
-								} 
-									$sensor2 = $sensor2."Sensor 2";
+                                   marker4.addListener('click', function() {
+                                    infowindow4.open(map, marker4);
+                                  });
 
-								echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                   //5
 
-								//query para sensor 3
-								$sql = "SELECT * FROM sensorParser where id_wasp  = 3  ORDER BY sensorParser.timestamp DESC limit 6";
+                                   var marker5 = new google.maps.Marker({
+                                    map: map,
+                                    position: myLatLngSensor5,
+                                    animation: google.maps.Animation.DROP,
+                                    icon: {
+                                      path: google.maps.SymbolPath.CIRCLE,
+                                      fillColor: 'white',
+                                        fillOpacity: 0.8,
+                                        scale: 10,
+                                        strokeColor: 'black',
+                                        strokeWeight: 5
+                                    },
+                                    clickable: true,
+                                    title: 'Centro de Investigación en Computación'
+                                  });
 
-								mysql_select_db("airmxgen_meshliu");
-								$retval = mysql_query( $sql, $conn );
-								if(! $retval )
-								{
-								  $sensor1 = "No hay información";
-								  die("Could not get data: ". mysql_error());
-								}
-								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-								{
+                                  var infowindow5 = new google.maps.InfoWindow({
+                                        content: infoString
+                                    });
 
-								    $sensor3 = $sensor3.
-								    " {$row['sensor']}:{$row['value']} <br/> " ;
-								} 
-								$sensor3 = $sensor3."Sensor 3";
-
-
-								echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-
-								//query para sensor 4
-								$sql = "SELECT * FROM sensorParser where id_wasp = 4   ORDER BY sensorParser.timestamp DESC limit 6";
-
-								mysql_select_db("airmxgen_meshliu");
-								$retval = mysql_query( $sql, $conn );
-								if(! $retval )
-								{
-								  $sensor4 = "No hay información";
-								  die("Could not get data: ". mysql_error());
-								}
-								while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-								{
-
-								    $sensor4 = $sensor4.
-								    " {$row['sensor']}:{$row['value']} <br/> " ;
-								} 
-								$sensor4 = $sensor4."Sensor 4 - General";
+                                   marker5.addListener('click', function() {
+                                    infowindow5.open(map, marker5);
+                                  });
 
 
-								echo ("addInfoSensor4('<div style = \'color: #000000\'>".json_encode($sensor4)."</div>');\n");
+                                   
 
-								mysql_close($conn);
-							?>
+
+
+                                function addInfoSensor1(info)
+                                {
+                                    infowindow1.setContent(info);
+                                }
+
+                                function addInfoSensor2(info)
+                                {
+                                    infowindow2.setContent(info);
+                                }
+
+                                function addInfoSensor3(info)
+                                {
+                                    infowindow3.setContent(info);
+                                }
+
+                                function addInfoSensor4(info)
+                                {
+                                    infowindow4.setContent(info);
+                                }
+
+                                function addInfoSensor5(info)
+                                {
+                                    infowindow5.setContent(info);
+                                }
+
+                        
+
+
+                            <?php
+                                $dbhost =  "localhost" ;
+                                $dbuser = "airmxgen_meshliu";
+                                $dbpass = "libelium2007";
+                                $sensor1 = "";
+                                $sensor2 = "";
+                                $sensor3 = "";
+                                $sensor4 = "";
+                                $sensor5 = "";
+                                $sql2="";
+                                $id="";
+
+                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor1 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }
+
+                                
+                                
+                                //query para sensor 1
+                                $sql = "SELECT * FROM sensorParser  where id_wasp = 1 ORDER BY sensorParser.timestamp  DESC limit 9 ";
+                                
+                                $id="";
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor1 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor1 = $sensor1.
+                                         " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+
+                                    $sensor1 = $sensor1."Sensor 1";
+                                echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 1....";
+                                $sql1=0.080;
+
+                                if($sql1<0.035)
+                                    $id="Bueno";
+                                else if($sql1>0.035 && $sql1<0.070 )
+                                    $id="Regular";
+                                else
+                                    $id="Malo";
+
+                                
+
+                                if($id=="Bueno"){
+                                    
+                                    echo ("addInfoSensor1('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                }
+                                else if($id=="Malo"){
+                                    echo ("addInfoSensor1('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                }
+                                else if($id=="Regular"){
+                                    echo ("addInfoSensor1('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                }
+                                //echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+
+
+                                
+
+
+                                //query para sensor 2
+                                $sql = "SELECT * FROM sensorParser  where id_wasp = 2  ORDER BY sensorParser.timestamp  DESC limit 6";
+                                
+                                $id="";                    
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor1 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor2 = $sensor2.
+                                         " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                    $sensor2 = $sensor2."Sensor 2";
+
+                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
+                                $sql2=0.030;
+
+                                if($sql2<0.035)
+                                    $id="Bueno";
+                                else if($sql2>0.035 && $sql2<0.070 )
+                                    $id="Regular";
+                                else
+                                    $id="Malo";
+
+                                
+
+                                if($id=="Bueno"){
+                                    
+                                    echo ("addInfoSensor2('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                }
+                                else if($id=="Malo"){
+                                    echo ("addInfoSensor2('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                }
+                                else if($id=="Regular"){
+                                    echo ("addInfoSensor2('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                }
+                                //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+
+
+
+                                
+
+                                //query para sensor 3
+                                $sql = "SELECT * FROM sensorParser where id_wasp  = 3  ORDER BY sensorParser.timestamp DESC limit 6";
+                                
+                                $id="";
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor1 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor3 = $sensor3.
+                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                $sensor3 = $sensor3."Sensor 3";
+
+
+                                //$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
+                                $sql2=0.050;
+
+                                if($sql2<0.035)
+                                    $id="Bueno";
+                                else if($sql2>0.035 && $sql2<0.070 )
+                                    $id="Regular";
+                                else
+                                    $id="Malo";
+
+                                
+
+                                if($id=="Bueno"){
+                                    
+                                    echo ("addInfoSensor3('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+                                }
+                                else if($id=="Malo"){
+                                    echo ("addInfoSensor3('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+                                }
+                                else if($id=="Regular"){
+                                    echo ("addInfoSensor3('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+                                }
+                                //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+
+                                //query para sensor 4
+                                $sql = "SELECT * FROM sensorParser where id_wasp = 4   ORDER BY sensorParser.timestamp DESC limit 6";
+
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor4 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor4 = $sensor4.
+                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                $sensor4 = $sensor4."Sensor 4 - General";
+
+
+                                echo ("addInfoSensor4('<div style = \'color: #000000\'>".json_encode($sensor4)."</div>');\n");
+
+                                
+
+                                 //query para sensor 5
+                                $sql = "SELECT * FROM sensorParser where id_wasp = 5   ORDER BY sensorParser.timestamp DESC limit 6";
+
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor5 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor5 = $sensor5.
+                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                $sensor5 = $sensor5."Sensor 5 - General";
+
+
+                                echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
+
+                                mysql_close($conn);
+                            ?>
+
+                            
+
+                            
+
+
  
 
-								
-							}	
+                                
+                            }   
 
 
 
@@ -570,33 +977,38 @@
                     
 
     <section id="indice">
-    	<div class="container">
-    		<div class="row">
-    			<h2>Tabla de índice</h2>
-    			<hr> <br>
-    			<div class="table-responsive row">
+        <div class="container">
+            <div class="row">
+                <h2>Tabla de índice</h2>
+                <hr> <br>
+                <div class="table-responsive row">
                     <table class="table">                
                         <tr>
-                            <th> </th>
-                            <th><center>Bueno</center></th>
-                            <th><center>Regular</center></th>
-                            <th><center>Mala</center></th>
+                            <td> </td>
+                            <td width="25%" bgcolor="green">Bueno</td>
+                            <td width="25%" bgcolor="yellow">Regular</td>
+                            <td width="25%" bgcolor="red">Mala</td>
                         </tr>
+
+
                         <tr>
                             <td><center>O<sub>3</sub></center></td>
-                            <td><center>0 - 0.035</center></td>
-                            <td><center>0.036 - 0.070</center></td>
-                            <td><center>0.071 -> </center></td>
+                            <td width="25%" bgcolor="green">0 - 0.035</td>
+                            <td width="25%" bgcolor="yellow">0.036 - 0.070</td>
+                            <td width="25%" bgcolor="red">0.071 -></td>
+                            
                         </tr>
                             <td><center>CO</center></td>
-                            <td><center>0 - 5</center></td>
-                            <td><center>6 - 10</center></td>
-                            <td><center>11 -></center></td>
+                            <td width="25%" bgcolor="green">0 - 5</td>
+                            <td width="25%" bgcolor="yellow">6 - 10</td>
+                            <td width="25%" bgcolor="red">11 -></td>
+                            
                         </tr>
                             <td><center>NO<sub>2</center></sub></td>
-                            <td><center>0 - 0.10</center></td>
-                            <td><center>0.11 - 0.20</center></td>
-                            <td><center>0.21 -></center></td>
+                            <td width="25%" bgcolor="green">0 - 0.10</td>
+                            <td width="25%" bgcolor="yellow">0.11 - 0.20</td>
+                            <td width="25%" bgcolor="red">0.21 -></td>
+                            
                         </tr>
                     </table>
                 </div>
@@ -612,99 +1024,237 @@
                     </thead>
             </table>
             </div>
-    		</div>
-    	<br>
-    	<div class="row">		
-    			<div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
+            </div>
+        <br>
+
+        <section id="Prototipo">
+        <div class="container">
+            <div class="row">
+        
+
+
+             <h2> Prototipo de Hardware <h2>
+                <hr> 
+                <h3> Existen 2 Módulos de Prototipos: Exteriores e Interiores </h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> Módulo de sensores basado en el dispositivo Libelium waspmote programado en Lenguaje C,
+             empleado en la captura de monóxido de carbono (CO), Dióxido de Carbono (CO2), Dióxido de Nitrógeno, 
+             (NO2) Ozono (O3), temperatura, humedad y consumo energético y de luminosidad. </LI>
+            <br><br>
+            
+             </h3>
+
+            <h3> Lo que mide cada prototipo es: </h3>
+            <hr>
+            <h3><LI> Módulo 1 Tiempo – Batería – Temperatura – Humedad. 
+            ( Se divide en dos ramas porque es muy larga). 
+            (Interior) Módulo 1 CO2 – CO – NO2 – O3 
+            (Interior) Módulo 2 Tiempo – Bateria – Humedad – CO2 – CO - NO2 
+            (Exterior) Módulo 3 Tiempo – Batería – CO2 – CO – NO2 – O3 (Interior). </LI>
+            <br><br>
+            
+             </h3>
+             </section>
+
+
+        <div class="row">       
+                <div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
+
                     <h3>Prototipo para exteriores</h3>
                         <hr><br>
+
+
                     
-    				  <ol class="carousel-indicators">
-    					<li data-target="#CarExterior" data-slide-to="0" class="active"></li>
-    					<li data-target="#CarExterior" data-slide-to="1"></li>
-    					<li data-target="#CarExterior" data-slide-to="2"></li>
-    					<li data-target="#CarExterior" data-slide-to="3"></li>
-    					<li data-target="#CarExterior" data-slide-to="4"></li>
-    					<li data-target="#CarExterior" data-slide-to="5"></li>
-    					<li data-target="#CarExterior" data-slide-to="6"></li>
-    					<li data-target="#CarExterior" data-slide-to="7"></li>
-    					<li data-target="#CarExterior" data-slide-to="8"></li>
-    					<li data-target="#CarExterior" data-slide-to="9"></li>
-    				  </ol>
-    				  
-    				  <!-- Carousel items -->
-    				  <div class="carousel-inner">
-    				  <div class="active item"><img  src="img/montajee/1.jpg" alt="montajee1" /></div>
-    					<div class="item"><img src="img/montajee/2.jpg" alt="montajee2" /></div>
-    					<div class="item"><img src="img/montajee/3.jpg" alt="montajee3" /></div>
-    					<div class="item"><img src="img/montajee/4.jpg" alt="montajee4" /></div>
-    					<div class="item"><img src="img/montajee/5.jpg" alt="montajee5" /></div>
-    					<div class="item"><img src="img/montajee/6.jpg" alt="montajee6" /></div>
-    					<div class="item"><img src="img/montajee/7.jpg" alt="montajee7" /></div>
-    					<div class="item"><img src="img/montajee/8.jpg" alt="montajee8" /></div>
-    					<div class="item"><img src="img/montajee/9.jpg" alt="montajee9" /></div>
-    				  
-    				  </div>
-    				  <!-- Carousel nav -->
-    				  <a class="carousel-control left" href="#CarExterior" data-slide="prev">&lsaquo;</a>
-    				  <a class="carousel-control right" href="#CarExterior" data-slide="next">&rsaquo;</a>
-    				</div>
-    				<div class="col-lg-1"> </div>
-    				<div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
-    		          <h3>Prototipo para interiores</h3>
+                      <ol class="carousel-indicators">
+                        <li data-target="#CarExterior" data-slide-to="0" class="active"></li>
+                        <li data-target="#CarExterior" data-slide-to="1"></li>
+                        <li data-target="#CarExterior" data-slide-to="2"></li>
+                        <li data-target="#CarExterior" data-slide-to="3"></li>
+                        <li data-target="#CarExterior" data-slide-to="4"></li>
+                        <li data-target="#CarExterior" data-slide-to="5"></li>
+                        <li data-target="#CarExterior" data-slide-to="6"></li>
+                        <li data-target="#CarExterior" data-slide-to="7"></li>
+                        <li data-target="#CarExterior" data-slide-to="8"></li>
+                        <li data-target="#CarExterior" data-slide-to="9"></li>
+                      </ol>
+                      
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                      <div class="active item"><img  src="img/montajee/1.jpg" alt="montajee1" /></div>
+                        <div class="item"><img src="img/montajee/2.jpg" alt="montajee2" /></div>
+                        <div class="item"><img src="img/montajee/3.jpg" alt="montajee3" /></div>
+                        <div class="item"><img src="img/montajee/4.jpg" alt="montajee4" /></div>
+                        <div class="item"><img src="img/montajee/5.jpg" alt="montajee5" /></div>
+                        <div class="item"><img src="img/montajee/6.jpg" alt="montajee6" /></div>
+                        <div class="item"><img src="img/montajee/7.jpg" alt="montajee7" /></div>
+                        <div class="item"><img src="img/montajee/8.jpg" alt="montajee8" /></div>
+                        <div class="item"><img src="img/montajee/9.jpg" alt="montajee9" /></div>
+                      
+                      </div>
+                      <!-- Carousel nav -->
+                      <a class="carousel-control left" href="#CarExterior" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#CarExterior" data-slide="next">&rsaquo;</a>
+                    </div>
+                    <div class="col-lg-1"> </div>
+                    <div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
+                      <h3>Prototipo para interiores</h3>
                         <hr><br>
-            		  <ol class="carousel-indicators">
-    					<li data-target="#CarInterior" data-slide-to="0" class="active"></li>
-    					<li data-target="#CarInterior" data-slide-to="1"></li>
-    					<li data-target="#CarInterior" data-slide-to="2"></li>
-    					<li data-target="#CarInterior" data-slide-to="3"></li>
-    					<li data-target="#CarInterior" data-slide-to="4"></li>
-    					<li data-target="#CarInterior" data-slide-to="5"></li>
-    					<li data-target="#CarInterior" data-slide-to="6"></li>
-    				  </ol>
-    				  <!-- Carousel items -->
-    				  <div class="carousel-inner">
-    					<div class="active item"><img  src="img/montajei/1.jpg" alt="montajei1" /></div>
-    					<div class="item"><img  src="img/montajei/2.jpg" alt="montajei2" /></div>
-    					<div class="item"><img  src="img/montajei/3.jpg" alt="montajei3" /></div>
-    					<div class="item"><img  src="img/montajei/4.jpg" alt="montajei4" /></div>
-    					<div class="item"><img  src="img/montajei/5.jpg" alt="montajei5" /></div>
-    					<div class="item"><img  src="img/montajei/6.jpg" alt="montajei6" /></div>
-    				  </div>
-    				  <!-- Carousel nav -->
-    				  <a class="carousel-control left" href="#CarInterior" data-slide="prev">&lsaquo;</a>
-    				  <a class="carousel-control right" href="#CarInterior" data-slide="next">&rsaquo;</a>
-    				</div>
-    			</div>
-    		</div>
+                      <ol class="carousel-indicators">
+                        <li data-target="#CarInterior" data-slide-to="0" class="active"></li>
+                        <li data-target="#CarInterior" data-slide-to="1"></li>
+                        <li data-target="#CarInterior" data-slide-to="2"></li>
+                        <li data-target="#CarInterior" data-slide-to="3"></li>
+                        <li data-target="#CarInterior" data-slide-to="4"></li>
+                        <li data-target="#CarInterior" data-slide-to="5"></li>
+                        <li data-target="#CarInterior" data-slide-to="6"></li>
+                      </ol>
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="active item"><img  src="img/montajei/1.jpg" alt="montajei1" /></div>
+                        <div class="item"><img  src="img/montajei/2.jpg" alt="montajei2" /></div>
+                        <div class="item"><img  src="img/montajei/3.jpg" alt="montajei3" /></div>
+                        <div class="item"><img  src="img/montajei/4.jpg" alt="montajei4" /></div>
+                        <div class="item"><img  src="img/montajei/5.jpg" alt="montajei5" /></div>
+                        <div class="item"><img  src="img/montajei/6.jpg" alt="montajei6" /></div>
+                      </div>
+                      <!-- Carousel nav -->
+                      <a class="carousel-control left" href="#CarInterior" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#CarInterior" data-slide="next">&rsaquo;</a>
+                    </div>
+                </div>
+            </div>
 
     </section>
 
 
 <section id="resultados">
-	<div class ="row container">
-			<h2> Resultados del proyecto <h2>
+    <div class ="row container">
+            <h2> Resultados del proyecto <h2>
                 <hr> 
-			<h3> Referencias de articulos</h3>
+            <h3> Referencias de articulos</h3>
             <hr>
 
             <UL type=square>
             <h3><LI> Eduardo Solorzano Alor, Amadeo José Argüelles Cruz and Maria Isabel Cajero Lázaro (2015). An
-					Embbeded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-
-					28, 2015.</LI>
+                    Embbeded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-
+                    28, 2015.</LI>
             <br><br>
             <LI> Miguel Sánchez Meraz, Felipe Ramírez Castañeda and Amadeo J. Argüelles Cruz (2015). Frame standardization for Smart Cities monitoring applications. ISC2-2015, First IEEE International
-				 Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+                 Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
             <br><br>
             <LI>Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmosferic Pollutants
-				with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
-				<br/><br/>
-			<LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.</LI>
+                with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
+                <br/><br/>
+            <LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.</LI>
+
             </h3>
+
+            <h3> Alumnos graduados de Maestría en Ciencias:</h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> 1. Fócil Árias Carolina. Cómputo no convencional para la estimación del desempeño académico. Maestría en Ciencias de la Computación.
+             Centro de Investigación en Computación, IPN. Boleta: A130248. Titulada el día 9/julio/2015 y registrada en el Libro 3 Folio 102. </LI>
+            <br><br>
+            <LI> 2. Velázquez Cruz Jesús Emmanuel. Clasificación de imágenes para el pre-diagnóstico de cáncer de mama aplicando cómputo no convencional Maestría en Ciencias de la Computación.
+             Centro de Investigación en Computación, IPN. Boleta: A130275. Titulado el día 8/julio/2015 y registrado en el Libro 3 Folio 102.</LI>
+            <br><br>
+            <LI>3.  Alfaro Ponce Mariel. Space-time pattern recognition in electrophysiological signals from evoked potentials using dynamic neural networks.
+             Doctorado en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: B110878. Titulada el día 10/julio/2015 y registrada en el Libro 3 Folio 010.</LI>
+                <br/><br/>
+            
+
+            </h3>
+
+            <h3> Tesis en desarrollo:</h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> 1. Solórzano Alór Eduardo. Boleta B140698. Modelos asociativos para monitoreo de contaminantes en ciudades inteligentes.
+             Maestría en Tecnología de Cómputo. CIDETEC. Trabajo iniciado en agosto de 2014.</LI>
+            <br><br>
+            <LI> 2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. 
+            Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.</LI>
+            <br><br>
+           
+
+            </h3>
+
+            <h3> Presentación de trabajos en congresos nacionales e internacionales</h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> 3. Carolina Fócil, Amadeo Argüelles, and Itzamá López. Unconventional Computing to Estimate Academic Performance in University Freshmen Students.
+             CTTC 2015, 11th International Congress Technological Trends in Computing. Mexico City, October 12-16. 2015.</LI>
+            <br><br>
+            <LI> 4. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz and María Isabel Cajero Lázaro. An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference.
+             Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+            <br><br>
+            <LI>5.  Miguel Sánchez Meraz, Felipe Ramírez Castañeda and Amadeo J. Argüelles Cruz. Frame standardization for Smart Cities monitoring applications. 
+            ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+                <br/><br/>
+            <LI> 6. Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz.
+             An Embedded Application System for Data Collection of Atmosferic Pollutants with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
+             <LI>7. Marina Vicario, Amadeo Argüelles, Pilar Gómez, Carlos Hernández Cognitive Footprints: Analytical and Predictive Paradigm for Digital Learning. ICALT 2015, 17th International Conference on Advanced Learning Technologies. 
+             Los Angeles, USA, September 28-29.</LI>
+                <br/><br/>
+
+            </h3>
+
+            <h3> Artículos publicados </h3>
+            <hr>
+             <UL type=square>
+            <h3><LI> 8. Itzamá López-Yáñez, Cornelio Yáñez-Márquez, Oscar Camacho-Nieto, Mario Aldape-Pérez, Amadeo-Jóse Argüelles-Cruz (2015) Collaborative learning in postgraduate level courses. 
+            Computing for Human Learning, Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 938-944. ISSN 0747-5632. F.I. 2.273.</LI>
+            <br><br>
+            <LI> 9. Mario Matamoros de Luis, Amadeo J. Argüelles Cruz, Abril V. Uriarte Arcia, Cornelio Yáñez Márquez.
+             (2015) Green Information Technology Influence on Car Owners Behavior: Considerations for Their Operative Support in Collaborative eLearning and Social Networks. 
+             Computing for Human Learning, Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 792-802. ISSN 0747-5632. F.I. 2.273.</LI>
+            <br><br>
+            <LI>10. Mario Aldape Pérez, Cornelio Yáñez Márquez, Oscar Camacho Nieto, Itzamá López Yáñez, Amadeo José Argüelles Cruz (2015)
+             Collaborative learning based on associative models: application to pattern classification in medical datasets Computing for Human Learning, 
+             Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 771-779. ISSN 0747-5632. F.I. 2.273.</LI>
+                <br/><br/>
+            <LI> 11. M. Alfaro Ponce, I. Salgado, A. Arguelles, I. Chairez (2015) Adaptive Identifier for Uncertain Complex Nonlinear Systems Based on Continuous Neural Networks. Neural Processing Letters. 43:133-153. </LI>
+
+            </h3>
+
+            <h3> Alumnos PIFI (BEIFI)</h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> 12. Carolina Fócil Arias.</LI>
+            <br><br>
+            <LI> 13. Jesús Emmanuel Velazquez Cruz.</LI>
+            <br><br>
+            <LI>14. Laura Elena Sastré García.</LI>
+                <br/><br/>
+            <LI> 15. Monserrat Romero Hernández.</LI>
+            <LI> 16. Sergio Suárez Guerra Iván López Monzón.</LI>
+            <br><br>
+
+            </h3>
+
+             <h3> Sitio www.airmx.net.</h3>
+            <hr>
+
+            <UL type=square>
+            <h3><LI> En este sitio de internet, desarrollado en conjunto con los alumnos tesistas,
+             BEIFI, de servicio social y prácticas profesionales, 
+             se encuentra en detalle la conformación de los módulos que incluyen a los sensores empleados en la medición de los contaminantes, 
+             los componentes principales con los que operan los módulos, una tabla con las mediciones al instante e indicadores de los niveles de acuerdo con la NOM, 
+             la ubicación de los nodos de medición, los participantes del módulo del proyecto, referencias de las publicaciones relativas al trabajo del proyecto, 
+             galería de fotos del prototipo desarrollado y manuales de operación. </LI>
+            <br><br>
+            
+            </h3>
+
+
             </UL>
-		</div>	
+        </div>  
 </section>
-		
 
 
 <br><br>
@@ -764,7 +1314,7 @@
 </span> 
 
 
-	
+    
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
@@ -1019,9 +1569,9 @@
     }); 
     </script>
 
-	<script type="text/javascript" src="engine3/wowslider.js"></script>
-	<script type="text/javascript" src="engine3/script.js"></script>
+    <script type="text/javascript" src="engine3/wowslider.js"></script>
+    <script type="text/javascript" src="engine3/script.js"></script>
 
-	
+    
     </body>
 </html>
