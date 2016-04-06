@@ -128,4 +128,4 @@ DROP temporary TABLE CALIDAD_AIRE_TEMP;
 
 END
 
-call imeca(-1,-1,'Menor', 'O2');
+call imeca(-1,-1,'Menor');
