@@ -500,7 +500,54 @@
                 </div>
                 <div class="row">
                     
+                 <?php
+                                $dbhost =  "localhost" ;
+                                $dbuser = "airmxgen_meshliu";
+                                $dbpass = "libelium2007";
+                                $sensor1 = "";
+                                $sensor2 = "";
+                                $sensor3 = "";
+                                $sensor4 = "";
+                                $sensor5 = "";
+                                $sql2="";
+                                $id="";
 
+                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor1 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }
+
+                                
+                                $numeroSensor = "1";
+                                $numeroElementos = "1";
+                                $ordenamiento = "Menor";
+                                //query para sensor 1
+                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
+                                echo $sql;
+                                $id="";
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor1 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+
+                                    $sensor1 = $sensor1.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} <br/> ";
+                                } 
+
+                                    $sensor1 = $sensor1."Sensor 1";
+                                echo $sensor1;
+                               
+                                mysql_close($conn);
+                            ?>
+
+                            
                    
                 </div> <!-- hay espacio para una imagen mas en este row-->
             </div>
@@ -576,7 +623,7 @@ var goldStar = {
                                     animation: google.maps.Animation.DROP,
                                     icon: {
                                       path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'red',
+                                      fillColor: 'blue',
                                         fillOpacity: 0.8,
                                         scale: 10,
                                         strokeColor: 'black',
@@ -736,13 +783,15 @@ var goldStar = {
                                 $dbhost =  "localhost" ;
                                 $dbuser = "airmxgen_meshliu";
                                 $dbpass = "libelium2007";
-                                $sensor1 = "";
-                                $sensor2 = "";
-                                $sensor3 = "";
-                                $sensor4 = "";
-                                $sensor5 = "";
+                                $sensor1 = " <br/> ";
+                                $sensor2 = " <br/> ";
+                                $sensor3 = " <br/> ";
+                                $sensor4 = " <br/> ";
+                                $sensor5 = " <br/> ";
                                 $sql2="";
                                 $id="";
+
+                                  
 
                                 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
                                 if(! $conn )
@@ -753,9 +802,14 @@ var goldStar = {
 
                                 
                                 
-                                //query para sensor 1
-                                $sql = "SELECT * FROM sensorParser  where id_wasp = 1 ORDER BY sensorParser.timestamp  DESC limit 9 ";
                                 
+                                $numeroSensor = "1";
+                                $numeroElementos = "3";
+                                $ordenamiento = "Menor";
+                                //query para sensor 1
+                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
+                            
+
                                 $id="";
                                 mysql_select_db("airmxgen_meshliu");
                                 $retval = mysql_query( $sql, $conn );
@@ -767,14 +821,15 @@ var goldStar = {
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
 
-                                    $sensor1 = $sensor1.
-                                         " {$row['sensor']}:{$row['value']} <br/> " ;
+                                      $sensor1 = $sensor1.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
                                 echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
+                                while(mysqli_next_result($con));
                                 //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 1....";
-                                $sql1=0.080;
+/*                                $sql1=0.080;
 
                                 if($sql1<0.035)
                                     $id="Bueno";
@@ -797,30 +852,34 @@ var goldStar = {
                                 }
                                 //echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
 
-
+*/
                                 
 
-
-                                //query para sensor 2
-                                $sql = "SELECT * FROM sensorParser  where id_wasp = 2  ORDER BY sensorParser.timestamp  DESC limit 6";
-                                
+                                $numeroSensor = "2";
+                                $numeroElementos = "3";
+                                $ordenamiento = "Menor";
+                                //query para sensor 1
+                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
+                            
+                                echo '<script type="text/javascript">alert("'.$sql.'");</script>';
                                 $id="";                    
                                 mysql_select_db("airmxgen_meshliu");
                                 $retval = mysql_query( $sql, $conn );
                                 if(! $retval )
                                 {
-                                  $sensor1 = "No hay información";
+                                  $sensor2 = "No hay información";
                                   die("Could not get data: ". mysql_error());
                                 }
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
 
-                                    $sensor2 = $sensor2.
-                                         " {$row['sensor']}:{$row['value']} <br/> " ;
+                                     $sensor2 = $sensor2.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
                                 } 
                                     $sensor2 = $sensor2."Sensor 2";
-
-                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
+                                     echo ("addInfoSensor2('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+   
+/*                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
                                 $sql2=0.030;
 
                                 if($sql2<0.035)
@@ -846,11 +905,17 @@ var goldStar = {
 
 
 
+                               
+
                                 
 
-                                //query para sensor 3
-                                $sql = "SELECT * FROM sensorParser where id_wasp  = 3  ORDER BY sensorParser.timestamp DESC limit 6";
-                                
+                                $numeroSensor = "3";
+                                $numeroElementos = "3";
+                                $ordenamiento = "Menor";
+                                //query para sensor 1
+                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
+                            
+  
                                 $id="";
                                 mysql_select_db("airmxgen_meshliu");
                                 $retval = mysql_query( $sql, $conn );
@@ -862,11 +927,11 @@ var goldStar = {
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
 
-                                    $sensor3 = $sensor3.
-                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                     $sensor3 = $sensor3.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
                                 } 
                                 $sensor3 = $sensor3."Sensor 3";
-
+                                echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
 
                                 //$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
                                 $sql2=0.050;
@@ -891,7 +956,7 @@ var goldStar = {
                                     echo ("addInfoSensor3('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
                                 }
                                 //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-
+/*
                                 //query para sensor 4
                                 $sql = "SELECT * FROM sensorParser where id_wasp = 4   ORDER BY sensorParser.timestamp DESC limit 6";
 
@@ -935,7 +1000,7 @@ var goldStar = {
 
 
                                 echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
-
+*/
                                 mysql_close($conn);
                             ?>
 
