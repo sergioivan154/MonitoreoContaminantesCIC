@@ -4,7 +4,7 @@
 -- --------------------------------------------------------------------------------
 DELIMITER $$
 
-CREATE PROCEDURE `airmxgen_meshliu`.`IMECA` ( IN NUMERO_SENSOR INT, IN NUMERO_ELEMENTOS INT,IN ORDENAMIENTO TEXT) -- SI ES 1 ENTONCES (DEL 2016 -> 2015) Y SI ES -1 ENTONCES VALOR POR OMISION
+CREATE PROCEDURE `airmxgen_meshliu`.`IMECA` ( IN NUMERO_SENSOR INT, IN NUMERO_ELEMENTOS INT,IN ORDENAMIENTO TEXT,IN FILTRO TEXT) -- SI ES 1 ENTONCES (DEL 2016 -> 2015) Y SI ES -1 ENTONCES VALOR POR OMISION
 BEGIN
 	
 
@@ -65,7 +65,7 @@ FROM sensorParser where
 sensor IN ('NO2', 'CO', 'O3') and NUMERO_SENSOR = -1 -- caso 1 es cuando quieres todos los elementos para la tabla debajo del mapa
 or sensor IN ('NO2', 'CO', 'O3')   -- caso necesitas un marcador por sensor
 AND sensorParser.id_wasp  = NUMERO_SENSOR
-
+ 
 
 ;
 
@@ -106,21 +106,42 @@ CASE WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 0  AND 50 THEN
 
 FROM CALIDAD_AIRE_TEMP order by fecha ASC ;
 
-
-IF NUMERO_ELEMENTOS < 0 THEN
-	IF lower(ORDENAMIENTO) = 'menor' THEN
-		SELECT * FROM  RESULTADO_TEMP;
-	elseif lower(ORDENAMIENTO) = 'mayor' then
-		SELECT * FROM  RESULTADO_TEMP ORDER BY fecha DESC;
+IF FILTRO = '' THEN
+	IF NUMERO_ELEMENTOS < 0 THEN
+		IF lower(ORDENAMIENTO) = 'menor' THEN
+			SELECT * FROM  RESULTADO_TEMP;
+		elseif lower(ORDENAMIENTO) = 'mayor' then
+			SELECT * FROM  RESULTADO_TEMP ORDER BY fecha DESC;
+		END IF;
+	ELSE 
+		IF lower(ORDENAMIENTO) = 'menor' THEN
+			SELECT * FROM  RESULTADO_TEMP LIMIT NUMERO_ELEMENTOS;
+		elseif lower(ORDENAMIENTO) = 'mayor' then
+			SELECT * FROM  RESULTADO_TEMP ORDER BY fecha DESC LIMIT NUMERO_ELEMENTOS;
+		END IF;
 	END IF;
-ELSE 
-	IF lower(ORDENAMIENTO) = 'menor' THEN
-		SELECT * FROM  RESULTADO_TEMP LIMIT NUMERO_ELEMENTOS;
-	elseif lower(ORDENAMIENTO) = 'mayor' then
-		SELECT * FROM  RESULTADO_TEMP ORDER BY fecha DESC LIMIT NUMERO_ELEMENTOS;
-		
+ELSE
+	IF NUMERO_ELEMENTOS < 0 THEN
+		IF lower(ORDENAMIENTO) = 'menor' THEN
+			SELECT * FROM  RESULTADO_TEMP 
+				WHERE sensor LIKE CONCAT('%', FILTRO, '%')  OR LOWER(Contaminante) like CONCAT('%', LOWER(FILTRO), '%') OR PUNTOS_IMECA like CONCAT('%', FILTRO, '%') OR  LOWER(CALIDAD) like CONCAT('%', LOWER(FILTRO), '%') ;
+		elseif lower(ORDENAMIENTO) = 'mayor' then
+			SELECT * FROM  RESULTADO_TEMP 
+				WHERE sensor LIKE CONCAT('%', FILTRO, '%')  OR LOWER(Contaminante) like CONCAT('%', LOWER(FILTRO), '%') OR PUNTOS_IMECA like CONCAT('%', FILTRO, '%') OR  LOWER(CALIDAD)  like CONCAT('%', LOWER(FILTRO), '%')   
+		 	ORDER BY fecha DESC;
+		END IF;
+	ELSE 
+		IF lower(ORDENAMIENTO) = 'menor' THEN
+			SELECT * FROM  RESULTADO_TEMP 
+				WHERE sensor LIKE CONCAT('%', FILTRO, '%')  OR LOWER(Contaminante) like CONCAT('%', LOWER(FILTRO), '%') OR PUNTOS_IMECA like CONCAT('%', FILTRO, '%') OR  LOWER(CALIDAD)  like CONCAT('%', LOWER(FILTRO), '%')  
+			LIMIT NUMERO_ELEMENTOS;
+		elseif lower(ORDENAMIENTO) = 'mayor' then
+			SELECT * FROM  RESULTADO_TEMP
+				WHERE sensor LIKE CONCAT('%', FILTRO, '%')  OR LOWER(Contaminante) like CONCAT('%', LOWER(FILTRO), '%') OR PUNTOS_IMECA like CONCAT('%', FILTRO, '%') OR  LOWER(CALIDAD)  like CONCAT('%', LOWER(FILTRO), '%')  
+			ORDER BY fecha DESC 
+			LIMIT NUMERO_ELEMENTOS;
+		END IF;
 	END IF;
-	
 END IF;
 
 DROP temporary TABLE RESULTADO_TEMP;
@@ -128,4 +149,4 @@ DROP temporary TABLE CALIDAD_AIRE_TEMP;
 
 END
 
-call imeca(-1,-1,'Menor');
+call imeca(-1,-1,'Menor','');
