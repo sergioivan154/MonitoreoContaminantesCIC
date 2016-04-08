@@ -525,7 +525,6 @@
                                 $ordenamiento = "Menor";
                                 //query para sensor 1
                                 $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
-                                echo $sql;
                                 $id="";
                                 mysql_select_db("airmxgen_meshliu");
                                 $retval = mysql_query( $sql, $conn );
@@ -827,7 +826,9 @@ var goldStar = {
 
                                     $sensor1 = $sensor1."Sensor 1";
                                 echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-                                while(mysqli_next_result($con));
+                                
+
+                                mysql_close($conn);
                                 //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 1....";
 /*                                $sql1=0.080;
 
@@ -852,8 +853,14 @@ var goldStar = {
                                 }
                                 //echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
 
-*/
-                                
+*///puedes replicar esto para los demas sensores? mira abre la conexion y cierrala si?
+  
+                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor2 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }                 //abrir conexion             
 
                                 $numeroSensor = "2";
                                 $numeroElementos = "3";
@@ -861,7 +868,6 @@ var goldStar = {
                                 //query para sensor 1
                                 $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."');";
                             
-                                echo '<script type="text/javascript">alert("'.$sql.'");</script>';
                                 $id="";                    
                                 mysql_select_db("airmxgen_meshliu");
                                 $retval = mysql_query( $sql, $conn );
@@ -877,8 +883,9 @@ var goldStar = {
                                     " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
                                 } 
                                     $sensor2 = $sensor2."Sensor 2";
-                                     echo ("addInfoSensor2('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
-   
+                                     echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                
+                                mysql_close($conn); // cerrar conexion
 /*                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
                                 $sql2=0.030;
 
@@ -904,10 +911,16 @@ var goldStar = {
                                 //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
 
 
-
+*/
                                
 
                                 
+                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor3 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }                 //abrir conexion             
 
                                 $numeroSensor = "3";
                                 $numeroElementos = "3";
@@ -932,8 +945,8 @@ var goldStar = {
                                 } 
                                 $sensor3 = $sensor3."Sensor 3";
                                 echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-
-                                //$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
+                                mysql_close($conn); 
+                                /*$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
                                 $sql2=0.050;
 
                                 if($sql2<0.035)
@@ -1001,7 +1014,6 @@ var goldStar = {
 
                                 echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
 */
-                                mysql_close($conn);
                             ?>
 
                             
@@ -1083,8 +1095,9 @@ var goldStar = {
                         <tr>
                             <th>Fecha</th>
                             <th>Sensor</th>
-                            <th>Rasgo</th>
-                            <th>Valores</th>
+                            <th>Contaminante</th>
+                            <th>IMECA</th>
+                            <th>Calidad</th>
                         </tr>
                     </thead>
             </table>
@@ -1617,7 +1630,7 @@ var goldStar = {
                         type: "post",  // method  , by default get
                         error: function(){  // error handling
                             $(".employee-grid-error").html("");
-                            $("#employee-grid").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
+                            $("#employee-grid").append('<tbody class="employee-grid-error"><tr><th colspan="5">No se encontraron datos</th></tr></tbody>');
                             $("#employee-grid_processing").css("display","none");
                             
                         }
