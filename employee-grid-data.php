@@ -34,7 +34,7 @@ if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
-	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'menor',".$requestData['search']['value']."); ";
+	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor',".$requestData['search']['value']."); ";
 	//$sql.=" FROM sensorParser";
 	//$sql.=" WHERE id_wasp LIKE '".$requestData['search']['value']."%' ";    // $requestData['search']['value'] contains search parameter
 	//$sql.=" OR sensor LIKE '".$requestData['search']['value']."%' ";
@@ -51,7 +51,7 @@ if( !empty($requestData['search']['value']) ) {
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
-	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'menor',''); ";
+	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor',''); ";
 	//$sql = "SELECT timestamp, id_wasp, sensor, value ";
 	//$sql.=" FROM sensorParser";
 	//$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."  desc  LIMIT ".$requestData['start']." ,".$requestData['length']."   ";

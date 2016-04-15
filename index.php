@@ -1018,36 +1018,90 @@ var goldStar = {
         <div class="container">
             <div class="row">
                 <h2>Tabla de índice</h2>
+                <h3>Rangos de los contaminantes</h3>
                 <hr> <br>
                 <div class="table-responsive row">
                     <table class="table">                
                         <tr>
-                            <td> </td>
-                            <td width="25%" bgcolor="green">Bueno</td>
-                            <td width="25%" bgcolor="yellow">Regular</td>
-                            <td width="25%" bgcolor="red">Mala</td>
-                        </tr>
 
+                            <td> </td>
+                            
+                            <td><center>IMECA</center></td>
+                            <td><center>O3 (ppb antigua)</center></td>
+                            <td><center>O3 (ppb Nueva)</center></td>
+                            <td><center>NO2 (ppb)</center></td>
+                            <td><center>CO (ppm)</center></td>
+                            
+                        </tr>
 
                         <tr>
-                            <td><center>O<sub>3</sub></center></td>
-                            <td width="25%" bgcolor="green">0 - 0.035</td>
-                            <td width="25%" bgcolor="yellow">0.036 - 0.070</td>
-                            <td width="25%" bgcolor="red">0.071 -></td>
+
+                            <td><center>Buena</center></td>
+                            <td width="15%" bgcolor="green"><center><font color="White"> 0 - 50 </font></center></td>
+                            <td width="15%" bgcolor="white"><center>0 - 55</center></td>
+                            <td width="15%" bgcolor="white"><center>0 - 70</center></td>
+                            <td width="15%" bgcolor="white"><center>0 - 105</center></td>
+                            <td width="15%" bgcolor="white"><center>0.00 - 5.50</center></td>
                             
                         </tr>
-                            <td><center>CO</center></td>
-                            <td width="25%" bgcolor="green">0 - 5</td>
-                            <td width="25%" bgcolor="yellow">6 - 10</td>
-                            <td width="25%" bgcolor="red">11 -></td>
+                            <td><center>Regular</center></td>
+                            <td width="15%" bgcolor="yellow"><center> 51 - 100 </center></td>
+                            <td width="15%" bgcolor=""><center>56 - 110</center></td>
+                            <td width="15%" bgcolor=""><center>71 - 95</center></td>
+                            <td width="15%" bgcolor=""><center>106 - 210</center></td>
+                            <td width="15%" bgcolor=""><center>5.51 - 11.0</center></td>
                             
                         </tr>
-                            <td><center>NO<sub>2</center></sub></td>
-                            <td width="25%" bgcolor="green">0 - 0.10</td>
-                            <td width="25%" bgcolor="yellow">0.11 - 0.20</td>
-                            <td width="25%" bgcolor="red">0.21 -></td>
+                            <td><center>Mala</center></td>
+                            <td width="15%" bgcolor="brown"><center><font color="White"> 101 - 150 </font></center></td>
+                            <td width="15%" bgcolor=""><center>111 - 165</center></td>
+                            <td width="15%" bgcolor=""><center>96 - 154</center></td>
+                            <td width="15%" bgcolor=""><center>211 - 315</center></td>
+                            <td width="15%" bgcolor=""><center>11.01 - 16.50</center></td>
                             
                         </tr>
+
+                        <td><center>Muy Mala</center></td>
+                            <td width="15%" bgcolor="red"><center><font color="White"> 151 - 200 </font></center></td>
+                            <td width="15%" bgcolor=""><center>166 - 220</center></td>
+                            <td width="15%" bgcolor=""><center>155 - 204</center></td>
+                            <td width="15%" bgcolor=""><center>316 - 420</center></td>
+                            <td width="15%" bgcolor=""><center>16.51 - 22.0</center></td>
+                            
+                        </tr>
+
+                        <td><center>Extremadamente Mala</center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White"> >200 </font></center></td>
+                            <td width="15%" bgcolor=""><center> >220 </center></td>
+                            <td width="15%" bgcolor=""><center> 205 - 404 </center></td>
+                            <td width="15%" bgcolor=""><center> >420 </center></td>
+                            <td width="15%" bgcolor=""><center> >22.0 </center></td>
+                            
+                        </tr>
+
+                        <td><center>Extremadamente Mala</center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White">301 - 400</font></center></td>
+                            <td width="15%" bgcolor=""><center> - </center></td>
+                            <td width="15%" bgcolor=""><center>405 - 504</center></td>
+                            <td width="15%" bgcolor=""> <center> - </center></td>
+                            <td width="15%" bgcolor=""><center> - </center></td>
+                            
+                        </tr>
+
+                        <td><center>Extremadamente Mala</center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White">401 - 500</font></center></td>
+                            <td width="15%" bgcolor=""><center> - </center></td>
+                            <td width="15%" bgcolor=""><center>505 - 604</center></td>
+                            <td width="15%" bgcolor=""><center> - </center></td>
+                            <td width="15%" bgcolor=""><center> - </center></td>
+                            
+                        </tr>
+
+
+
+                    
+
+
                     </table>
                 </div>
                     <div class="row">
@@ -1057,7 +1111,7 @@ var goldStar = {
                             <th>Fecha</th>
                             <th>Sensor</th>
                             <th>Contaminante</th>
-                            <th>IMECA</th>
+                            <th>Valor (NOM's)</th>
                             <th>Calidad</th>
                         </tr>
                     </thead>
