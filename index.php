@@ -1021,12 +1021,11 @@ var goldStar = {
                 <h3>Rangos de los contaminantes</h3>
                 <hr> <br>
                 <div class="table-responsive row">
-                    <table class="table">                
-                        <tr>
-
-                            <td> </td>
-                            
-                            <td><center>IMECA</center></td>
+                    <table class="table">
+                    <tr>
+                    
+                            <td><center>Calificativo</center></td>
+                            <td><center>RANGO IMECA</center></td>
                             <td><center>O3 (ppb antigua)</center></td>
                             <td><center>O3 (ppb Nueva)</center></td>
                             <td><center>NO2 (ppb)</center></td>
