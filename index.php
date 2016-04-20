@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<--ingles
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,34 @@
     <link rel="stylesheet" type="text/css" href="engine3/style.css" />
     <script type="text/javascript" src="engine3/jquery.js"></script>
     <link href="img/profile.png" rel="icon" type="image/jpeg" />
-</head>
+
+ </head>
+
+
+
+<section id="Ingles">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <hr> 
+                    
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class = col-sm-4>
+                <center><src="img/profile.png" onclick="location.href='http://www.airmx.net'" target="_blank" class="btn btn-success btn-lg">Ingles
+            </button></center>
+                <script type="text/javascript">
+if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='http://www.airmx.net'; } else {''}
+
+</script>
+            </div>
+            
+        </div>
+    </section>
 
 <body id="page-top" class="index">
     <!-- Navigation -->
@@ -47,34 +74,36 @@
 
                     
                     <li class="page-scroll">
-                        <a href="#objetivo">Objetivo</a>
+                        <a href="#objective">objective</a>
                     </li>
                     
                     <li class="page-scroll">
-                        <a href="#donde"> Lugar </a>
+                        <a href="#where"> Place </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#participantes"> Participantes </a>
+                        <a href="#participants"> Participants </a>
                     </li>
 
                      <li class="page-scroll">
-                     <a href="#productos">Productos del Modulo</a>
+                     <a href="#products">Products Module</a>
                     </li>
 
                     <li class="page-scroll">
-                     <a href="#resultados">Articulos</a>
+                     <a href="#results">Articles</a>
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#Prototipo">Prototipos</a>
+                        <a href="#Prototype">Prototypes</a>
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#mapa">Mapa</a>
+                        <a href="#map">Map</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#indice">Índice</a>
+                        <a href="#index">Índex</a>
                     </li>
+                    
+                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,17 +111,18 @@
         <!-- /.container-fluid -->
     </nav>
 
+
+
     <!-- Header -->
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a href="#significado" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
+                    <a href="#meaning" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
                         <div class="intro-text">
-                            <span class="name">¿Qué es?</span>
+                            <span class="name">¿What is it?</span>
                             <hr>
-                            <span class="skills">Es un proyecto en el cual se pretende implementar las TIC´s en una area de oportunidad como lo es el tema de los contaminantes atmosféricos, y el consumo de energía eléctrica, para ayudar a los ciudadanos a disfrutar de la información para tomar decisiones. 
-                            Este es el principio de una ciudad inteligente. 
+                            <span class="skills">It is a project which aims to implement ICTs in an area of opportunity as it is the subject of air pollutants, and power consumption to help citizens to enjoy the information to make decisions. This is the beginning of a smart city.
                             </span>
                         </div>
                 </div>
@@ -100,25 +130,24 @@
         </div>
     </header> 
 
-
-    <section id="productos">
+    <section id="products">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Proyecto Multidisciplinario
+                    <h1>Multidisciplinary project
                     </h1>
                     <hr> 
                     <div class="intro-text">
                         <span class="skills">
-                        Desarrollo de un Prototipo de Ciudad Inteligente para la Ciudad de México. 
+                        Development of a Prototype of Smart City for Mexico City. 
                         </span>
                         <br><br><br><br>
-                       <h1>Módulo Proyecto 
+                       <h1>Module Project 
                         </h1>
                         <hr> 
                             <span class="skills">
                             SIP-20150287
-                            Monitoreo de Contaminantes Atmosféricos y Eficiencia Energética en Alumbrado Público.
+                            Monitoring of Air Pollutants and Energy Efficiency in Public Lighting.
                             </span>
                     </div>
                 </div>
@@ -129,27 +158,27 @@
         </div>
     </section>
     
-
     
-    <section id="objetivo">
+    <section id="objective">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>¿Por qué se realizó el proyecto?
+                    <h1>¿Why the project was conducted?
                     </h1>
                     <hr> 
                     <div class="intro-text">
                         <span class="skills">
-                        En los últimos años, el aumento de procesos industriales en los que se involucran la combustión de hidrocarburos, además de la adquisición desmesurada de automóviles (debido a la facilidad del financiamiento de la compra de los mismos), han originado que la contaminación atmosférica aumente considerablemente afectando la salud y el ritmo de las actividades cotidianas de los ciudadanos. 
-                        Debido a eso, es necesario ofrecer al usuario información que le sea útil el entorno en donde se mueve para que tomes sus cuidados y precauciones. 
+                        In recent years, increased industrial processes in which combustion of hydrocarbons are involved, besides the excessive purchase of automobiles (due to the ease of financing the purchase thereof), 
+                        have caused that air pollution increases considerably affecting the health and rhythm of daily activities of citizens. Because of that, 
+                        it is necessary to provide the user with information that is useful environment where it moves to take your care and precautions. 
                         </span>
                         <br><br><br><br>
-                       <h1>Objetivo del proyecto
+                       <h1>Objective of the project
                         </h1>
                         <hr> 
                             <span class="skills">
-                            Desarrollo de un prototipo de monitoreo de contaminantes atmosféricos presentes en el aire y eficiencia de consumo de energía de infraestructura presentes en el aire y eficiencia de consumo de energía de infraestructura
-                            de alumbrado público en la Ciudad de México.
+                            Development of a prototype monitoring of air pollutants present in the air and energy consumption efficiency infrastructure in the air 
+                            and energy consumption efficiency infrastructure public lighting in the City of Mexico.
                             </span>
                     </div>
                 </div>
@@ -169,23 +198,22 @@
                 </button></center>
             </div>
             
+
         </div>
     </section>
     
 
-    <section class="significadologo" id="significado">
+    <section class="significadologo" id="meaning">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Significado del logotipo</h2>
+                    <h2>Meaning of Logo</h2>
                     <hr >
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 skills">
-                    <p>El logotipo es un pictograma Náhuatl que significa Nariz, al igual que el nombre. Se trata de representar el propósito del  modulo que es la detección de contaminantes atmosféricos al “Oler” o sensarlos. 
-                    ¿Por qué se decidió usar la lengua náhuatl?:
-                    Al ser un dispositivo y proyecto desarrollado en México, se decidió tomar parte nuestras raíces, tomando el nombre en Náhualt.
+                    <p>The logo is a pictogram Nahuatl means nose, like the name. This is to represent the purpose of the module that is the detection of atmospheric pollutants to "sniff" or sensarlos. Why we decided to use the Nahuatl language ? Being a device and project developed in Mexico, it was decided to take part our roots, taking the name in Náhualt.
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-1">
@@ -196,11 +224,11 @@
 
 <br>
     <!-- Quienes participan -->
-   <section class="cic" id="donde">
+   <section class="cic" id="where">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Centro de Investigación en Computación
+                    <h2>Computing Research Center
                     </h2>
                     <hr>
                     <div class="container">
@@ -210,8 +238,8 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4 col-lg-offset-2">
-                                <p>El proyecto se realizó en el Centro de Investigación en Computación
-                                    CIC, a partir de Mayo.
+                                <p>The project was conducted at the Center for Computing Research
+                                     CIC, from May.
                                 </p>
                             </div>
                         </div>
@@ -288,24 +316,24 @@
             </div>
     </section>
 
-   <section  id="participantes">
+   <section  id="participants">
         <div class="container">
-            <h2>¿Quiénes participan?</h2>
+            <h2>¿Those who participate?</h2>
             <div class="row">
                 <div class="col-lg-12 text">
-                    <h1>Instituciones</h1>
+                    <h1>Institutions</h1>
                     <hr >
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-1">
                      <p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-                        <br/>El Centro de Investigación en Computación a través del Laboratorio de Redes Neuronales y Cómputo no Convencional
+                        <br/>The Computing Research Center through the Laboratory of Neural Networks and Unconventional Computation
                      </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2">
                     <p><a href="http://www.esimez.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/esime.png" alt=""></a>
-                         <br/>La Escuela Superior de Ingeniería Mecánica Eléctrica unidad Zacatenco                    
+                         <br/>The School of Mechanical and Electrical Engineering unit Zacatenco                   
                     </p>
                 </div>
             </div>
@@ -314,18 +342,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Personas</h2>
+                    <h2>People</h2>
                     <hr >
                 </div>
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: López Monzón Sergio Iván
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIC
-                                        <br/>Correo: sergioivan154@gmail.com
+                                    <h5>Name: López Monzón Sergio Iván
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIC
+                                        <br/>Mail: sergioivan154@gmail.com
                                         <br/>
                                         <br/>
                                     </h5>
@@ -334,11 +362,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: Romero Hernández Monserrat
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIC
-                                        <br/>Correo: rhdezmonserrat@gmail.com
+                                    <h5>Name: Romero Hernández Monserrat
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIC
+                                        <br/>Mail: rhdezmonserrat@gmail.com
                                         <br/>
                                         <br/>
                                     </h5>
@@ -347,11 +375,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: Solórzano Alor Eduardo
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIDETEC
-                                        <br/>Correo: eduardosolorzano22@hotmail.com
+                                    <h5>Name: Solórzano Alor Eduardo
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIDETEC
+                                        <br/>Mail: eduardosolorzano22@hotmail.com
                                         <br/>
                                         <br/>
                                     </h5>
@@ -362,11 +390,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: Argüelles Cruz José Amadeo
-                                        <br/>Cargo: Director del proyecto
-                                        <br/>Aportaciones: Coordinación
-                                        <br/>Institución: CIC
-                                        <br/>Correo: jamadeo@cic.ipn.mx
+                                    <h5>Name: Argüelles Cruz José Amadeo
+                                        <br/>Position: Director del proyecto
+                                        <br/>Contributions: Coordinación
+                                        <br/>Institution: CIC
+                                        <br/>Mail: jamadeo@cic.ipn.mx
                                         <br/>
                                         <br/>
                                     </h5>
@@ -378,11 +406,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: Cajero Lázaro María Isabel
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: UPIICSA
-                                        <br/>Correo: mcajerol0900@alumno.ipn.mx 
+                                    <h5>Name: Cajero Lázaro María Isabel
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: UPIICSA
+                                        <br/>Mail: mcajerol0900@alumno.ipn.mx 
                                         <br/>
                                         <br/>
                                     </h5>
@@ -392,11 +420,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
                         <figcaption>
-                                    <h5>Nombre: Sánchez Meraz Miguel
-                                        <br/>Cargo: Profesor
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: ESIMEZ
-                                        <br/>Correo: mmeraz@ipn.mx              
+                                    <h5>Name: Sánchez Meraz Miguel
+                                        <br/>Position: Profesor
+                                        <br/>Contributions: 
+                                        <br/>Institution: ESIMEZ
+                                        <br/>Mail: mmeraz@ipn.mx              
                                         <br/>
                                         <br/>
                                     </h5>
@@ -409,11 +437,11 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
-                                    <h5>Nombre: Yáñez Márquez Cornelio
-                                        <br/>Cargo: Profesor
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIC 
-                                        <br/>Correo: cyanez@cic.ipn.mx                         
+                                    <h5>Name: Yáñez Márquez Cornelio
+                                        <br/>Position: Profesor
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIC 
+                                        <br/>Mail: cyanez@cic.ipn.mx                         
                                         <br/>
                                         <br/>
                                     </h5>
@@ -426,11 +454,11 @@
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
                        <figcaption>
-                                    <h5>Nombre: Vázquez Bernal Fernando
-                                        <br/>Cargo: Profesor
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIC
-                                        <br/>Correo: fvazquez@mail.cic.ipn.mx                               
+                                    <h5>Name: Vázquez Bernal Fernando
+                                        <br/>Position: Profesor
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIC
+                                        <br/>Mail: fvazquez@mail.cic.ipn.mx                               
                                         <br/>
                                         <br/>
                                     </h5></figcaption>
@@ -440,11 +468,11 @@
 <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
                        <figcaption>
-                                    <h5>Nombre: Fócil Arias Carolina
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: CIC 
-                                        <br/>Correo:                                  
+                                    <h5>Name: Fócil Arias Carolina
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: CIC 
+                                        <br/>Mail:                                  
                                         <br/>
                                         <br/>
                                     </h5>
@@ -460,11 +488,11 @@
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
                        <figcaption>
-                                    <h5>Nombre: Garcia Santana Johnathan
-                                        <br/>Cargo: Participante
-                                        <br/>Aportaciones: 
-                                        <br/>Institución: UTFV 
-                                        <br/>Correo: john.garcia.san@gmail.com                        
+                                    <h5>Name: Garcia Santana Johnathan
+                                        <br/>Position: Participante
+                                        <br/>Contributions: 
+                                        <br/>Institution: UTFV 
+                                        <br/>Mail: john.garcia.san@gmail.com                        
                                         <br/>
                                         <br/>
                                     </h5>
@@ -473,11 +501,11 @@
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
                        <figcaption>
-                                <h5>Nombre: Chávez Argüello Oscar Roberto
-                                    <br/>Cargo: Participante
-                                    <br/>Aportaciones: 
-                                    <br/>Institución: CIC
-                                    <br/>Correo: oscar_arguelloipn@yahoo.com                        
+                                <h5>Name: Chávez Argüello Oscar Roberto
+                                    <br/>Position: Participante
+                                    <br/>Contributions: 
+                                    <br/>Institution: CIC
+                                    <br/>Mail: oscar_arguelloipn@yahoo.com                        
                                     <br/>
                                     <br/>
                                 </h5>
@@ -487,11 +515,11 @@
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
                        <figcaption>
-                                <h5>Nombre: Rosales Pérez Jhairo Margil
-                                    <br/>Cargo: Profesor
-                                    <br/>Aportaciones: 
-                                    <br/>Institución: CIC
-                                    <br/>Correo: jhairo@cic.ipn.mx                      
+                                <h5>Name: Rosales Pérez Jhairo Margil
+                                    <br/>Position: Profesor
+                                    <br/>Contributions: 
+                                    <br/>Institution: CIC
+                                    <br/>Mail: jhairo@cic.ipn.mx                      
                                     <br/>
                                     <br/>
                                 </h5>
@@ -514,7 +542,7 @@
      <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Mapa</h2>
+                    <h2>Map</h2>
         
                     <hr >
                 </div>
@@ -582,7 +610,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Centro de Investigación en Computación'
+                                    title: 'Computing Research Center'
                                   });
 
                                   var infowindow1 = new google.maps.InfoWindow({
@@ -611,7 +639,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Centro de Investigación en Computación'
+                                    title: 'Computing Research Center'
                                   });
 
                                   var infowindow2 = new google.maps.InfoWindow({
@@ -635,7 +663,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Centro de Investigación en Computación'
+                                    title: 'Computing Research Center'
                                   });
 
                                   var infowindow3 = new google.maps.InfoWindow({
@@ -661,7 +689,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Centro de Investigación en Computación'
+                                    title: 'Computing Research Center'
                                   });
 
                                   var infowindow4 = new google.maps.InfoWindow({
@@ -687,7 +715,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Centro de Investigación en Computación'
+                                    title: 'Computing Research Center'
                                   });
 
                                   var infowindow5 = new google.maps.InfoWindow({
@@ -1014,20 +1042,19 @@ var goldStar = {
  
                     
 
-    <section id="indice">
+    <section id="index">
         <div class="container">
             <div class="row">
-                <h2>Tabla de índice</h2>
-                <h3>Rangos de los contaminantes</h3>
+                <h2>Index Table</h2>
+                <h3>Ranges contaminants</h3>
                 <hr> <br>
                 <div class="table-responsive row">
                     <table class="table">
                     <tr>
                     
-                            <td><center>Calificativo</center></td>
-                            <td><center>RANGO IMECA</center></td>
-                            <td><center>O3 (ppb antigua)</center></td>
-                            <td><center>O3 (ppb Nueva)</center></td>
+                            <td><center>Qualifying</center></td>
+                            <td><center>RANK IMECA</center></td>
+                            <td><center>O3 (ppb)</center></td>
                             <td><center>NO2 (ppb)</center></td>
                             <td><center>CO (ppm)</center></td>
                             
@@ -1035,9 +1062,8 @@ var goldStar = {
 
                         <tr>
 
-                            <td><center>Buena</center></td>
+                            <td><center>Good</center></td>
                             <td width="15%" bgcolor="green"><center><font color="White"> 0 - 50 </font></center></td>
-                            <td width="15%" bgcolor="white"><center>0 - 55</center></td>
                             <td width="15%" bgcolor="white"><center>0 - 70</center></td>
                             <td width="15%" bgcolor="white"><center>0 - 105</center></td>
                             <td width="15%" bgcolor="white"><center>0.00 - 5.50</center></td>
@@ -1045,51 +1071,45 @@ var goldStar = {
                         </tr>
                             <td><center>Regular</center></td>
                             <td width="15%" bgcolor="yellow"><center> 51 - 100 </center></td>
-                            <td width="15%" bgcolor=""><center>56 - 110</center></td>
                             <td width="15%" bgcolor=""><center>71 - 95</center></td>
                             <td width="15%" bgcolor=""><center>106 - 210</center></td>
                             <td width="15%" bgcolor=""><center>5.51 - 11.0</center></td>
                             
                         </tr>
-                            <td><center>Mala</center></td>
+                            <td><center>bad</center></td>
                             <td width="15%" bgcolor="brown"><center><font color="White"> 101 - 150 </font></center></td>
-                            <td width="15%" bgcolor=""><center>111 - 165</center></td>
                             <td width="15%" bgcolor=""><center>96 - 154</center></td>
                             <td width="15%" bgcolor=""><center>211 - 315</center></td>
                             <td width="15%" bgcolor=""><center>11.01 - 16.50</center></td>
                             
                         </tr>
 
-                        <td><center>Muy Mala</center></td>
+                        <td><center>Very bad</center></td>
                             <td width="15%" bgcolor="red"><center><font color="White"> 151 - 200 </font></center></td>
-                            <td width="15%" bgcolor=""><center>166 - 220</center></td>
                             <td width="15%" bgcolor=""><center>155 - 204</center></td>
                             <td width="15%" bgcolor=""><center>316 - 420</center></td>
                             <td width="15%" bgcolor=""><center>16.51 - 22.0</center></td>
                             
                         </tr>
 
-                        <td><center>Extremadamente Mala</center></td>
+                        <td><center>extremely Poor</center></td>
                             <td width="15%" bgcolor="purple"><center><font color="White"> >200 </font></center></td>
-                            <td width="15%" bgcolor=""><center> >220 </center></td>
                             <td width="15%" bgcolor=""><center> 205 - 404 </center></td>
                             <td width="15%" bgcolor=""><center> >420 </center></td>
                             <td width="15%" bgcolor=""><center> >22.0 </center></td>
                             
                         </tr>
 
-                        <td><center>Extremadamente Mala</center></td>
+                        <td><center>extremely Poor</center></td>
                             <td width="15%" bgcolor="purple"><center><font color="White">301 - 400</font></center></td>
-                            <td width="15%" bgcolor=""><center> - </center></td>
                             <td width="15%" bgcolor=""><center>405 - 504</center></td>
                             <td width="15%" bgcolor=""> <center> - </center></td>
                             <td width="15%" bgcolor=""><center> - </center></td>
                             
                         </tr>
 
-                        <td><center>Extremadamente Mala</center></td>
+                        <td><center>extremely Poor</center></td>
                             <td width="15%" bgcolor="purple"><center><font color="White">401 - 500</font></center></td>
-                            <td width="15%" bgcolor=""><center> - </center></td>
                             <td width="15%" bgcolor=""><center>505 - 604</center></td>
                             <td width="15%" bgcolor=""><center> - </center></td>
                             <td width="15%" bgcolor=""><center> - </center></td>
@@ -1107,11 +1127,11 @@ var goldStar = {
                 <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
                     <thead>
                         <tr>
-                            <th>Fecha</th>
+                            <th>Date</th>
                             <th>Sensor</th>
-                            <th>Contaminante</th>
-                            <th>Valor (NOM's)</th>
-                            <th>Calidad</th>
+                            <th>Pollutant</th>
+                            <th>Value (NOM's)</th>
+                            <th>Quality</th>
                         </tr>
                     </thead>
             </table>
@@ -1119,32 +1139,26 @@ var goldStar = {
             </div>
         <br>
 
-        <section id="Prototipo">
+        <section id="Prototype">
         <div class="container">
             <div class="row">
         
 
 
-             <h2> Prototipo de Hardware <h2>
+             <h2> Prototype Hardware <h2>
                 <hr> 
-                <h3> Existen 2 Módulos de Prototipos: Exteriores e Interiores </h3>
+                <h3> Exist 2 Prototype modules: Exterior and Interior </h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> Módulo de sensores basado en el dispositivo Libelium waspmote programado en Lenguaje C,
-             empleado en la captura de monóxido de carbono (CO), Dióxido de Carbono (CO2), Dióxido de Nitrógeno, 
-             (NO2) Ozono (O3), temperatura, humedad y consumo energético y de luminosidad. </LI>
+            <h3><LI> Sensor module based on the Libelium Waspmote device programmed in C language, used in the capture of carbon monoxide (CO), carbon dioxide (CO2), nitrogen dioxide, (NO2) Ozone (O3), temperature, humidity and energy consumption and brightness. </LI>
             <br><br>
             
              </h3>
 
-            <h3> Lo que mide cada prototipo es: </h3>
+            <h3> What measures each prototype is: </h3>
             <hr>
-            <h3><LI> Módulo 1 Tiempo – Batería – Temperatura – Humedad. 
-            ( Se divide en dos ramas porque es muy larga). 
-            (Interior) Módulo 1 CO2 – CO – NO2 – O3 
-            (Interior) Módulo 2 Tiempo – Bateria – Humedad – CO2 – CO - NO2 
-            (Exterior) Módulo 3 Tiempo – Batería – CO2 – CO – NO2 – O3 (Interior). </LI>
+            <h3><LI> Module 1 Weather - Battery - Temperature - Humidity.(It is divided into two branches because it is very long). (Interior) Module 1 CO2 - CO - NO2 - O3 (Interior) Module 2 Time - Battery - humidity - CO2 - CO - NO2 (Exterior) Module 3 Time - Battery - CO2 - CO - NO2 - O3 (Interior). </LI>
             <br><br>
             
              </h3>
@@ -1154,7 +1168,7 @@ var goldStar = {
         <div class="row">       
                 <div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
 
-                    <h3>Prototipo para exteriores</h3>
+                    <h3>Outdoor prototype</h3>
                         <hr><br>
 
 
@@ -1221,11 +1235,11 @@ var goldStar = {
     </section>
 
 
-<section id="resultados">
+<section id="results">
     <div class ="row container">
-            <h2> Resultados del proyecto <h2>
+            <h2> Project results <h2>
                 <hr> 
-            <h3> Referencias de articulos</h3>
+            <h3> References articles</h3>
             <hr>
 
             <UL type=square>
@@ -1239,42 +1253,42 @@ var goldStar = {
             <LI>Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmosferic Pollutants
                 with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
                 <br/><br/>
-            <LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.</LI>
+            <LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). System monitoring air pollutants in closed environments with mobile computing and TICs Cancún Quintana Roo, México.</LI>
 
             </h3>
 
-            <h3> Alumnos graduados de Maestría en Ciencias:</h3>
+            <h3> Graduates of Master of Science:</h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 1. Fócil Árias Carolina. Cómputo no convencional para la estimación del desempeño académico. Maestría en Ciencias de la Computación.
-             Centro de Investigación en Computación, IPN. Boleta: A130248. Titulada el día 9/julio/2015 y registrada en el Libro 3 Folio 102. </LI>
+            <h3><LI> 1. Fócil Árias Carolina. Unconventional computation for the estimation of academic performance. Master of Computer Science.
+              Computing Research Center, IPN. Ticket: A130248. Entitled day 9/julio/2015 and recorded in the Book 3 Folio 102. </LI>
             <br><br>
-            <LI> 2. Velázquez Cruz Jesús Emmanuel. Clasificación de imágenes para el pre-diagnóstico de cáncer de mama aplicando cómputo no convencional Maestría en Ciencias de la Computación.
-             Centro de Investigación en Computación, IPN. Boleta: A130275. Titulado el día 8/julio/2015 y registrado en el Libro 3 Folio 102.</LI>
+            <LI> 2. Velázquez Cruz Jesús Emmanuel.Classification of images for pre-diagnosis of breast cancer using unconventional computing Master of Computer Science.
+             Computing Research Center, IPN. Ticket: A130275. Titled day 8/julio/2015 and recorded in the Book 3 Folio 102.</LI>
             <br><br>
             <LI>3.  Alfaro Ponce Mariel. Space-time pattern recognition in electrophysiological signals from evoked potentials using dynamic neural networks.
-             Doctorado en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: B110878. Titulada el día 10/julio/2015 y registrada en el Libro 3 Folio 010.</LI>
+             D. in Computer Science. Computing Research Center, IPN. Ticket: B110878. Entitled day 10/julio/2015 and recorded in the Book 3 Folio 010.</LI>
                 <br/><br/>
             
 
             </h3>
 
-            <h3> Tesis en desarrollo:</h3>
+            <h3> Thesis development:</h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 1. Solórzano Alór Eduardo. Boleta B140698. Modelos asociativos para monitoreo de contaminantes en ciudades inteligentes.
-             Maestría en Tecnología de Cómputo. CIDETEC. Trabajo iniciado en agosto de 2014.</LI>
+            <h3><LI> 1. Solórzano Alór Eduardo. Ticket B140698. Associative models for contaminant monitoring in smart cities.
+             Master of Computer Technology. CIDETEC. Work started in August 2014.</LI>
             <br><br>
-            <LI> 2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. 
-            Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.</LI>
+            <LI> 2. Óscar Chávez Argüello. Ticket A140517. Estimating air quality for ozone and nitrogen dioxide tropospheric indoors.
+             Master of Civil Engineering ESIA. Work started in August 2014.</LI>
             <br><br>
            
 
             </h3>
 
-            <h3> Presentación de trabajos en congresos nacionales e internacionales</h3>
+            <h3> Presentation of papers in national and international conferences</h3>
             <hr>
 
             <UL type=square>
@@ -1295,7 +1309,7 @@ var goldStar = {
 
             </h3>
 
-            <h3> Artículos publicados </h3>
+            <h3> Published Articles </h3>
             <hr>
              <UL type=square>
             <h3><LI> 8. Itzamá López-Yáñez, Cornelio Yáñez-Márquez, Oscar Camacho-Nieto, Mario Aldape-Pérez, Amadeo-Jóse Argüelles-Cruz (2015) Collaborative learning in postgraduate level courses. 
@@ -1313,7 +1327,7 @@ var goldStar = {
 
             </h3>
 
-            <h3> Alumnos PIFI (BEIFI)</h3>
+            <h3> Students PIFI (BEIFI)</h3>
             <hr>
 
             <UL type=square>
@@ -1329,16 +1343,11 @@ var goldStar = {
 
             </h3>
 
-             <h3> Sitio www.airmx.net.</h3>
+             <h3> Site www.airmx.net.</h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> En este sitio de internet, desarrollado en conjunto con los alumnos tesistas,
-             BEIFI, de servicio social y prácticas profesionales, 
-             se encuentra en detalle la conformación de los módulos que incluyen a los sensores empleados en la medición de los contaminantes, 
-             los componentes principales con los que operan los módulos, una tabla con las mediciones al instante e indicadores de los niveles de acuerdo con la NOM, 
-             la ubicación de los nodos de medición, los participantes del módulo del proyecto, referencias de las publicaciones relativas al trabajo del proyecto, 
-             galería de fotos del prototipo desarrollado y manuales de operación. </LI>
+            <h3><LI> This website, developed in conjunction with tesistas students, BEIFI, social service and professional practices, It is in detail the formation of modules including sensors used for measurement of pollutants, the main components that operate the modules, a table with measurements instantly and indicators of levels according to the NOM, the location of the measurement nodes, participants in the project module, references to publications relating to project work, photo gallery prototype developed and operating manuals.</LI>
             <br><br>
             
             </h3>
@@ -1351,7 +1360,7 @@ var goldStar = {
 
 <br><br>
 <span class="mono">
-<div class="container"><h1>Galeria</h1><hr></div>
+<div class="container"><h1>Gallery</h1><hr></div>
 <div id="wowslider-container3">
     <div class="ws_images"><ul>
         <li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
@@ -1413,7 +1422,7 @@ var goldStar = {
             <div class="container">
                 <div class="row">
                     <div class="footer-col">
-                        <h3>Ubicación</h3>
+                        <h3>Location</h3>
                         <p>Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal<br>Col. Nueva Industrial Vallejo,<br>Del. Gustavo A. Madero<br>C.P. 07738, México D.F.</p>
                     </div>
                 </div>
@@ -1452,41 +1461,35 @@ var goldStar = {
                         <div class="modal-body">
                             <h2>Waspmote</h2>
                             <img src="img/dispositivos/waspmote.png " class="img-responsive img-centered" alt="">
-                            <p><class="skills">Es una plataforma de software libre, que además de contar con
-                             características propias como se muestra en la tabla, se caracteriza
-                              por tener una gama de placas diseñadas específicamente para aplicaciones
-                              que involucren obtener datos del entorno que nos rodea.
+                            <p><class="skills">It is a free software platform, which in addition to characteristics as shown in the table, 
+                            it characterized by having a range of plates designed specifically for applications involving obtain data from the environment around us.
                             </p>
                             <p>
-                            El gateway Meshliumel (elemeto en el centro) permite tener una base de
-                            datos local, adempas cuenta con una interfaz gráfica para la visualización
-                            de los datos obtenido por los nodos (elementos que lo rodean).
-                            Cabe mencionar que para acceder al sistema, solo es necesario contar
-                            con una conexión a internet y un navegador.
+                            The gateway Meshlium the (element in center) allows a local database, you adempas has a graphical interface for displaying the data obtained by the nodes (elements that surround it). It is worth mentioning that to access the system, it is only necessary to have an Internet connection and a browser.
                         </p>
                             <div class="table-responsive">
                     <table class="table skills">                
                         <tr>
-                            <th><center>Características</center></th>
+                            <th><center>Characteristics</center></th>
                             <th><center>Waspmote</center></th>
                         </tr>
                         <tr>
-                            <td><center>Microcontrolador</center></td>
+                            <td><center>Microcontroller</center></td>
                             <td><center>ATmega 1281</center></td>
                         </tr>
                             <td><center>SRAM</center></td>
                             <td><center>8 KB</center></td>                            
                         </tr>
-                            <td><center>Almacenamiento<sub>2</center></sub></td>
+                            <td><center>Storage<sub>2</center></sub></td>
                             <td><center>Micro - SD</center></td>                            
                         </tr>
-                            <td><center>Dimensiones<sub>2</center></sub></td>
+                            <td><center>Dimensions<sub>2</center></sub></td>
                             <td><center>76.5 x 51 x 13 mm</center></td>                            
                         </tr>
-                            <td><center>Reloj</center></sub></td>
+                            <td><center>Clock</center></sub></td>
                             <td><center>RTC (32 KHz)</center></td>                            
                         </tr>
-                            <td rowspan="3" style="vertical-align:middle;"><center>Consumo</center></sub></td>
+                            <td rowspan="3" style="vertical-align:middle;"><center>Consumption</center></sub></td>
                             <td><center>ON: 15mA</center></td>                            
                         </tr>
                             <td><center>Sleep: 55 &microA</center></td>                            
@@ -1519,12 +1522,8 @@ var goldStar = {
                         <div class="modal-body">
                             <h2>Gas sensor board</h2>
                             <img src="img/dispositivos/gassensor.png" class="img-responsive img-centered" alt="">
-                            <p><class="skills">Es un tarjeta de conversión de datos analógicos a digital. 
-                                En la imagen podemos apreciar las terminales para los diferentes sensores
-                                de contaminantes atmosféricos, entre los más importantes se encuentran: 
-                                NO<sub>2</sub>, CO, CO<sub>2</sub>, O<sub>3</sub>, VOC (Compuestos 
-                                Orgánicos Volátiles), CH, CH<sub>4</sub>, además de contar con terminales 
-                                para los sensores de humedad y temperatura.
+                            <p><class="skills">It is a card analog to digital conversion data. In the picture we see terminals for different sensors of air pollutants, among the most important are:
+                                NO<sub>2</sub>, CO, CO<sub>2</sub>, O<sub>3</sub>, VOC (compounds Volatile organic), CH, CH<sub>4</sub>, in addition to terminals sensors for humidity and temperature.
                             </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -1545,17 +1544,12 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Módulo de comunicación (Xbee)</h2>
+                            <h2>Communication Module (Xbee)</h2>
                             <img src="img/dispositivos/xbee.png" class="img-responsive img-centered" alt="">
-                            <p>Se desarrolló una red de sensores inalámbricos con 3 nodos, donde
-                                cada nodo es una plataforma de cómputo móvil Waspmote, que es capaz
-                                de comunicarse a través del protocolo ZigBee.
-                                El protocolo ZigBee es ampliamente utilizado en la comunicación entre
-                                nodos de sensores de ciudades inteligentes, ya que la tecnología fue 
-                                desarrollada para la transmición de pequeñas cantidades de datos
-                                sobre una distancia corta con un pequeño consumo de energía.
-                                sus características
-                                Cada nodo envía la información a un gateway llamado Meshlium
+                            <p>a network of wireless sensors was developed with 3 nodes, where each node is a mobile computing platform Waspmote which 
+                            is capable to communicate via the ZigBee protocol. The ZigBee protocol is widely used in 
+                            communication between smart sensor nodes cities, since technology was developed for the transmittance of small amounts of data over a short distance with a small energy consumption.
+                            CARACTERISTICS Each node sends the information to a gateway called Meshlium.
                                 </p>
                                 <br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -1577,7 +1571,7 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Ejemplo de placas Waspmote</h2>
+                            <h2>Example Waspmote plates</h2>
                             <img src="img/dispositivos/entorno.png" class="img-responsive img-centered" alt="">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -1600,11 +1594,7 @@ var goldStar = {
                         <div class="modal-body">
                             <h2>Rider LiPo Pro</h2>
                             <img src="img/dispositivos/lipro.jpg" class="img-responsive img-centered" alt="">
-                            <p>Es una tarjeta de gestión de energía. Identifica el nivel
-                             energético almacenado en la pila; cuando éste valor es bajo, 
-                             permite la recarga de la batería a través del paso de energía
-                             del panel solar; si éste valor es alto, alimenta al módulo
-                             con la energía almacenada en la pila.
+                            <p>It is a card power management. Identifies the level energy stored in the battery; when this value is low, It allows battery recharge through passage of energy the solar panel; If this value is high, it feeds the module with the energy stored in the battery.
                             </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>

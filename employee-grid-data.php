@@ -31,6 +31,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 mysqli_close($conn);
 
 if( !empty($requestData['search']['value']) ) {
+	 
 	// if there is a search parameter
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
