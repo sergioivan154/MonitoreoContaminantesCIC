@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<--ingles
+<?php session_start();
+
+/*Lo que vamos a comprobar primero es si se esta solicitando un nuevo idioma
+Si se esta solicitando, verificamos que el idioma existe tambien*/
+
+
+if(!empty($_REQUEST['local']) && file_exists('lang/'.$_REQUEST['local'].'.php')){
+
+  /*Entonces lo que vamos a hacer ahora, es decir que a partir de ahora,
+  nuestro idioma por defecto es este, al menos que se solicite cambiarlo de vuelta*/
+
+  $_SESSION['local'] = $_REQUEST['local'];
+
+  //y esto lo vamos a usar despues
+  $language = $_REQUEST['local'];
+}
+
+//Sino se solicito ningun idioma, verificamos si quedo guardado en nuestra session
+
+elseif(isset($_SESSION['local']))
+
+  //Lo mismo que antes, esto para despues
+
+  $language = $_SESSION['local'];
+
+//Y por ultimo, si nada de lo anterior cumple los requisitos, cargamos el idioma, que seria el idioma por defecto
+
+else
+  $language = 'es';
+require_once('lang/'.strtolower($language).'.php');
+
+?>
+
+<!--ingles-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +58,7 @@
 
 
 
-<section id="Ingles">
+<!--<section id="Ingles">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
@@ -38,16 +71,16 @@
             <br>
             <br>
             <div class = col-sm-4>
-                <center><src="img/profile.png" onclick="location.href='http://www.airmx.net'" target="_blank" class="btn btn-success btn-lg">Ingles
-            </button></center>
-                <script type="text/javascript">
-if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='http://www.airmx.net'; } else {''}
-
-</script>
+                <center>
+            
+            <div id = "idioma">
+                <src="img/profile.png"  class="btn btn-success btn-lg"><?php echo $text['cambiar_idioma'];?>
+            </div></center>
+                
             </div>
             
         </div>
-    </section>
+    </section>-->
 
 <body id="page-top" class="index">
     <!-- Navigation -->
@@ -65,7 +98,7 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-            <div>
+            <div style="margin: 0 auto; width: 100%;">
                 <!--<ul class="nav navbar-nav navbar-right">-->
                 <ul class="nav navbar-nav ">
                     <li class="hidden">
@@ -74,38 +107,43 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
 
                     
                     <li class="page-scroll">
-                        <a href="#objective">objective</a>
+                        <a href="#objective"><?php echo $text['objetivo'];?></a>
                     </li>
                     
                     <li class="page-scroll">
-                        <a href="#where"> Place </a>
+                        <a href="#where"><?php echo $text['lugar'];?> </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#participants"> Participants </a>
+                        <a href="#participants"> <?php echo $text['Participantes'];?> </a>
                     </li>
 
                      <li class="page-scroll">
-                     <a href="#products">Products Module</a>
+                     <a href="#products"><?php echo $text['Productos_del_Modulo'];?> </a>
                     </li>
 
                     <li class="page-scroll">
-                     <a href="#results">Articles</a>
+                     <a href="#results"><?php echo $text['Articulos'];?> </a>
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#Prototype">Prototypes</a>
+                        <a href="#Prototype"><?php echo $text['Prototipos'];?> </a>
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#map">Map</a>
+                        <a href="#map"><?php echo $text['Mapa'];?> </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#index">Índex</a>
+                        <a href="#index"><?php echo $text['Indice'];?> </a>
                     </li>
+                    
                     
                    
                 </ul>
-            </div>
+                <div id = "idioma" style="margin: 0 auto; width: 100%; text-align: right;">
+                        <src="img/profile.png"  class="btn btn-success btn-lg"><?php echo $text['cambiar_idioma'];?>
+                </div>
+            </div>   
+            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -113,16 +151,16 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
 
 
 
-    <!-- Header -->
+   <!-- Header -->
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <a href="#meaning" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
                         <div class="intro-text">
-                            <span class="name">¿What is it?</span>
+                            <span class="name"><?php echo $text['300'];?> </span>
                             <hr>
-                            <span class="skills">It is a project which aims to implement ICTs in an area of opportunity as it is the subject of air pollutants, and power consumption to help citizens to enjoy the information to make decisions. This is the beginning of a smart city.
+                            <span class="skills"><?php echo $text['301'];?>
                             </span>
                         </div>
                 </div>
@@ -130,25 +168,23 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
         </div>
     </header> 
 
-    <section id="products">
+    <section id=<?php echo $text["productos"];?>
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Multidisciplinary project
+                    <h1><?php echo $text['Proyecto_Multidisciplinario'];?>
                     </h1>
                     <hr> 
                     <div class="intro-text">
                         <span class="skills">
-                        Development of a Prototype of Smart City for Mexico City. 
+                        <?php echo $text['Desarrollo_de_un_Prototipo'];?> 
                         </span>
                         <br><br><br><br>
-                       <h1>Module Project 
-                        </h1>
+                       <h1><?php echo $text['Modulo_Proyecto'];?>
                         <hr> 
-                            <span class="skills">
-                            SIP-20150287
-                            Monitoring of Air Pollutants and Energy Efficiency in Public Lighting.
-                            </span>
+                            <span class="skills"> 
+                            <?php echo $text['prod_texto'];?>
+                    </span>
                     </div>
                 </div>
             </div>
@@ -159,26 +195,23 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
     </section>
     
     
-    <section id="objective">
+    <section id=<?php echo $text['objetivo'];?>
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>¿Why the project was conducted?
+                    <h1><?php echo $text['1'];?>
                     </h1>
                     <hr> 
                     <div class="intro-text">
                         <span class="skills">
-                        In recent years, increased industrial processes in which combustion of hydrocarbons are involved, besides the excessive purchase of automobiles (due to the ease of financing the purchase thereof), 
-                        have caused that air pollution increases considerably affecting the health and rhythm of daily activities of citizens. Because of that, 
-                        it is necessary to provide the user with information that is useful environment where it moves to take your care and precautions. 
+                        <?php echo $text['2'];?>
                         </span>
                         <br><br><br><br>
-                       <h1>Objective of the project
+                       <h1><?php echo $text['3'];?>
                         </h1>
                         <hr> 
                             <span class="skills">
-                            Development of a prototype monitoring of air pollutants present in the air and energy consumption efficiency infrastructure in the air 
-                            and energy consumption efficiency infrastructure public lighting in the City of Mexico.
+                            <?php echo $text['4'];?>
                             </span>
                     </div>
                 </div>
@@ -207,13 +240,13 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Meaning of Logo</h2>
+                    <h2><?php echo $text['5'];?></h2>
                     <hr >
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 skills">
-                    <p>The logo is a pictogram Nahuatl means nose, like the name. This is to represent the purpose of the module that is the detection of atmospheric pollutants to "sniff" or sensarlos. Why we decided to use the Nahuatl language ? Being a device and project developed in Mexico, it was decided to take part our roots, taking the name in Náhualt.
+                    <p><?php echo $text['6'];?>
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-1">
@@ -228,7 +261,7 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Computing Research Center
+                    <h2><?php echo $text['7'];?>
                     </h2>
                     <hr>
                     <div class="container">
@@ -238,8 +271,7 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                         </div>
                         <div class="row">
                             <div class="col-lg-4 col-lg-offset-2">
-                                <p>The project was conducted at the Center for Computing Research
-                                     CIC, from May.
+                                <p><?php echo $text['8'];?>
                                 </p>
                             </div>
                         </div>
@@ -316,24 +348,24 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
             </div>
     </section>
 
-   <section  id="participants">
+   <section  id=<?php echo $text['9'];?>>
         <div class="container">
-            <h2>¿Those who participate?</h2>
+            <h2><?php echo $text['10'];?></h2>
             <div class="row">
                 <div class="col-lg-12 text">
-                    <h1>Institutions</h1>
+                    <h1><?php echo $text['11'];?></h1>
                     <hr >
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-1">
                      <p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-                        <br/>The Computing Research Center through the Laboratory of Neural Networks and Unconventional Computation
+                        <br/><?php echo $text['12'];?>
                      </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2">
                     <p><a href="http://www.esimez.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/esime.png" alt=""></a>
-                         <br/>The School of Mechanical and Electrical Engineering unit Zacatenco                   
+                         <br/><?php echo $text['13'];?>                   
                     </p>
                 </div>
             </div>
@@ -342,18 +374,18 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>People</h2>
+                    <h2><?php echo $text['14'];?></h2>
                     <hr >
                 </div>
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: López Monzón Sergio Iván
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIC
-                                        <br/>Mail: sergioivan154@gmail.com
+                                    <h5><?php echo $text['15'];?>
+                                        <br/><?php echo $text['16'];?>
+                                        <br/><?php echo $text['17'];?> 
+                                        <br/><?php echo $text['18'];?> 
+                                        <br/><?php echo $text['19'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -362,11 +394,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: Romero Hernández Monserrat
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIC
-                                        <br/>Mail: rhdezmonserrat@gmail.com
+                                    <h5><?php echo $text['20'];?>
+                                        <br/><?php echo $text['21'];?>
+                                        <br/><?php echo $text['22'];?> 
+                                        <br/><?php echo $text['23'];?>
+                                        <br/><?php echo $text['24'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -375,11 +407,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: Solórzano Alor Eduardo
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIDETEC
-                                        <br/>Mail: eduardosolorzano22@hotmail.com
+                                    <h5><?php echo $text['25'];?>
+                                        <br/><?php echo $text['26'];?>
+                                        <br/><?php echo $text['27'];?> 
+                                        <br/><?php echo $text['28'];?>
+                                        <br/><?php echo $text['29'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -390,11 +422,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: Argüelles Cruz José Amadeo
-                                        <br/>Position: Director del proyecto
-                                        <br/>Contributions: Coordinación
-                                        <br/>Institution: CIC
-                                        <br/>Mail: jamadeo@cic.ipn.mx
+                                    <h5><?php echo $text['30'];?>
+                                        <br/><?php echo $text['31'];?>
+                                        <br/><?php echo $text['32'];?>
+                                        <br/><?php echo $text['33'];?>
+                                        <br/><?php echo $text['34'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -406,11 +438,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: Cajero Lázaro María Isabel
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: UPIICSA
-                                        <br/>Mail: mcajerol0900@alumno.ipn.mx 
+                                    <h5><?php echo $text['35'];?>
+                                        <br/><?php echo $text['36'];?>
+                                        <br/><?php echo $text['37'];?> 
+                                        <br/><?php echo $text['38'];?>
+                                        <br/><?php echo $text['39'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -420,11 +452,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
                         <figcaption>
-                                    <h5>Name: Sánchez Meraz Miguel
-                                        <br/>Position: Profesor
-                                        <br/>Contributions: 
-                                        <br/>Institution: ESIMEZ
-                                        <br/>Mail: mmeraz@ipn.mx              
+                                    <h5><?php echo $text['40'];?>
+                                        <br/><?php echo $text['41'];?>
+                                        <br/><?php echo $text['42'];?> 
+                                        <br/><?php echo $text['43'];?>
+                                        <br/><?php echo $text['44'];?>             
                                         <br/>
                                         <br/>
                                     </h5>
@@ -437,11 +469,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
-                                    <h5>Name: Yáñez Márquez Cornelio
-                                        <br/>Position: Profesor
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIC 
-                                        <br/>Mail: cyanez@cic.ipn.mx                         
+                                    <h5><br/><?php echo $text['45'];?>
+                                        <br/><br/><?php echo $text['46'];?>
+                                        <br/><br/><?php echo $text['47'];?> 
+                                        <br/><br/><?php echo $text['48'];?>
+                                        <br/><br/><?php echo $text['49'];?>                         
                                         <br/>
                                         <br/>
                                     </h5>
@@ -454,11 +486,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
                        <figcaption>
-                                    <h5>Name: Vázquez Bernal Fernando
-                                        <br/>Position: Profesor
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIC
-                                        <br/>Mail: fvazquez@mail.cic.ipn.mx                               
+                                    <h5>N<?php echo $text['50'];?>
+                                        <br/><?php echo $text['51'];?>
+                                        <br/><?php echo $text['52'];?> 
+                                        <br/><?php echo $text['53'];?>
+                                        <br/><?php echo $text['54'];?>                               
                                         <br/>
                                         <br/>
                                     </h5></figcaption>
@@ -468,11 +500,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
 <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
                        <figcaption>
-                                    <h5>Name: Fócil Arias Carolina
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: CIC 
-                                        <br/>Mail:                                  
+                                    <h5><?php echo $text['55'];?>
+                                        <br/><?php echo $text['56'];?>
+                                        <br/><?php echo $text['57'];?> 
+                                        <br/><?php echo $text['58'];?> 
+                                        <br/><?php echo $text['59'];?>                                 
                                         <br/>
                                         <br/>
                                     </h5>
@@ -488,11 +520,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
                        <figcaption>
-                                    <h5>Name: Garcia Santana Johnathan
-                                        <br/>Position: Participante
-                                        <br/>Contributions: 
-                                        <br/>Institution: UTFV 
-                                        <br/>Mail: john.garcia.san@gmail.com                        
+                                    <h5><?php echo $text['60'];?>
+                                        <br/><?php echo $text['61'];?>
+                                        <br/><?php echo $text['62'];?> 
+                                        <br/><?php echo $text['63'];?> 
+                                        <br/><?php echo $text['64'];?>                        
                                         <br/>
                                         <br/>
                                     </h5>
@@ -501,11 +533,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
                        <figcaption>
-                                <h5>Name: Chávez Argüello Oscar Roberto
-                                    <br/>Position: Participante
-                                    <br/>Contributions: 
-                                    <br/>Institution: CIC
-                                    <br/>Mail: oscar_arguelloipn@yahoo.com                        
+                                <h5><?php echo $text['65'];?> 
+                                    <br/><?php echo $text['66'];?> 
+                                    <br/><?php echo $text['67'];?>  
+                                    <br/><?php echo $text['68'];?> 
+                                    <br/><?php echo $text['69'];?>                         
                                     <br/>
                                     <br/>
                                 </h5>
@@ -515,11 +547,11 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
                        <figcaption>
-                                <h5>Name: Rosales Pérez Jhairo Margil
-                                    <br/>Position: Profesor
-                                    <br/>Contributions: 
-                                    <br/>Institution: CIC
-                                    <br/>Mail: jhairo@cic.ipn.mx                      
+                                <h5><?php echo $text['70'];?> 
+                                    <br/><?php echo $text['71'];?> 
+                                    <br/><?php echo $text['72'];?>  
+                                    <br/><?php echo $text['73'];?> 
+                                    <br/><?php echo $text['74'];?>                       
                                     <br/>
                                     <br/>
                                 </h5>
@@ -542,7 +574,7 @@ if(confirm('Desea leer la pagina en Ingles?, Continuar?')) {parent.location='htt
      <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Map</h2>
+                    <h2><?php echo $text['75'];?></h2>
         
                     <hr >
                 </div>
@@ -610,7 +642,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Computing Research Center'
+                                    title: "<?php echo $text['76'];?>"
                                   });
 
                                   var infowindow1 = new google.maps.InfoWindow({
@@ -639,7 +671,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Computing Research Center'
+                                    title: "<?php echo $text['77'];?>"
                                   });
 
                                   var infowindow2 = new google.maps.InfoWindow({
@@ -663,7 +695,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Computing Research Center'
+                                    title: "<?php echo $text['78'];?>"
                                   });
 
                                   var infowindow3 = new google.maps.InfoWindow({
@@ -689,7 +721,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Computing Research Center'
+                                    title: "<?php echo $text['79'];?>"
                                   });
 
                                   var infowindow4 = new google.maps.InfoWindow({
@@ -715,7 +747,7 @@ var goldStar = {
                                         strokeWeight: 5
                                     },
                                     clickable: true,
-                                    title: 'Computing Research Center'
+                                    title: "<?php echo $text['80'];?>"
                                   });
 
                                   var infowindow5 = new google.maps.InfoWindow({
@@ -800,9 +832,34 @@ var goldStar = {
                                 }
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
+                                     $calidad = $row['CALIDAD'];
+                                     if (strtolower($language) == 'en'){
+                                        switch (strtolower($calidad)) {
+                                            case 'buena':
+                                                $calidad = 'GOOD';
+                                                break;
+                                            case 'regular':
+                                                $calidad = 'REGULAR';
+                                                break;
+                                            case 'mala':
+                                                $calidad = 'BAD';
+                                                break;
+                                            case 'muy mala':
+                                                $calidad = 'VERY BAD';
+                                                break;
 
+                                            case 'extremadamente mala':
+                                                $calidad = 'EXTREMELY BAD';
+                                                break;
+                                            default:
+                                                # code...
+                                                break;
+                                        }
+                                     }
+
+                                     
                                       $sensor1 = $sensor1.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$calidad} <br/> ";
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
@@ -1042,77 +1099,77 @@ var goldStar = {
  
                     
 
-    <section id="index">
+    <section id=<?php echo $text['81'];?>>
         <div class="container">
             <div class="row">
-                <h2>Index Table</h2>
-                <h3>Ranges contaminants</h3>
+                <h2><?php echo $text['82'];?></h2>
+                <h3><?php echo $text['83'];?></h3>
                 <hr> <br>
                 <div class="table-responsive row">
                     <table class="table">
                     <tr>
                     
-                            <td><center>Qualifying</center></td>
-                            <td><center>RANK IMECA</center></td>
-                            <td><center>O3 (ppb)</center></td>
-                            <td><center>NO2 (ppb)</center></td>
-                            <td><center>CO (ppm)</center></td>
+                            <td><center><?php echo $text['84'];?></h3></center></td>
+                            <td><center><?php echo $text['85'];?></h3></center></td>
+                            <td><center><?php echo $text['86'];?></h3></center></td>
+                            <td><center><?php echo $text['87'];?></h3></center></td>
+                            <td><center><?php echo $text['88'];?></h3></center></td>
                             
                         </tr>
 
                         <tr>
 
-                            <td><center>Good</center></td>
-                            <td width="15%" bgcolor="green"><center><font color="White"> 0 - 50 </font></center></td>
-                            <td width="15%" bgcolor="white"><center>0 - 70</center></td>
-                            <td width="15%" bgcolor="white"><center>0 - 105</center></td>
-                            <td width="15%" bgcolor="white"><center>0.00 - 5.50</center></td>
+                            <td><center><?php echo $text['89'];?></center></td>
+                            <td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
+                            <td width="15%" bgcolor="white"><center><?php echo $text['91'];?></center></td>
+                            <td width="15%" bgcolor="white"><center><?php echo $text['92'];?></center></td>
+                            <td width="15%" bgcolor="white"><center><?php echo $text['93'];?></center></td>
                             
                         </tr>
-                            <td><center>Regular</center></td>
-                            <td width="15%" bgcolor="yellow"><center> 51 - 100 </center></td>
-                            <td width="15%" bgcolor=""><center>71 - 95</center></td>
-                            <td width="15%" bgcolor=""><center>106 - 210</center></td>
-                            <td width="15%" bgcolor=""><center>5.51 - 11.0</center></td>
+                            <td><center><?php echo $text['94'];?></center></td>
+                            <td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['96'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['97'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['98'];?></center></td>
                             
                         </tr>
-                            <td><center>bad</center></td>
-                            <td width="15%" bgcolor="brown"><center><font color="White"> 101 - 150 </font></center></td>
-                            <td width="15%" bgcolor=""><center>96 - 154</center></td>
-                            <td width="15%" bgcolor=""><center>211 - 315</center></td>
-                            <td width="15%" bgcolor=""><center>11.01 - 16.50</center></td>
-                            
-                        </tr>
-
-                        <td><center>Very bad</center></td>
-                            <td width="15%" bgcolor="red"><center><font color="White"> 151 - 200 </font></center></td>
-                            <td width="15%" bgcolor=""><center>155 - 204</center></td>
-                            <td width="15%" bgcolor=""><center>316 - 420</center></td>
-                            <td width="15%" bgcolor=""><center>16.51 - 22.0</center></td>
+                            <td><center><?php echo $text['99'];?></center></td>
+                            <td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['101'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['102'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['103'];?></center></td>
                             
                         </tr>
 
-                        <td><center>extremely Poor</center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White"> >200 </font></center></td>
-                            <td width="15%" bgcolor=""><center> 205 - 404 </center></td>
-                            <td width="15%" bgcolor=""><center> >420 </center></td>
-                            <td width="15%" bgcolor=""><center> >22.0 </center></td>
+                        <td><center><?php echo $text['104'];?></center></td>
+                            <td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['106'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['107'];?></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['108'];?></center></td>
                             
                         </tr>
 
-                        <td><center>extremely Poor</center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White">301 - 400</font></center></td>
-                            <td width="15%" bgcolor=""><center>405 - 504</center></td>
-                            <td width="15%" bgcolor=""> <center> - </center></td>
-                            <td width="15%" bgcolor=""><center> - </center></td>
+                        <td><center><?php echo $text['109'];?></center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White"> <?php echo $text['110'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['111'];?> </center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['112'];?> </center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['113'];?> </center></td>
                             
                         </tr>
 
-                        <td><center>extremely Poor</center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White">401 - 500</font></center></td>
-                            <td width="15%" bgcolor=""><center>505 - 604</center></td>
-                            <td width="15%" bgcolor=""><center> - </center></td>
-                            <td width="15%" bgcolor=""><center> - </center></td>
+                        <td><center><?php echo $text['114'];?></center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['115'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['116'];?></center></td>
+                            <td width="15%" bgcolor=""> <center> <?php echo $text['117'];?></center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['118'];?> </center></td>
+                            
+                        </tr>
+
+                        <td><center><?php echo $text['119'];?></center></td>
+                            <td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['120'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center><?php echo $text['121'];?></center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['122'];?> </center></td>
+                            <td width="15%" bgcolor=""><center> <?php echo $text['123'];?> </center></td>
                             
                         </tr>
 
@@ -1127,11 +1184,11 @@ var goldStar = {
                 <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Sensor</th>
-                            <th>Pollutant</th>
-                            <th>Value (NOM's)</th>
-                            <th>Quality</th>
+                            <th><?php echo $text['124'];?></th>
+                            <th><?php echo $text['125'];?></th>
+                            <th><?php echo $text['126'];?></th>
+                            <th><?php echo $text['127'];?></th>
+                            <th><?php echo $text['128'];?></th>
                         </tr>
                     </thead>
             </table>
@@ -1139,26 +1196,26 @@ var goldStar = {
             </div>
         <br>
 
-        <section id="Prototype">
+        <section id=<?php echo $text['129'];?>>
         <div class="container">
             <div class="row">
         
 
 
-             <h2> Prototype Hardware <h2>
+             <h2> <?php echo $text['130'];?><h2>
                 <hr> 
-                <h3> Exist 2 Prototype modules: Exterior and Interior </h3>
+                <h3> <?php echo $text['131'];?> </h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> Sensor module based on the Libelium Waspmote device programmed in C language, used in the capture of carbon monoxide (CO), carbon dioxide (CO2), nitrogen dioxide, (NO2) Ozone (O3), temperature, humidity and energy consumption and brightness. </LI>
+            <h3><LI> <?php echo $text['132'];?> </LI>
             <br><br>
             
              </h3>
 
-            <h3> What measures each prototype is: </h3>
+            <h3> <?php echo $text['133'];?> </h3>
             <hr>
-            <h3><LI> Module 1 Weather - Battery - Temperature - Humidity.(It is divided into two branches because it is very long). (Interior) Module 1 CO2 - CO - NO2 - O3 (Interior) Module 2 Time - Battery - humidity - CO2 - CO - NO2 (Exterior) Module 3 Time - Battery - CO2 - CO - NO2 - O3 (Interior). </LI>
+            <h3><LI> <?php echo $text['134'];?></LI>
             <br><br>
             
              </h3>
@@ -1168,7 +1225,7 @@ var goldStar = {
         <div class="row">       
                 <div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
 
-                    <h3>Outdoor prototype</h3>
+                    <h3><?php echo $text['135'];?></h3>
                         <hr><br>
 
 
@@ -1205,7 +1262,7 @@ var goldStar = {
                     </div>
                     <div class="col-lg-1"> </div>
                     <div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
-                      <h3>Prototipo para interiores</h3>
+                      <h3><?php echo $text['136'];?></h3>
                         <hr><br>
                       <ol class="carousel-indicators">
                         <li data-target="#CarInterior" data-slide-to="0" class="active"></li>
@@ -1235,119 +1292,100 @@ var goldStar = {
     </section>
 
 
-<section id="results">
+<section id=<?php echo $text['137'];?>>
     <div class ="row container">
-            <h2> Project results <h2>
+            <h2> <?php echo $text['138'];?> <h2>
                 <hr> 
-            <h3> References articles</h3>
+            <h3> <?php echo $text['139'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> Eduardo Solorzano Alor, Amadeo José Argüelles Cruz and Maria Isabel Cajero Lázaro (2015). An
-                    Embbeded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-
-                    28, 2015.</LI>
+            <h3><LI> <?php echo $text['140'];?></LI>
             <br><br>
-            <LI> Miguel Sánchez Meraz, Felipe Ramírez Castañeda and Amadeo J. Argüelles Cruz (2015). Frame standardization for Smart Cities monitoring applications. ISC2-2015, First IEEE International
-                 Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+            <LI> <?php echo $text['141'];?></LI>
             <br><br>
-            <LI>Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmosferic Pollutants
-                with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
+            <LI><?php echo $text['142'];?></LI>
                 <br/><br/>
-            <LI> Eduardo Solórzano, Elena Sastré and Amadeo Argüelles (2015). System monitoring air pollutants in closed environments with mobile computing and TICs Cancún Quintana Roo, México.</LI>
+            <LI><?php echo $text['143'];?> </LI>
 
             </h3>
 
-            <h3> Graduates of Master of Science:</h3>
+            <h3> <?php echo $text['144'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 1. Fócil Árias Carolina. Unconventional computation for the estimation of academic performance. Master of Computer Science.
-              Computing Research Center, IPN. Ticket: A130248. Entitled day 9/julio/2015 and recorded in the Book 3 Folio 102. </LI>
+            <h3><LI> <?php echo $text['145'];?> </LI>
             <br><br>
-            <LI> 2. Velázquez Cruz Jesús Emmanuel.Classification of images for pre-diagnosis of breast cancer using unconventional computing Master of Computer Science.
-             Computing Research Center, IPN. Ticket: A130275. Titled day 8/julio/2015 and recorded in the Book 3 Folio 102.</LI>
+            <LI> <?php echo $text['146'];?></LI>
             <br><br>
-            <LI>3.  Alfaro Ponce Mariel. Space-time pattern recognition in electrophysiological signals from evoked potentials using dynamic neural networks.
-             D. in Computer Science. Computing Research Center, IPN. Ticket: B110878. Entitled day 10/julio/2015 and recorded in the Book 3 Folio 010.</LI>
+            <LI><?php echo $text['147'];?></LI>
                 <br/><br/>
             
 
             </h3>
 
-            <h3> Thesis development:</h3>
+            <h3> <?php echo $text['148'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 1. Solórzano Alór Eduardo. Ticket B140698. Associative models for contaminant monitoring in smart cities.
-             Master of Computer Technology. CIDETEC. Work started in August 2014.</LI>
+            <h3><LI> <?php echo $text['149'];?></LI>
             <br><br>
-            <LI> 2. Óscar Chávez Argüello. Ticket A140517. Estimating air quality for ozone and nitrogen dioxide tropospheric indoors.
-             Master of Civil Engineering ESIA. Work started in August 2014.</LI>
+            <LI><?php echo $text['150'];?> </LI>
             <br><br>
            
 
             </h3>
 
-            <h3> Presentation of papers in national and international conferences</h3>
+            <h3><?php echo $text['151'];?> </h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 3. Carolina Fócil, Amadeo Argüelles, and Itzamá López. Unconventional Computing to Estimate Academic Performance in University Freshmen Students.
-             CTTC 2015, 11th International Congress Technological Trends in Computing. Mexico City, October 12-16. 2015.</LI>
+            <h3><LI> <?php echo $text['152'];?></LI>
             <br><br>
-            <LI> 4. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz and María Isabel Cajero Lázaro. An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, First IEEE International Smart Cities Conference.
-             Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+            <LI> <?php echo $text['153'];?></LI>
             <br><br>
-            <LI>5.  Miguel Sánchez Meraz, Felipe Ramírez Castañeda and Amadeo J. Argüelles Cruz. Frame standardization for Smart Cities monitoring applications. 
-            ISC2-2015, First IEEE International Smart Cities Conference. Guadalajara Jalisco, Mexico. October 25-28, 2015.</LI>
+            <LI><?php echo $text['154'];?></LI>
                 <br/><br/>
-            <LI> 6. Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro, and Miguel Sánchez-Meraz.
-             An Embedded Application System for Data Collection of Atmosferic Pollutants with a Classification Approach. MICAI 2015, 14th Mexican International Conference on Artificial Intelligence. Cuernavaca Morelos, México, del 25 al 31 de octubre 2015.</LI>
-             <LI>7. Marina Vicario, Amadeo Argüelles, Pilar Gómez, Carlos Hernández Cognitive Footprints: Analytical and Predictive Paradigm for Digital Learning. ICALT 2015, 17th International Conference on Advanced Learning Technologies. 
-             Los Angeles, USA, September 28-29.</LI>
+            <LI><?php echo $text['155'];?> </LI>
+             <LI><?php echo $text['156'];?></LI>
                 <br/><br/>
 
             </h3>
 
-            <h3> Published Articles </h3>
+            <h3> <?php echo $text['157'];?></h3>
             <hr>
              <UL type=square>
-            <h3><LI> 8. Itzamá López-Yáñez, Cornelio Yáñez-Márquez, Oscar Camacho-Nieto, Mario Aldape-Pérez, Amadeo-Jóse Argüelles-Cruz (2015) Collaborative learning in postgraduate level courses. 
-            Computing for Human Learning, Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 938-944. ISSN 0747-5632. F.I. 2.273.</LI>
+            <h3><LI> <?php echo $text['158'];?></LI>
             <br><br>
-            <LI> 9. Mario Matamoros de Luis, Amadeo J. Argüelles Cruz, Abril V. Uriarte Arcia, Cornelio Yáñez Márquez.
-             (2015) Green Information Technology Influence on Car Owners Behavior: Considerations for Their Operative Support in Collaborative eLearning and Social Networks. 
-             Computing for Human Learning, Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 792-802. ISSN 0747-5632. F.I. 2.273.</LI>
+            <LI><?php echo $text['159'];?> </LI>
             <br><br>
-            <LI>10. Mario Aldape Pérez, Cornelio Yáñez Márquez, Oscar Camacho Nieto, Itzamá López Yáñez, Amadeo José Argüelles Cruz (2015)
-             Collaborative learning based on associative models: application to pattern classification in medical datasets Computing for Human Learning, 
-             Behaviour and Collaboration in the Social and Mobile Networks Era Special Issue. Computers in Human Behavior. 51(B): 771-779. ISSN 0747-5632. F.I. 2.273.</LI>
+            <LI><?php echo $text['160'];?></LI>
                 <br/><br/>
-            <LI> 11. M. Alfaro Ponce, I. Salgado, A. Arguelles, I. Chairez (2015) Adaptive Identifier for Uncertain Complex Nonlinear Systems Based on Continuous Neural Networks. Neural Processing Letters. 43:133-153. </LI>
+            <LI> <?php echo $text['161'];?></LI>
 
             </h3>
 
-            <h3> Students PIFI (BEIFI)</h3>
+            <h3><?php echo $text['162'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> 12. Carolina Fócil Arias.</LI>
+            <h3><LI> <?php echo $text['163'];?></LI>
             <br><br>
-            <LI> 13. Jesús Emmanuel Velazquez Cruz.</LI>
+            <LI> <?php echo $text['164'];?></LI>
             <br><br>
-            <LI>14. Laura Elena Sastré García.</LI>
+            <LI><?php echo $text['165'];?></LI>
                 <br/><br/>
-            <LI> 15. Monserrat Romero Hernández.</LI>
-            <LI> 16. Sergio Suárez Guerra Iván López Monzón.</LI>
+            <LI><?php echo $text['166'];?></LI>
+            <LI> <?php echo $text['167'];?></LI>
             <br><br>
 
             </h3>
 
-             <h3> Site www.airmx.net.</h3>
+             <h3><?php echo $text['168'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> This website, developed in conjunction with tesistas students, BEIFI, social service and professional practices, It is in detail the formation of modules including sensors used for measurement of pollutants, the main components that operate the modules, a table with measurements instantly and indicators of levels according to the NOM, the location of the measurement nodes, participants in the project module, references to publications relating to project work, photo gallery prototype developed and operating manuals.</LI>
+            <h3><LI><?php echo $text['169'];?> </LI>
             <br><br>
             
             </h3>
@@ -1360,7 +1398,7 @@ var goldStar = {
 
 <br><br>
 <span class="mono">
-<div class="container"><h1>Gallery</h1><hr></div>
+<div class="container"><h1><?php echo $text['170'];?></h1><hr></div>
 <div id="wowslider-container3">
     <div class="ws_images"><ul>
         <li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
@@ -1422,8 +1460,8 @@ var goldStar = {
             <div class="container">
                 <div class="row">
                     <div class="footer-col">
-                        <h3>Location</h3>
-                        <p>Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal<br>Col. Nueva Industrial Vallejo,<br>Del. Gustavo A. Madero<br>C.P. 07738, México D.F.</p>
+                        <h3><?php echo $text['171'];?></h3>
+                        <p><?php echo $text['172'];?></p>
                     </div>
                 </div>
             </div>
@@ -1459,49 +1497,48 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Waspmote</h2>
+                            <h2><?php echo $text['173'];?></h2>
                             <img src="img/dispositivos/waspmote.png " class="img-responsive img-centered" alt="">
-                            <p><class="skills">It is a free software platform, which in addition to characteristics as shown in the table, 
-                            it characterized by having a range of plates designed specifically for applications involving obtain data from the environment around us.
+                            <p><class="skills"><?php echo $text['174'];?>
                             </p>
                             <p>
-                            The gateway Meshlium the (element in center) allows a local database, you adempas has a graphical interface for displaying the data obtained by the nodes (elements that surround it). It is worth mentioning that to access the system, it is only necessary to have an Internet connection and a browser.
+                            <?php echo $text['175'];?>
                         </p>
                             <div class="table-responsive">
                     <table class="table skills">                
                         <tr>
-                            <th><center>Characteristics</center></th>
-                            <th><center>Waspmote</center></th>
+                            <th><center><?php echo $text['176'];?></center></th>
+                            <th><center><?php echo $text['177'];?></center></th>
                         </tr>
                         <tr>
-                            <td><center>Microcontroller</center></td>
-                            <td><center>ATmega 1281</center></td>
+                            <td><center><?php echo $text['178'];?></center></td>
+                            <td><center><?php echo $text['179'];?></center></td>
                         </tr>
-                            <td><center>SRAM</center></td>
-                            <td><center>8 KB</center></td>                            
+                            <td><center><?php echo $text['180'];?></center></td>
+                            <td><center><?php echo $text['181'];?></center></td>                            
                         </tr>
-                            <td><center>Storage<sub>2</center></sub></td>
-                            <td><center>Micro - SD</center></td>                            
+                            <td><center><?php echo $text['182'];?><sub><?php echo $text['183'];?></center></sub></td>
+                            <td><center><?php echo $text['184'];?></center></td>                            
                         </tr>
-                            <td><center>Dimensions<sub>2</center></sub></td>
-                            <td><center>76.5 x 51 x 13 mm</center></td>                            
+                            <td><center><?php echo $text['185'];?><sub><?php echo $text['186'];?></center></sub></td>
+                            <td><center><?php echo $text['187'];?></center></td>                            
                         </tr>
-                            <td><center>Clock</center></sub></td>
-                            <td><center>RTC (32 KHz)</center></td>                            
+                            <td><center><?php echo $text['188'];?></center></sub></td>
+                            <td><center><?php echo $text['189'];?></center></td>                            
                         </tr>
-                            <td rowspan="3" style="vertical-align:middle;"><center>Consumption</center></sub></td>
-                            <td><center>ON: 15mA</center></td>                            
+                            <td rowspan="3" style="vertical-align:middle;"><center><?php echo $text['190'];?></center></sub></td>
+                            <td><center><?php echo $text['191'];?></center></td>                            
                         </tr>
-                            <td><center>Sleep: 55 &microA</center></td>                            
+                            <td><center><?php echo $text['192'];?></center></td>                            
                         </tr>
-                            <td><center>Hibernate: 0.07 &microA</center></td>                            
+                            <td><center><?php echo $text['193'];?></center></td>                            
 
                     </table>
                 </div>
             </div>
         <br>
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['194'];?></button>
                         </div>
                     </div>
                 </div>
@@ -1520,12 +1557,11 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Gas sensor board</h2>
+                            <h2><?php echo $text['195'];?></h2>
                             <img src="img/dispositivos/gassensor.png" class="img-responsive img-centered" alt="">
-                            <p><class="skills">It is a card analog to digital conversion data. In the picture we see terminals for different sensors of air pollutants, among the most important are:
-                                NO<sub>2</sub>, CO, CO<sub>2</sub>, O<sub>3</sub>, VOC (compounds Volatile organic), CH, CH<sub>4</sub>, in addition to terminals sensors for humidity and temperature.
+                            <p><class="skills"><?php echo $text['196'];?>
                             </p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['197'];?></button>
                         </div>
                     </div>
                 </div>
@@ -1544,15 +1580,12 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Communication Module (Xbee)</h2>
+                            <h2><?php echo $text['198'];?></h2>
                             <img src="img/dispositivos/xbee.png" class="img-responsive img-centered" alt="">
-                            <p>a network of wireless sensors was developed with 3 nodes, where each node is a mobile computing platform Waspmote which 
-                            is capable to communicate via the ZigBee protocol. The ZigBee protocol is widely used in 
-                            communication between smart sensor nodes cities, since technology was developed for the transmittance of small amounts of data over a short distance with a small energy consumption.
-                            CARACTERISTICS Each node sends the information to a gateway called Meshlium.
+                            <p><?php echo $text['199'];?>
                                 </p>
                                 <br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['200'];?></button>
                         </div>
                     </div>
                 </div>
@@ -1571,9 +1604,9 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Example Waspmote plates</h2>
+                            <h2><?php echo $text['201'];?></h2>
                             <img src="img/dispositivos/entorno.png" class="img-responsive img-centered" alt="">
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php echo $text['202'];?></button>
                         </div>
                     </div>
                 </div>
@@ -1592,11 +1625,11 @@ var goldStar = {
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Rider LiPo Pro</h2>
+                            <h2><?php echo $text['203'];?></h2>
                             <img src="img/dispositivos/lipro.jpg" class="img-responsive img-centered" alt="">
-                            <p>It is a card power management. Identifies the level energy stored in the battery; when this value is low, It allows battery recharge through passage of energy the solar panel; If this value is high, it feeds the module with the energy stored in the battery.
+                            <p><?php echo $text['204'];?>
                             </p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['205'];?></button>
                         </div>
                     </div>
                 </div>
@@ -1650,6 +1683,26 @@ var goldStar = {
          })
     }); 
     </script>
+
+
+    <script type='text/javascript'>
+       $('#idioma').click(function(){
+            
+           var sesdion = "<?php  echo $_SESSION['local'] ; ?>";
+           <?php
+
+                if(!empty($_SESSION['local']) && $_SESSION['local'] == 'es'){
+                    $_SESSION['local'] = 'en';
+                }
+                else{
+                    $_SESSION['local'] = 'es';
+                }
+            ?>
+            location.reload();
+        });
+    </script>
+
+
 
     <script type="text/javascript" src="engine3/wowslider.js"></script>
     <script type="text/javascript" src="engine3/script.js"></script>
