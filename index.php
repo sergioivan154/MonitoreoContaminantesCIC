@@ -135,7 +135,7 @@ require_once('lang/'.strtolower($language).'.php');
                     <li class="page-scroll">
                         <a href="#index"><?php echo $text['Indice'];?> </a>
                     </li>
-                    
+
                     
                    
                 </ul>
@@ -368,6 +368,11 @@ require_once('lang/'.strtolower($language).'.php');
                          <br/><?php echo $text['13'];?>                   
                     </p>
                 </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/cidetec1.jpg" alt=""></a>
+                         <br/><?php echo $text['260'];?>                   
+                    </p>
+                </div>
             </div>
         </div>
         
@@ -486,7 +491,7 @@ require_once('lang/'.strtolower($language).'.php');
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
                        <figcaption>
-                                    <h5>N<?php echo $text['50'];?>
+                                    <h5><?php echo $text['50'];?>
                                         <br/><?php echo $text['51'];?>
                                         <br/><?php echo $text['52'];?> 
                                         <br/><?php echo $text['53'];?>
@@ -917,8 +922,11 @@ var goldStar = {
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
 
+
+
                                      $sensor2 = $sensor2.
                                     " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
+
                                 } 
                                     $sensor2 = $sensor2."Sensor 2";
                                      echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
@@ -981,6 +989,8 @@ var goldStar = {
                                      $sensor3 = $sensor3.
                                     " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
                                 } 
+
+
                                 $sensor3 = $sensor3."Sensor 3";
                                 echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
                                 mysql_close($conn); 
