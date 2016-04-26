@@ -368,8 +368,8 @@ require_once('lang/'.strtolower($language).'.php');
                          <br/><?php echo $text['13'];?>                   
                     </p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" > <img class="img-responsive"   src="img/cidetec1.jpg" alt=""></a>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" ><center> <img class="img-responsive"   src="img/cidetec1.jpg" alt=""></center></a>
                          <br/><?php echo $text['260'];?>                   
                     </p>
                 </div>
@@ -1334,11 +1334,11 @@ var goldStar = {
 
             </h3>
 
-            <h3> <?php echo $text['148'];?></h3>
+            <h3><?php echo $text['148'];?></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> <?php echo $text['149'];?></LI>
+            <h3><LI><?php echo $text['149'];?></LI>
             <br><br>
             <LI><?php echo $text['150'];?> </LI>
             <br><br>
