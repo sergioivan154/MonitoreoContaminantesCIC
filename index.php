@@ -368,60 +368,28 @@ require_once('lang/'.strtolower($language).'.php');
                          <br/><?php echo $text['13'];?>                   
                     </p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-4">
-                    <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" ><center> <img class="img-responsive"   src="img/cidetec1.jpg" alt=""></center></a>
+           </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-1">
+                     <h1><?php echo $text['371'];?></h1>
+                    
+                    <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" ><img class="img-responsive"   src="img/cidetec1.jpg" alt=""></a>
                          <br/><?php echo $text['260'];?>                   
                     </p>
                 </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                <h1><?php echo $text['371'];?></h1>
+                   <p><a href="http://utfv.edomex.gob.mx/" ><img class="img-responsive"   src="img/utfv1.jpg" alt=""></a>
+                         <br/><?php echo $text['261'];?>                    
+                    </p>
+
             </div>
-        </div>
-        
+                   
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2><?php echo $text['14'];?></h2>
                     <hr >
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
-                        <figcaption>
-                                    <h5><?php echo $text['15'];?>
-                                        <br/><?php echo $text['16'];?>
-                                        <br/><?php echo $text['17'];?> 
-                                        <br/><?php echo $text['18'];?> 
-                                        <br/><?php echo $text['19'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
-                        <figcaption>
-                                    <h5><?php echo $text['20'];?>
-                                        <br/><?php echo $text['21'];?>
-                                        <br/><?php echo $text['22'];?> 
-                                        <br/><?php echo $text['23'];?>
-                                        <br/><?php echo $text['24'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
-                        <figcaption>
-                                    <h5><?php echo $text['25'];?>
-                                        <br/><?php echo $text['26'];?>
-                                        <br/><?php echo $text['27'];?> 
-                                        <br/><?php echo $text['28'];?>
-                                        <br/><?php echo $text['29'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
@@ -432,6 +400,64 @@ require_once('lang/'.strtolower($language).'.php');
                                         <br/><?php echo $text['32'];?>
                                         <br/><?php echo $text['33'];?>
                                         <br/><?php echo $text['34'];?>
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
+
+
+                     <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
+                        <figcaption>
+                                    <h5><?php echo $text['40'];?>
+                                        <br/><?php echo $text['41'];?>
+                                        <br/><?php echo $text['42'];?> 
+                                        <br/><?php echo $text['43'];?>
+                                        <br/><?php echo $text['44'];?>             
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+
+                    </div>
+                
+
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
+                        <figcaption>
+                                    <h5><br/><?php echo $text['45'];?>
+                                        <br/><br/><?php echo $text['46'];?>
+                                        <br/><br/><?php echo $text['47'];?> 
+                                        <br/><br/><?php echo $text['48'];?>
+                                        <br/><br/><?php echo $text['49'];?>                         
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+
+                    </div>    
+
+                
+                
+                
+
+                <div class="col-lg-12">
+                    <h2><?php echo $text['375'];?></h2>
+                    <hr >
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
+                        <figcaption>
+                                    <h5><?php echo $text['15'];?>
+                                        <br/><?php echo $text['16'];?>
+                                        <br/><?php echo $text['17'];?> 
+                                        <br/><?php echo $text['18'];?> 
+                                        <br/><?php echo $text['19'];?>
                                         <br/>
                                         <br/>
                                     </h5>
@@ -455,72 +481,36 @@ require_once('lang/'.strtolower($language).'.php');
                     </div>
                 
                     <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
+                        <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['40'];?>
-                                        <br/><?php echo $text['41'];?>
-                                        <br/><?php echo $text['42'];?> 
-                                        <br/><?php echo $text['43'];?>
-                                        <br/><?php echo $text['44'];?>             
+                                    <h5><?php echo $text['20'];?>
+                                        <br/><?php echo $text['21'];?>
+                                        <br/><?php echo $text['22'];?> 
+                                        <br/><?php echo $text['23'];?>
+                                        <br/><?php echo $text['24'];?>
                                         <br/>
                                         <br/>
                                     </h5>
                         </figcaption>
-
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
+              
+              <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                        <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
                         <figcaption>
-                                    <h5><br/><?php echo $text['45'];?>
-                                        <br/><br/><?php echo $text['46'];?>
-                                        <br/><br/><?php echo $text['47'];?> 
-                                        <br/><br/><?php echo $text['48'];?>
-                                        <br/><br/><?php echo $text['49'];?>                         
+                                    <h5><?php echo $text['25'];?>
+                                        <br/><?php echo $text['26'];?>
+                                        <br/><?php echo $text['27'];?> 
+                                        <br/><?php echo $text['28'];?>
+                                        <br/><?php echo $text['29'];?>
                                         <br/>
                                         <br/>
                                     </h5>
                         </figcaption>
-
-                    </div>    
+                    </div>
+                 
                     
                   
-
-                    <div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['50'];?>
-                                        <br/><?php echo $text['51'];?>
-                                        <br/><?php echo $text['52'];?> 
-                                        <br/><?php echo $text['53'];?>
-                                        <br/><?php echo $text['54'];?>                               
-                                        <br/>
-                                        <br/>
-                                    </h5></figcaption>
-
-                    </div>
-
-<div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['55'];?>
-                                        <br/><?php echo $text['56'];?>
-                                        <br/><?php echo $text['57'];?> 
-                                        <br/><?php echo $text['58'];?> 
-                                        <br/><?php echo $text['59'];?>                                 
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-
-                </div>
-                <div class="row">
-                    
-
-                   
 
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
@@ -534,6 +524,38 @@ require_once('lang/'.strtolower($language).'.php');
                                         <br/>
                                     </h5>
                         </figcaption>
+                    </div>
+                    
+                    <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
+                       <figcaption>
+                                    <h5><?php echo $text['55'];?>
+                                        <br/><?php echo $text['56'];?>
+                                        <br/><?php echo $text['57'];?> 
+                                        <br/><?php echo $text['58'];?> 
+                                        <br/><?php echo $text['59'];?>                                 
+                                        <br/>
+                                        <br/>
+                                    </h5>
+                        </figcaption>
+                    </div>
+                    </div>
+
+                
+                <div class="row">
+                    
+                <div class="col-sm-4 portfolio-item">
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
+                       <figcaption>
+                                    <h5><?php echo $text['50'];?>
+                                        <br/><?php echo $text['51'];?>
+                                        <br/><?php echo $text['52'];?> 
+                                        <br/><?php echo $text['53'];?>
+                                        <br/><?php echo $text['54'];?>                               
+                                        <br/>
+                                        <br/>
+                                    </h5></figcaption>
+
                     </div>
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
@@ -562,8 +584,8 @@ require_once('lang/'.strtolower($language).'.php');
                                 </h5>
                         </figcaption>
                     </div>
-                </div>
-                <div class="row">
+                
+                
                     
                    
                 </div> <!-- hay espacio para una imagen mas en este row-->
@@ -838,7 +860,10 @@ var goldStar = {
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
                                      $calidad = $row['CALIDAD'];
+                                     $calidadText = "Calidad";
                                      if (strtolower($language) == 'en'){
+
+                                        $calidadText = "Quality";
                                         switch (strtolower($calidad)) {
                                             case 'buena':
                                                 $calidad = 'GOOD';
@@ -864,7 +889,7 @@ var goldStar = {
 
                                      
                                       $sensor1 = $sensor1.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$calidad} <br/> ";
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
