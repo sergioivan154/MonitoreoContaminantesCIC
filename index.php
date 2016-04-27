@@ -407,11 +407,12 @@ require_once('lang/'.strtolower($language).'.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2><?php echo $text['14'];?></h2>
+                    <!--<h2><?php echo $text['14'];?></h2> -->
                     <hr >
                 </div>
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
+                    <h1><?php echo $text['14'];?></h1>
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
                         <figcaption>
                                     <h5><?php echo $text['30'];?>
@@ -427,6 +428,7 @@ require_once('lang/'.strtolower($language).'.php');
 
 
                      <div class="col-sm-4 portfolio-item">
+                     <h1><?php echo $text['14'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
                         <figcaption>
                                     <h5><?php echo $text['40'];?>
@@ -442,8 +444,10 @@ require_once('lang/'.strtolower($language).'.php');
                     </div>
                 
 
+                 
                 <div class="row">
-                    <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-4 portfolio-item">
+                <h1><?php echo $text['376'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
                                     <h5><br/><?php echo $text['45'];?>
@@ -456,7 +460,37 @@ require_once('lang/'.strtolower($language).'.php');
                                     </h5>
                         </figcaption>
 
-                    </div>    
+                    </div>   
+
+                    <div class="col-sm-4 portfolio-item">
+                    <h1><?php echo $text['377'];?></h1>
+                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
+                       <figcaption>
+                                    <h5><?php echo $text['50'];?>
+                                        <br/><?php echo $text['51'];?>
+                                        <br/><?php echo $text['52'];?> 
+                                        <br/><?php echo $text['53'];?>
+                                        <br/><?php echo $text['54'];?>                               
+                                        <br/>
+                                        <br/>
+                                    </h5></figcaption>
+
+                    </div> 
+
+                     <div class="col-sm-4 portfolio-item">
+                     <h1><?php echo $text['377'];?></h1>
+                       <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
+                       <figcaption>
+                                <h5><?php echo $text['70'];?> 
+                                    <br/><?php echo $text['71'];?> 
+                                    <br/><?php echo $text['72'];?>  
+                                    <br/><?php echo $text['73'];?> 
+                                    <br/><?php echo $text['74'];?>                       
+                                    <br/>
+                                    <br/>
+                                </h5>
+                        </figcaption>
+                    </div>
 
                 
                 
@@ -563,19 +597,7 @@ require_once('lang/'.strtolower($language).'.php');
                 
                 <div class="row">
                     
-                <div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['50'];?>
-                                        <br/><?php echo $text['51'];?>
-                                        <br/><?php echo $text['52'];?> 
-                                        <br/><?php echo $text['53'];?>
-                                        <br/><?php echo $text['54'];?>                               
-                                        <br/>
-                                        <br/>
-                                    </h5></figcaption>
-
-                    </div>
+               
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
                        <figcaption>
@@ -590,19 +612,7 @@ require_once('lang/'.strtolower($language).'.php');
                         </figcaption>
                     </div>
 
-                    <div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
-                       <figcaption>
-                                <h5><?php echo $text['70'];?> 
-                                    <br/><?php echo $text['71'];?> 
-                                    <br/><?php echo $text['72'];?>  
-                                    <br/><?php echo $text['73'];?> 
-                                    <br/><?php echo $text['74'];?>                       
-                                    <br/>
-                                    <br/>
-                                </h5>
-                        </figcaption>
-                    </div>
+                    
                 
                 
                     
