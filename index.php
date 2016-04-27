@@ -1421,72 +1421,86 @@ var goldStar = {
             <h3> <?php echo $text['139'];?></h3>
             <hr>
 
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> ------
+            
             <UL type=square>
-            <h3><LI> <?php echo $text['140'];?></LI>
+            <h3><LI><p align="left"> <?php echo $text['140'];?></p></LI>
             <br><br>
-            <LI> <?php echo $text['141'];?></LI>
+            <LI> <p align="left"><?php echo $text['141'];?></p></LI>
             <br><br>
-            <LI><?php echo $text['142'];?></LI>
+            <LI><p align="left"><?php echo $text['142'];?></p></LI>
                 <br/><br/>
-            <LI><?php echo $text['143'];?> </LI>
-
+            <LI><p align="left"><?php echo $text['143'];?></p></LI>
+            </div> -----
             </h3>
-
+            
+            <!--</div> -->
+            
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> -----
             <h3> <?php echo $text['144'];?></h3>
             <hr>
-
+           
             <UL type=square>
-            <h3><LI> <?php echo $text['145'];?> </LI>
+            <h3><LI> <p align="left"><?php echo $text['145'];?></p></LI>
             <br><br>
-            <LI> <?php echo $text['146'];?></LI>
+            <LI> <p align="left"><?php echo $text['146'];?></p></LI>
             <br><br>
-            <LI><?php echo $text['147'];?></LI>
+            <LI><p align="left"><?php echo $text['147'];?></p></LI>
+            </div> -----
                 <br/><br/>
             
 
-            </h3>
 
-            <h3><?php echo $text['148'];?></h3>
+            </h3>
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> -----
+                    
+
+            <h3><p align="left"><?php echo $text['148'];?></p></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI><?php echo $text['149'];?></LI>
+            <h3><LI><p align="left"><?php echo $text['149'];?></p></LI>
             <br><br>
-            <LI><?php echo $text['150'];?> </LI>
+            <LI><p align="left"><?php echo $text['150'];?></p> </LI>
+            </div>-----------
             <br><br>
            
 
             </h3>
-
             <h3><?php echo $text['151'];?> </h3>
             <hr>
-
             <UL type=square>
             <h3><LI> <?php echo $text['152'];?></LI>
             <br><br>
             <LI> <?php echo $text['153'];?></LI>
             <br><br>
             <LI><?php echo $text['154'];?></LI>
-                <br/><br/>
+            <br/><br/>
             <LI><?php echo $text['155'];?> </LI>
-             <LI><?php echo $text['156'];?></LI>
-                <br/><br/>
+            <LI><?php echo $text['156'];?></LI>
+            <br/><br/>
 
             </h3>
+          
+
+            
 
             <h3> <?php echo $text['157'];?></h3>
             <hr>
-             <UL type=square>
+            <UL type=square>
             <h3><LI> <?php echo $text['158'];?></LI>
             <br><br>
             <LI><?php echo $text['159'];?> </LI>
             <br><br>
             <LI><?php echo $text['160'];?></LI>
-                <br/><br/>
+            <br/><br/>
             <LI> <?php echo $text['161'];?></LI>
-
             </h3>
 
+            
             <h3><?php echo $text['162'];?></h3>
             <hr>
 
@@ -1500,16 +1514,17 @@ var goldStar = {
             <LI><?php echo $text['166'];?></LI>
             <LI> <?php echo $text['167'];?></LI>
             <br><br>
-
             </h3>
-
-             <h3><?php echo $text['168'];?></h3>
+            <h3><?php echo $text['168'];?></h3>
             <hr>
+
 
             <UL type=square>
             <h3><LI><?php echo $text['169'];?> </LI>
             <br><br>
             
+            
+
             </h3>
 
 
