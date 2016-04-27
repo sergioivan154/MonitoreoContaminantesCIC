@@ -384,6 +384,25 @@ require_once('lang/'.strtolower($language).'.php');
                     </p>
 
             </div>
+
+            <div class="col-lg-4 col-lg-offset-1">
+                <h1><?php echo $text['371'];?></h1>
+                   <p><a href="http://www.upiicsa.ipn.mx/Paginas/inicio.aspx" ><img class="img-responsive"   src="img/upiicsa.jpg" alt=""></a>
+                         <br/><?php echo $text['262'];?>                   
+                    </p>
+
+            </div>
+
+            <div class="col-lg-4 col-lg-offset-2">
+                <h1><?php echo $text['371'];?></h1>
+                   <p><a href="http://www.esiaz.ipn.mx/Paginas/Inicio.aspx" ><img class="img-responsive"   src="img/Esia.png" alt=""></a>
+                         <br/><?php echo $text['263'];?>                   
+                    </p>
+
+            </div>
+
+
+
                    
         <div class="container">
             <div class="row">
@@ -525,7 +544,7 @@ require_once('lang/'.strtolower($language).'.php');
                                     </h5>
                         </figcaption>
                     </div>
-                    
+
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
                        <figcaption>
