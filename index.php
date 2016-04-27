@@ -965,13 +965,40 @@ var goldStar = {
                                 }
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
+                                     $calidad = $row['CALIDAD'];
+                                     $calidadText = "Calidad";
+                                     if (strtolower($language) == 'en'){
+
+                                        $calidadText = "Quality";
+                                        switch (strtolower($calidad)) {
+                                            case 'buena':
+                                                $calidad = 'GOOD';
+                                                break;
+                                            case 'regular':
+                                                $calidad = 'REGULAR';
+                                                break;
+                                            case 'mala':
+                                                $calidad = 'BAD';
+                                                break;
+                                            case 'muy mala':
+                                                $calidad = 'VERY BAD';
+                                                break;
+
+                                            case 'extremadamente mala':
+                                                $calidad = 'EXTREMELY BAD';
+                                                break;
+                                            default:
+                                                # code...
+                                                break;
+                                        }
+                                     }
+
+                                     
+                                      $sensor2 = $sensor2.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
 
 
-
-                                     $sensor2 = $sensor2.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
-
-                                } 
+                                     } 
                                     $sensor2 = $sensor2."Sensor 2";
                                      echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
                                 
@@ -1030,8 +1057,39 @@ var goldStar = {
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
 
-                                     $sensor3 = $sensor3.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, Calidad: {$row['CALIDAD']} <br/> ";
+                                    $calidad = $row['CALIDAD'];
+                                     $calidadText = "Calidad";
+                                     if (strtolower($language) == 'en'){
+
+                                        $calidadText = "Quality";
+                                        switch (strtolower($calidad)) {
+                                            case 'buena':
+                                                $calidad = 'GOOD';
+                                                break;
+                                            case 'regular':
+                                                $calidad = 'REGULAR';
+                                                break;
+                                            case 'mala':
+                                                $calidad = 'BAD';
+                                                break;
+                                            case 'muy mala':
+                                                $calidad = 'VERY BAD';
+                                                break;
+
+                                            case 'extremadamente mala':
+                                                $calidad = 'EXTREMELY BAD';
+                                                break;
+                                            default:
+                                                # code...
+                                                break;
+                                        }
+                                     }
+
+                                     
+                                      $sensor3 = $sensor3.
+                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
+
+                                    
                                 } 
 
 
