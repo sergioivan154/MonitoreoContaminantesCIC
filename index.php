@@ -1414,11 +1414,11 @@ var goldStar = {
     </section>
 
 
-<section id=<?php echo $text['137'];?>>
+<section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>-->
     <div class ="row container">
-            <h2> <?php echo $text['138'];?> <h2>
+                <h2> <?php echo $text['138'];?> <h2>
                 <hr> 
-            <h3> <?php echo $text['139'];?></h3>
+            <h3> <?php echo $text['139'];?></h3> <!-- texto largo-->
             <hr>
 
             <div class="row">
@@ -1433,13 +1433,13 @@ var goldStar = {
                 <br/><br/>
             <LI><p align="left"><?php echo $text['143'];?></p></LI>
             </div> -----
-            </h3>
+            </h3> <!-- texto largo-->
             
-            <!--</div> -->
+          
             
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> -----
-            <h3> <?php echo $text['144'];?></h3>
+            <h3> <?php echo $text['144'];?></h3> <!-- texto largo-->
             <hr>
            
             <UL type=square>
@@ -1453,12 +1453,49 @@ var goldStar = {
             
 
 
+            </h3> <!-- texto largo-->
+           
+           
+             <div class="row">
+                    <div class="col-sm-4 portfolio-item"> ----- <!-- texto largo-->
+                    
+            <h3><?php echo $text['151'];?> </h3>
+            <hr>
+            <UL type=square>
+            <h3><LI> <p align="left"><?php echo $text['152'];?></p></LI>
+            <br><br>
+            <LI><p align="left"> <?php echo $text['153'];?></p></LI>
+            <br><br>
+            <LI><p align="left"><?php echo $text['154'];?></p></LI>
+            <br/><br/>
+            <LI><p align="left"><?php echo $text['155'];?></p></LI>
+            <LI><p align="left"><?php echo $text['156'];?></p></LI>
+            </div>-----------
+            <br/><br/>
+
+            </h3> <!-- texto largo-->
+          <div class="row">
+                    <div class="col-sm-4 portfolio-item"> ----- <!-- texto largo-->
+
+            <h3><p align="center"><?php echo $text['157'];?></p></h3>
+            <hr>
+            <UL type=square>
             </h3>
+            <h3><LI><p align="right"> <?php echo $text['158'];?></p></LI>
+            <br><br>
+            <LI><p align="right"><?php echo $text['159'];?></p> </LI>
+            <br><br>
+            <LI><p align="right"><?php echo $text['160'];?></p></LI>
+            <br/><br/>
+            <LI> <p align="right"><?php echo $text['161'];?></p></LI>
+            </div>-----------
+            </h3> <!-- texto largo-->
+
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> -----
                     
 
-            <h3><p align="left"><?php echo $text['148'];?></p></h3>
+            <h3><?php echo $text['148'];?></h3>
             <hr>
 
             <UL type=square>
@@ -1470,57 +1507,32 @@ var goldStar = {
            
 
             </h3>
-            <h3><?php echo $text['151'];?> </h3>
-            <hr>
-            <UL type=square>
-            <h3><LI> <?php echo $text['152'];?></LI>
-            <br><br>
-            <LI> <?php echo $text['153'];?></LI>
-            <br><br>
-            <LI><?php echo $text['154'];?></LI>
-            <br/><br/>
-            <LI><?php echo $text['155'];?> </LI>
-            <LI><?php echo $text['156'];?></LI>
-            <br/><br/>
-
-            </h3>
-          
-
-            
-
-            <h3> <?php echo $text['157'];?></h3>
-            <hr>
-            <UL type=square>
-            <h3><LI> <?php echo $text['158'];?></LI>
-            <br><br>
-            <LI><?php echo $text['159'];?> </LI>
-            <br><br>
-            <LI><?php echo $text['160'];?></LI>
-            <br/><br/>
-            <LI> <?php echo $text['161'];?></LI>
-            </h3>
 
             
             <h3><?php echo $text['162'];?></h3>
             <hr>
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> -----
 
             <UL type=square>
-            <h3><LI> <?php echo $text['163'];?></LI>
+            <h3><LI><p align="left"> <?php echo $text['163'];?></p></LI>
             <br><br>
-            <LI> <?php echo $text['164'];?></LI>
+            <LI><p align="left"><?php echo $text['164'];?></p></LI>
             <br><br>
-            <LI><?php echo $text['165'];?></LI>
+            <LI><p align="left"><?php echo $text['165'];?></p></LI>
                 <br/><br/>
-            <LI><?php echo $text['166'];?></LI>
-            <LI> <?php echo $text['167'];?></LI>
+            <LI><p align="left"><?php echo $text['166'];?></p></LI>
+            <LI><p align="left"><?php echo $text['167'];?></p></LI>
             <br><br>
+            </div>-----------
             </h3>
             <h3><?php echo $text['168'];?></h3>
             <hr>
+            
 
 
             <UL type=square>
-            <h3><LI><?php echo $text['169'];?> </LI>
+            <h3><LI><p align="left"><?php echo $text['169'];?></p></LI>
             <br><br>
             
             
@@ -1531,6 +1543,7 @@ var goldStar = {
             </UL>
         </div>  
 </section>
+
 
 
 <br><br>
