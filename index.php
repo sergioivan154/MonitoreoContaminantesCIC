@@ -1414,7 +1414,7 @@ var goldStar = {
     </section>
 
 
-<section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>-->
+<section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
     <div class ="row container">
                 <h2> <?php echo $text['138'];?> <h2>
                 <hr> 
@@ -1425,13 +1425,13 @@ var goldStar = {
                     <div class="col-sm-4 portfolio-item"> ------
             
             <UL type=square>
-            <h3><LI><p align="left"> <?php echo $text['140'];?></p></LI>
+            <h3><LI><span class="skills"><p align="left"> <?php echo $text['140'];?></p></span></LI>
             <br><br>
-            <LI> <p align="left"><?php echo $text['141'];?></p></LI>
+            <LI> <span class="skills"><p align="left"><?php echo $text['141'];?></p></span></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['142'];?></p></LI>
+            <LI><span class="skills"><p align="left"><?php echo $text['142'];?></p></span></LI>
                 <br/><br/>
-            <LI><p align="left"><?php echo $text['143'];?></p></LI>
+            <LI><span class="skills"><p align="left"><?php echo $text['143'];?></p></span></LI>
             </div> -----
             </h3> <!-- texto largo-->
             
@@ -1477,17 +1477,17 @@ var goldStar = {
           <div class="row">
                     <div class="col-sm-4 portfolio-item"> ----- <!-- texto largo-->
 
-            <h3><p align="center"><?php echo $text['157'];?></p></h3>
+            <h3><span class="skills"><p align="center"><?php echo $text['157'];?></p></span></h3>
             <hr>
             <UL type=square>
             </h3>
-            <h3><LI><p align="right"> <?php echo $text['158'];?></p></LI>
+            <h3><LI><span class="skills"><p align="left"> <?php echo $text['158'];?></p></span></LI>
             <br><br>
-            <LI><p align="right"><?php echo $text['159'];?></p> </LI>
+            <LI><span class="skills"><p align="left"><?php echo $text['159'];?></p></span> </LI>
             <br><br>
-            <LI><p align="right"><?php echo $text['160'];?></p></LI>
+            <LI><span class="skills"><p align="left"><?php echo $text['160'];?></p></span></LI>
             <br/><br/>
-            <LI> <p align="right"><?php echo $text['161'];?></p></LI>
+            <LI> <span class="skills"><p align="left"><?php echo $text['161'];?></p></span></LI>
             </div>-----------
             </h3> <!-- texto largo-->
 
