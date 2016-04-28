@@ -1415,7 +1415,9 @@ var goldStar = {
 
 
 <section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
-    <div class ="row container">
+    <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
+            <div class="row">
+                <div class="col-lg-12">
                 <h2> <?php echo $text['138'];?> <h2>
                 <hr> 
             <h3> <?php echo $text['139'];?></h3> <!-- texto largo-->
@@ -1481,13 +1483,13 @@ var goldStar = {
             <hr>
             <UL type=square>
             </h3>
-            <h3><LI><span class="skills"><p align="left"> <?php echo $text['158'];?></p></span></LI>
+            <h3><LI><span class="skills"><p align="right"> <?php echo $text['158'];?></p></span></LI>
             <br><br>
-            <LI><span class="skills"><p align="left"><?php echo $text['159'];?></p></span> </LI>
+            <LI><span class="skills"><p align="right"><?php echo $text['159'];?></p></span> </LI>
             <br><br>
-            <LI><span class="skills"><p align="left"><?php echo $text['160'];?></p></span></LI>
+            <LI><span class="skills"><p align="right"><?php echo $text['160'];?></p></span></LI>
             <br/><br/>
-            <LI> <span class="skills"><p align="left"><?php echo $text['161'];?></p></span></LI>
+            <LI> <span class="skills"><p align="right"><?php echo $text['161'];?></p></span></LI>
             </div>-----------
             </h3> <!-- texto largo-->
 
@@ -1538,9 +1540,10 @@ var goldStar = {
             
 
             </h3>
-
-
             </UL>
+            </div> 
+            </div> 
+            </div> 
         </div>  
 </section>
 
