@@ -137,11 +137,11 @@ require_once('lang/'.strtolower($language).'.php');
                     </li>
 
                     
-                   
-                </ul>
-                <div id = "idioma" style="margin: 0 auto; width: 100%; text-align: right;">
-                        <src="img/profile.png"  class="btn btn-success btn-lg"><?php echo $text['cambiar_idioma'];?>
+                    <div id = "idioma" style="margin: 0 auto; width: 100%; text-align: left;">
+                        <src="img/profile.png"  class="fondo2.jpg btn-lg"><?php echo $text['cambiar_idioma'];?>
                 </div>
+                </ul>
+                
             </div>   
             
             <!-- /.navbar-collapse -->
@@ -484,8 +484,8 @@ require_once('lang/'.strtolower($language).'.php');
                                 <h5><?php echo $text['70'];?> 
                                     <br/><?php echo $text['71'];?> 
                                     <br/><?php echo $text['72'];?>  
-                                    <br/><?php echo $text['73'];?> 
-                                    <br/><?php echo $text['74'];?>                       
+                                    <br/><?php echo $text['380'];?> 
+                                    <br/><?php echo $text['73'];?>                       
                                     <br/>
                                     <br/>
                                 </h5>
@@ -893,12 +893,15 @@ var goldStar = {
                                      if (strtolower($language) == 'en'){
 
                                         $calidadText = "Quality";
+                                        //$imagen = "img/Buena.jpg"; para agregar imagenes en los sensores
                                         switch (strtolower($calidad)) {
                                             case 'buena':
                                                 $calidad = 'GOOD';
+                                                $imagen = "img/Buena.jpg";
                                                 break;
                                             case 'regular':
                                                 $calidad = 'REGULAR';
+                                                $imagen = "Mala.jpg";
                                                 break;
                                             case 'mala':
                                                 $calidad = 'BAD';
@@ -922,7 +925,6 @@ var goldStar = {
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
-                                echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
                                 
 
                                 mysql_close($conn);
@@ -983,9 +985,11 @@ var goldStar = {
                                         switch (strtolower($calidad)) {
                                             case 'buena':
                                                 $calidad = 'GOOD';
+                                                $imagen = "img/Buena.jpg";
                                                 break;
                                             case 'regular':
                                                 $calidad = 'REGULAR';
+                                                 $imagen = "Mala.jpg";
                                                 break;
                                             case 'mala':
                                                 $calidad = 'BAD';
@@ -1010,7 +1014,8 @@ var goldStar = {
 
                                      } 
                                     $sensor2 = $sensor2."Sensor 2";
-                                     echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
+                                     //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n"); para ajustar el tamaño, color de imagenes
+                                    echo ("addInfoSensor2('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");
                                 
                                 mysql_close($conn); // cerrar conexion
 /*                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
@@ -1075,9 +1080,11 @@ var goldStar = {
                                         switch (strtolower($calidad)) {
                                             case 'buena':
                                                 $calidad = 'GOOD';
+                                                $imagen = "img/excelente.jpg";
                                                 break;
                                             case 'regular':
                                                 $calidad = 'REGULAR';
+                                                $imagen = "Mala.jpg";
                                                 break;
                                             case 'mala':
                                                 $calidad = 'BAD';
@@ -1104,7 +1111,7 @@ var goldStar = {
 
 
                                 $sensor3 = $sensor3."Sensor 3";
-                                echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+                                //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
                                 mysql_close($conn); 
                                 /*$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
                                 $sql2=0.050;
@@ -1417,30 +1424,31 @@ var goldStar = {
 <section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
     <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
             <div class="row">
-                <div class="col-lg-12">
-                <h2> <?php echo $text['138'];?> <h2>
-                <hr> 
+            <div class="col-lg-12">
+            <h2> <?php echo $text['138'];?> <h2>
+                 
+            <hr>
             <h3> <?php echo $text['139'];?></h3> <!-- texto largo-->
             <hr>
 
             <div class="row">
-                    <div class="col-sm-4 portfolio-item"> ------
-            
+                    <div class="col-sm-4 portfolio-item"> 
+
             <UL type=square>
-            <h3><LI><span class="skills"><p align="left"> <?php echo $text['140'];?></p></span></LI>
+            <h3><LI><p align="left"> <?php echo $text['140'];?></p></LI>
             <br><br>
-            <LI> <span class="skills"><p align="left"><?php echo $text['141'];?></p></span></LI>
+            <LI><p align="left"><?php echo $text['141'];?></p></LI>
             <br><br>
-            <LI><span class="skills"><p align="left"><?php echo $text['142'];?></p></span></LI>
-                <br/><br/>
-            <LI><span class="skills"><p align="left"><?php echo $text['143'];?></p></span></LI>
-            </div> -----
+            <LI><p align="left"><?php echo $text['142'];?></p></LI>
+            <br/><br/>
+            <LI><p align="left"><?php echo $text['143'];?></p></LI>
+            </div> 
             </h3> <!-- texto largo-->
             
           
             
             <div class="row">
-                    <div class="col-sm-4 portfolio-item"> -----
+                    <div class="col-sm-4 portfolio-item"> 
             <h3> <?php echo $text['144'];?></h3> <!-- texto largo-->
             <hr>
            
@@ -1450,7 +1458,7 @@ var goldStar = {
             <LI> <p align="left"><?php echo $text['146'];?></p></LI>
             <br><br>
             <LI><p align="left"><?php echo $text['147'];?></p></LI>
-            </div> -----
+            </div> 
                 <br/><br/>
             
 
@@ -1458,8 +1466,8 @@ var goldStar = {
             </h3> <!-- texto largo-->
            
            
-             <div class="row">
-                    <div class="col-sm-4 portfolio-item"> ----- <!-- texto largo-->
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
                     
             <h3><?php echo $text['151'];?> </h3>
             <hr>
@@ -1472,49 +1480,46 @@ var goldStar = {
             <br/><br/>
             <LI><p align="left"><?php echo $text['155'];?></p></LI>
             <LI><p align="left"><?php echo $text['156'];?></p></LI>
-            </div>-----------
+            </div>
             <br/><br/>
 
             </h3> <!-- texto largo-->
-          <div class="row">
-                    <div class="col-sm-4 portfolio-item"> ----- <!-- texto largo-->
+            <div class="row">
+                    <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
 
-            <h3><span class="skills"><p align="center"><?php echo $text['157'];?></p></span></h3>
+            <h3><p align="center"><?php echo $text['157'];?></p></h3>
             <hr>
             <UL type=square>
             </h3>
-            <h3><LI><span class="skills"><p align="right"> <?php echo $text['158'];?></p></span></LI>
+            <h3><LI><p align="left"> <?php echo $text['158'];?></p></LI>
             <br><br>
-            <LI><span class="skills"><p align="right"><?php echo $text['159'];?></p></span> </LI>
+            <LI><p align="left"><?php echo $text['159'];?></p></LI>
             <br><br>
-            <LI><span class="skills"><p align="right"><?php echo $text['160'];?></p></span></LI>
+            <LI><p align="left"><?php echo $text['160'];?></p></LI>
             <br/><br/>
-            <LI> <span class="skills"><p align="right"><?php echo $text['161'];?></p></span></LI>
-            </div>-----------
+            <LI><p align="left"><?php echo $text['161'];?></p></LI>
+            </div>
             </h3> <!-- texto largo-->
 
             <div class="row">
-                    <div class="col-sm-4 portfolio-item"> -----
+                    <div class="col-sm-4 portfolio-item"> 
                     
 
             <h3><?php echo $text['148'];?></h3>
             <hr>
-
             <UL type=square>
             <h3><LI><p align="left"><?php echo $text['149'];?></p></LI>
             <br><br>
             <LI><p align="left"><?php echo $text['150'];?></p> </LI>
-            </div>-----------
+            </div>
             <br><br>
-           
-
             </h3>
 
             
             <h3><?php echo $text['162'];?></h3>
             <hr>
             <div class="row">
-                    <div class="col-sm-4 portfolio-item"> -----
+                    <div class="col-sm-4 portfolio-item"> 
 
             <UL type=square>
             <h3><LI><p align="left"> <?php echo $text['163'];?></p></LI>
@@ -1522,23 +1527,22 @@ var goldStar = {
             <LI><p align="left"><?php echo $text['164'];?></p></LI>
             <br><br>
             <LI><p align="left"><?php echo $text['165'];?></p></LI>
-                <br/><br/>
+            <br/><br/>
             <LI><p align="left"><?php echo $text['166'];?></p></LI>
             <LI><p align="left"><?php echo $text['167'];?></p></LI>
             <br><br>
-            </div>-----------
+            </div>
             </h3>
-            <h3><?php echo $text['168'];?></h3>
+            
+            <h3><p align="center"><?php echo $text['168'];?></p></h3>
             <hr>
             
-
-
             <UL type=square>
             <h3><LI><p align="left"><?php echo $text['169'];?></p></LI>
             <br><br>
             
             
-
+            
             </h3>
             </UL>
             </div> 
