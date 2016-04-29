@@ -925,6 +925,7 @@ var goldStar = {
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
+                                echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
                                 
 
                                 mysql_close($conn);
@@ -1112,6 +1113,7 @@ var goldStar = {
 
                                 $sensor3 = $sensor3."Sensor 3";
                                 //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+                                echo ("addInfoSensor3('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
                                 mysql_close($conn); 
                                 /*$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
                                 $sql2=0.050;
