@@ -69,7 +69,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["sensor"];
 	$nestedData[] = $row["Contaminante"];
 	$nestedData[] = $row["PUNTOS_IMECA"];
-	$nestedData[] = $row["CALIDAD"];
+	$nestedData[] = $row["CALIDAD"]; //tiene que ir el if de la linea
 	
 	$data[] = $nestedData;
 }
