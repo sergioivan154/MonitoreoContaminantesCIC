@@ -624,14 +624,11 @@ require_once('lang/'.strtolower($language).'.php');
     </section>
 
     <section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
+        <header>
         <div class="container">
             <div class="row">
-            <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                        <div class="intro-text">
+            <div class="col-lg-12">
+            <div class="intro-text">
                             <h2> La calidad del aire en interiores  <h2>
                             <hr> 
                 
@@ -648,30 +645,7 @@ require_once('lang/'.strtolower($language).'.php');
             <h3><LI><div style="text-transform: none">Los óxidos de nitrógeno entran por las emisiones del humo de los vehículos de trafico cercano, se calcula que los rangos de emisión (entrada / salida) )del NO2  van de los 0.88 a 1 </div></LI>
             <br><br>
             </h3>
-                            
-                            
-                        </div>
-                </div>
-            </div>
-        </div>
-    </header> 
-
-            <h2> La calidad del aire en interiores  <h2>
-                <hr> 
-                
-            <UL type=square>
-            <h3><LI><div style="text-transform: none">"La calidad del aire en interiores es un factor muy importante a considerar para el desempeño estudiantil. La contaminación en interiores pueden acarrear problemas de salud así como también, problemas cognitivos."
-            <p>Referencia Stafford, T. M. (2015). Indoor air quality and academic performance. Journal of Environmental Economics and Management, 70, 34–50. doi:10.1016/j.jeem.2014.11.002</p></div></LI>
-            <br><br>
-            </h3>
-
-            <h3><LI><div style="text-transform: none">"Los gases más comunes encontrados dentro del aire de la escuela son CO, SO2 y NO2. Los óxidos de nitrógeno (NOx suma tanto monóxido de nitrógeno (NO) como dióxido (NO2)) entra principalmente desde fuera, proveniente del trafico vehicular, pero muchos estudios revelan que los mas importantes factores que incrementan la exposición al NOx, sobre la postura de los edificios en la ciudad, es el uso de las aplicaciones de gas para  calefacción. La exposición a grandes concentraciones de NO2 representa un factor de riesgo modesto para enfermedades respiratorias.</div></LI>
-            <br><br>
-            </h3>
-
-            <h3><LI><div style="text-transform: none">Los óxidos de nitrógeno entran por las emisiones del humo de los vehículos de trafico cercano, se calcula que los rangos de emisión (entrada / salida) )del NO2  van de los 0.88 a 1 </div></LI>
-            <br><br>
-            </h3>
+                        
 
             <div class="table-responsive row">
                     <table class="table">
@@ -716,6 +690,12 @@ require_once('lang/'.strtolower($language).'.php');
             <h3><LI><div style="text-transform: none">Uno de los problemas más comunes al tener un aire contaminado son los problemas respiratorios, los cuales ocasionan la mayoría de las ausencias, de hecho estudios recientes muestran que aproximadamente el 3.4 porciento de aulas con aire arriba del estándar estipulado pueden reducir la asistencia de los alumnos producto de enfermedades respiratorias.</div></LI>
             <br><br>
             </h3>
+             
+                   </div>
+                </div>
+            </div>
+        </div>
+    </header> 
 
              </section> <!-- en esta seccion se declara la informacion de la calidad del aire -->
 
@@ -1521,9 +1501,15 @@ var goldStar = {
 
 
 <section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
+    <header>
     <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
             <div class="row">
             <div class="col-lg-12">
+            <!--<header>
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12"> -->
+            <div class="intro-text">
             <h2> <?php echo $text['138'];?> <h2>
                  
             <hr>
@@ -1647,7 +1633,12 @@ var goldStar = {
             </div> 
             </div> 
             </div> 
-        </div>  
+        </div> 
+        </div>
+                </div>
+            </div>
+        </div>
+    </header>  
 </section>
 
 
