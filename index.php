@@ -450,11 +450,7 @@ require_once('lang/'.strtolower($language).'.php');
                 <h1><?php echo $text['376'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
-                                    <h5><br/><?php echo $text['45'];?>
-                                        <br/><br/><?php echo $text['46'];?>
-                                        <br/><br/><?php echo $text['47'];?> 
-                                        <br/><br/><?php echo $text['48'];?>
-                                        <br/><br/><?php echo $text['49'];?>                         
+                                    <h5><br/><?php echo $text['45'];?><p><br/><br/><?php echo $text['46'];?></p><p><br/><br/><?php echo $text['47'];?></p><p><br/><br/><?php echo $text['48'];?></p><p><br/><br/><?php echo $text['49'];?></p>                         
                                         <br/>
                                         <br/>
                                     </h5>
@@ -622,17 +618,84 @@ require_once('lang/'.strtolower($language).'.php');
         </div>
 
     </section>
+
+    <section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
+        <div class="container">
+            <div class="row">
+            <h2> La calidad del aire en interiores  <h2>
+                <hr> 
+                
+            <UL type=square>
+            <h3><LI><div style="text-transform: none">"La calidad del aire en interiores es un factor muy importante a considerar para el desempeño estudiantil. La contaminación en interiores pueden acarrear problemas de salud así como también, problemas cognitivos."
+            <p>Referencia Stafford, T. M. (2015). Indoor air quality and academic performance. Journal of Environmental Economics and Management, 70, 34–50. doi:10.1016/j.jeem.2014.11.002</p></div></LI>
+            <br><br>
+            </h3>
+
+            <h3><LI><div style="text-transform: none">"Los gases más comunes encontrados dentro del aire de la escuela son CO, SO2 y NO2. Los óxidos de nitrógeno (NOx suma tanto monóxido de nitrógeno (NO) como dióxido (NO2)) entra principalmente desde fuera, proveniente del trafico vehicular, pero muchos estudios revelan que los mas importantes factores que incrementan la exposición al NOx, sobre la postura de los edificios en la ciudad, es el uso de las aplicaciones de gas para  calefacción. La exposición a grandes concentraciones de NO2 representa un factor de riesgo modesto para enfermedades respiratorias.</div></LI>
+            <br><br>
+            </h3>
+
+            <h3><LI><div style="text-transform: none">Los óxidos de nitrógeno entran por las emisiones del humo de los vehículos de trafico cercano, se calcula que los rangos de emisión (entrada / salida) )del NO2  van de los 0.88 a 1 </div></LI>
+            <br><br>
+            </h3>
+
+            <div class="table-responsive row">
+                    <table class="table">
+
+                        <tr>
+                            <td> </td>
+                            <td width="25%" bgcolor="">Bueno</td>
+                            <td width="25%" bgcolor="">Regular</td>
+                            <td width="25%" bgcolor="">Mala</td>
+                        </tr>
+
+
+                        <tr>
+                            <td><center>O<sub>3</sub></center></td>
+                            <td width="25%" bgcolor="">0 - 0.035</td>
+                            <td width="25%" bgcolor="">0.036 - 0.070</td>
+                            <td width="25%" bgcolor="">0.071 -></td>
+                            
+                        </tr>
+                            <td><center>CO</center></td>
+                            <td width="25%" bgcolor="">0 - 5</td>
+                            <td width="25%" bgcolor="">6 - 10</td>
+                            <td width="25%" bgcolor="">11 -></td>
+                            
+                        </tr>
+                            <td><center>NO<sub>2</center></sub></td>
+                            <td width="25%" bgcolor="">0 - 0.10</td>
+                            <td width="25%" bgcolor="">0.11 - 0.20</td>
+                            <td width="25%" bgcolor="">0.21 -></td>
+                            
+                        </tr>
+
+
+                    </table>
+
+                </div>
+
+                <h3><LI><div style="text-transform: none">Referencia de Gennaro, G., Dambruoso, P. R., Loiotile, A. D., Di Gilio, A., Giungato, P., Tutino, M., Marzocca, A., Mazzone, A., Palmisani, J., & Porcelli, F. (2014). Indoor air quality in schools. Environmental Chemistry Letters, 12(4), 467–482. doi:10.1007/s10311-014-0470-6</div></LI>
+            <br><br>
+            </h3>
+
+            <h3><LI><div style="text-transform: none">Uno de los problemas más comunes al tener un aire contaminado son los problemas respiratorios, los cuales ocasionan la mayoría de las ausencias, de hecho estudios recientes muestran que aproximadamente el 3.4 porciento de aulas con aire arriba del estándar estipulado pueden reducir la asistencia de los alumnos producto de enfermedades respiratorias.</div></LI>
+            <br><br>
+            </h3>
+
+             </section> <!-- en esta seccion se declara la informacion de la calidad del aire -->
+
   
   <!-- Mapa  -->
-  
+
     <section class="success"  id="mapa">
-    
-     <div class="container">
+    <div class="container">
             <div class="row">
+
                 <div class="col-lg-12 text-center">
                     <h2><?php echo $text['75'];?></h2>
-        
-                    <hr >
+                   
+                  <hr >
                 </div>
             </div>
             <div class="row">
