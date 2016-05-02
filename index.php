@@ -1335,18 +1335,18 @@ var goldStar = {
 
              <h2> <?php echo $text['130'];?><h2>
                 <hr> 
-                <h3> <?php echo $text['131'];?> </h3>
+                <h3><div style="text-transform: none"><?php echo $text['131'];?></div></h3>
             <hr>
 
             <UL type=square>
-            <h3><LI> <?php echo $text['132'];?> </LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['132'];?></div></LI>
             <br><br>
             
              </h3>
 
-            <h3> <?php echo $text['133'];?> </h3>
+            <h3><div style="text-transform: none"><?php echo $text['133'];?></div></h3>
             <hr>
-            <h3><LI> <?php echo $text['134'];?></LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['134'];?></div></LI>
             <br><br>
             
              </h3>
@@ -1430,20 +1430,20 @@ var goldStar = {
             <h2> <?php echo $text['138'];?> <h2>
                  
             <hr>
-            <h3> <?php echo $text['139'];?></h3> <!-- texto largo-->
+            <h3><div style="text-transform: none"><?php echo $text['139'];?></div></h3> <!-- texto largo-->
             <hr>
 
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> 
 
             <UL type=square>
-            <h3><LI><p align="left"> <?php echo $text['140'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['140'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['141'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['141'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['142'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['142'];?></p></div></LI>
             <br/><br/>
-            <LI><p align="left"><?php echo $text['143'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['143'];?></p></div></LI>
             </div> 
             </h3> <!-- texto largo-->
             
@@ -1451,15 +1451,15 @@ var goldStar = {
             
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> 
-            <h3> <?php echo $text['144'];?></h3> <!-- texto largo-->
+            <h3><div style="text-transform: none"><?php echo $text['144'];?></div></h3> <!-- texto largo-->
             <hr>
            
             <UL type=square>
-            <h3><LI> <p align="left"><?php echo $text['145'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['145'];?></p></div></LI>
             <br><br>
-            <LI> <p align="left"><?php echo $text['146'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['146'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['147'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['147'];?></p></div></LI>
             </div> 
                 <br/><br/>
             
@@ -1471,17 +1471,17 @@ var goldStar = {
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
                     
-            <h3><?php echo $text['151'];?> </h3>
+            <h3><div style="text-transform: none"><?php echo $text['151'];?></div></h3>
             <hr>
             <UL type=square>
-            <h3><LI> <p align="left"><?php echo $text['152'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['152'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"> <?php echo $text['153'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"> <?php echo $text['153'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['154'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['154'];?></p></div></LI>
             <br/><br/>
-            <LI><p align="left"><?php echo $text['155'];?></p></LI>
-            <LI><p align="left"><?php echo $text['156'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['155'];?></p></div></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['156'];?></p></div></LI>
             </div>
             <br/><br/>
 
@@ -1489,17 +1489,17 @@ var goldStar = {
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
 
-            <h3><p align="center"><?php echo $text['157'];?></p></h3>
+            <h3><div style="text-transform: none"><p align="center"><?php echo $text['157'];?></p></div></h3>
             <hr>
             <UL type=square>
             </h3>
-            <h3><LI><p align="left"> <?php echo $text['158'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"> <?php echo $text['158'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['159'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['159'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['160'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['160'];?></p></div></LI>
             <br/><br/>
-            <LI><p align="left"><?php echo $text['161'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['161'];?></p></div></LI>
             </div>
             </h3> <!-- texto largo-->
 
@@ -1507,40 +1507,40 @@ var goldStar = {
                     <div class="col-sm-4 portfolio-item"> 
                     
 
-            <h3><?php echo $text['148'];?></h3>
+            <h3><div style="text-transform: none"><?php echo $text['148'];?></div></h3>
             <hr>
             <UL type=square>
-            <h3><LI><p align="left"><?php echo $text['149'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['149'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['150'];?></p> </LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['150'];?></p></div></LI>
             </div>
             <br><br>
             </h3>
 
             
-            <h3><?php echo $text['162'];?></h3>
+            <h3><div style="text-transform: none"><?php echo $text['162'];?></div></h3>
             <hr>
             <div class="row">
                     <div class="col-sm-4 portfolio-item"> 
 
             <UL type=square>
-            <h3><LI><p align="left"> <?php echo $text['163'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"> <?php echo $text['163'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['164'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['164'];?></p></div></LI>
             <br><br>
-            <LI><p align="left"><?php echo $text['165'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['165'];?></p></div></LI>
             <br/><br/>
-            <LI><p align="left"><?php echo $text['166'];?></p></LI>
-            <LI><p align="left"><?php echo $text['167'];?></p></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['166'];?></p></div></LI>
+            <LI><div style="text-transform: none"><p align="left"><?php echo $text['167'];?></p></div></LI>
             <br><br>
             </div>
             </h3>
             
-            <h3><p align="center"><?php echo $text['168'];?></p></h3>
+            <h3><div style="text-transform: none"><p align="center"><?php echo $text['168'];?></p></div></h3>
             <hr>
             
             <UL type=square>
-            <h3><LI><p align="left"><?php echo $text['169'];?></p></LI>
+            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['169'];?></p></div></LI>
             <br><br>
             
             
