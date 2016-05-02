@@ -623,14 +623,26 @@ require_once('lang/'.strtolower($language).'.php');
 
     </section>
 
-    <section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
-        <header>
+    <!--<section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
+        <!--<header>
         <div class="container">
             <div class="row">
             <div class="col-lg-12">
             <div class="intro-text">
                             <h2> La calidad del aire en interiores  <h2>
-                            <hr> 
+                            <hr> -->
+     <section class="success"  id="Aire">
+    
+     <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>La calidad del aire en interiores</h2>
+        
+                    <hr >
+                </div>
+            </div>
+            <div class="row">
+                 <div id="Aire">
                 
             <UL type=square>
             <h3><LI><div style="text-transform: none">"La calidad del aire en interiores es un factor muy importante a considerar para el desempeño estudiantil. La contaminación en interiores pueden acarrear problemas de salud así como también, problemas cognitivos."
@@ -1504,11 +1516,7 @@ var goldStar = {
     <header>
     <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
             <div class="row">
-            <div class="col-lg-12">
-            <!--<header>
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-12"> -->
+            <div class="col-lg-12"> <!-- codigo para imagen de fondo-->
             <div class="intro-text">
             <h2> <?php echo $text['138'];?> <h2>
                  
@@ -1520,13 +1528,13 @@ var goldStar = {
                     <div class="col-sm-4 portfolio-item"> 
 
             <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['140'];?></p></div></LI>
+            <h3><LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['140'];?></p></font></div></LI>
             <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['141'];?></p></div></LI>
+            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['141'];?></p></font></div></LI>
             <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['142'];?></p></div></LI>
+            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['142'];?></p></font></div></LI>
             <br/><br/>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['143'];?></p></div></LI>
+            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['143'];?></p></font></div></LI>
             </div> 
             </h3> <!-- texto largo-->
             
@@ -1542,7 +1550,7 @@ var goldStar = {
             <br><br>
             <LI><div style="text-transform: none"><p align="left"><?php echo $text['146'];?></p></div></LI>
             <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['147'];?></p></div></LI>
+            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['147'];?></p></font></div></LI>
             </div> 
                 <br/><br/>
             
