@@ -450,9 +450,13 @@ require_once('lang/'.strtolower($language).'.php');
                 <h1><?php echo $text['376'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
-                                    <h5><br/><?php echo $text['45'];?><p><br/><br/><?php echo $text['46'];?></p><p><br/><br/><?php echo $text['47'];?></p><p><br/><br/><?php echo $text['48'];?></p><p><br/><br/><?php echo $text['49'];?></p>                         
-                                        <br/>
-                                        <br/>
+                                    <h5><br/><?php echo $text['45'];?>
+                                    <br/><br/><?php echo $text['46'];?>
+                                    <br/><br/><?php echo $text['47'];?>
+                                    <br/><br/><?php echo $text['48'];?>
+                                    <br/><br/><?php echo $text['49'];?>                         
+                                    <br/>
+                                    <br/>
                                     </h5>
                         </figcaption>
 
@@ -622,6 +626,36 @@ require_once('lang/'.strtolower($language).'.php');
     <section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
         <div class="container">
             <div class="row">
+            <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                        <div class="intro-text">
+                            <h2> La calidad del aire en interiores  <h2>
+                            <hr> 
+                
+            <UL type=square>
+            <h3><LI><div style="text-transform: none">"La calidad del aire en interiores es un factor muy importante a considerar para el desempeño estudiantil. La contaminación en interiores pueden acarrear problemas de salud así como también, problemas cognitivos."
+            <p>Referencia Stafford, T. M. (2015). Indoor air quality and academic performance. Journal of Environmental Economics and Management, 70, 34–50. doi:10.1016/j.jeem.2014.11.002</p></div></LI>
+            <br><br>
+            </h3>
+
+            <h3><LI><div style="text-transform: none">"Los gases más comunes encontrados dentro del aire de la escuela son CO, SO2 y NO2. Los óxidos de nitrógeno (NOx suma tanto monóxido de nitrógeno (NO) como dióxido (NO2)) entra principalmente desde fuera, proveniente del trafico vehicular, pero muchos estudios revelan que los mas importantes factores que incrementan la exposición al NOx, sobre la postura de los edificios en la ciudad, es el uso de las aplicaciones de gas para  calefacción. La exposición a grandes concentraciones de NO2 representa un factor de riesgo modesto para enfermedades respiratorias.</div></LI>
+            <br><br>
+            </h3>
+
+            <h3><LI><div style="text-transform: none">Los óxidos de nitrógeno entran por las emisiones del humo de los vehículos de trafico cercano, se calcula que los rangos de emisión (entrada / salida) )del NO2  van de los 0.88 a 1 </div></LI>
+            <br><br>
+            </h3>
+                            
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+
             <h2> La calidad del aire en interiores  <h2>
                 <hr> 
                 
