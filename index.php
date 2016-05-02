@@ -922,6 +922,7 @@ var goldStar = {
 
                                 function addInfoSensor1(info)
                                 {
+                                    alert(info);
                                     infowindow1.setContent(info);
                                 }
 
@@ -1002,7 +1003,7 @@ var goldStar = {
                                                 break;
                                             case 'regular':
                                                 $calidad = 'REGULAR';
-                                                $imagen = "Mala.jpg";
+                                                $imagen = "img/Mala.jpg";
                                                 break;
                                             case 'mala':
                                                 $calidad = 'BAD';
@@ -1015,6 +1016,7 @@ var goldStar = {
                                                 $calidad = 'EXTREMELY BAD';
                                                 break;
                                             default:
+                                            $imagen = "img/Buena.jpg";
                                                 # code...
                                                 break;
                                         }
@@ -1026,7 +1028,7 @@ var goldStar = {
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
-                                echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
+                                echo ("addInfoSensor1('hola');\n");
                                 
 
                                 mysql_close($conn);
