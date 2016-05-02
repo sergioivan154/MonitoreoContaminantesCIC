@@ -631,16 +631,23 @@ require_once('lang/'.strtolower($language).'.php');
             <div class="intro-text">
                             <h2> La calidad del aire en interiores  <h2>
                             <hr> -->
-     <section class="success"  id="Aire">
-    
-     <div class="container">
+     <!--<section class="success"  id="Aire">-->
+    <section class="significadologo" id="significado">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>La calidad del aire en interiores</h2>
+                    <hr >
+                </div>
+            </div>
+     <!--<div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>La calidad del aire en interiores</h2>
         
                     <hr >
                 </div>
-            </div>
+            </div>-->
             <div class="row">
                  <div id="Aire">
                 
@@ -660,39 +667,44 @@ require_once('lang/'.strtolower($language).'.php');
                         
 
             <div class="table-responsive row">
-                    <table class="table">
+                   <table class="table">
+                    <tr>
+                    
+                            <td><center><?php echo $text['84'];?></h3></center></td>
+                            <td><center><?php echo $text['85'];?></h3></center></td>
+                            
+                            
+                        </tr>
 
                         <tr>
-                            <td> </td>
-                            <td width="25%" bgcolor="">Bueno</td>
-                            <td width="25%" bgcolor="">Regular</td>
-                            <td width="25%" bgcolor="">Mala</td>
-                        </tr>
 
-
-                        <tr>
-                            <td><center>O<sub>3</sub></center></td>
-                            <td width="25%" bgcolor="">0 - 0.035</td>
-                            <td width="25%" bgcolor="">0.036 - 0.070</td>
-                            <td width="25%" bgcolor="">0.071 -></td>
+                            <td><center><?php echo $text['89'];?></center></td>
+                            <td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
+                            
                             
                         </tr>
-                            <td><center>CO</center></td>
-                            <td width="25%" bgcolor="">0 - 5</td>
-                            <td width="25%" bgcolor="">6 - 10</td>
-                            <td width="25%" bgcolor="">11 -></td>
+                            <td><center><?php echo $text['94'];?></center></td>
+                            <td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
+                            
                             
                         </tr>
-                            <td><center>NO<sub>2</center></sub></td>
-                            <td width="25%" bgcolor="">0 - 0.10</td>
-                            <td width="25%" bgcolor="">0.11 - 0.20</td>
-                            <td width="25%" bgcolor="">0.21 -></td>
+                            <td><center><?php echo $text['99'];?></center></td>
+                            <td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
+                            
+                            
                             
                         </tr>
 
+                        <td><center><?php echo $text['104'];?></center></td>
+                            <td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
+                            
+                           
+                            
+                        </tr>
+
+                        
 
                     </table>
-
                 </div>
 
                 <h3><LI><div style="text-transform: none">Referencia de Gennaro, G., Dambruoso, P. R., Loiotile, A. D., Di Gilio, A., Giungato, P., Tutino, M., Marzocca, A., Mazzone, A., Palmisani, J., & Porcelli, F. (2014). Indoor air quality in schools. Environmental Chemistry Letters, 12(4), 467–482. doi:10.1007/s10311-014-0470-6</div></LI>
