@@ -108,7 +108,7 @@ $text['81'] = "index ";
 $text['82'] = "Index Table ";
 $text['83'] = "Ranges contaminants ";
 $text['84'] = "Qualifying ";
-$text['85'] = "RANK IMECA ";
+$text['85'] = "IMECA Ranges";
 $text['86'] = "O3 (ppb) ";
 $text['87'] = "NO2 (ppb) ";
 $text['88'] = "CO (ppm) ";
@@ -228,5 +228,14 @@ $text['201'] = "Example Waspmote plates ";
 $text['202'] = "Close ";
 $text['203'] = "Rider LiPo Pro ";
 $text['204'] = "It is a card power management. Identifies the level energy stored in the battery; when this value is low, It allows battery recharge through passage of energy the solar panel; If this value is high, it feeds the module with the energy stored in the battery. ";
-$text['205'] = "Close ";    
+$text['205'] = "Close ";
+$text['372'] = "Recommendations";
+$text['378'] = "Una cantidad (CO2<1000 ppm) se considera como niveles aceptables para el rendimiento estudiantil";
+$text['379'] = "Mientras que una cantidad (CO2 > 1000 ppm) son causa del 10 % al 20 % de ausencia estudiantil";
+$text['380'] = "Se puede trabajar una jornada de 8 horas diarias siempre y cuando los ppm sean menores a 5000";
+$text['381'] = "Si rebasa los 30000 se recomienda no permanecer en ese ambiente mas de 10 minutos";
+$text['382'] = "Los niveles normales de O3 dentro de una escuela es menor que uno (de 0.13 a 0.8)";
+$text['383'] = "Los niveles de O3 más elevados se encuentran en escuelas localizadas cerca de areas afectadas por contaminación industrial o urbana";
+$text['384'] = "La contaminación de O3 proviene la mayoría del tiempo del exterior, de hecho existe una correlación directa incrementada rápidamente cuando las puertas o ventanas están abiertas";
+
     ?>
