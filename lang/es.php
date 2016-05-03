@@ -11,8 +11,7 @@
    $text['Indice'] = 'Índice';
    $text['300'] = '¿Qué es?';
    $text['301'] = 'Es un proyecto en el cual se pretende implementar las TIC´s en una area de oportunidad como lo es el tema de los contaminantes atmosféricos, y el consumo de energía eléctrica, para ayudar a los ciudadanos a disfrutar de la información para tomar decisiones. Este es el principio de una ciudad inteligente.';
-
-  $text['productos'] = "productos";
+   $text['productos'] = "productos";
   $text['Proyecto_Multidisciplinario'] = "Proyecto Multidisciplinario";
   $text['Desarrollo_de_un_Prototipo'] = "Desarrollo de un Prototipo de Ciudad Inteligente para la Ciudad de México.";
   $text['Modulo_Proyecto'] = 'Módulo Proyecto ';
@@ -231,5 +230,13 @@ $text['202'] = "Close";
 $text['203'] = "Rider LiPo Pro ";
 $text['204'] = "Es una tarjeta de gestión de energía. Identifica el nivel energético almacenado en la pila; cuando éste valor es bajo, permite la recarga de la batería a través del paso de energía del panel solar; si éste valor es alto, alimenta al módulo con la energía almacenada en la pila. ";
 $text['205'] = "Close ";
+$text['372'] = "Recomendaciones";
+$text['378'] = "Una cantidad (CO2<1000 ppm) se considera como niveles aceptables para el rendimiento estudiantil";
+$text['379'] = "Mientras que una cantidad (CO2 > 1000 ppm) son causa del 10 % al 20 % de ausencia estudiantil";
+$text['380'] = "Se puede trabajar una jornada de 8 horas diarias siempre y cuando los ppm sean menores a 5000";
+$text['381'] = "Si rebasa los 30000 se recomienda no permanecer en ese ambiente mas de 10 minutos";
+$text['382'] = "Los niveles normales de O3 dentro de una escuela es menor que uno (de 0.13 a 0.8)";
+$text['383'] = "Los niveles de O3 más elevados se encuentran en escuelas localizadas cerca de areas afectadas por contaminación industrial o urbana";
+$text['384'] = "La contaminación de O3 proviene la mayoría del tiempo del exterior, de hecho existe una correlación directa incrementada rápidamente cuando las puertas o ventanas están abiertas";
 
 ?>

@@ -623,6 +623,9 @@ require_once('lang/'.strtolower($language).'.php');
 
     </section>
 
+    
+
+
     <!--<section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
         <!--<header>
         <div class="container">
@@ -668,39 +671,39 @@ require_once('lang/'.strtolower($language).'.php');
 
             <div class="table-responsive row">
                    <table class="table">
-                    <tr>
                     
-                            <td><center><?php echo $text['84'];?></h3></center></td>
-                            <td><center><?php echo $text['85'];?></h3></center></td>
+                    <tr>
+
+                            <td width="15%" bgcolor="blue"><center><?php echo $text['372'];?></center></td>
                             
                             
                         </tr>
-
                         <tr>
 
-                            <td><center><?php echo $text['89'];?></center></td>
-                            <td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center><center><font color="black"><?php echo $text['378'];?></font></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor="blue"><center><font color="White"> <?php echo $text['379'];?></font></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['380'];?></font></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor="blue"><center><?php echo $text['381'];?></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['382'];?></font></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor="blue"><?php echo $text['383'];?></center></td>
+                            </tr>
+                            <tr>
+                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['384'];?></font></center></td>
+                            </tr>
                             
-                            
-                        </tr>
-                            <td><center><?php echo $text['94'];?></center></td>
-                            <td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
-                            
-                            
-                        </tr>
-                            <td><center><?php echo $text['99'];?></center></td>
-                            <td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
-                            
-                            
-                            
-                        </tr>
 
-                        <td><center><?php echo $text['104'];?></center></td>
-                            <td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
                             
-                           
-                            
-                        </tr>
+                           </tr>
 
                         
 
