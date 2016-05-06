@@ -639,8 +639,8 @@ require_once('lang/'.strtolower($language).'.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>La calidad del aire en interiores</h2>
-                    <hr >
+                    <h2><?php echo $text['385'];?></h2>
+                    <hr>
                 </div>
             </div>
      <!--<div class="container">
@@ -655,16 +655,16 @@ require_once('lang/'.strtolower($language).'.php');
                  <div id="Aire">
                 
             <UL type=square>
-            <h3><LI><div style="text-transform: none">"La calidad del aire en interiores es un factor muy importante a considerar para el desempeño estudiantil. La contaminación en interiores pueden acarrear problemas de salud así como también, problemas cognitivos."
-            <p>Referencia Stafford, T. M. (2015). Indoor air quality and academic performance. Journal of Environmental Economics and Management, 70, 34–50. doi:10.1016/j.jeem.2014.11.002</p></div></LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['386'];?>
+            <p><?php echo $text['387'];?></p></div></LI>
             <br><br>
             </h3>
 
-            <h3><LI><div style="text-transform: none">"Los gases más comunes encontrados dentro del aire de la escuela son CO, SO2 y NO2. Los óxidos de nitrógeno (NOx suma tanto monóxido de nitrógeno (NO) como dióxido (NO2)) entra principalmente desde fuera, proveniente del trafico vehicular, pero muchos estudios revelan que los mas importantes factores que incrementan la exposición al NOx, sobre la postura de los edificios en la ciudad, es el uso de las aplicaciones de gas para  calefacción. La exposición a grandes concentraciones de NO2 representa un factor de riesgo modesto para enfermedades respiratorias.</div></LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['388'];?></div></LI>
             <br><br>
             </h3>
 
-            <h3><LI><div style="text-transform: none">Los óxidos de nitrógeno entran por las emisiones del humo de los vehículos de trafico cercano, se calcula que los rangos de emisión (entrada / salida) )del NO2  van de los 0.88 a 1 </div></LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['389'];?></div></LI>
             <br><br>
             </h3>
                         
@@ -680,7 +680,7 @@ require_once('lang/'.strtolower($language).'.php');
                         </tr>
                         <tr>
 
-                            <td width="15%" bgcolor=""><center><center><font color="black"><?php echo $text['378'];?></font></center></td>
+                            <td width="15%" bgcolor=""><center><center><font color="black"><?php echo $text['378'];?></font></center></td> <!--En este apartado se declara la tabla de recomendaciones-->
                             </tr>
                             <tr>
                             <td width="15%" bgcolor="blue"><center><font color="White"> <?php echo $text['379'];?></font></center></td>
@@ -710,11 +710,11 @@ require_once('lang/'.strtolower($language).'.php');
                     </table>
                 </div>
 
-                <h3><LI><div style="text-transform: none">Referencia de Gennaro, G., Dambruoso, P. R., Loiotile, A. D., Di Gilio, A., Giungato, P., Tutino, M., Marzocca, A., Mazzone, A., Palmisani, J., & Porcelli, F. (2014). Indoor air quality in schools. Environmental Chemistry Letters, 12(4), 467–482. doi:10.1007/s10311-014-0470-6</div></LI>
+                <h3><LI><div style="text-transform: none"><?php echo $text['390'];?></div></LI>
             <br><br>
             </h3>
 
-            <h3><LI><div style="text-transform: none">Uno de los problemas más comunes al tener un aire contaminado son los problemas respiratorios, los cuales ocasionan la mayoría de las ausencias, de hecho estudios recientes muestran que aproximadamente el 3.4 porciento de aulas con aire arriba del estándar estipulado pueden reducir la asistencia de los alumnos producto de enfermedades respiratorias.</div></LI>
+            <h3><LI><div style="text-transform: none"><?php echo $text['391'];?></div></LI>
             <br><br>
             </h3>
              
@@ -1031,8 +1031,8 @@ var goldStar = {
                                 } 
 
                                     $sensor1 = $sensor1."Sensor 1";
-                                echo ("addInfoSensor1('hola');\n");
-                                
+                                  echo ("addInfoSensor1('hola');\n");
+                                  echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
 
                                 mysql_close($conn);
                                 //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 1....";
@@ -1528,6 +1528,63 @@ var goldStar = {
 
     </section>
 
+    <br><br>
+<span class="mono">
+<div class="container"><h1><?php echo $text['170'];?></h1><hr></div>
+<div id="wowslider-container3">
+    <div class="ws_images"><ul>
+        <li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
+        <li><img src="img/montajee/2.jpg" alt="2" title="2" id="wows3_1"/></li>
+        <li><img src="img/montajee/3.jpg" alt="3" title="3" id="wows3_2"/></li>
+        <li><img src="img/montajee/4.jpg" alt="4" title="4" id="wows3_3"/></li>
+        <li><img src="img/montajee/5.jpg" alt="5" title="5" id="wows3_4"/></li>
+        <li><img src="img/montajee/6.jpg" alt="6" title="6" id="wows3_5"/></li>
+        <li><img src="img/montajee/7.jpg" alt="7" title="7" id="wows3_6"/></li>
+        <li><img src="img/montajee/8.jpg" alt="8" title="8" id="wows3_7"/></li>
+        <li><img src="img/montajee/9.jpg" alt="9" title="9" id="wows3_8"/></li>
+        <li><img src="img/pruebase/1.jpg" alt="1" title="1" id="wows3_9"/></li>
+        <li><img src="img/pruebase/2.jpg" alt="2" title="2" id="wows3_10"/></li>
+        <li><img src="img/pruebase/3.jpg" alt="3" title="3" id="wows3_11"/></li>
+        <li><img src="img/exterior/1.jpg" alt="1" title="1" id="wows3_12"/></li>
+        <li><img src="img/exterior/2.jpg" alt="2" title="2" id="wows3_13"/></li>
+        <li><img src="img/exterior/3.jpg" alt="3" title="3" id="wows3_14"/></li>
+        <li><img src="img/montajei/1.jpg" alt="1" title="1" id="wows3_15"/></li>
+        <li><img src="img/montajei/2.jpg" alt="2" title="2" id="wows3_16"/></li>
+        <li><img src="img/montajei/3.jpg" alt="3" title="3" id="wows3_17"/></li>
+        <li><img src="img/montajei/4.jpg" alt="4" title="4" id="wows3_18"/></li>
+        <li><img src="img/montajei/5.jpg" alt="jquery carousel" title="5" id="wows3_19"/></li>
+        <li><img src="img/montajei/6.jpg" alt="6" title="6" id="wows3_20"/></li>
+    </ul></div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="1"><span><img src="img/montajee/1.jpg" alt="1"/>1</span></a>
+            <a href="#" title="2"><span><img src="img/montajee/2.jpg" alt="2"/>2</span></a>
+            <a href="#" title="3"><span><img src="img/montajee/3.jpg" alt="3"/>3</span></a>
+            <a href="#" title="4"><span><img src="img/montajee/4.jpg" alt="4"/>4</span></a>
+            <a href="#" title="5"><span><img src="img/montajee/5.jpg" alt="5"/>5</span></a>
+            <a href="#" title="6"><span><img src="img/montajee/6.jpg" alt="6"/>6</span></a>
+            <a href="#" title="7"><span><img src="img/montajee/7.jpg" alt="7"/>7</span></a>
+            <a href="#" title="8"><span><img src="img/montajee/8.jpg" alt="8"/>8</span></a>
+            <a href="#" title="9"><span><img src="img/montajee/9.jpg" alt="9"/>9</span></a>
+            <a href="#" title="1"><span><img src="img/pruebase/1.jpg" alt="1"/>10</span></a>
+            <a href="#" title="2"><span><img src="img/pruebase/2.jpg" alt="2"/>11</span></a>
+            <a href="#" title="3"><span><img src="img/pruebase/3.jpg" alt="3"/>12</span></a>
+            <a href="#" title="1"><span><img src="img/exterior/1.jpg" alt="1"/>13</span></a>
+            <a href="#" title="2"><span><img src="img/exterior/2.jpg" alt="2"/>14</span></a>
+            <a href="#" title="3"><span><img src="img/exterior/3.jpg" alt="3"/>15</span></a>
+            <a href="#" title="1"><span><img src="img/montajei/1.jpg" alt="1"/>16</span></a>
+            <a href="#" title="2"><span><img src="img/montajei/2.jpg" alt="2"/>17</span></a>
+            <a href="#" title="3"><span><img src="img/montajei/3.jpg" alt="3"/>18</span></a>
+            <a href="#" title="4"><span><img src="img/montajei/4.jpg" alt="4"/>19</span></a>
+            <a href="#" title="5"><span><img src="img/montajei/5.jpg" alt="5"/>20</span></a>
+            <a href="#" title="6"><span><img src="img/montajei/6.jpg" alt="6"/>21</span></a>
+        </div>
+    </div>
+    <div class="ws_shadow"></div>
+</div>  
+</span> 
+
+
 
 <section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
     <header>
@@ -1668,7 +1725,7 @@ var goldStar = {
 
 
 
-<br><br>
+<!--<br><br> ---- Se cambio de lugar para que aparesca despues de los prototipos
 <span class="mono">
 <div class="container"><h1><?php echo $text['170'];?></h1><hr></div>
 <div id="wowslider-container3">
@@ -1722,7 +1779,7 @@ var goldStar = {
     </div>
     <div class="ws_shadow"></div>
 </div>  
-</span> 
+</span> -->
 
 
     
