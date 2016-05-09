@@ -4,7 +4,7 @@
 -- --------------------------------------------------------------------------------
 DELIMITER $$
 
-CREATE PROCEDURE `airmxgen_meshliu`.`IMECA` ( IN NUMERO_SENSOR INT, IN NUMERO_ELEMENTOS INT,IN ORDENAMIENTO TEXT,IN FILTRO TEXT) -- SI ES 1 ENTONCES (DEL 2016 -> 2015) Y SI ES -1 ENTONCES VALOR POR OMISION
+CREATE PROCEDURE `airmxgen_meshliu`.`IMECA` ( IN NUMERO_SENSOR INT, IN NUMERO_ELEMENTOS INT,IN ORDENAMIENTO TEXT,IN FILTRO TEXT, IN IDIOMA TEXT) -- SI ES 1 ENTONCES (DEL 2016 -> 2015) Y SI ES -1 ENTONCES VALOR POR OMISION
 BEGIN
 	
 
@@ -14,7 +14,7 @@ DROP temporary TABLE IF exists CALIDAD_AIRE_TEMP;
 
 	CREATE TEMPORARY TABLE CALIDAD_AIRE_TEMP
 
-SELECT timestamp as fecha, id_wasp as sensor, sensor as 'Contaminante',  
+SELECT timestamp as fecha, id_wasp as sensor, sensor as 'Contaminante',  ROUND(
 
 	CASE WHEN sensor = 'O3' THEN
 
@@ -46,7 +46,7 @@ SELECT timestamp as fecha, id_wasp as sensor, sensor as 'Contaminante',
 
 						1 * (VALUE - 505) + 401
 					
-		END
+		END,2)
 
 		
 	
@@ -76,7 +76,11 @@ SELECT *,
 
 CASE WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 0  AND 50 THEN
 						
-						'BUENA'
+						IF (IDIOMA = 'ES') THEN
+							'BUENA'
+						ELSE
+							'GOOD'	
+						END
 
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 51  AND  100 THEN
 

@@ -1,5 +1,4 @@
   <?php
-  
 $text['cambiar_idioma'] = 'Cambiar a Ingles';
 $text['objetivo'] = 'Objetivo';
 $text['lugar'] = 'Lugar';

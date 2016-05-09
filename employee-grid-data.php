@@ -1,4 +1,39 @@
+<?php session_start();
+
+/*Lo que vamos a comprobar primero es si se esta solicitando un nuevo idioma
+Si se esta solicitando, verificamos que el idioma existe tambien*/
+
+
+if(!empty($_REQUEST['local']) && file_exists('lang/'.$_REQUEST['local'].'.php')){
+
+  /*Entonces lo que vamos a hacer ahora, es decir que a partir de ahora,
+  nuestro idioma por defecto es este, al menos que se solicite cambiarlo de vuelta*/
+
+  $_SESSION['local'] = $_REQUEST['local'];
+
+  //y esto lo vamos a usar despues
+  $language = $_REQUEST['local'];
+}
+
+//Sino se solicito ningun idioma, verificamos si quedo guardado en nuestra session
+
+elseif(isset($_SESSION['local']))
+
+  //Lo mismo que antes, esto para despues
+
+  $language = $_SESSION['local'];
+
+//Y por ultimo, si nada de lo anterior cumple los requisitos, cargamos el idioma, que seria el idioma por defecto
+
+else
+  $language = 'es';
+
+require_once('lang/'.$language.'.php');
+
+?>
+
 <?php
+
 /* Database connection start */
 $servername = "localhost";
 $username = "airmxgen_meshliu";
@@ -23,8 +58,16 @@ $columns = array(
 	
 );
 
+$idioma = '';
+if($language == 'en'){
+	$idioma  = 'es';
+}
+else{
+	$idioma  = 'en';		
+}
+
 // getting total number records without any search
-$sql = "CALL `IMECA`(-1, -1, 'menor','');";
+$sql = "CALL `IMECA`(-1, -1, 'menor','', '".$idioma."');";
 $query=mysqli_query($conn, $sql) or die("employee-grid-data.php: get data");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
@@ -35,7 +78,7 @@ if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
-	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor',".$requestData['search']['value']."); ";
+	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor',".$requestData['search']['value'].", '".$idioma."'); ";
 	//$sql.=" FROM sensorParser";
 	//$sql.=" WHERE id_wasp LIKE '".$requestData['search']['value']."%' ";    // $requestData['search']['value'] contains search parameter
 	//$sql.=" OR sensor LIKE '".$requestData['search']['value']."%' ";
@@ -52,7 +95,7 @@ if( !empty($requestData['search']['value']) ) {
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
-	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor',''); ";
+	$sql = "CALL `IMECA`(-1, ".$requestData['length'].", 'mayor','', '".$idioma."'); ";
 	//$sql = "SELECT timestamp, id_wasp, sensor, value ";
 	//$sql.=" FROM sensorParser";
 	//$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."  desc  LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
