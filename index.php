@@ -30,9 +30,12 @@ elseif(isset($_SESSION['local']))
 
 else
   $language = 'es';
-require_once('lang/'.strtolower($language).'.php');
+
+require_once('lang/es.php');
 
 ?>
+
+
 
 <!--ingles-->
 <head>
@@ -130,7 +133,7 @@ require_once('lang/'.strtolower($language).'.php');
                     </li>
 
                     <li class="page-scroll">
-                        <a href="#map"><?php echo $text['Mapa'];?> </a>
+                        <a href="#mapa"><?php echo $text['Mapa'];?> </a>
                     </li>
                     <li class="page-scroll">
                         <a href="#index"><?php echo $text['Indice'];?> </a>
@@ -168,7 +171,7 @@ require_once('lang/'.strtolower($language).'.php');
         </div>
     </header> 
 
-    <section id=<?php echo $text["productos"];?>
+    <section id="products">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
@@ -195,7 +198,7 @@ require_once('lang/'.strtolower($language).'.php');
     </section>
     
     
-    <section id=<?php echo $text['objetivo'];?>
+    <section id="objective">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
@@ -348,7 +351,7 @@ require_once('lang/'.strtolower($language).'.php');
             </div>
     </section>
 
-   <section  id=<?php echo $text['9'];?>>
+   <section  id="participants">
         <div class="container">
             <h2><?php echo $text['10'];?></h2>
             <div class="row">
@@ -635,7 +638,7 @@ require_once('lang/'.strtolower($language).'.php');
                             <h2> La calidad del aire en interiores  <h2>
                             <hr> -->
      <!--<section class="success"  id="Aire">-->
-    <section class="significadologo" id="significado">
+    <section class="significadologo" id="meaning">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -730,7 +733,7 @@ require_once('lang/'.strtolower($language).'.php');
   <!-- Mapa  -->
 
     <section class="success"  id="mapa">
-    <div class="container">
+		 <div class="container">
             <div class="row">
 
                 <div class="col-lg-12 text-center">
@@ -740,51 +743,54 @@ require_once('lang/'.strtolower($language).'.php');
                 </div>
             </div>
             <div class="row">
-                 <div id="map">
+                
+                 <div id="map"><div>
                      
 
                         <script type="text/javascript">
 
                             var map;
 
-var marker = new google.maps.Marker({
-    position: map.getCenter(),
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      scale: 10
-    },
-    draggable: true,
-    map: map
-  });
-
-var goldStar = {
-    path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-    fillColor: 'yellow',
-    fillOpacity: 0.8,
-    scale: 1,
-    strokeColor: 'gold',
-    strokeWeight: 14
-  };
-
-
-
+                            
+  
                             function initMap() {
 
+                            var myLatLng = {lat: 19.503298, lng: -99.147772};
                              var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
 
-                            var myLatLng = {lat: 19.503298, lng: -99.147772};
-                            var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
-                            var myLatLngSensor2 = {lat: 19.503039, lng: -99.147858};
-                            var myLatLngSensor3 = {lat: 19.503311, lng: -99.147888};
-                            var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
-                            var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
-  
                               map = new google.maps.Map(document.getElementById('map'), {
                                 center: myLatLng,
                                 styles: styleArray,
                                 zoom: 18
 
                               });
+
+                              var marker = new google.maps.Marker({
+                                position: map.getCenter(),
+                                icon: {
+                                  path: google.maps.SymbolPath.CIRCLE,
+                                  scale: 10
+                                },
+                                draggable: true,
+                                map: map
+                              });
+
+                            var goldStar = {
+                                path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+                                fillColor: 'yellow',
+                                fillOpacity: 0.8,
+                                scale: 1,
+                                strokeColor: 'gold',
+                                strokeWeight: 14
+                              };
+
+
+
+                            var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
+                            var myLatLngSensor2 = {lat: 19.503311, lng: -99.147888};
+                            var myLatLngSensor3 = {lat: 19.503039, lng: -99.147858};
+                            var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
+                            var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
 
                               infoString = "";
   // Create a marker and set its position.
@@ -918,14 +924,12 @@ var goldStar = {
                                     infowindow5.open(map, marker5);
                                   });
 
+                               
+      
+                               
 
-                                   
-
-
-
-                                function addInfoSensor1(info)
+                             function addInfoSensor1(info)
                                 {
-                                    alert(info);
                                     infowindow1.setContent(info);
                                 }
 
@@ -949,10 +953,8 @@ var goldStar = {
                                     infowindow5.setContent(info);
                                 }
 
-                        
 
-
-                            <?php
+  <?php
                                 $dbhost =  "localhost" ;
                                 $dbuser = "airmxgen_meshliu";
                                 $dbpass = "libelium2007";
@@ -991,6 +993,8 @@ var goldStar = {
                                   $sensor1 = "No hay información";
                                   die("Could not get data: ". mysql_error());
                                 }
+
+                                $imagen = "img/Buena.jpg";
                                 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                                 {
                                      $calidad = $row['CALIDAD'];
@@ -998,7 +1002,7 @@ var goldStar = {
                                      if (strtolower($language) == 'en'){
 
                                         $calidadText = "Quality";
-                                        //$imagen = "img/Buena.jpg"; para agregar imagenes en los sensores
+                                        
                                         switch (strtolower($calidad)) {
                                             case 'buena':
                                                 $calidad = 'GOOD';
@@ -1030,38 +1034,14 @@ var goldStar = {
                                     " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
                                 } 
 
-                                    $sensor1 = $sensor1."Sensor 1";
-                                  echo ("addInfoSensor1('hola');\n");
-                                  echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
+                                    $sensor1 = $sensor1."Sensor 1"; 
 
+                                     echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
+                                  
                                 mysql_close($conn);
-                                //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 1....";
-/*                                $sql1=0.080;
 
-                                if($sql1<0.035)
-                                    $id="Bueno";
-                                else if($sql1>0.035 && $sql1<0.070 )
-                                    $id="Regular";
-                                else
-                                    $id="Malo";
-
-                                
-
-                                if($id=="Bueno"){
-                                    
-                                    echo ("addInfoSensor1('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-                                }
-                                else if($id=="Malo"){
-                                    echo ("addInfoSensor1('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-                                }
-                                else if($id=="Regular"){
-                                    echo ("addInfoSensor1('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-                                }
-                                //echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."</div>');\n");
-
-*///puedes replicar esto para los demas sensores? mira abre la conexion y cierrala si?
   
-                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+  								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
                                 if(! $conn )
                                 {
                                   $sensor2 = "No hay conexion"; 
@@ -1069,7 +1049,7 @@ var goldStar = {
                                 }                 //abrir conexion             
 
                                 $numeroSensor = "2";
-                                $numeroElementos = "3";
+                                $numeroElementos = "2";
                                 $ordenamiento = "mayor";
                                 //query para sensor 1
                                 $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."','');";
@@ -1125,36 +1105,9 @@ var goldStar = {
                                     echo ("addInfoSensor2('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");
                                 
                                 mysql_close($conn); // cerrar conexion
-/*                                    //$sql1 ="SELECT * FROM sensorParser where id_wasp  = 2....";
-                                $sql2=0.030;
-
-                                if($sql2<0.035)
-                                    $id="Bueno";
-                                else if($sql2>0.035 && $sql2<0.070 )
-                                    $id="Regular";
-                                else
-                                    $id="Malo";
-
-                                
-
-                                if($id=="Bueno"){
-                                    
-                                    echo ("addInfoSensor2('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
-                                }
-                                else if($id=="Malo"){
-                                    echo ("addInfoSensor2('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
-                                }
-                                else if($id=="Regular"){
-                                    echo ("addInfoSensor2('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
-                                }
-                                //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n");
 
 
-*/
-                               
-
-                                
-                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
                                 if(! $conn )
                                 {
                                   $sensor3 = "No hay conexion"; 
@@ -1221,111 +1174,23 @@ var goldStar = {
                                 //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
                                 echo ("addInfoSensor3('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
                                 mysql_close($conn); 
-                                /*$sql2 ="SELECT * FROM sensorParser where id_wasp  = 3....";
-                                $sql2=0.050;
+                         
+                               
 
-                                if($sql2<0.035)
-                                    $id="Bueno";
-                                else if($sql2>0.035 && $sql2<0.070 )
-                                    $id="Regular";
-                                else
-                                    $id="Malo";
-
-                                
-
-                                if($id=="Bueno"){
-                                    
-                                    echo ("addInfoSensor3('<h1 style = \'color: #00FF00\'>Bueno</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-                                }
-                                else if($id=="Malo"){
-                                    echo ("addInfoSensor3('<h1 style = \'color: #FF0000\'>Malo</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-                                }
-                                else if($id=="Regular"){
-                                    echo ("addInfoSensor3('<h1 style = \'color: #FFFF00\'>Regular</h1>'+'<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-                                }
-                                //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-∫*/
-                                //query para sensor 4
-
-                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-                                if(! $conn )
-                                {
-                                  $sensor4 = "No hay conexion"; 
-                                  die("Could not connect:" . mysql_error());
-                                }                 //abrir conexion             
-
-                                $sql = "SELECT * FROM sensorParser where id_wasp = 4   ORDER BY sensorParser.timestamp DESC limit 6";
-
-                                mysql_select_db("airmxgen_meshliu");
-                                $retval = mysql_query( $sql, $conn );
-                                if(! $retval )
-                                {
-                                  $sensor4 = "No hay información";
-                                  die("Could not get data: ". mysql_error());
-                                }
-                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-                                {
-
-                                    $sensor4 = $sensor4.
-                                    " {$row['sensor']}:{$row['value']} <br/> " ;
-                                } 
-                                $sensor4 = $sensor4."Sensor 4 - General";
-
-
-                                echo ("addInfoSensor4('<div style = \'color: #000000\'>".json_encode($sensor4)."</div>');\n");
-
-                                
-
-                                 //query para sensor 5
-                                $sql = "SELECT * FROM sensorParser where id_wasp = 5   ORDER BY sensorParser.timestamp DESC limit 6";
-
-                                mysql_select_db("airmxgen_meshliu");
-                                $retval = mysql_query( $sql, $conn );
-                                if(! $retval )
-                                {
-                                  $sensor5 = "No hay información";
-                                  die("Could not get data: ". mysql_error());
-                                }
-                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-                                {
-
-                                    $sensor5 = $sensor5.
-                                    " {$row['sensor']}:{$row['value']} <br/> " ;
-                                } 
-                                $sensor5 = $sensor5."Sensor 5 - General";
-
-
-                                echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
-                                mysql_close($conn);
                             ?>
+				}
 
-                            
-
-                            
-
-
- 
-
-                                
-                            }   
-
-
-
-                                </script>
-                                <script async defer
-                                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
-                        </script>
-                        
-                 </div>
-
+                </script>
+                <script async defer
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
+                </script>
 
             </div>
         </div>
         <div class="row">
 
         </div>
-        
-     </section>
+    </section>
 
      <!-- About Section -->
     <br>
@@ -1336,7 +1201,7 @@ var goldStar = {
  
                     
 
-    <section id=<?php echo $text['81'];?>>
+    <section id="index">
         <div class="container">
             <div class="row">
                 <h2><?php echo $text['82'];?></h2>
@@ -1433,7 +1298,7 @@ var goldStar = {
             </div>
         <br>
 
-        <section id=<?php echo $text['129'];?>>
+        <section id="Prototype">
         <div class="container">
             <div class="row">
         
@@ -1586,7 +1451,7 @@ var goldStar = {
 
 
 
-<section id=<?php echo $text['137'];?>> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
+<section id="results"> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
     <header>
     <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
             <div class="row">
@@ -2016,8 +1881,7 @@ var goldStar = {
 
     <script type='text/javascript'>
        $('#idioma').click(function(){
-            
-           var sesdion = "<?php  echo $_SESSION['local'] ; ?>";
+             var sesdion = "<?php  echo $_SESSION['local'] ; ?>";
            <?php
 
                 if(!empty($_SESSION['local']) && $_SESSION['local'] == 'es'){
