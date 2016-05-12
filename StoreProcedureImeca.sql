@@ -46,7 +46,7 @@ SELECT timestamp as fecha, id_wasp as sensor, sensor as 'Contaminante',  ROUND(
 
 						1 * (VALUE - 505) + 401
 					
-		END,2)
+		END
 
 		
 	
@@ -58,7 +58,7 @@ SELECT timestamp as fecha, id_wasp as sensor, sensor as 'Contaminante',  ROUND(
 		
 		VALUE * 100 / 11
 
-	END AS PUNTOS_IMECA
+	END, 2) AS PUNTOS_IMECA
 	
 FROM sensorParser where 
 
@@ -76,35 +76,54 @@ SELECT *,
 
 CASE WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 0  AND 50 THEN
 						
-						IF (IDIOMA = 'ES') THEN
+						CASE lower(IDIOMA) WHEN 'es' THEN
 							'BUENA'
 						ELSE
 							'GOOD'	
 						END
 
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 51  AND  100 THEN
-
-						'REGULAR'
+						
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'REGULAR'
+							ELSE
+								'REGULAR'
+							END
 						
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 101  AND  150 THEN
-						
-						'MALA'
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'MALA'
+							ELSE
+								'BAD'
+							END
 
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 151  AND  200  THEN
-						
-						'MUY MALA'
-
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'MUY MALA'
+							ELSE
+								'VERY BAD'
+							END
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 201  AND  300  THEN
-				
-						'EXTREMADAMENTE MALA'
-
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'EXTREMADAMENTE MALA'
+							ELSE
+								'EXTREMELY BAD'
+							END
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 301  AND 400  THEN
 
-						'EXTREMADAMENTE MALA'
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'EXTREMADAMENTE MALA'
+							ELSE
+								'EXTREMELY BAD'
+							END
 
 						WHEN ROUND(PUNTOS_IMECA,0) BETWEEN 401  AND  500  THEN
 
-						'EXTREMADAMENTE MALA'
+							CASE lower(IDIOMA) WHEN 'es' THEN
+								'EXTREMADAMENTE MALA'
+							ELSE
+								'EXTREMELY BAD'
+							END
 					
 					END AS CALIDAD
 
@@ -153,4 +172,5 @@ DROP temporary TABLE CALIDAD_AIRE_TEMP;
 
 END
 
-call imeca(-1,-1,'Menor','');
+
+call imeca(-1,-1,'Menor','','es');

@@ -8,8 +8,11 @@ require 'Database.php';
 
 class Sensor
 {
+    
+
     function __construct()
     {
+        ini_set('memory_limit', '512M');
     }
 
     /**
@@ -36,6 +39,39 @@ class Sensor
         }
     }
 
+     /**
+     * Retorna en la fila especificada de la tabla 'meta'
+     *
+     * @param $idMeta Identificador del registro
+     * @return array Datos del registro
+     */
+    public static function getAllSensor($IdSensor, $ordenamiento)
+    {
+
+        if ( $ordenamiento == 1){ // de mayor a menor
+            $consulta = "select id_wasp, sensor, value, timestamp from sensorParser where id_wasp = ".$IdSensor." and upper(sensor) in('CO','CO2','NO2','O3','TCA','HUMA') order by timestamp DESC;";
+        }
+        else{ //de menor a mayor
+            $consulta = "select id_wasp, sensor, value, timestamp from sensorParser where id_wasp = ".$IdSensor." and upper(sensor) in('CO','CO2','NO2','O3','TCA','HUMA') order by timestamp ASC;";
+        }
+
+
+        
+        try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
+
+        }
+    }
+
     /**
      * Obtiene los campos de una meta con un identificador
      * determinado
@@ -45,6 +81,7 @@ class Sensor
      */
     public static function getImecas($numeroSensor, $numeroElementos, $ordenamiento, $filtro)
     {
+
         $numeroSensor = -1;
         $numeroElementos = -1;
         $ordenamiento = 'mayor';
