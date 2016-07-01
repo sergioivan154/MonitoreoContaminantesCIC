@@ -90,7 +90,6 @@ class Sensor
         // Consulta de la meta
         $consulta=  "SELECT * FROM sensorParser";
 
-        echo $consulta;
 
         try {
             // Preparar sentencia
@@ -107,15 +106,14 @@ class Sensor
         }
     }
 
-     public static function getPrediccion()
+     public static function getPrediccion($numeroSensor)
     {
 
       
         // Consulta de la meta
-        $consulta=  "SELECT * FROM prediccion order by id desc";
+        $consulta=  "SELECT * FROM prediccion where sensor = ".$numeroSensor." order by id desc LIMIT 1";
 
-        echo $consulta;
-
+      
         try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);
