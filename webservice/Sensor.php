@@ -135,7 +135,8 @@ class Sensor
         $contaminante,
         $imecas,
         $calidad,
-        $hora
+        $hora, 
+        $sensor
     )
     {
         // Sentencia INSERT
@@ -143,8 +144,9 @@ class Sensor
             "contaminante," .
             " imecas," .
             " calidad," .
-            " hora) " .
-            " VALUES(?,?,?,?);";
+            " hora, " .
+            " sensor ) " .
+            " VALUES(?,?,?,?,?);";
 
 
 
@@ -158,6 +160,7 @@ class Sensor
         $sentencia->bindParam(2, $imecas);
         $sentencia->bindParam(3, $calidad);
         $sentencia->bindParam(4, $hora);
+        $sentencia->bindParam(5, $sensor);
 
         return $sentencia->execute();
 

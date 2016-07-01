@@ -8,15 +8,16 @@ require 'Sensor.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Manejar petición GET
-    if (isset($_GET['contaminante']) && isset($_GET['imecas']) && isset($_GET['calidad']) && isset($_GET['hora']) ) {
+    if (isset($_GET['contaminante']) && isset($_GET['imecas']) && isset($_GET['calidad']) && isset($_GET['hora']) && isset($_GET['sensor']) ) {
 
         // Obtener parámetros
         $contaminante = $_GET['contaminante'];
         $imecas = $_GET['imecas'];
         $calidad = $_GET['calidad'];
         $hora = $_GET['hora'];
+        $sensor = $_GET['sensor'];
         // Tratar retorno
-        $retorno = Sensor::insert($contaminante, $imecas, $calidad, $hora);
+        $retorno = Sensor::insert($contaminante, $imecas, $calidad, $hora, $sensor);
     }
 
     if ($retorno) {

@@ -7,10 +7,16 @@ require 'Sensor.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-    // Manejar petición GET
-    // Tratar retorno
-    $retorno = Sensor::getPrediccion();
+    if (isset($_GET['sensor'])){
+
+
     
+        $numeroSensor =  $_GET['sensor'];
+        // Manejar petición GET
+        // Tratar retorno
+        $retorno = Sensor::getPrediccion($numeroSensor);
+    }
+
     if ($retorno) {
 
         $datos["estado"] = 1;
