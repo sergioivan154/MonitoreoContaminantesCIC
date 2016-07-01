@@ -107,6 +107,63 @@ class Sensor
         }
     }
 
+     public static function getPrediccion()
+    {
+
+      
+        // Consulta de la meta
+        $consulta=  "SELECT * FROM prediccion order by id desc";
+
+        echo $consulta;
+
+        try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
+
+        }
+    }
+
+     public static function insert(
+        $contaminante,
+        $imecas,
+        $calidad,
+        $hora
+    )
+    {
+        // Sentencia INSERT
+        $comando = "INSERT INTO prediccion ( " .
+            "contaminante," .
+            " imecas," .
+            " calidad," .
+            " hora) " .
+            " VALUES(?,?,?,?);";
+
+
+
+                        
+
+                    
+        // Preparar la sentencia
+        $sentencia = Database::getInstance()->getDb()->prepare($comando);
+		
+		$sentencia->bindParam(1, $contaminante);
+        $sentencia->bindParam(2, $imecas);
+        $sentencia->bindParam(3, $calidad);
+        $sentencia->bindParam(4, $hora);
+
+        return $sentencia->execute();
+
+    }
+
+
     /**
      * Actualiza un registro de la bases de datos basado
      * en los nuevos valores relacionados con un identificador
