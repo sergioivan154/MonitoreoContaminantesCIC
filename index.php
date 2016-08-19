@@ -3,32 +3,6 @@
 
 <?php session_start();
 
-/*Lo que vamos a comprobar primero es si se esta solicitando un nuevo idioma
-Si se esta solicitando, verificamos que el idioma existe tambien*/
-
-
-if(!empty($_REQUEST['local']) && file_exists('lang/'.$_REQUEST['local'].'.php')){
-
-  /*Entonces lo que vamos a hacer ahora, es decir que a partir de ahora,
-  nuestro idioma por defecto es este, al menos que se solicite cambiarlo de vuelta*/
-
-  $_SESSION['local'] = $_REQUEST['local'];
-
-  //y esto lo vamos a usar despues
-  $language = $_REQUEST['local'];
-}
-
-//Sino se solicito ningun idioma, verificamos si quedo guardado en nuestra session
-
-elseif(isset($_SESSION['local']))
-
-  //Lo mismo que antes, esto para despues
-
-  $language = $_SESSION['local'];
-
-//Y por ultimo, si nada de lo anterior cumple los requisitos, cargamos el idioma, que seria el idioma por defecto
-
-else
   $language = 'es';
 
 require_once('lang/'.$language.'.php');
@@ -126,7 +100,7 @@ require_once('lang/'.$language.'.php');
                     </li>
 
                     <li class="page-scroll">
-                     <a href="#results"><?php echo $text['Articulos'];?> </a>
+                     <a href="#results"><?php echo $text['Artículos'];?> </a>
                     </li>
 
                     <li class="page-scroll">
@@ -137,7 +111,7 @@ require_once('lang/'.$language.'.php');
                         <a href="#mapa"><?php echo $text['Mapa'];?> </a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#index"><?php echo $text['Indice'];?> </a>
+                        <a href="#index"><?php echo $text['Índice'];?> </a>
                     </li>
 
                     
@@ -171,695 +145,8 @@ require_once('lang/'.$language.'.php');
             </div>
         </div>
     </header> 
-  <!-- Mapa  -->
 
-    <section class="success"  id="mapa">
-		 <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 text-center">
-                    <h2><?php echo $text['75'];?></h2>
-                   
-                  <hr >
-                </div>
-            </div>
-            <div class="row">
-                
-                 <div id="map"><div>
-                     
-
-                        <script type="text/javascript">
-
-                            var map;
-
-                            
-  
-                            function initMap() {
-
-                            var myLatLng = {lat: 19.503298, lng: -99.147772};
-                             var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
-
-                              map = new google.maps.Map(document.getElementById('map'), {
-                                center: myLatLng,
-                                styles: styleArray,
-                                zoom: 18
-
-                              });
-
-                              var marker = new google.maps.Marker({
-                                position: map.getCenter(),
-                                icon: {
-                                  path: google.maps.SymbolPath.CIRCLE,
-                                  scale: 10
-                                },
-                                draggable: true,
-                                map: map
-                              });
-
-                            var goldStar = {
-                                path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-                                fillColor: 'yellow',
-                                fillOpacity: 0.8,
-                                scale: 1,
-                                strokeColor: 'gold',
-                                strokeWeight: 14
-                              };
-
-
-
-                            var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
-                            var myLatLngSensor2 = {lat: 19.503311, lng: -99.147888};
-                            var myLatLngSensor3 = {lat: 19.503039, lng: -99.147858};
-                            var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
-                            var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
-
-                              infoString = "";
-  // Create a marker and set its position.
-  //                            marcador 1
-                                  var marker1 = new google.maps.Marker({
-                                    map: map,
-                                    position: myLatLngSensor1,
-                                    animation: google.maps.Animation.DROP,
-                                    icon: {
-                                      path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'blue',
-                                        fillOpacity: 0.8,
-                                        scale: 10,
-                                        strokeColor: 'black',
-                                        strokeWeight: 5
-                                    },
-                                    clickable: true,
-                                    title: "<?php echo $text['76'];?>"
-                                  });
-
-                                  var infowindow1 = new google.maps.InfoWindow({
-                                        content: infoString
-                                    });
-
-                                  
-
-                                   marker1.addListener('click', function() {
-
-                                    infowindow1.open(map, marker1);
-                                  });
-
-
-                                // marcador 2
-                                var marker2 = new google.maps.Marker({
-                                    map: map,
-                                    position: myLatLngSensor2,
-                                    animation: google.maps.Animation.DROP,
-                                    icon: {
-                                      path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'green',
-                                        fillOpacity: 0.8,
-                                        scale: 10,
-                                        strokeColor: 'black',
-                                        strokeWeight: 5
-                                    },
-                                    clickable: true,
-                                    title: "<?php echo $text['77'];?>"
-                                  });
-
-                                  var infowindow2 = new google.maps.InfoWindow({
-                                        content: infoString
-                                    });
-
-                                   marker2.addListener('click', function() {
-                                    infowindow2.open(map, marker2);
-                                  });
-                                // marcador 3
-                                var marker3 = new google.maps.Marker({
-                                    map: map,
-                                    position: myLatLngSensor3,
-                                    animation: google.maps.Animation.DROP,
-                                    icon: {
-                                      path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'yellow',
-                                        fillOpacity: 0.8,
-                                        scale: 10,
-                                        strokeColor: 'black',
-                                        strokeWeight: 5
-                                    },
-                                    clickable: true,
-                                    title: "<?php echo $text['78'];?>"
-                                  });
-
-                                  var infowindow3 = new google.maps.InfoWindow({
-                                        content: infoString
-                                    });
-
-                                   marker3.addListener('click', function() {
-                                    infowindow3.open(map, marker3);
-                                  });
-
-
-                                     // marcador 4
-                                var marker4 = new google.maps.Marker({
-                                    map: map,
-                                    position: myLatLngSensor4,
-                                    animation: google.maps.Animation.DROP,
-                                    icon: {
-                                      path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'white',
-                                        fillOpacity: 0.8,
-                                        scale: 10,
-                                        strokeColor: 'black',
-                                        strokeWeight: 5
-                                    },
-                                    clickable: true,
-                                    title: "<?php echo $text['79'];?>"
-                                  });
-
-                                  var infowindow4 = new google.maps.InfoWindow({
-                                        content: infoString
-                                    });
-
-                                   marker4.addListener('click', function() {
-                                    infowindow4.open(map, marker4);
-                                  });
-
-                                   //5
-
-                                   var marker5 = new google.maps.Marker({
-                                    map: map,
-                                    position: myLatLngSensor5,
-                                    animation: google.maps.Animation.DROP,
-                                    icon: {
-                                      path: google.maps.SymbolPath.CIRCLE,
-                                      fillColor: 'white',
-                                        fillOpacity: 0.8,
-                                        scale: 10,
-                                        strokeColor: 'black',
-                                        strokeWeight: 5
-                                    },
-                                    clickable: true,
-                                    title: "<?php echo $text['80'];?>"
-                                  });
-
-                                  var infowindow5 = new google.maps.InfoWindow({
-                                        content: infoString
-                                    });
-
-                                   marker5.addListener('click', function() {
-                                    infowindow5.open(map, marker5);
-                                  });
-
-                               
-      
-                               
-
-                             function addInfoSensor1(info)
-                                {
-                                    infowindow1.setContent(info);
-                                }
-
-                                function addInfoSensor2(info)
-                                {
-                                    infowindow2.setContent(info);
-                                }
-
-                                function addInfoSensor3(info)
-                                {
-                                    infowindow3.setContent(info);
-                                }
-
-                                function addInfoSensor4(info)
-                                {
-                                    infowindow4.setContent(info);
-                                }
-
-                                function addInfoSensor5(info)
-                                {
-                                    infowindow5.setContent(info);
-                                }
-
-
-  <?php
-                                $dbhost =  "localhost" ;
-                                $dbuser = "airmxgen_meshliu";
-                                $dbpass = "libelium2007";
-                                $sensor1 = " <br/> ";
-                                $sensor2 = " <br/> ";
-                                $sensor3 = " <br/> ";
-                                $sensor4 = " <br/> ";
-                                $sensor5 = " <br/> ";
-                                $sql2="";
-                                $id="";
-
-                                  
-
-                                $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-                                if(! $conn )
-                                {
-                                  $sensor1 = "No hay conexion"; 
-                                  die("Could not connect:" . mysql_error());
-                                }
-
-                                
-                                
-                                
-                                $numeroSensor = "1";
-                                $numeroElementos = "3";
-                                $ordenamiento = "mayor";
-                                //query para sensor 1
-                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
-                            
-
-                                $id="";
-                                mysql_select_db("airmxgen_meshliu");
-                                $retval = mysql_query( $sql, $conn );
-                                if(! $retval )
-                                {
-                                  $sensor1 = "No hay información";
-                                  die("Could not get data: ". mysql_error());
-                                }
-
-                                $imagen = "img/Buena.jpg";
-                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-                                {
-                                     $calidad = $row['CALIDAD'];
-                                     $calidadText = "Calidad";
-                                     if (strtolower($language) == 'en'){
-
-                                        $calidadText = "Quality";
-                                        
-                                        switch (strtolower($calidad)) {
-                                            case 'buena':
-                                                $calidad = 'GOOD';
-                                                $imagen = "img/Buena.jpg";
-                                                break;
-                                            case 'regular':
-                                                $calidad = 'REGULAR';
-                                                $imagen = "img/Mala.jpg";
-                                                break;
-                                            case 'mala':
-                                                $calidad = 'BAD';
-                                                break;
-                                            case 'muy mala':
-                                                $calidad = 'VERY BAD';
-                                                break;
-
-                                            case 'extremadamente mala':
-                                                $calidad = 'EXTREMELY BAD';
-                                                break;
-                                            default:
-                                            $imagen = "img/Buena.jpg";
-                                                # code...
-                                                break;
-                                        }
-                                     }
-
-                                     
-                                      $sensor1 = $sensor1.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
-                                } 
-
-                                    $sensor1 = $sensor1."Sensor 1"; 
-
-                                     echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n");
-                                  
-                                mysql_close($conn);
-
-  
-  								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-                                if(! $conn )
-                                {
-                                  $sensor2 = "No hay conexion"; 
-                                  die("Could not connect:" . mysql_error());
-                                }                 //abrir conexion             
-
-                                $numeroSensor = "2";
-                                $numeroElementos = "2";
-                                $ordenamiento = "mayor";
-                                //query para sensor 1
-                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
-                            
-                                $id="";                    
-                                mysql_select_db("airmxgen_meshliu");
-                                $retval = mysql_query( $sql, $conn );
-                                if(! $retval )
-                                {
-                                  $sensor2 = "No hay información";
-                                  die("Could not get data: ". mysql_error());
-                                }
-                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-                                {
-                                     $calidad = $row['CALIDAD'];
-                                     $calidadText = "Calidad";
-                                     if (strtolower($language) == 'en'){
-
-                                        $calidadText = "Quality";
-                                        switch (strtolower($calidad)) {
-                                            case 'buena':
-                                                $calidad = 'GOOD';
-                                                $imagen = "img/Buena.jpg";
-                                                break;
-                                            case 'regular':
-                                                $calidad = 'REGULAR';
-                                                 $imagen = "Mala.jpg";
-                                                break;
-                                            case 'mala':
-                                                $calidad = 'BAD';
-                                                break;
-                                            case 'muy mala':
-                                                $calidad = 'VERY BAD';
-                                                break;
-
-                                            case 'extremadamente mala':
-                                                $calidad = 'EXTREMELY BAD';
-                                                break;
-                                            default:
-                                                # code...
-                                                break;
-                                        }
-                                     }
-
-                                     
-                                      $sensor2 = $sensor2.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
-
-
-                                     } 
-                                    $sensor2 = $sensor2."Sensor 2";
-                                     //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n"); para ajustar el tamaño, color de imagenes
-                                    echo ("addInfoSensor2('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");
-                                
-                                mysql_close($conn); // cerrar conexion
-
-
-								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-                                if(! $conn )
-                                {
-                                  $sensor3 = "No hay conexion"; 
-                                  die("Could not connect:" . mysql_error());
-                                }                 //abrir conexion             
-
-                                $numeroSensor = "3";
-                                $numeroElementos = "3";
-                                $ordenamiento = "mayor";
-                                //query para sensor 1
-                                $sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
-                            
-  
-                                $id="";
-                                mysql_select_db("airmxgen_meshliu");
-                                $retval = mysql_query( $sql, $conn );
-                                if(! $retval )
-                                {
-                                  $sensor1 = "No hay información";
-                                  die("Could not get data: ". mysql_error());
-                                }
-                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-                                {
-
-                                    $calidad = $row['CALIDAD'];
-                                     $calidadText = "Calidad";
-                                     if (strtolower($language) == 'en'){
-
-                                        $calidadText = "Quality";
-                                        switch (strtolower($calidad)) {
-                                            case 'buena':
-                                                $calidad = 'GOOD';
-                                                $imagen = "img/excelente.jpg";
-                                                break;
-                                            case 'regular':
-                                                $calidad = 'REGULAR';
-                                                $imagen = "Mala.jpg";
-                                                break;
-                                            case 'mala':
-                                                $calidad = 'BAD';
-                                                break;
-                                            case 'muy mala':
-                                                $calidad = 'VERY BAD';
-                                                break;
-
-                                            case 'extremadamente mala':
-                                                $calidad = 'EXTREMELY BAD';
-                                                break;
-                                            default:
-                                                # code...
-                                                break;
-                                        }
-                                     }
-
-                                     
-                                      $sensor3 = $sensor3.
-                                    " {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
-
-                                    
-                                } 
-
-
-                                $sensor3 = $sensor3."Sensor 3";
-                                //echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-                                echo ("addInfoSensor3('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
-                                mysql_close($conn); 
-                         
-                               
-
-                            ?>
-				}
-
-                </script>
-                <script async defer
-                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
-                </script>
-
-            </div>
-        </div>
-        <div class="row">
-
-        </div>
-    </section>
-
-     <!-- About Section -->
-    <br>
-
-            
-</div>
-
-<section id="index">
-        <div class="container">
-            <div class="row">
-                <h2><?php echo $text['82'];?></h2>
-                <h3><?php echo $text['83'];?></h3>
-                <hr> <br>
-                <div class="table-responsive row">
-                    <table class="table">
-                    <tr>
-                    
-                            <td><center><?php echo $text['84'];?></h3></center></td>
-                            <td><center><?php echo $text['85'];?></h3></center></td>
-                            <td><center><?php echo $text['86'];?></h3></center></td>
-                            <td><center><?php echo $text['87'];?></h3></center></td>
-                            <td><center><?php echo $text['88'];?></h3></center></td>
-                            
-                        </tr>
-
-                        <tr>
-
-                            <td><center><?php echo $text['89'];?></center></td>
-                            <td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
-                            <td width="15%" bgcolor="white"><center><?php echo $text['91'];?></center></td>
-                            <td width="15%" bgcolor="white"><center><?php echo $text['92'];?></center></td>
-                            <td width="15%" bgcolor="white"><center><?php echo $text['93'];?></center></td>
-                            
-                        </tr>
-                            <td><center><?php echo $text['94'];?></center></td>
-                            <td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['96'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['97'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['98'];?></center></td>
-                            
-                        </tr>
-                            <td><center><?php echo $text['99'];?></center></td>
-                            <td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['101'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['102'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['103'];?></center></td>
-                            
-                        </tr>
-
-                        <td><center><?php echo $text['104'];?></center></td>
-                            <td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['106'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['107'];?></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['108'];?></center></td>
-                            
-                        </tr>
-
-                        <td><center><?php echo $text['109'];?></center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White"> <?php echo $text['110'];?></font></center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['111'];?> </center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['112'];?> </center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['113'];?> </center></td>
-                            
-                        </tr>
-
-                        <td><center><?php echo $text['114'];?></center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['115'];?></font></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['116'];?></center></td>
-                            <td width="15%" bgcolor=""> <center> <?php echo $text['117'];?></center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['118'];?> </center></td>
-                            
-                        </tr>
-
-                        <td><center><?php echo $text['119'];?></center></td>
-                            <td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['120'];?></font></center></td>
-                            <td width="15%" bgcolor=""><center><?php echo $text['121'];?></center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['122'];?> </center></td>
-                            <td width="15%" bgcolor=""><center> <?php echo $text['123'];?> </center></td>
-                            
-                        </tr>
-
-
-
-                    
-
-
-                    </table>
-                </div>
-                    <div class="row">
-                <table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
-                    <thead>
-                        <tr>
-                            <th><?php echo $text['124'];?></th>
-                            <th><?php echo $text['125'];?></th>
-                            <th><?php echo $text['126'];?></th>
-                            <th><?php echo $text['127'];?></th>
-                            <th><?php echo $text['128'];?></th>
-                        </tr>
-                    </thead>
-            </table>
-            </div>
-            </div>
-        <br>
-
-        <section id="Prototype">
-        <div class="container">
-            <div class="row">
-        
-
-
-             <h2> <?php echo $text['130'];?><h2>
-                <hr> 
-                <h3><div style="text-transform: none"><?php echo $text['131'];?></div></h3>
-            <hr>
-
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><?php echo $text['132'];?></div></LI>
-            <br><br>
-            
-             </h3>
-
-            <h3><div style="text-transform: none"><?php echo $text['133'];?></div></h3>
-            <hr>
-            <h3><LI><div style="text-transform: none"><?php echo $text['134'];?></div></LI>
-            <br><br>
-            
-             </h3>
-             </section>
-
-
-        <div class="row">       
-                <div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
-
-                    <h3><?php echo $text['135'];?></h3>
-                        <hr><br>
-
-
-                    
-                      <ol class="carousel-indicators">
-                        <li data-target="#CarExterior" data-slide-to="0" class="active"></li>
-                        <li data-target="#CarExterior" data-slide-to="1"></li>
-                        <li data-target="#CarExterior" data-slide-to="2"></li>
-                        <li data-target="#CarExterior" data-slide-to="3"></li>
-                        <li data-target="#CarExterior" data-slide-to="4"></li>
-                        <li data-target="#CarExterior" data-slide-to="5"></li>
-                        <li data-target="#CarExterior" data-slide-to="6"></li>
-                        <li data-target="#CarExterior" data-slide-to="7"></li>
-                        <li data-target="#CarExterior" data-slide-to="8"></li>
-                        <li data-target="#CarExterior" data-slide-to="9"></li>
-                      </ol>
-                      
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                      <div class="active item"><img  src="img/montajee/1.jpg" alt="montajee1" /></div>
-                        <div class="item"><img src="img/montajee/2.jpg" alt="montajee2" /></div>
-                        <div class="item"><img src="img/montajee/3.jpg" alt="montajee3" /></div>
-                        <div class="item"><img src="img/montajee/4.jpg" alt="montajee4" /></div>
-                        <div class="item"><img src="img/montajee/5.jpg" alt="montajee5" /></div>
-                        <div class="item"><img src="img/montajee/6.jpg" alt="montajee6" /></div>
-                        <div class="item"><img src="img/montajee/7.jpg" alt="montajee7" /></div>
-                        <div class="item"><img src="img/montajee/8.jpg" alt="montajee8" /></div>
-                        <div class="item"><img src="img/montajee/9.jpg" alt="montajee9" /></div>
-                      
-                      </div>
-                      <!-- Carousel nav -->
-                      <a class="carousel-control left" href="#CarExterior" data-slide="prev">&lsaquo;</a>
-                      <a class="carousel-control right" href="#CarExterior" data-slide="next">&rsaquo;</a>
-                    </div>
-                    <div class="col-lg-1"> </div>
-                    <div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
-                      <h3><?php echo $text['136'];?></h3>
-                        <hr><br>
-                      <ol class="carousel-indicators">
-                        <li data-target="#CarInterior" data-slide-to="0" class="active"></li>
-                        <li data-target="#CarInterior" data-slide-to="1"></li>
-                        <li data-target="#CarInterior" data-slide-to="2"></li>
-                        <li data-target="#CarInterior" data-slide-to="3"></li>
-                        <li data-target="#CarInterior" data-slide-to="4"></li>
-                        <li data-target="#CarInterior" data-slide-to="5"></li>
-                        <li data-target="#CarInterior" data-slide-to="6"></li>
-                      </ol>
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="active item"><img  src="img/montajei/1.jpg" alt="montajei1" /></div>
-                        <div class="item"><img  src="img/montajei/2.jpg" alt="montajei2" /></div>
-                        <div class="item"><img  src="img/montajei/3.jpg" alt="montajei3" /></div>
-                        <div class="item"><img  src="img/montajei/4.jpg" alt="montajei4" /></div>
-                        <div class="item"><img  src="img/montajei/5.jpg" alt="montajei5" /></div>
-                        <div class="item"><img  src="img/montajei/6.jpg" alt="montajei6" /></div>
-                      </div>
-                      <!-- Carousel nav -->
-                      <a class="carousel-control left" href="#CarInterior" data-slide="prev">&lsaquo;</a>
-                      <a class="carousel-control right" href="#CarInterior" data-slide="next">&rsaquo;</a>
-                    </div>
-                </div>
-            </div>
-
-    </section>
-
-</section>
-    <section id="products">
-        <div class="container" >
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1><?php echo $text['Proyecto_Multidisciplinario'];?>
-                    </h1>
-                    <hr> 
-                    <div class="intro-text">
-                        <span class="skills">
-                        <?php echo $text['Desarrollo_de_un_Prototipo'];?> 
-                        </span>
-                        <br><br><br><br>
-                       <h1><?php echo $text['Modulo_Proyecto'];?>
-                        <hr> 
-                            <span class="skills"> 
-                            <?php echo $text['prod_texto'];?>
-                    </span>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-    
-        </div>
-    </section>
-    
-    
-    <section id="objective">
+	<section id="objective">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
@@ -874,31 +161,40 @@ require_once('lang/'.$language.'.php');
                        <h1><?php echo $text['3'];?>
                         </h1>
                         <hr> 
-                            <span class="skills">
-                            <?php echo $text['4'];?>
-                            </span>
+						<span class="skills">
+						<?php echo $text['4'];?>
+						</span>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class = col-sm-4>
-                <center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
-                </button></center>
-            </div>
-            <div class = col-sm-4>
-                <center><button onclick="location.href='http://www.aire.df.gob.mx/default.php'" target="_blank" class="btn btn-success btn-lg">SIMAT
-                </button></center>
-            </div>
-            <div class = col-sm-4>
-                <center><button onclick="location.href='http://www.pnuma.org/'" target="_blank" class="btn btn-success btn-lg">PNUMA
-                </button></center>
-            </div>
-            
-
         </div>
-    </section>
+	</section>
     
+	  <!-- Donde se hace -->
+   <section class="cic" id="where">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><?php echo $text['7'];?>
+                    </h2>
+                    <hr>
+						<div class="container">
+							<div class="col-lg-4 col-lg-offset-2">
+								<p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
+								</p>
+							</div>
+							<div class="row">
+								<div class="col-lg-4 col-lg-offset-2">
+									<p><?php echo $text['8'];?>
+									</p>
+								</div>
+							</div>
+						</div>
+					</hr>
+                </div>
+            </div>
+		</div>
+    </section>
 
     <section class="significadologo" id="meaning">
         <div class="container">
@@ -919,99 +215,740 @@ require_once('lang/'.$language.'.php');
             </div>
     </section>
 
-<br>
-    <!-- Quienes participan -->
-   <section class="cic" id="where">
-        <div class="container">
+	 <!--<section class="success"  id="Aire">-->
+    <section class="success" id="meaning">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2><font color="black"><?php echo $text['385'];?></font></h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				 <div id="Aire">				
+					<UL type=square>
+					<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['386'];?></font>
+					<p><font color="black"><?php echo $text['387'];?></p></font></div></LI>
+					<br><br>
+					</h3>
+					<h3>
+						<LI><div style="text-transform: none"><font color="black"><?php echo $text['388'];?></font></div></LI>
+						<br><br>
+					</h3>
+
+					<h3>
+						<LI><div style="text-transform: none"><font color="black"><?php echo $text['389'];?></font></div></LI>
+						<br><br>
+					</h3>						
+					<div class="table-responsive row">
+						   <table class="table">
+								<tr>
+									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['372'];?></font></center></td>					
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['378'];?></font></center></td> <!--En este apartado se declara la tabla de recomendaciones-->
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['379'];?></font></center></td>
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['380'];?></font></center></td>
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['381'];?></font></center></td>
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['382'];?></font></center></td>
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['383'];?></font></center></td>
+								</tr>
+								<tr>
+									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['384'];?></font></center></td>
+								</tr>
+							</table>
+					</div>
+					<h3>
+						<LI><div style="text-transform: none"><font color="black"><?php echo $text['390'];?></font></div></LI>
+						<br><br>
+					</h3>
+
+					<h3>
+						<LI><div style="text-transform: none"><font color="black"><?php echo $text['391'];?></font></div></LI>
+						<br><br>
+					</h3>
+				 
+			   </div>
+			</div>
+		</div>
+		<!--/header> -->
+	</section> 
+	<!-- en esta seccion se declara la informacion de la calidad del aire -->
+	
+	<section class="success" id="Prototype">
+		<div class="container">
+			<div class="row">
+				 <h2><font color="black"><?php echo $text['130'];?></font><h2>
+					<hr> 
+					<h3><div style="text-transform: none"><font color="black"><?php echo $text['131'];?></font></div></h3>
+				<hr>
+
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['132'];?></font></div></LI>
+				<br><br>
+				
+				 </h3>
+
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['133'];?></font></div></h3>
+				<hr>
+				<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['134'];?></font></div></LI>
+				<br><br>
+				 </h3>
+			</div>
+			<div class="row">       
+				<div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
+					<h3><font color="black"><?php echo $text['135'];?></font></h3>
+						<hr><br>
+					  <ol class="carousel-indicators">
+						<li data-target="#CarExterior" data-slide-to="0" class="active"></li>
+						<li data-target="#CarExterior" data-slide-to="1"></li>
+						<li data-target="#CarExterior" data-slide-to="2"></li>
+						<li data-target="#CarExterior" data-slide-to="3"></li>
+						<li data-target="#CarExterior" data-slide-to="4"></li>
+						<li data-target="#CarExterior" data-slide-to="5"></li>
+						<li data-target="#CarExterior" data-slide-to="6"></li>
+						<li data-target="#CarExterior" data-slide-to="7"></li>
+						<li data-target="#CarExterior" data-slide-to="8"></li>
+						<li data-target="#CarExterior" data-slide-to="9"></li>
+					  </ol>
+					  
+					  <!-- Carousel items -->
+					  <div class="carousel-inner">
+					  <div class="active item"><img  src="img/montajee/1.jpg" alt="montajee1" /></div>
+						<div class="item"><img src="img/montajee/2.jpg" alt="montajee2" /></div>
+						<div class="item"><img src="img/montajee/3.jpg" alt="montajee3" /></div>
+						<div class="item"><img src="img/montajee/4.jpg" alt="montajee4" /></div>
+						<div class="item"><img src="img/montajee/5.jpg" alt="montajee5" /></div>
+						<div class="item"><img src="img/montajee/6.jpg" alt="montajee6" /></div>
+						<div class="item"><img src="img/montajee/7.jpg" alt="montajee7" /></div>
+						<div class="item"><img src="img/montajee/8.jpg" alt="montajee8" /></div>
+						<div class="item"><img src="img/montajee/9.jpg" alt="montajee9" /></div>
+					  
+					  </div>
+					  <!-- Carousel nav -->
+					  <a class="carousel-control left" href="#CarExterior" data-slide="prev">&lsaquo;</a>
+					  <a class="carousel-control right" href="#CarExterior" data-slide="next">&rsaquo;</a>
+				</div>
+				<div class="col-lg-1"> </div>
+				<div id="CarInterior" class="col-lg-6 col-sm-12 carousel slide">
+				  <h3><font color="black"><?php echo $text['136'];?></font></h3>
+					<hr><br>
+				  <ol class="carousel-indicators">
+					<li data-target="#CarInterior" data-slide-to="0" class="active"></li>
+					<li data-target="#CarInterior" data-slide-to="1"></li>
+					<li data-target="#CarInterior" data-slide-to="2"></li>
+					<li data-target="#CarInterior" data-slide-to="3"></li>
+					<li data-target="#CarInterior" data-slide-to="4"></li>
+					<li data-target="#CarInterior" data-slide-to="5"></li>
+					<li data-target="#CarInterior" data-slide-to="6"></li>
+				  </ol>
+				  <!-- Carousel items -->
+				  <div class="carousel-inner">
+					<div class="active item"><img  src="img/montajei/1.jpg" alt="montajei1" /></div>
+					<div class="item"><img  src="img/montajei/2.jpg" alt="montajei2" /></div>
+					<div class="item"><img  src="img/montajei/3.jpg" alt="montajei3" /></div>
+					<div class="item"><img  src="img/montajei/4.jpg" alt="montajei4" /></div>
+					<div class="item"><img  src="img/montajei/5.jpg" alt="montajei5" /></div>
+					<div class="item"><img  src="img/montajei/6.jpg" alt="montajei6" /></div>
+				  </div>
+				  <!-- Carousel nav -->
+				  <a class="carousel-control left" href="#CarInterior" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#CarInterior" data-slide="next">&rsaquo;</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio1" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio4" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/xbee.png" class="img-responsive" alt="">
+					</a>
+				</div>           
+				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio2" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/entorno.png" class="img-responsive" alt="">
+					</a>
+				</div>          
+				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio3" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/gassensor.png" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio5" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section id="index">
+		<div class="container">
+			<div class="row">
+				<h2><?php echo $text['82'];?></h2>
+				<h3><?php echo $text['83'];?></h3>
+				<hr> <br>
+				<div class="table-responsive row">
+					<table class="table">
+						<tr>
+					
+							<td><center><?php echo $text['84'];?></h3></center></td>
+							<td><center><?php echo $text['85'];?></h3></center></td>
+							<td><center><?php echo $text['86'];?></h3></center></td>
+							<td><center><?php echo $text['87'];?></h3></center></td>
+							<td><center><?php echo $text['88'];?></h3></center></td>
+							
+						</tr>
+
+						<tr>
+
+							<td><center><?php echo $text['89'];?></center></td>
+							<td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
+							<td width="15%" bgcolor="white"><center><?php echo $text['91'];?></center></td>
+							<td width="15%" bgcolor="white"><center><?php echo $text['92'];?></center></td>
+							<td width="15%" bgcolor="white"><center><?php echo $text['93'];?></center></td>
+							
+						</tr>
+							<td><center><?php echo $text['94'];?></center></td>
+							<td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['96'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['97'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['98'];?></center></td>
+							
+						</tr>
+							<td><center><?php echo $text['99'];?></center></td>
+							<td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['101'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['102'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['103'];?></center></td>
+							
+						</tr>
+
+						<td><center><?php echo $text['104'];?></center></td>
+							<td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['106'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['107'];?></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['108'];?></center></td>
+							
+						</tr>
+
+						<td><center><?php echo $text['109'];?></center></td>
+							<td width="15%" bgcolor="purple"><center><font color="White"> <?php echo $text['110'];?></font></center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['111'];?> </center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['112'];?> </center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['113'];?> </center></td>
+							
+						</tr>
+
+						<td><center><?php echo $text['114'];?></center></td>
+							<td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['115'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['116'];?></center></td>
+							<td width="15%" bgcolor=""> <center> <?php echo $text['117'];?></center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['118'];?> </center></td>
+							
+						</tr>
+
+						<td><center><?php echo $text['119'];?></center></td>
+							<td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['120'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><?php echo $text['121'];?></center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['122'];?> </center></td>
+							<td width="15%" bgcolor=""><center> <?php echo $text['123'];?> </center></td>
+							
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class = col-sm-6>
+			<center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
+			</button></center>
+		</div>
+		<div class = col-sm-6>
+			<center><button onclick="location.href='http://www.aire.df.gob.mx/default.php'" target="_blank" class="btn btn-success btn-lg">SIMAT
+			</button></center>
+		</div>
+	</section>
+
+	 <!-- Mapa  -->
+    <section class="success"  id="mapa">
+		<div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2><?php echo $text['7'];?>
-                    </h2>
-                    <hr>
-                    <div class="container">
-                        <div class="col-lg-4 col-lg-offset-2">
-                            <p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-lg-offset-2">
-                                <p><?php echo $text['8'];?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                <hr>
+                    <h2><?php echo $text['75'];?></h2>
                 </div>
-
-                <div class="row">
-
-
-                    <div class="col-lg-4 col-sm-12 portfolio-item">
-                        <a href="#portfolio1" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-12 portfolio-item">
-                        <a href="#portfolio4" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/dispositivos/xbee.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-12 portfolio-item">
-                        <a href="#portfolio2" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/dispositivos/entorno.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-12 portfolio-item">
-                        <a href="#portfolio3" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/dispositivos/gassensor.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12 portfolio-item">
-                        <a href="#portfolio5" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
-                        </a>
-                    </div>
-
-
-                    
-                    <!--<div class="col-lg-4 col-sm-12 portfolio-item">
-                        <br/>
-                        <br/>
-                        <button type="submit" class="btn btn-success btn-lg">Banco de datos</button>
-                    </div>-->  
-                <</div>
             </div>
-    </section>
+            <div class="row">
+				<div id="map">
+					<div>
+						<script type="text/javascript">
+							var map;
+							function initMap() {
+								var myLatLng = {lat: 19.503298, lng: -99.147772};
+								var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
+								map = new google.maps.Map(document.getElementById('map'), {
+									center: myLatLng,
+									styles: styleArray,
+									zoom: 18
 
+								});
+								var marker = new google.maps.Marker({
+									position: map.getCenter(),
+									icon: {
+									  path: google.maps.SymbolPath.CIRCLE,
+									  scale: 10
+									},
+									draggable: true,
+									map: map
+								});
+								var goldStar = {
+									path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+									fillColor: 'yellow',
+									fillOpacity: 0.8,
+									scale: 1,
+									strokeColor: 'gold',
+									strokeWeight: 14
+								};
+								var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
+								var myLatLngSensor2 = {lat: 19.503311, lng: -99.147888};
+								var myLatLngSensor3 = {lat: 19.503039, lng: -99.147858};
+								var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
+								var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
+								infoString = "";
+								// Create a marker and set its position.
+	  //                        marcador 1
+								var marker1 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor1,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: 'blue',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['76'];?>"
+								});
+
+								var infowindow1 = new google.maps.InfoWindow({
+									content: infoString
+								});
+							   marker1.addListener('click', function() {
+									infowindow1.open(map, marker1);
+								});
+								// marcador 2
+								var marker2 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor2,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: 'green',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['77'];?>"
+								});
+
+								var infowindow2 = new google.maps.InfoWindow({
+									content: infoString
+								});
+
+								marker2.addListener('click', function() {
+									infowindow2.open(map, marker2);
+								});
+								// marcador 3
+								var marker3 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor3,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: 'yellow',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['78'];?>"
+								});
+
+								var infowindow3 = new google.maps.InfoWindow({
+									content: infoString
+								});
+
+							   marker3.addListener('click', function() {
+									infowindow3.open(map, marker3);
+								});
+
+
+								// marcador 4
+								var marker4 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor4,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: 'white',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+										title: "<?php echo $text['79'];?>"
+								});
+								var infowindow4 = new google.maps.InfoWindow({
+									content: infoString
+								});
+								marker4.addListener('click', function() {
+									infowindow4.open(map, marker4);
+								});
+
+								//5
+								var marker5 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor5,
+									animation: google.maps.Animation.DROP,
+									icon: {
+									  path: google.maps.SymbolPath.CIRCLE,
+									  fillColor: 'white',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['80'];?>"
+								});
+
+								var infowindow5 = new google.maps.InfoWindow({
+									content: infoString
+								});
+
+								marker5.addListener('click', function() {
+									infowindow5.open(map, marker5);
+								});
+
+								function addInfoSensor1(info)
+								{
+									infowindow1.setContent(info);
+								}
+
+								function addInfoSensor2(info)
+								{
+									infowindow2.setContent(info);
+								}
+
+								function addInfoSensor3(info)
+								{
+									infowindow3.setContent(info);
+								}
+
+								function addInfoSensor4(info)
+								{
+									infowindow4.setContent(info);
+								}
+
+								function addInfoSensor5(info)
+								{
+									infowindow5.setContent(info);
+								}
+
+								<?php
+									$dbhost =  "localhost" ;
+									$dbuser = "airmxgen_meshliu";
+									$dbpass = "libelium2007";
+									$sensor1 = " <br/> ";
+									$sensor2 = " <br/> ";
+									$sensor3 = " <br/> ";
+									$sensor4 = " <br/> ";
+									$sensor5 = " <br/> ";
+									$sql2="";
+									$id="";
+								  
+									$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+									if(! $conn )
+									{
+									  $sensor1 = "No hay conexion"; 
+									  die("Could not connect:" . mysql_error());
+									}
+									$numeroSensor = "1";
+									$numeroElementos = "3";
+									$ordenamiento = "mayor";
+									//query para sensor 1
+									$sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
+								
+
+									$id="";
+									mysql_select_db("airmxgen_meshliu");
+									$retval = mysql_query( $sql, $conn );
+									if(! $retval )
+									{
+									  $sensor1 = "No hay información";
+									  die("Could not get data: ". mysql_error());
+									}
+
+									$imagen = "img/Buena.jpg";
+									while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+									{
+										$calidad = $row['CALIDAD'];
+										$calidadText = "Calidad";
+										if (strtolower($language) == 'en'){
+											$calidadText = "Quality";
+											switch (strtolower($calidad)) {
+												case 'buena':
+													$calidad = 'GOOD';
+													$imagen = "img/Buena.jpg";
+													break;
+												case 'regular':
+													$calidad = 'REGULAR';
+													$imagen = "img/Mala.jpg";
+													break;
+												case 'mala':
+													$calidad = 'BAD';
+													break;
+												case 'muy mala':
+													$calidad = 'VERY BAD';
+													break;
+
+												case 'extremadamente mala':
+													$calidad = 'EXTREMELY BAD';
+													break;
+												default:
+												$imagen = "img/Buena.jpg";
+													# code...
+													break;
+											}
+										}
+										  $sensor1 = $sensor1.
+										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
+									} 
+
+									$sensor1 = $sensor1."Sensor 1"; 
+									echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n"); 
+									mysql_close($conn);
+									$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+									if(! $conn )
+									{
+									  $sensor2 = "No hay conexion"; 
+									  die("Could not connect:" . mysql_error());
+									}                 //abrir conexion             
+
+									$numeroSensor = "2";
+									$numeroElementos = "2";
+									$ordenamiento = "mayor";
+									//query para sensor 1
+									$sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
+								
+									$id="";                    
+									mysql_select_db("airmxgen_meshliu");
+									$retval = mysql_query( $sql, $conn );
+									if(! $retval )
+									{
+									  $sensor2 = "No hay información";
+									  die("Could not get data: ". mysql_error());
+									}
+									while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+									{
+										$calidad = $row['CALIDAD'];
+										$calidadText = "Calidad";
+										if (strtolower($language) == 'en'){
+											$calidadText = "Quality";
+											switch (strtolower($calidad)) {
+												case 'buena':
+													$calidad = 'GOOD';
+													$imagen = "img/Buena.jpg";
+													break;
+												case 'regular':
+													$calidad = 'REGULAR';
+													 $imagen = "Mala.jpg";
+													break;
+												case 'mala':
+													$calidad = 'BAD';
+													break;
+												case 'muy mala':
+													$calidad = 'VERY BAD';
+													break;
+
+												case 'extremadamente mala':
+													$calidad = 'EXTREMELY BAD';
+													break;
+												default:
+													# code...
+													break;
+											}
+										}
+										$sensor2 = $sensor2.
+										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
+									} 
+									$sensor2 = $sensor2."Sensor 2";
+									 //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n"); para ajustar el tamaño, color de imagenes
+									echo ("addInfoSensor2('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");                              
+									mysql_close($conn); // cerrar conexion
+									$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+									if(! $conn )
+									{
+									  $sensor3 = "No hay conexion"; 
+									  die("Could not connect:" . mysql_error());
+									}                 //abrir conexion             
+
+									$numeroSensor = "3";
+									$numeroElementos = "3";
+									$ordenamiento = "mayor";
+									//query para sensor 1
+									$sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
+									$id="";
+									mysql_select_db("airmxgen_meshliu");
+									$retval = mysql_query( $sql, $conn );
+									if(! $retval )
+									{
+									  $sensor1 = "No hay información";
+									  die("Could not get data: ". mysql_error());
+									}
+									while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+									{
+										$calidad = $row['CALIDAD'];
+										$calidadText = "Calidad";
+										if (strtolower($language) == 'en'){
+											$calidadText = "Quality";
+											switch (strtolower($calidad)) {
+												case 'buena':
+													$calidad = 'GOOD';
+													$imagen = "img/excelente.jpg";
+													break;
+												case 'regular':
+													$calidad = 'REGULAR';
+													$imagen = "Mala.jpg";
+													break;
+												case 'mala':
+													$calidad = 'BAD';
+													break;
+												case 'muy mala':
+													$calidad = 'VERY BAD';
+													break;
+
+												case 'extremadamente mala':
+													$calidad = 'EXTREMELY BAD';
+													break;
+												default:
+													# code...
+													break;
+											}
+										}  
+										$sensor3 = $sensor3.
+										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";    
+									} 
+									$sensor3 = $sensor3."Sensor 3";
+									//echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
+									echo ("addInfoSensor3('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
+									mysql_close($conn); 
+								?>
+							}
+						</script>
+						<script async defer
+						  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
+				<thead>
+					<tr>
+					<th><?php echo $text['124'];?></th>
+					<th><?php echo $text['125'];?></th>
+					<th><?php echo $text['126'];?></th>
+					<th><?php echo $text['127'];?></th>
+					<th><?php echo $text['128'];?></th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+    </section>
+	
+
+
+<section id="products">
+	<div class="container" >
+		<div class="row">
+			<div class="col-lg-12">
+				<h1><?php echo $text['Proyecto_Multidisciplinario'];?>
+				</h1>
+				<hr> 
+				<div class="intro-text">
+					<span class="skills">
+					<?php echo $text['Desarrollo_de_un_Prototipo'];?> 
+					</span>
+					<br><br><br><br>
+				   <h1><?php echo $text['Modulo_Proyecto'];?>
+					<hr> 
+						<span class="skills"> 
+						<?php echo $text['prod_texto'];?>
+				</span>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+
+	</div>
+</section>
+    
+<br>
    <section  id="participants">
         <div class="container">
             <h2><?php echo $text['10'];?></h2>
@@ -1287,108 +1224,6 @@ require_once('lang/'.$language.'.php');
 
     </section>
 
-    
-
-
-    <!--<section id="Aire"> <!-- en esta seccion se declara la informacion de la calidad del aire -->
-        <!--<header>
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-12">
-            <div class="intro-text">
-                            <h2> La calidad del aire en interiores  <h2>
-                            <hr> -->
-     <!--<section class="success"  id="Aire">-->
-    <section class="significadologo" id="meaning">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2><?php echo $text['385'];?></h2>
-                    <hr>
-                </div>
-            </div>
-     <!--<div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>La calidad del aire en interiores</h2>
-        
-                    <hr >
-                </div>
-            </div>-->
-            <div class="row">
-                 <div id="Aire">
-                
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><?php echo $text['386'];?>
-            <p><?php echo $text['387'];?></p></div></LI>
-            <br><br>
-            </h3>
-
-            <h3><LI><div style="text-transform: none"><?php echo $text['388'];?></div></LI>
-            <br><br>
-            </h3>
-
-            <h3><LI><div style="text-transform: none"><?php echo $text['389'];?></div></LI>
-            <br><br>
-            </h3>
-                        
-
-            <div class="table-responsive row">
-                   <table class="table">
-                    
-                    <tr>
-
-                            <td width="15%" bgcolor="blue"><center><?php echo $text['372'];?></center></td>
-                            
-                            
-                        </tr>
-                        <tr>
-
-                            <td width="15%" bgcolor=""><center><center><font color="black"><?php echo $text['378'];?></font></center></td> <!--En este apartado se declara la tabla de recomendaciones-->
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor="blue"><center><font color="White"> <?php echo $text['379'];?></font></center></td>
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['380'];?></font></center></td>
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor="blue"><center><?php echo $text['381'];?></center></td>
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['382'];?></font></center></td>
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor="blue"><?php echo $text['383'];?></center></td>
-                            </tr>
-                            <tr>
-                            <td width="15%" bgcolor=""><center><font color="black"><?php echo $text['384'];?></font></center></td>
-                            </tr>
-                            
-
-                            
-                           </tr>
-
-                        
-
-                    </table>
-                </div>
-
-                <h3><LI><div style="text-transform: none"><?php echo $text['390'];?></div></LI>
-            <br><br>
-            </h3>
-
-            <h3><LI><div style="text-transform: none"><?php echo $text['391'];?></div></LI>
-            <br><br>
-            </h3>
-             
-                   </div>
-                </div>
-            </div>
-        </div>
-    </header> 
-
-             </section> <!-- en esta seccion se declara la informacion de la calidad del aire -->
 
   
 
@@ -1451,6 +1286,8 @@ require_once('lang/'.$language.'.php');
     <div class="ws_shadow"></div>
 </div>  
 </span> 
+
+
 
 
 
