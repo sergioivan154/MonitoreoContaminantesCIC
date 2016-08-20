@@ -51,7 +51,7 @@ require_once('lang/'.$language.'.php');
                 <center>
             
             <div id = "idioma">
-                <src="img/profile.png"  class="btn btn-success btn-lg"><?php echo $text['cambiar_idioma'];?>
+                <src="img/profile.png"  class="btn btn-success btn-lg">
             </div></center>
                 
             </div>
@@ -71,7 +71,7 @@ require_once('lang/'.$language.'.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="img/header1.png"  height="47" width="447" href="#page-top" class="img-responsive" alt="">
+                <img src="img/header1.png"  height="20" width="1000" href="#page-top" class="img-responsive" alt="">
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
@@ -82,8 +82,6 @@ require_once('lang/'.$language.'.php');
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-
-                    
                     <li class="page-scroll">
                         <a href="#objective"><?php echo $text['objetivo'];?></a>
                     </li>
@@ -91,33 +89,28 @@ require_once('lang/'.$language.'.php');
                     <li class="page-scroll">
                         <a href="#where"><?php echo $text['lugar'];?> </a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#participants"> <?php echo $text['Participantes'];?> </a>
+					<li class="page-scroll">
+                        <a href="#Calidad"><?php echo $text['Calidad'];?> </a>
                     </li>
-
-                     <li class="page-scroll">
-                     <a href="#products"><?php echo $text['Productos_del_Modulo'];?> </a>
-                    </li>
-
-                    <li class="page-scroll">
-                     <a href="#results"><?php echo $text['Artículos'];?> </a>
-                    </li>
-
-                    <li class="page-scroll">
+					<li class="page-scroll">
                         <a href="#Prototype"><?php echo $text['Prototipos'];?> </a>
                     </li>
-
+					<li class="page-scroll">
+                        <a href="#index"><?php echo $text['Índice'];?> </a>
+                    </li>
                     <li class="page-scroll">
                         <a href="#mapa"><?php echo $text['Mapa'];?> </a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#index"><?php echo $text['Índice'];?> </a>
+					<li class="page-scroll">
+                        <a href="#Predicción"><?php echo $text['Predicción'];?> </a>
                     </li>
-
                     
-                    <div id = "idioma" style="margin: 0 auto; width: 100%; text-align: left;">
-                        <src="img/profile.png"  class="fondo2.jpg btn-lg"><?php echo $text['cambiar_idioma'];?>
-                </div>
+					<li class="page-scroll">
+                        <a href="#participants"> <?php echo $text['Participantes'];?> </a>
+                    </li>
+					 <li class="page-scroll">
+						<a href="#products"><?php echo $text['Productos_del_Proyecto'];?> </a>
+                    </li>
                 </ul>
                 
             </div>   
@@ -128,7 +121,14 @@ require_once('lang/'.$language.'.php');
     </nav>
 
 
-
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
    <!-- Header -->
     <header>
         <div class="container">
@@ -136,9 +136,9 @@ require_once('lang/'.$language.'.php');
                 <div class="col-lg-12">
                     <a href="#meaning" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
                         <div class="intro-text">
-                            <span class="name"><?php echo $text['300'];?> </span>
+                            <span class="name"><font color="black"><?php echo $text['300'];?></font></span>
                             <hr>
-                            <span class="skills"><?php echo $text['301'];?>
+                            <span class="skills"><font color="black"><?php echo $text['301'];?></font>
                             </span>
                         </div>
                 </div>
@@ -199,24 +199,24 @@ require_once('lang/'.$language.'.php');
     <section class="significadologo" id="meaning">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-4" align="left">
                     <h2><?php echo $text['5'];?></h2>
                     <hr >
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 skills">
-                    <p><?php echo $text['6'];?>
+                <div class="col-md-4" align="left">
+                    <p><strong><?php echo $text['6'];?>
                     </p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-1">
+                <div class="col-md-4" align="center">
                         <p><img class="img-responsive imagen-redonda" src="img/profile.png" alt="Yakatl"></p>
                 </div>
             </div>
     </section>
 
 	 <!--<section class="success"  id="Aire">-->
-    <section class="success" id="meaning">
+    <section class="success" id="Calidad">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -905,57 +905,87 @@ require_once('lang/'.$language.'.php');
 				</div>
 			</div>
 		</div>
+		<style>
+		thead {color:black;}
+		tbody {color:black;}
+		table, th, td {
+			border: 1px solid black;
+		}
+		</style>
 		<div class="row">
-			<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
-				<thead>
-					<tr>
-					<th><?php echo $text['124'];?></th>
-					<th><?php echo $text['125'];?></th>
-					<th><?php echo $text['126'];?></th>
-					<th><?php echo $text['127'];?></th>
-					<th><?php echo $text['128'];?></th>
-					</tr>
-				</thead>
-			</table>
+			<center>
+				<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="80%" bgcolor="black">
+					<thead>
+						<tr>
+						<th><font color="black"><?php echo $text['124'];?></font></th>
+						<th><font color="black"><?php echo $text['125'];?></font></th>
+						<th><font color="black"><?php echo $text['126'];?></font></th>
+						<th><font color="black"><?php echo $text['127'];?></font></th>
+						<th><font color="black"><?php echo $text['128'];?></font></th>
+						</tr>
+					</thead>
+				</table>
+			</center>
 		</div>
     </section>
 	
-
-
-<section id="products">
-	<div class="container" >
-		<div class="row">
-			<div class="col-lg-12">
-				<h1><?php echo $text['Proyecto_Multidisciplinario'];?>
-				</h1>
-				<hr> 
-				<div class="intro-text">
-					<span class="skills">
-					<?php echo $text['Desarrollo_de_un_Prototipo'];?> 
-					</span>
-					<br><br><br><br>
-				   <h1><?php echo $text['Modulo_Proyecto'];?>
+	<section id="Predicción">
+		<div class="container" >
+			<div class="row">
+				<div class="col-lg-12">
+					<h1><?php echo $text['Predicción'];?>
+					</h1>
 					<hr> 
-						<span class="skills"> 
-						<?php echo $text['prod_texto'];?>
-				</span>
 				</div>
 			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-lg-12">
+					<h1><?php echo $text['Conclusión'];?>
+					</h1>
+					<hr> 
+				</div>
+			</div>
+			<br>
+			<br>
 		</div>
-		<br>
-		<br>
+	</section>
 
-	</div>
-</section>
+	<section>
+		<div class="container" >
+			<div class="row">
+				<div class="col-lg-12">
+					<h1><?php echo $text['Proyecto_Multidisciplinario'];?>
+					</h1>
+					<hr> 
+					<div class="intro-text">
+						<span class="skills">
+						<?php echo $text['Desarrollo_de_un_Prototipo'];?> 
+						</span>
+						<br><br><br><br>
+					   <h1><?php echo $text['Modulo_Proyecto'];?>
+						<hr> 
+							<span class="skills"> 
+							<?php echo $text['prod_texto'];?>
+					</span>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+
+		</div>
+	</section>
     
 <br>
-   <section  id="participants">
+	<section  id="participants">
         <div class="container">
             <h2><?php echo $text['10'];?></h2>
             <div class="row">
                 <div class="col-lg-12 text">
                     <h1><?php echo $text['11'];?></h1>
-                    <hr >
+                    <hr>
                 </div>
             </div>
             <div class="row">
@@ -969,42 +999,36 @@ require_once('lang/'.$language.'.php');
                          <br/><?php echo $text['13'];?>                   
                     </p>
                 </div>
-           </div>
+			</div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-1">
-                     <h1><?php echo $text['371'];?></h1>
-                    
+                     <h1><?php echo $text['371'];?></h1>                 
                     <p><a href="http://www.cidetec.ipn.mx/Paginas/Inicio.aspx" ><img class="img-responsive"   src="img/cidetec1.jpg" alt=""></a>
                          <br/><?php echo $text['260'];?>                   
                     </p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2">
-                <h1><?php echo $text['371'];?></h1>
-                   <p><a href="http://utfv.edomex.gob.mx/" ><img class="img-responsive"   src="img/utfv1.jpg" alt=""></a>
-                         <br/><?php echo $text['261'];?>                    
-                    </p>
-
-            </div>
-
-            <div class="col-lg-4 col-lg-offset-1">
-                <h1><?php echo $text['371'];?></h1>
-                   <p><a href="http://www.upiicsa.ipn.mx/Paginas/inicio.aspx" ><img class="img-responsive"   src="img/upiicsa.jpg" alt=""></a>
-                         <br/><?php echo $text['262'];?>                   
-                    </p>
-
-            </div>
-
-            <div class="col-lg-4 col-lg-offset-2">
-                <h1><?php echo $text['371'];?></h1>
-                   <p><a href="http://www.esiaz.ipn.mx/Paginas/Inicio.aspx" ><img class="img-responsive"   src="img/Esia.png" alt=""></a>
-                         <br/><?php echo $text['263'];?>                   
-                    </p>
-
-            </div>
-
-
-
-                   
+				</div>
+				<div class="col-lg-4 col-lg-offset-2">
+					<h1><?php echo $text['371'];?></h1>
+						<p><a href="http://utfv.edomex.gob.mx/" ><img class="img-responsive"   src="img/utfv1.jpg" alt=""></a>
+							 <br/><?php echo $text['261'];?>                    
+						</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-1">
+					<h1><?php echo $text['371'];?></h1>
+						<p><a href="http://www.upiicsa.ipn.mx/Paginas/inicio.aspx" ><img class="img-responsive"   src="img/upiicsa.jpg" alt=""></a>
+							 <br/><?php echo $text['262'];?>                   
+						</p>
+				</div>
+				<div class="col-lg-4 col-lg-offset-2">
+					<h1><?php echo $text['371'];?></h1>
+						<p><a href="http://www.esiaz.ipn.mx/Paginas/Inicio.aspx" ><img class="img-responsive"   src="img/Esia.png" alt=""></a>
+							 <br/><?php echo $text['263'];?>                   
+						</p>
+				</div>  
+			</div> 
+		</div> 			
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1016,221 +1040,205 @@ require_once('lang/'.$language.'.php');
                     <h1><?php echo $text['14'];?></h1>
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['30'];?>
-                                        <br/><?php echo $text['31'];?>
-                                        <br/><?php echo $text['32'];?>
-                                        <br/><?php echo $text['33'];?>
-                                        <br/><?php echo $text['34'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
+							<h5><?php echo $text['30'];?>
+								<br/><?php echo $text['31'];?>
+								<br/><?php echo $text['32'];?>
+								<br/><?php echo $text['33'];?>
+								<br/><?php echo $text['34'];?>
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
                     </div>
-
-
-                     <div class="col-sm-4 portfolio-item">
+					<div class="col-sm-4 portfolio-item">
                      <h1><?php echo $text['14'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['40'];?>
-                                        <br/><?php echo $text['41'];?>
-                                        <br/><?php echo $text['42'];?> 
-                                        <br/><?php echo $text['43'];?>
-                                        <br/><?php echo $text['44'];?>             
-                                        <br/>
-                                        <br/>
-                                    </h5>
+							<h5><?php echo $text['40'];?>
+								<br/><?php echo $text['41'];?>
+								<br/><?php echo $text['42'];?> 
+								<br/><?php echo $text['43'];?>
+								<br/><?php echo $text['44'];?>             
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
-
                     </div>
-                
-
-                 
-                <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                <h1><?php echo $text['376'];?></h1>
+					<div class="col-sm-4 portfolio-item">
+					<h1><?php echo $text['376'];?></h1>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
-                                    <h5><br/><?php echo $text['45'];?>
-                                    <br/><br/><?php echo $text['46'];?>
-                                    <br/><br/><?php echo $text['47'];?>
-                                    <br/><br/><?php echo $text['48'];?>
-                                    <br/><br/><?php echo $text['49'];?>                         
-                                    <br/>
-                                    <br/>
-                                    </h5>
+							<h5><?php echo $text['45'];?>
+								<br/><?php echo $text['46'];?>
+								<br/><?php echo $text['47'];?>
+								<br/><?php echo $text['48'];?>
+								<br/><?php echo $text['49'];?>                         
+								<br/>
+							</h5>
                         </figcaption>
-
                     </div>   
-
-                    <div class="col-sm-4 portfolio-item">
-                    <h1><?php echo $text['377'];?></h1>
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['50'];?>
-                                        <br/><?php echo $text['51'];?>
-                                        <br/><?php echo $text['52'];?> 
-                                        <br/><?php echo $text['53'];?>
-                                        <br/><?php echo $text['54'];?>                               
-                                        <br/>
-                                        <br/>
-                                    </h5></figcaption>
-
-                    </div> 
-
-                     <div class="col-sm-4 portfolio-item">
-                     <h1><?php echo $text['377'];?></h1>
-                       <img class="img-responsive imagen-redonda"  width="240" height="240"  src="img/Jhairo.jpg" alt="">
-                       <figcaption>
-                                <h5><?php echo $text['70'];?> 
-                                    <br/><?php echo $text['71'];?> 
-                                    <br/><?php echo $text['72'];?>  
-                                    <br/><?php echo $text['380'];?> 
-                                    <br/><?php echo $text['73'];?>                       
-                                    <br/>
-                                    <br/>
-                                </h5>
-                        </figcaption>
-                    </div>
-
-                
-                
-                
-
+				</div> 
+				<div class="row">
+					<div class="col-md-3 portfolio-item">
+					<h1><?php echo $text['377'];?></h1>
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Mario.jpg" alt="">
+					   <figcaption>
+							<h5><?php echo $text['50'];?>
+								<br/><?php echo $text['51'];?>
+								<br/><?php echo $text['52'];?> 
+								<br/><?php echo $text['53'];?>
+								<br/><?php echo $text['54'];?>                               
+								<br/>
+								<br/>
+							</h5></figcaption>
+					</div> 
+					 <div class="col-md-3 portfolio-item">
+					 <h1><?php echo $text['377'];?></h1>
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Itzama.jpg" alt="">
+					   <figcaption>
+							<h5><?php echo $text['70'];?> 
+								<br/><?php echo $text['71'];?> 
+								<br/><?php echo $text['72'];?>  
+								<br/><?php echo $text['380'];?> 
+								<br/><?php echo $text['73'];?>                       
+								<br/>
+								<br/>
+							</h5>
+						</figcaption>
+					</div>
+					<div class="col-md-3 portfolio-item">
+					<h1><?php echo $text['377'];?></h1>
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
+					   <figcaption>
+							<h5><?php echo $text['50'];?>
+								<br/><?php echo $text['51'];?>
+								<br/><?php echo $text['52'];?> 
+								<br/><?php echo $text['53'];?>
+								<br/><?php echo $text['54'];?>                               
+								<br/>
+								<br/>
+							</h5></figcaption>
+					</div> 
+					 <div class="col-md-3 portfolio-item">
+					 <h1><?php echo $text['377'];?></h1>
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Jhairo.jpg" alt="">
+					   <figcaption>
+								<h5><?php echo $text['70'];?> 
+									<br/><?php echo $text['71'];?> 
+									<br/><?php echo $text['72'];?>  
+									<br/><?php echo $text['380'];?> 
+									<br/><?php echo $text['73'];?>                       
+									<br/>
+									<br/>
+								</h5>
+						</figcaption>
+					</div>
+				</div>
                 <div class="col-lg-12">
                     <h2><?php echo $text['375'];?></h2>
                     <hr >
                 </div>
-
-
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['15'];?>
-                                        <br/><?php echo $text['16'];?>
-                                        <br/><?php echo $text['17'];?> 
-                                        <br/><?php echo $text['18'];?> 
-                                        <br/><?php echo $text['19'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
+							<h5><?php echo $text['15'];?>
+								<br/><?php echo $text['16'];?>
+								<br/><?php echo $text['17'];?> 
+								<br/><?php echo $text['18'];?> 
+								<br/><?php echo $text['19'];?>
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
                     </div>
-
-                    
-                    
-                    <div class="col-sm-4 portfolio-item">
+					<div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['35'];?>
-                                        <br/><?php echo $text['36'];?>
-                                        <br/><?php echo $text['37'];?> 
-                                        <br/><?php echo $text['38'];?>
-                                        <br/><?php echo $text['39'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
+							<h5><?php echo $text['35'];?>
+								<br/><?php echo $text['36'];?>
+								<br/><?php echo $text['37'];?> 
+								<br/><?php echo $text['38'];?>
+								<br/><?php echo $text['39'];?>
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
-                    </div>
-                
+                    </div>             
                     <div class="col-sm-4 portfolio-item">
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
                         <figcaption>
-                                    <h5><?php echo $text['20'];?>
-                                        <br/><?php echo $text['21'];?>
-                                        <br/><?php echo $text['22'];?> 
-                                        <br/><?php echo $text['23'];?>
-                                        <br/><?php echo $text['24'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
+							<h5><?php echo $text['20'];?>
+								<br/><?php echo $text['21'];?>
+								<br/><?php echo $text['22'];?> 
+								<br/><?php echo $text['23'];?>
+								<br/><?php echo $text['24'];?>
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
                     </div>
-              
-              <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                        <img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
-                        <figcaption>
-                                    <h5><?php echo $text['25'];?>
-                                        <br/><?php echo $text['26'];?>
-                                        <br/><?php echo $text['27'];?> 
-                                        <br/><?php echo $text['28'];?>
-                                        <br/><?php echo $text['29'];?>
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-                 
-                    
-                  
-
-                    <div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['60'];?>
-                                        <br/><?php echo $text['61'];?>
-                                        <br/><?php echo $text['62'];?> 
-                                        <br/><?php echo $text['63'];?> 
-                                        <br/><?php echo $text['64'];?>                        
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-
-                    <div class="col-sm-4 portfolio-item">
-                       <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
-                       <figcaption>
-                                    <h5><?php echo $text['55'];?>
-                                        <br/><?php echo $text['56'];?>
-                                        <br/><?php echo $text['57'];?> 
-                                        <br/><?php echo $text['58'];?> 
-                                        <br/><?php echo $text['59'];?>                                 
-                                        <br/>
-                                        <br/>
-                                    </h5>
-                        </figcaption>
-                    </div>
-                    </div>
-
-                
+				</div>            
+				<div class="row">
+					<div class="col-sm-4 portfolio-item">
+						<img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
+						<figcaption>
+							<h5><?php echo $text['25'];?>
+								<br/><?php echo $text['26'];?>
+								<br/><?php echo $text['27'];?> 
+								<br/><?php echo $text['28'];?>
+								<br/><?php echo $text['29'];?>
+								<br/>
+								<br/>
+							</h5>
+						</figcaption>
+					</div>
+					<div class="col-sm-4 portfolio-item">
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
+					   <figcaption>
+							<h5><?php echo $text['60'];?>
+								<br/><?php echo $text['61'];?>
+								<br/><?php echo $text['62'];?> 
+								<br/><?php echo $text['63'];?> 
+								<br/><?php echo $text['64'];?>                        
+								<br/>
+								<br/>
+							</h5>
+						</figcaption>
+					</div>
+					<div class="col-sm-4 portfolio-item">
+					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
+					   <figcaption>
+							<h5><?php echo $text['55'];?>
+								<br/><?php echo $text['56'];?>
+								<br/><?php echo $text['57'];?> 
+								<br/><?php echo $text['58'];?> 
+								<br/><?php echo $text['59'];?>                                 
+								<br/>
+								<br/>
+							</h5>
+						</figcaption>
+					</div>
+				</div>
                 <div class="row">
-                    
-               
                     <div class="col-sm-4 portfolio-item">
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
                        <figcaption>
-                                <h5><?php echo $text['65'];?> 
-                                    <br/><?php echo $text['66'];?> 
-                                    <br/><?php echo $text['67'];?>  
-                                    <br/><?php echo $text['68'];?> 
-                                    <br/><?php echo $text['69'];?>                         
-                                    <br/>
-                                    <br/>
-                                </h5>
+							<h5><?php echo $text['65'];?> 
+								<br/><?php echo $text['66'];?> 
+								<br/><?php echo $text['67'];?>  
+								<br/><?php echo $text['68'];?> 
+								<br/><?php echo $text['69'];?>                         
+								<br/>
+								<br/>
+							</h5>
                         </figcaption>
                     </div>
-
-                    
-                
-                
-                    
-                   
                 </div> <!-- hay espacio para una imagen mas en este row-->
             </div>
         </div>
-
     </section>
 
-
-  
-
- 
-                    
-
-    
     <br><br>
 <span class="mono">
 <div class="container"><h1><?php echo $text['170'];?></h1><hr></div>
@@ -1291,142 +1299,139 @@ require_once('lang/'.$language.'.php');
 
 
 
-<section id="results"> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
-    <header>
-    <div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
-            <div class="row">
-            <div class="col-lg-12"> <!-- codigo para imagen de fondo-->
-            <div class="intro-text">
-            <h2> <?php echo $text['138'];?> <h2>
-                 
-            <hr>
-            <h3><div style="text-transform: none"><?php echo $text['139'];?></div></h3> <!-- texto largo-->
-            <hr>
+	<section id="products"> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
+		<header>
+		<div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
+				<div class="row">
+				<div class="col-lg-12"> <!-- codigo para imagen de fondo-->
+				<div class="intro-text">
+				<h2> <font color="black"><?php echo $text['138'];?></font><h2>
+					 
+				<hr>
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['139'];?></font></div></h3> <!-- texto largo-->
+				<hr>
 
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> 
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> 
 
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['140'];?></p></font></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['141'];?></p></font></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['142'];?></p></font></div></LI>
-            <br/><br/>
-            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['143'];?></p></font></div></LI>
-            </div> 
-            </h3> <!-- texto largo-->
-            
-          
-            
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> 
-            <h3><div style="text-transform: none"><?php echo $text['144'];?></div></h3> <!-- texto largo-->
-            <hr>
-           
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['145'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['146'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['147'];?></p></font></div></LI>
-            </div> 
-                <br/><br/>
-            
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['140'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['141'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['142'];?></p></font></div></LI>
+				<br/><br/>
+				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['143'];?></p></font></div></LI>
+				</div> 
+				</h3> <!-- texto largo-->
+				
+			  
+				
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> 
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['144'];?></font></div></h3> <!-- texto largo-->
+				<hr>
+			   
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['145'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['146'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['147'];?></p></font></div></LI>
+				</div> 
+					<br/><br/>
+				
 
 
-            </h3> <!-- texto largo-->
-           
-           
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
-                    
-            <h3><div style="text-transform: none"><?php echo $text['151'];?></div></h3>
-            <hr>
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['152'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"> <?php echo $text['153'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['154'];?></p></div></LI>
-            <br/><br/>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['155'];?></p></div></LI>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['156'];?></p></div></LI>
-            </div>
-            <br/><br/>
+				</h3> <!-- texto largo-->
+			   
+			   
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> <!-- texto largo-->
+						
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['151'];?></font></div></h3>
+				<hr>
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['152'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['153'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['154'];?></p></font></div></LI>
+				<br/><br/>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['155'];?></p></font></div></LI>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['156'];?></p></font></div></LI>
+				</div>
+				<br/><br/>
 
-            </h3> <!-- texto largo-->
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> <!-- texto largo-->
+				</h3> <!-- texto largo-->
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> <!-- texto largo-->
 
-            <h3><div style="text-transform: none"><p align="center"><?php echo $text['157'];?></p></div></h3>
-            <hr>
-            <UL type=square>
-            </h3>
-            <h3><LI><div style="text-transform: none"><p align="left"> <?php echo $text['158'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['159'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['160'];?></p></div></LI>
-            <br/><br/>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['161'];?></p></div></LI>
-            </div>
-            </h3> <!-- texto largo-->
+				<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo $text['157'];?></p></font></div></h3>
+				<hr>
+				<UL type=square>
+				</h3>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['158'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['159'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['160'];?></p></font></div></LI>
+				<br/><br/>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['161'];?></p></font></div></LI>
+				</div>
+				</h3> <!-- texto largo-->
 
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> 
-                    
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> 
+						
 
-            <h3><div style="text-transform: none"><?php echo $text['148'];?></div></h3>
-            <hr>
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['149'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['150'];?></p></div></LI>
-            </div>
-            <br><br>
-            </h3>
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['148'];?></font></div></h3>
+				<hr>
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['149'];?></font></p></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['150'];?></p></font></div></LI>
+				</div>
+				<br><br>
+				</h3>
 
-            
-            <h3><div style="text-transform: none"><?php echo $text['162'];?></div></h3>
-            <hr>
-            <div class="row">
-                    <div class="col-sm-4 portfolio-item"> 
+				
+				<h3><div style="text-transform: none"><font color="black"><?php echo $text['162'];?></font></div></h3>
+				<hr>
+				<div class="row">
+						<div class="col-sm-4 portfolio-item"> 
 
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"> <?php echo $text['163'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['164'];?></p></div></LI>
-            <br><br>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['165'];?></p></div></LI>
-            <br/><br/>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['166'];?></p></div></LI>
-            <LI><div style="text-transform: none"><p align="left"><?php echo $text['167'];?></p></div></LI>
-            <br><br>
-            </div>
-            </h3>
-            
-            <h3><div style="text-transform: none"><p align="center"><?php echo $text['168'];?></p></div></h3>
-            <hr>
-            
-            <UL type=square>
-            <h3><LI><div style="text-transform: none"><p align="left"><?php echo $text['169'];?></p></div></LI>
-            <br><br>
-            
-            
-            
-            </h3>
-            </UL>
-            </div> 
-            </div> 
-            </div> 
-        </div> 
-        </div>
-                </div>
-            </div>
-        </div>
-    </header>  
-</section>
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['163'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['164'];?></p></font></div></LI>
+				<br><br>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['165'];?></p></font></div></LI>
+				<br/><br/>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['166'];?></p></font></div></LI>
+				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['167'];?></p></font></div></LI>
+				<br><br>
+				</div>
+				</h3>
+				
+				<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo $text['168'];?></p></font></div></h3>
+				<hr>
+				
+				<UL type=square>
+				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['169'];?></p></font></div></LI>
+				<br><br>  
+				</h3>
+				</UL>
+				</div> 
+				</div> 
+				</div> 
+			</div> 
+			</div>
+					</div>
+				</div>
+			</div>
+		</header>  
+	</section>
 
 
 
@@ -1693,20 +1698,20 @@ require_once('lang/'.$language.'.php');
 
          });
 
-         var dataTable = $('#employee-grid').DataTable( {
-                    "processing": true,
-                    "serverSide": true,
-                    "ajax":{
-                        url :"employee-grid-data.php", // json datasource
-                        type: "post",  // method  , by default get
-                        error: function(){  // error handling
-                            $(".employee-grid-error").html("");
-                            $("#employee-grid").append('<tbody class="employee-grid-error"><tr><th colspan="5">No se encontraron datos</th></tr></tbody>');
-                            $("#employee-grid_processing").css("display","none");
-                            
-                        }
-                    }
-                } );
+	var dataTable = $('#employee-grid').DataTable( {
+		"processing": true,
+		"serverSide": true,
+		"ajax":{
+			url :"employee-grid-data.php", // json datasource
+			type: "post",  // method  , by default get
+			error: function(){  // error handling
+				$(".employee-grid-error").html("");
+				$("#employee-grid").append('<tbody class="employee-grid-error"><thead><tr><th colspan="5">No se encontraron datos</th></tr></thead></tbody>');
+				$("#employee-grid_processing").css("display","none");
+				
+			}
+		}
+	});
 
     });  </script>  
     
