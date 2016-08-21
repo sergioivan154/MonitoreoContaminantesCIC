@@ -136,9 +136,9 @@ require_once('lang/'.$language.'.php');
                 <div class="col-lg-12">
                     <a href="#meaning" ><img class="img-responsive imagen-redonda" src="img/profile.png" alt=""></a>
                         <div class="intro-text">
-                            <span class="name"><font color="black"><?php echo $text['300'];?></font></span>
+                            <span class="name"><font color="black"><h3><?php echo $text['300'];?></font></h3></span>
                             <hr>
-                            <span class="skills"><font color="black"><?php echo $text['301'];?></font>
+                            <span class="skills"><font color="black" SIZE=5><p style=”text-align: justify;”><?php echo $text['301'];?></font></p>
                             </span>
                         </div>
                 </div>
@@ -150,19 +150,21 @@ require_once('lang/'.$language.'.php');
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><?php echo $text['1'];?>
-                    </h1>
-                    <hr> 
-                    <div class="intro-text">
-                        <span class="skills">
-                        <?php echo $text['2'];?>
-                        </span>
-                        <br><br><br><br>
-                       <h1><?php echo $text['3'];?>
-                        </h1>
-                        <hr> 
+					<div class="intro-text">
+						<span class="name">
+							<h3><?php echo $text['1'];?></h3>
+						</span>
+						<hr> 
 						<span class="skills">
-						<?php echo $text['4'];?>
+							<font color="black" SIZE=5><p style=”text-align: justify;”><?php echo $text['2'];?></font></p>
+						</span>
+							<br><br><br><br>
+						<span class="name">
+							<h3><?php echo $text['3'];?></h3>
+						</span>
+						<hr> 
+						<span class="skills">
+							<font color="black" SIZE=5><p style=”text-align: justify;”><?php echo $text['4'];?></font></p>
 						</span>
                     </div>
                 </div>
@@ -175,40 +177,42 @@ require_once('lang/'.$language.'.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2><?php echo $text['7'];?>
-                    </h2>
-                    <hr>
-						<div class="container">
-							<div class="col-lg-4 col-lg-offset-2">
-								<p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a>
-								</p>
-							</div>
-							<div class="row">
-								<div class="col-lg-4 col-lg-offset-2">
-									<p><?php echo $text['8'];?>
-									</p>
+					<div class="intro-text">
+							<span class="name"><h3><?php echo $text['7'];?></h3></span>
+							<hr>
+								<div class="container">
+									<div class="col-lg-4 col-lg-offset-2">
+										<p><a href="http://www.cic.ipn.mx/" > <img class="img-responsive" src="img/logocic.png" alt=""></a></p>
+									</div>
+									<div class="row">
+										<div class="col-lg-4 col-lg-offset-2">
+											<span class="skills"><font color="white" SIZE=5><p style=”text-align: justify;”><?php echo $text['8'];?></p></font></span>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</hr>
+							</hr>
+					</div>
                 </div>
             </div>
 		</div>
     </section>
-
+<!-- Significado-->
     <section class="significadologo" id="meaning">
         <div class="container">
             <div class="row">
                 <div class="col-md-4" align="left">
-                    <h2><?php echo $text['5'];?></h2>
-                    <hr >
-                </div>
+					<div class="intro-text">
+						<span class="name"><h3><?php echo $text['5'];?></h3></span>
+						<hr >
+					</div>
+				</div>
             </div>
             <div class="row">
                 <div class="col-md-4" align="left">
-                    <p><strong><?php echo $text['6'];?>
-                    </p>
-                </div>
+					<div class="intro-text">
+						<span class="skills"><font color="white" SIZE=5><p style=”text-align: justify;”><strong><?php echo $text['6'];?></p></font></span>
+					</div>
+				</div>
                 <div class="col-md-4" align="center">
                         <p><img class="img-responsive imagen-redonda" src="img/profile.png" alt="Yakatl"></p>
                 </div>
@@ -220,65 +224,59 @@ require_once('lang/'.$language.'.php');
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<h2><font color="black"><?php echo $text['385'];?></font></h2>
-					<hr>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['385'];?></h3></font></span>
+						<hr>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				 <div id="Aire">				
-					<UL type=square>
-					<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['386'];?></font>
-					<p><font color="black"><?php echo $text['387'];?></p></font></div></LI>
-					<br><br>
-					</h3>
-					<h3>
-						<LI><div style="text-transform: none"><font color="black"><?php echo $text['388'];?></font></div></LI>
+				 <div id="Aire">	
+					<div class="intro-text">				 
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['392'];?></font></p></span>
 						<br><br>
-					</h3>
-
-					<h3>
-						<LI><div style="text-transform: none"><font color="black"><?php echo $text['389'];?></font></div></LI>
+						<UL type=circle>
+						<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['386'];?></font></p></span></LI>				
+						<p ><?php echo $text['387'];?></p>
 						<br><br>
-					</h3>						
-					<div class="table-responsive row">
-						   <table class="table">
-								<tr>
-									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['372'];?></font></center></td>					
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['378'];?></font></center></td> <!--En este apartado se declara la tabla de recomendaciones-->
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['379'];?></font></center></td>
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['380'];?></font></center></td>
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['381'];?></font></center></td>
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['382'];?></font></center></td>
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#BBFFFF"><center><font color="black"><?php echo $text['383'];?></font></center></td>
-								</tr>
-								<tr>
-									<td width="15%" bgcolor="#E0FFFF"><center><font color="black"><?php echo $text['384'];?></font></center></td>
-								</tr>
-							</table>
+						<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['388'];?></font></p></LI></span>	
+						<br><br>
+						<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['389'];?></font></p></LI></span>	
+						<br><br>					
+						<div class="table-responsive row">
+							   <table class="table">
+									<tr>
+										<td width="15%" bgcolor="#BBFFFF"><center><font color="black" SIZE=5><?php echo $text['372'];?></font></center></td>					
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#E0FFFF"><center><font color="black" SIZE=5><?php echo $text['378'];?></font></center></td> <!--En este apartado se declara la tabla de recomendaciones-->
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#BBFFFF"><center><font color="black" SIZE=5><?php echo $text['379'];?></font></center></td>
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#E0FFFF"><center><font color="black" SIZE=5><?php echo $text['380'];?></font></center></td>
+									</tr>
+									<tr> 
+										<td width="15%" bgcolor="#BBFFFF"><center><font color="black" SIZE=5><?php echo $text['381'];?></font></center></td>
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#E0FFFF"><center><font color="black" SIZE=5><?php echo $text['382'];?></font></center></td>
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#BBFFFF"><center><font color="black" SIZE=5><?php echo $text['383'];?></font></center></td>
+									</tr>
+									<tr>
+										<td width="15%" bgcolor="#E0FFFF"><center><font color="black" SIZE=5><?php echo $text['384'];?></font></center></td>
+									</tr>
+								</table>
+						</div>
+							<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['390'];?></p ></font>
+							<br><br>
+							<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['391'];?></font></p></LI></span>
+							<br><br>
 					</div>
-					<h3>
-						<LI><div style="text-transform: none"><font color="black"><?php echo $text['390'];?></font></div></LI>
-						<br><br>
-					</h3>
-
-					<h3>
-						<LI><div style="text-transform: none"><font color="black"><?php echo $text['391'];?></font></div></LI>
-						<br><br>
-					</h3>
-				 
-			   </div>
+				</div>
 			</div>
 		</div>
 		<!--/header> -->
@@ -288,22 +286,33 @@ require_once('lang/'.$language.'.php');
 	<section class="success" id="Prototype">
 		<div class="container">
 			<div class="row">
-				 <h2><font color="black"><?php echo $text['130'];?></font><h2>
-					<hr> 
-					<h3><div style="text-transform: none"><font color="black"><?php echo $text['131'];?></font></div></h3>
-				<hr>
-
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['132'];?></font></div></LI>
-				<br><br>
-				
-				 </h3>
-
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['133'];?></font></div></h3>
-				<hr>
-				<h3><LI><div style="text-transform: none"><font color="black"><?php echo $text['134'];?></font></div></LI>
-				<br><br>
-				 </h3>
+				<div class="col-lg-12">
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['130'];?><h3></font></span>
+						<hr>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="intro-text">
+					<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['131'];?></font></p></span>
+					<br>
+					<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['133'];?></font></p></span>
+					<hr>
+					<UL type=disk>
+					<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['136'];?></font></p></LI>
+					<UL>
+						<LI><p style=”text-align: justify;”><font color="black" SIZE=4><?php echo $text['134'];?></font></p></LI>
+						<LI><p style=”text-align: justify;”><font color="black" SIZE=4><?php echo $text['393'];?></font></p></LI>
+						<LI><p style=”text-align: justify;”><font color="black" SIZE=4><?php echo $text['394'];?></font></p></LI>
+						<LI><p style=”text-align: justify;”><font color="black" SIZE=4><?php echo $text['395'];?></font></p></LI>
+					</UL>
+					<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['135'];?></font></p></LI>
+					<UL>
+					<LI><p style=”text-align: justify;”><font color="black" SIZE=4><?php echo $text['396'];?></font></p></LI>
+					</UL>
+					<br><br>
+				</div>
 			</div>
 			<div class="row">       
 				<div id="CarExterior" class="col-lg-5 col-sm-12 carousel slide ">
@@ -366,6 +375,18 @@ require_once('lang/'.$language.'.php');
 				  <a class="carousel-control right" href="#CarInterior" data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
+			<br><br><br>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['397'];?></font></p></span>
+						<br><br>
+						<center><button onclick="location.href='http://www.libelium.com/'" target="_blank" class="btn btn-success btn-lg">Libelium
+						</button></center>
+						<hr>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-lg-4 col-sm-12 portfolio-item">
 					<a href="#portfolio1" class="portfolio-link" data-toggle="modal">
@@ -374,7 +395,7 @@ require_once('lang/'.$language.'.php');
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/dispositivos/waspmote.png" class="img-responsive" alt="">
+						<img src="img/dispositivos/waspmote.png" width="230" height="230" class="img-responsive" alt="">
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-12 portfolio-item">
@@ -384,7 +405,7 @@ require_once('lang/'.$language.'.php');
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/dispositivos/xbee.png" class="img-responsive" alt="">
+						<img src="img/dispositivos/xbee.png" width="230" height="230" class="img-responsive" alt="">
 					</a>
 				</div>           
 				<div class="col-lg-4 col-sm-12 portfolio-item">
@@ -394,7 +415,7 @@ require_once('lang/'.$language.'.php');
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/dispositivos/entorno.png" class="img-responsive" alt="">
+						<img src="img/dispositivos/meshlium.png" width="230" height="230" class="img-responsive" alt="">
 					</a>
 				</div>          
 				<div class="col-lg-4 col-sm-12 portfolio-item">
@@ -404,7 +425,7 @@ require_once('lang/'.$language.'.php');
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/dispositivos/gassensor.png" class="img-responsive" alt="">
+						<img src="img/dispositivos/gassensor.png" width="230" height="230" class="img-responsive" alt="">
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-12 portfolio-item">
@@ -414,7 +435,7 @@ require_once('lang/'.$language.'.php');
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/dispositivos/lipro.jpg" class="img-responsive" alt="">
+						<img src="img/dispositivos/lipro.jpg" width="230" height="230" class="img-responsive" alt="">
 					</a>
 				</div>
 			</div>
@@ -428,9 +449,12 @@ require_once('lang/'.$language.'.php');
 	<section id="index">
 		<div class="container">
 			<div class="row">
-				<h2><?php echo $text['82'];?></h2>
-				<h3><?php echo $text['83'];?></h3>
-				<hr> <br>
+				<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['82'];?></h3></font></span>
+						<hr>
+				</div>
+				<h3><?php echo $text['83'];?></h3> 
+				<br>
 				<div class="table-responsive row">
 					<table class="table">
 						<tr>
@@ -952,32 +976,6 @@ require_once('lang/'.$language.'.php');
 		</div>
 	</section>
 
-	<section>
-		<div class="container" >
-			<div class="row">
-				<div class="col-lg-12">
-					<h1><?php echo $text['Proyecto_Multidisciplinario'];?>
-					</h1>
-					<hr> 
-					<div class="intro-text">
-						<span class="skills">
-						<?php echo $text['Desarrollo_de_un_Prototipo'];?> 
-						</span>
-						<br><br><br><br>
-					   <h1><?php echo $text['Modulo_Proyecto'];?>
-						<hr> 
-							<span class="skills"> 
-							<?php echo $text['prod_texto'];?>
-					</span>
-					</div>
-				</div>
-			</div>
-			<br>
-			<br>
-
-		</div>
-	</section>
-    
 <br>
 	<section  id="participants">
         <div class="container">
@@ -1536,54 +1534,50 @@ require_once('lang/'.$language.'.php');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2><?php echo $text['173'];?></h2>
-                            <img src="img/dispositivos/waspmote.png " class="img-responsive img-centered" alt="">
-                            <p><class="skills"><?php echo $text['174'];?>
-                            </p>
-                            <p>
-                            <?php echo $text['175'];?>
-                        </p>
+                            <h3><?php echo $text['173'];?></h3>
+                            <img src="img/dispositivos/waspmote.png " width="500" height="500" class="img-responsive img-centered" alt="">
+							<div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['174'];?></font></p></span>
+							</div>
                             <div class="table-responsive">
-                    <table class="table skills">                
-                        <tr>
-                            <th><center><?php echo $text['176'];?></center></th>
-                            <th><center><?php echo $text['177'];?></center></th>
-                        </tr>
-                        <tr>
-                            <td><center><?php echo $text['178'];?></center></td>
-                            <td><center><?php echo $text['179'];?></center></td>
-                        </tr>
-                            <td><center><?php echo $text['180'];?></center></td>
-                            <td><center><?php echo $text['181'];?></center></td>                            
-                        </tr>
-                            <td><center><?php echo $text['182'];?><sub><?php echo $text['183'];?></center></sub></td>
-                            <td><center><?php echo $text['184'];?></center></td>                            
-                        </tr>
-                            <td><center><?php echo $text['185'];?><sub><?php echo $text['186'];?></center></sub></td>
-                            <td><center><?php echo $text['187'];?></center></td>                            
-                        </tr>
-                            <td><center><?php echo $text['188'];?></center></sub></td>
-                            <td><center><?php echo $text['189'];?></center></td>                            
-                        </tr>
-                            <td rowspan="3" style="vertical-align:middle;"><center><?php echo $text['190'];?></center></sub></td>
-                            <td><center><?php echo $text['191'];?></center></td>                            
-                        </tr>
-                            <td><center><?php echo $text['192'];?></center></td>                            
-                        </tr>
-                            <td><center><?php echo $text['193'];?></center></td>                            
+								<table class="table skills">                
+									<tr>
+										<th><center><?php echo $text['176'];?></center></th>
+										<th><center><?php echo $text['177'];?></center></th>
+									</tr>
+									<tr>
+										<td><center><?php echo $text['178'];?></center></td>
+										<td><center><?php echo $text['179'];?></center></td>
+									</tr>
+										<td><center><?php echo $text['180'];?></center></td>
+										<td><center><?php echo $text['181'];?></center></td>                            
+									</tr>
+										<td><center><?php echo $text['182'];?></center></td>
+										<td><center><?php echo $text['184'];?></center></td>                            
+									</tr>
+										<td><center><?php echo $text['185'];?></center></td>
+										<td><center><?php echo $text['187'];?></center></td>                            
+									</tr>
+										<td><center><?php echo $text['188'];?></center></sub></td>
+										<td><center><?php echo $text['189'];?></center></td>                            
+									</tr>
+										<td rowspan="3" style="vertical-align:middle;"><center><?php echo $text['190'];?></center></sub></td>
+										<td><center><?php echo $text['191'];?></center></td>                            
+									</tr>
+										<td><center><?php echo $text['192'];?></center></td>                            
+									</tr>
+										<td><center><?php echo $text['193'];?></center></td>                            
+								</table>
+							</div>
+						</div>
+						<br>
+                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['194'];?></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                    </table>
-                </div>
-            </div>
-        <br>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['194'];?></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="portfolio-modal modal fade" id="portfolio3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -1596,10 +1590,11 @@ require_once('lang/'.$language.'.php');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2><?php echo $text['195'];?></h2>
-                            <img src="img/dispositivos/gassensor.png" class="img-responsive img-centered" alt="">
-                            <p><class="skills"><?php echo $text['196'];?>
-                            </p>
+                            <h3><?php echo $text['195'];?></h3>
+                            <img src="img/dispositivos/gassensor.png" width="500" height="500" class="img-responsive img-centered" alt="">
+                            <div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['196'];?></font></p></span>
+							</div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['197'];?></button>
                         </div>
                     </div>
@@ -1619,11 +1614,12 @@ require_once('lang/'.$language.'.php');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2><?php echo $text['198'];?></h2>
-                            <img src="img/dispositivos/xbee.png" class="img-responsive img-centered" alt="">
-                            <p><?php echo $text['199'];?>
-                                </p>
-                                <br>
+                            <h3><?php echo $text['198'];?></h3>
+                            <img src="img/dispositivos/xbee.png" width="500" height="230" class="img-responsive img-centered" alt="">
+                            <div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['199'];?></font></p></span>
+							</div>
+                             <br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['200'];?></button>
                         </div>
                     </div>
@@ -1643,8 +1639,11 @@ require_once('lang/'.$language.'.php');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2><?php echo $text['201'];?></h2>
-                            <img src="img/dispositivos/entorno.png" class="img-responsive img-centered" alt="">
+                            <h3><?php echo $text['177'];?></h3>
+                            <img src="img/dispositivos/meshlium.png" width="500" height="500" class="img-responsive img-centered" alt="">
+							<div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['175'];?></font></p></span>
+							</div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php echo $text['202'];?></button>
                         </div>
                     </div>
@@ -1664,10 +1663,10 @@ require_once('lang/'.$language.'.php');
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2><?php echo $text['203'];?></h2>
-                            <img src="img/dispositivos/lipro.jpg" class="img-responsive img-centered" alt="">
-                            <p><?php echo $text['204'];?>
-                            </p>
+                            <h3><?php echo $text['203'];?></h3>
+                            <img src="img/dispositivos/lipro.jpg" width="500" height="500" class="img-responsive img-centered" alt="">
+                            <div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['204'];?></font></p></span>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['205'];?></button>
                         </div>
                     </div>

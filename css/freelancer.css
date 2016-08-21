@@ -173,6 +173,9 @@ section h2 {
     font-size: 3em;
 }
 
+ul li{
+    color: black
+}
 section.cic {
     color: #fff;
     background: #092275;
