@@ -1,31 +1,4 @@
 <?php session_start();
-
-/*Lo que vamos a comprobar primero es si se esta solicitando un nuevo idioma
-Si se esta solicitando, verificamos que el idioma existe tambien*/
-
-
-if(!empty($_REQUEST['local']) && file_exists('lang/'.$_REQUEST['local'].'.php')){
-
-  /*Entonces lo que vamos a hacer ahora, es decir que a partir de ahora,
-  nuestro idioma por defecto es este, al menos que se solicite cambiarlo de vuelta*/
-
-  $_SESSION['local'] = $_REQUEST['local'];
-
-  //y esto lo vamos a usar despues
-  $language = $_REQUEST['local'];
-}
-
-//Sino se solicito ningun idioma, verificamos si quedo guardado en nuestra session
-
-elseif(isset($_SESSION['local']))
-
-  //Lo mismo que antes, esto para despues
-
-  $language = $_SESSION['local'];
-
-//Y por ultimo, si nada de lo anterior cumple los requisitos, cargamos el idioma, que seria el idioma por defecto
-
-else
   $language = 'es';
 
 require_once('lang/'.$language.'.php');
@@ -58,13 +31,8 @@ $columns = array(
 	
 );
 
-$idioma = '';
-if($language == 'en'){
-	$idioma  = 'es';
-}
-else{
-	$idioma  = 'en';		
-}
+$idioma = 'es';
+
 
 // getting total number records without any search
 $sql = "CALL `IMECA`(-1, -1, 'menor','', '".$idioma."');";

@@ -102,6 +102,9 @@ require_once('lang/'.$language.'.php');
                         <a href="#mapa"><?php echo $text['Mapa'];?> </a>
                     </li>
 					<li class="page-scroll">
+                        <a href="#Gráfica"><?php echo $text['Gráfica'];?> </a>
+                    </li>
+					<li class="page-scroll">
                         <a href="#Predicción"><?php echo $text['Predicción'];?> </a>
                     </li>
                     
@@ -210,7 +213,7 @@ require_once('lang/'.$language.'.php');
             <div class="row">
                 <div class="col-md-4" align="left">
 					<div class="intro-text">
-						<span class="skills"><font color="white" SIZE=5><p style=”text-align: justify;”><strong><?php echo $text['6'];?></p></font></span>
+						<span class="skills"><font color="white" SIZE=5><p style=”text-align: justify;”><strong><?php echo $text['6'];?></strong></p></font></span>
 					</div>
 				</div>
                 <div class="col-md-4" align="center">
@@ -452,75 +455,57 @@ require_once('lang/'.$language.'.php');
 				<div class="intro-text">
 						<span class="name"><font color="black"><h3><?php echo $text['82'];?></h3></font></span>
 						<hr>
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['83'];?></font></p></span>
 				</div>
-				<h3><?php echo $text['83'];?></h3> 
 				<br>
 				<div class="table-responsive row">
 					<table class="table">
 						<tr>
-					
-							<td><center><?php echo $text['84'];?></h3></center></td>
-							<td><center><?php echo $text['85'];?></h3></center></td>
-							<td><center><?php echo $text['86'];?></h3></center></td>
-							<td><center><?php echo $text['87'];?></h3></center></td>
-							<td><center><?php echo $text['88'];?></h3></center></td>
+							<td><center><font color="black" SIZE=5><strong><?php echo $text['84'];?></strong></font ></center></td>
+							<td><center><font color="black" SIZE=5><strong><?php echo $text['85'];?></strong></font ></center></td>
+							<td><center><font color="black" SIZE=5><strong><?php echo $text['86'];?></strong></font ></center></td>
+							<td><center><font color="black" SIZE=5><strong><?php echo $text['87'];?></strong></font ></center></td>
+							<td><center><font color="black" SIZE=5><strong><?php echo $text['88'];?></strong></font ></center></td>
 							
 						</tr>
 
 						<tr>
 
-							<td><center><?php echo $text['89'];?></center></td>
-							<td width="15%" bgcolor="green"><center><font color="White"> <?php echo $text['90'];?></font></center></td>
-							<td width="15%" bgcolor="white"><center><?php echo $text['91'];?></center></td>
-							<td width="15%" bgcolor="white"><center><?php echo $text['92'];?></center></td>
-							<td width="15%" bgcolor="white"><center><?php echo $text['93'];?></center></td>
+							<td><center><font color="black" SIZE=5><?php echo $text['89'];?></font ></center></td>
+							<td width="15%" bgcolor="green"><center><font color="White"  SIZE=5> <?php echo $text['90'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['91'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['92'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['93'];?></font ></center></td>
 							
 						</tr>
-							<td><center><?php echo $text['94'];?></center></td>
-							<td width="15%" bgcolor="yellow"><center> <?php echo $text['95'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['96'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['97'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['98'];?></center></td>
+							<td><center><font color="black" SIZE=5><?php echo $text['94'];?></font></center></td>
+							<td width="15%" bgcolor="yellow"><center> <font color="black" SIZE=5><?php echo $text['95'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['96'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['97'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['98'];?></font ></center></td>
 							
 						</tr>
-							<td><center><?php echo $text['99'];?></center></td>
-							<td width="15%" bgcolor="brown"><center><font color="White"> <?php echo $text['100'];?></font></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['101'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['102'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['103'];?></center></td>
-							
-						</tr>
-
-						<td><center><?php echo $text['104'];?></center></td>
-							<td width="15%" bgcolor="red"><center><font color="White"> <?php echo $text['105'];?> </font></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['106'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['107'];?></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['108'];?></center></td>
+							<td><center><font color="black" SIZE=5><?php echo $text['99'];?></font></center></td>
+							<td width="15%" bgcolor="brown"><center><font color="White" SIZE=5> <?php echo $text['100'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['101'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['102'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['103'];?></font ></center></td>
 							
 						</tr>
 
-						<td><center><?php echo $text['109'];?></center></td>
-							<td width="15%" bgcolor="purple"><center><font color="White"> <?php echo $text['110'];?></font></center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['111'];?> </center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['112'];?> </center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['113'];?> </center></td>
+						<td><center><font color="black" SIZE=5><?php echo $text['104'];?></font></center></td>
+							<td width="15%" bgcolor="red"><center><font color="White" SIZE=5> <?php echo $text['105'];?> </font></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['106'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['107'];?></font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5><?php echo $text['108'];?></font ></center></td>
 							
 						</tr>
 
-						<td><center><?php echo $text['114'];?></center></td>
-							<td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['115'];?></font></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['116'];?></center></td>
-							<td width="15%" bgcolor=""> <center> <?php echo $text['117'];?></center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['118'];?> </center></td>
-							
-						</tr>
-
-						<td><center><?php echo $text['119'];?></center></td>
-							<td width="15%" bgcolor="purple"><center><font color="White"><?php echo $text['120'];?></font></center></td>
-							<td width="15%" bgcolor=""><center><?php echo $text['121'];?></center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['122'];?> </center></td>
-							<td width="15%" bgcolor=""><center> <?php echo $text['123'];?> </center></td>
-							
+						<td><center><font color="black" SIZE=5><?php echo $text['109'];?></font></center></td>
+							<td width="15%" bgcolor="purple"><center><font color="White" SIZE=5> <?php echo $text['110'];?></font></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5> <?php echo $text['111'];?> </font ></center></td>
+							<td width="15%" bgcolor=""><center><font color="black" SIZE=5> <?php echo $text['112'];?> </font ></center></td>
+							<td width="15%" bgcolor=""><center> <font color="black" SIZE=5><?php echo $text['113'];?></font > </center></td>
 						</tr>
 					</table>
 				</div>
@@ -544,7 +529,10 @@ require_once('lang/'.$language.'.php');
 		<div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2><?php echo $text['75'];?></h2>
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['75'];?></h3></font></span>
+						<hr>
+					</div>
                 </div>
             </div>
             <div class="row">
@@ -592,7 +580,7 @@ require_once('lang/'.$language.'.php');
 									animation: google.maps.Animation.DROP,
 									icon: {
 										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'blue',
+										fillColor: 'white',
 										fillOpacity: 0.8,
 										scale: 10,
 										strokeColor: 'black',
@@ -615,7 +603,7 @@ require_once('lang/'.$language.'.php');
 									animation: google.maps.Animation.DROP,
 									icon: {
 										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'green',
+										fillColor: 'white',
 										fillOpacity: 0.8,
 										scale: 10,
 										strokeColor: 'black',
@@ -639,7 +627,7 @@ require_once('lang/'.$language.'.php');
 									animation: google.maps.Animation.DROP,
 									icon: {
 										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'yellow',
+										fillColor: 'white',
 										fillOpacity: 0.8,
 										scale: 10,
 										strokeColor: 'black',
@@ -711,6 +699,7 @@ require_once('lang/'.$language.'.php');
 									infowindow1.setContent(info);
 								}
 
+
 								function addInfoSensor2(info)
 								{
 									infowindow2.setContent(info);
@@ -754,8 +743,6 @@ require_once('lang/'.$language.'.php');
 									$ordenamiento = "mayor";
 									//query para sensor 1
 									$sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
-								
-
 									$id="";
 									mysql_select_db("airmxgen_meshliu");
 									$retval = mysql_query( $sql, $conn );
@@ -766,6 +753,7 @@ require_once('lang/'.$language.'.php');
 									}
 
 									$imagen = "img/Buena.jpg";
+									$color= " <br/> ";
 									while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 									{
 										$calidad = $row['CALIDAD'];
@@ -776,20 +764,25 @@ require_once('lang/'.$language.'.php');
 												case 'buena':
 													$calidad = 'GOOD';
 													$imagen = "img/Buena.jpg";
+													$color= "green";
 													break;
 												case 'regular':
 													$calidad = 'REGULAR';
 													$imagen = "img/Mala.jpg";
+													$color= "yellow";
 													break;
 												case 'mala':
 													$calidad = 'BAD';
+													$color= "brown";
 													break;
 												case 'muy mala':
 													$calidad = 'VERY BAD';
+													$color= "red";
 													break;
 
 												case 'extremadamente mala':
 													$calidad = 'EXTREMELY BAD';
+													$color= "purple";
 													break;
 												default:
 												$imagen = "img/Buena.jpg";
@@ -800,10 +793,11 @@ require_once('lang/'.$language.'.php');
 										  $sensor1 = $sensor1.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
 									} 
-
-									$sensor1 = $sensor1."Sensor 1"; 
-									echo ("addInfoSensor1('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n"); 
+									
+									$sensor1 = $sensor1."Sensor 1 - Monitoreo Atmosférico"; 
+									echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n"); 
 									mysql_close($conn);
+									
 									$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 									if(! $conn )
 									{
@@ -812,7 +806,7 @@ require_once('lang/'.$language.'.php');
 									}                 //abrir conexion             
 
 									$numeroSensor = "2";
-									$numeroElementos = "2";
+									$numeroElementos = "3";
 									$ordenamiento = "mayor";
 									//query para sensor 1
 									$sql = "call imeca(".$numeroSensor.",".$numeroElementos.",'".$ordenamiento."', '', '".$language."');";
@@ -858,17 +852,19 @@ require_once('lang/'.$language.'.php');
 										$sensor2 = $sensor2.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
 									} 
-									$sensor2 = $sensor2."Sensor 2";
+									$sensor2 = $sensor2."Sensor 2 - Monitoreo Atmosférico";
 									 //echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."</div>');\n"); para ajustar el tamaño, color de imagenes
-									echo ("addInfoSensor2('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");                              
+									echo ("addInfoSensor2('<div style = \'color: #000000\'>".json_encode($sensor2)."  </div>');\n");                              
 									mysql_close($conn); // cerrar conexion
+									
 									$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 									if(! $conn )
 									{
 									  $sensor3 = "No hay conexion"; 
 									  die("Could not connect:" . mysql_error());
-									}                 //abrir conexion             
-
+									}                
+									
+									//abrir conexion             
 									$numeroSensor = "3";
 									$numeroElementos = "3";
 									$ordenamiento = "mayor";
@@ -915,10 +911,59 @@ require_once('lang/'.$language.'.php');
 										$sensor3 = $sensor3.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";    
 									} 
-									$sensor3 = $sensor3."Sensor 3";
+									$sensor3 = $sensor3."Sensor 3 - Monitoreo Atmosférico";
 									//echo ("addInfoSensor3('<div style = \'color: #000000\'>".json_encode($sensor3)."</div>');\n");
-									echo ("addInfoSensor3('<div  ><img src=".$imagen." height=\"70\" width=\"260\"/></div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
+									echo ("addInfoSensor3('<div><div style = \'color: #000000\'>".json_encode($sensor3)."  </div>');\n");
 									mysql_close($conn); 
+									
+
+                                 //query para sensor 4
+								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor4 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }                 //abrir conexion             
+                                $sql = "SELECT * FROM sensorParser where (id_wasp = 4 and sensor = 'TCA') or (id_wasp = 4 and sensor = 'HUMA') or (id_wasp = 4  and sensor = 'LUM') or (id_wasp = 4  and sensor = 'CU')   ORDER BY sensorParser.timestamp DESC limit 4";
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor4 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+                                    $sensor4 = $sensor4.
+                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                $sensor4 = $sensor4."Sensor 4 - Eficiencia Energética";
+                                echo ("addInfoSensor4('<div style = \'color: #000000\'>".json_encode($sensor4)."</div>');\n");
+                                mysql_close($conn);
+								
+								//query para sensor 5
+								$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+                                if(! $conn )
+                                {
+                                  $sensor5 = "No hay conexion"; 
+                                  die("Could not connect:" . mysql_error());
+                                }                 //abrir conexion  
+                                $sql = "SELECT * FROM sensorParser where (id_wasp = 5  and sensor = 'TCA') or (id_wasp = 5  and sensor = 'HUMA') or (id_wasp = 5  and sensor = 'LUM') or (id_wasp = 5  and sensor = 'CU')   ORDER BY sensorParser.timestamp DESC limit 4";
+                                mysql_select_db("airmxgen_meshliu");
+                                $retval = mysql_query( $sql, $conn );
+                                if(! $retval )
+                                {
+                                  $sensor5 = "No hay información";
+                                  die("Could not get data: ". mysql_error());
+                                }
+                                while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+                                {
+                                    $sensor5 = $sensor5.
+                                    " {$row['sensor']}:{$row['value']} <br/> " ;
+                                } 
+                                $sensor5 = $sensor5."Sensor 5 - Eficiencia Energética";
+                                echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
+                                mysql_close($conn);
 								?>
 							}
 						</script>
@@ -937,6 +982,14 @@ require_once('lang/'.$language.'.php');
 		}
 		</style>
 		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="intro-text">
+					<span class="name"><font color="black"><h3><?php echo $text['117'];?></h3></font></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
 			<center>
 				<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="80%" bgcolor="black">
 					<thead>
@@ -953,37 +1006,192 @@ require_once('lang/'.$language.'.php');
 		</div>
     </section>
 	
+	<section class="success"  id="Gráfica">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['Gráfica'];?></h3></font></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<div class="row">
+			<script src="js/Chart.js"></script>
+			<canvas id="myChart" width="400" height="150"></canvas>
+			<script>
+				
+			var ctx = document.getElementById("myChart");
+			var data = {
+				labels : ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio"],
+				datasets : [
+					{
+						label: "CO",
+						fillColor : "rgba(0, 165, 0, 0.2)",
+						backgroundColor: "rgba(0, 165, 0, 0.2)",
+						borderColor: "rgba(0, 165, 0, 1)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(75,192,192,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						strokeColor : "#6b9dfa",
+						pointColor : "#1e45d7",
+						pointStrokeColor : "#ff0",
+						pointHighlightFill : "#fff",
+						pointHighlightStroke : "rgba(220,220,220,1)",
+						data : [90,30,10,80,15,5,15]
+
+						
+					},
+					{
+						label: "CO2",
+						fillColor : "rgba(179, 0, 0, 0.2)",
+						backgroundColor: "rgba(179, 0, 0, 0.2)",
+						borderColor: "rgba(179, 0, 0, 1)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(75,192,192,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						strokeColor : "#6b9dfa",
+						strokeColor : "#e9e225",
+						pointColor : "#faab12",
+						pointStrokeColor : "#fff",
+						pointHighlightFill : "#fff",
+						pointHighlightStroke : "rgba(151,187,205,1)",
+						data : [40,50,70,40,85,55,15]
+					},
+					{
+						label: "NO2",
+						fillColor : "rgba(117, 0, 200, 0.2)",
+						backgroundColor: "rgba(117, 0, 200, 0.2)",
+						borderColor: "rgba(117, 0, 200, 1)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(75,192,192,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						strokeColor : "#6b9dfa",
+						pointColor : "#1e45d7",
+						pointStrokeColor : "#ff0",
+						pointHighlightFill : "#fff",
+						pointHighlightStroke : "rgba(220,220,220,1)",
+						data : [15,5,15]
+					},
+					{
+						label: "O3",
+						fillColor : "rgba(220,220,220,0.2)",
+						backgroundColor: "rgba(75,192,192,0.2)",
+						borderColor: "rgba(75,192,192,1)",
+						borderCapStyle: 'butt',
+						borderDash: [],
+						borderDashOffset: 0.0,
+						borderJoinStyle: 'miter',
+						pointBorderColor: "rgba(75,192,192,1)",
+						pointBackgroundColor: "#fff",
+						pointBorderWidth: 1,
+						pointHoverRadius: 5,
+						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+						pointHoverBorderColor: "rgba(220,220,220,1)",
+						strokeColor : "#6b9dfa",
+						pointColor : "#1e45d7",
+						pointStrokeColor : "#ff0",
+						pointHighlightFill : "#fff",
+						pointHighlightStroke : "rgba(220,220,220,1)",
+						data : [90,30,5,15]
+					}
+				]
+			};
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: data,
+				options: {
+					scales: {
+						xAxes: [{
+							display: false
+						}]
+					}
+				}
+			});
+			</script>
+			</div>
+
+	</section>
+	
 	<section id="Predicción">
 		<div class="container" >
 			<div class="row">
-				<div class="col-lg-12">
-					<h1><?php echo $text['Predicción'];?>
-					</h1>
-					<hr> 
-				</div>
-			</div>
-			<br>
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['Predicción'];?></h3></font></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['398'];?></font></p></span>
+						<hr>
+					</div>
+                </div>
+            </div>
 			<br>
 			<div class="row">
-				<div class="col-lg-12">
-					<h1><?php echo $text['Conclusión'];?>
-					</h1>
-					<hr> 
-				</div>
-			</div>
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['397'];?></h3></font></span>
+						<hr>
+					</div>
+                </div>
+            </div>
 			<br>
-			<br>
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['Conclusión'];?></h3></font></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['399'];?></font></p></span>
+						<hr>
+					</div>
+                </div>
+            </div>
 		</div>
 	</section>
 
-<br>
 	<section  id="participants">
         <div class="container">
-            <h2><?php echo $text['10'];?></h2>
+           <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['10'];?></h3></font></span>
+			</div>
             <div class="row">
                 <div class="col-lg-12 text">
-                    <h1><?php echo $text['11'];?></h1>
-                    <hr>
+                    <div class="intro-text">
+						<span class="name"><font color="black"><h4><?php echo $text['11'];?></h4></font></span>
+						<hr>
+					</div>
                 </div>
             </div>
             <div class="row">
@@ -1028,19 +1236,16 @@ require_once('lang/'.$language.'.php');
 			</div> 
 		</div> 			
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!--<h2><?php echo $text['14'];?></h2> -->
-                    <hr >
-                </div>
+							<hr>
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
-                    <h1><?php echo $text['14'];?></h1>
+
+                   <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['14'];?></h3></font></span>
+					</div>
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/amadeo.jpg" alt="">
                         <figcaption>
 							<h5><?php echo $text['30'];?>
-								<br/><?php echo $text['31'];?>
-								<br/><?php echo $text['32'];?>
 								<br/><?php echo $text['33'];?>
 								<br/><?php echo $text['34'];?>
 								<br/>
@@ -1049,12 +1254,12 @@ require_once('lang/'.$language.'.php');
                         </figcaption>
                     </div>
 					<div class="col-sm-4 portfolio-item">
-                     <h1><?php echo $text['14'];?></h1>
+                     <div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['14'];?></h3></font></span>
+					</div>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/miguel.jpg" alt="">
                         <figcaption>
 							<h5><?php echo $text['40'];?>
-								<br/><?php echo $text['41'];?>
-								<br/><?php echo $text['42'];?> 
 								<br/><?php echo $text['43'];?>
 								<br/><?php echo $text['44'];?>             
 								<br/>
@@ -1063,12 +1268,12 @@ require_once('lang/'.$language.'.php');
                         </figcaption>
                     </div>
 					<div class="col-sm-4 portfolio-item">
-					<h1><?php echo $text['376'];?></h1>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['376'];?></h3></font></span>
+					</div>
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Cornelio.png" alt="">
                         <figcaption>
 							<h5><?php echo $text['45'];?>
-								<br/><?php echo $text['46'];?>
-								<br/><?php echo $text['47'];?>
 								<br/><?php echo $text['48'];?>
 								<br/><?php echo $text['49'];?>                         
 								<br/>
@@ -1078,39 +1283,39 @@ require_once('lang/'.$language.'.php');
 				</div> 
 				<div class="row">
 					<div class="col-md-3 portfolio-item">
-					<h1><?php echo $text['377'];?></h1>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['377'];?></h3></font></span>
+					</div>
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Mario.jpg" alt="">
 					   <figcaption>
-							<h5><?php echo $text['50'];?>
-								<br/><?php echo $text['51'];?>
-								<br/><?php echo $text['52'];?> 
-								<br/><?php echo $text['53'];?>
-								<br/><?php echo $text['54'];?>                               
+							<h5><?php echo $text['400'];?>
+								<br/><?php echo $text['28'];?>
+								<br/><?php echo $text['401'];?>                               
 								<br/>
 								<br/>
 							</h5></figcaption>
 					</div> 
 					 <div class="col-md-3 portfolio-item">
-					 <h1><?php echo $text['377'];?></h1>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['377'];?></h3></font></span>
+					</div>
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Itzama.jpg" alt="">
 					   <figcaption>
-							<h5><?php echo $text['70'];?> 
-								<br/><?php echo $text['71'];?> 
-								<br/><?php echo $text['72'];?>  
-								<br/><?php echo $text['380'];?> 
-								<br/><?php echo $text['73'];?>                       
+							<h5><?php echo $text['402'];?> 
+								<br/><?php echo $text['28'];?> 
+								<br/><?php echo $text['403'];?>                       
 								<br/>
 								<br/>
 							</h5>
 						</figcaption>
 					</div>
 					<div class="col-md-3 portfolio-item">
-					<h1><?php echo $text['377'];?></h1>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['377'];?></h3></font></span>
+					</div>
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/fernando.png" alt="">
 					   <figcaption>
 							<h5><?php echo $text['50'];?>
-								<br/><?php echo $text['51'];?>
-								<br/><?php echo $text['52'];?> 
 								<br/><?php echo $text['53'];?>
 								<br/><?php echo $text['54'];?>                               
 								<br/>
@@ -1118,13 +1323,13 @@ require_once('lang/'.$language.'.php');
 							</h5></figcaption>
 					</div> 
 					 <div class="col-md-3 portfolio-item">
-					 <h1><?php echo $text['377'];?></h1>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['377'];?></h3></font></span>
+					</div>
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Jhairo.jpg" alt="">
 					   <figcaption>
 								<h5><?php echo $text['70'];?> 
-									<br/><?php echo $text['71'];?> 
-									<br/><?php echo $text['72'];?>  
-									<br/><?php echo $text['380'];?> 
+									<br/><?php echo $text['53'];?> 
 									<br/><?php echo $text['73'];?>                       
 									<br/>
 									<br/>
@@ -1133,7 +1338,9 @@ require_once('lang/'.$language.'.php');
 					</div>
 				</div>
                 <div class="col-lg-12">
-                    <h2><?php echo $text['375'];?></h2>
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['375'];?></h3></font></span>
+					</div>
                     <hr >
                 </div>
                 <div class="row">
@@ -1141,8 +1348,6 @@ require_once('lang/'.$language.'.php');
                         <img class="img-responsive imagen-redonda" width="230" height="230" src="img/ivan.jpg" alt="">
                         <figcaption>
 							<h5><?php echo $text['15'];?>
-								<br/><?php echo $text['16'];?>
-								<br/><?php echo $text['17'];?> 
 								<br/><?php echo $text['18'];?> 
 								<br/><?php echo $text['19'];?>
 								<br/>
@@ -1154,8 +1359,6 @@ require_once('lang/'.$language.'.php');
                         <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Isa.jpg" alt="">
                         <figcaption>
 							<h5><?php echo $text['35'];?>
-								<br/><?php echo $text['36'];?>
-								<br/><?php echo $text['37'];?> 
 								<br/><?php echo $text['38'];?>
 								<br/><?php echo $text['39'];?>
 								<br/>
@@ -1167,8 +1370,6 @@ require_once('lang/'.$language.'.php');
                         <img class="img-responsive imagen-redonda" width="230" height="230"  src="img/monse.jpg" alt="">
                         <figcaption>
 							<h5><?php echo $text['20'];?>
-								<br/><?php echo $text['21'];?>
-								<br/><?php echo $text['22'];?> 
 								<br/><?php echo $text['23'];?>
 								<br/><?php echo $text['24'];?>
 								<br/>
@@ -1182,8 +1383,6 @@ require_once('lang/'.$language.'.php');
 						<img class="img-responsive imagen-redonda"  width="230" height="230" src="img/eduardo.jpg" alt="">
 						<figcaption>
 							<h5><?php echo $text['25'];?>
-								<br/><?php echo $text['26'];?>
-								<br/><?php echo $text['27'];?> 
 								<br/><?php echo $text['28'];?>
 								<br/><?php echo $text['29'];?>
 								<br/>
@@ -1195,8 +1394,6 @@ require_once('lang/'.$language.'.php');
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Johnathan.png" alt="">
 					   <figcaption>
 							<h5><?php echo $text['60'];?>
-								<br/><?php echo $text['61'];?>
-								<br/><?php echo $text['62'];?> 
 								<br/><?php echo $text['63'];?> 
 								<br/><?php echo $text['64'];?>                        
 								<br/>
@@ -1208,8 +1405,6 @@ require_once('lang/'.$language.'.php');
 					   <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Carolina.png" alt="">
 					   <figcaption>
 							<h5><?php echo $text['55'];?>
-								<br/><?php echo $text['56'];?>
-								<br/><?php echo $text['57'];?> 
 								<br/><?php echo $text['58'];?> 
 								<br/><?php echo $text['59'];?>                                 
 								<br/>
@@ -1223,8 +1418,6 @@ require_once('lang/'.$language.'.php');
                        <img class="img-responsive imagen-redonda"  width="230" height="230"  src="img/Roberto.png" alt="">
                        <figcaption>
 							<h5><?php echo $text['65'];?> 
-								<br/><?php echo $text['66'];?> 
-								<br/><?php echo $text['67'];?>  
 								<br/><?php echo $text['68'];?> 
 								<br/><?php echo $text['69'];?>                         
 								<br/>
@@ -1239,58 +1432,62 @@ require_once('lang/'.$language.'.php');
 
     <br><br>
 <span class="mono">
-<div class="container"><h1><?php echo $text['170'];?></h1><hr></div>
-<div id="wowslider-container3">
-    <div class="ws_images"><ul>
-        <li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
-        <li><img src="img/montajee/2.jpg" alt="2" title="2" id="wows3_1"/></li>
-        <li><img src="img/montajee/3.jpg" alt="3" title="3" id="wows3_2"/></li>
-        <li><img src="img/montajee/4.jpg" alt="4" title="4" id="wows3_3"/></li>
-        <li><img src="img/montajee/5.jpg" alt="5" title="5" id="wows3_4"/></li>
-        <li><img src="img/montajee/6.jpg" alt="6" title="6" id="wows3_5"/></li>
-        <li><img src="img/montajee/7.jpg" alt="7" title="7" id="wows3_6"/></li>
-        <li><img src="img/montajee/8.jpg" alt="8" title="8" id="wows3_7"/></li>
-        <li><img src="img/montajee/9.jpg" alt="9" title="9" id="wows3_8"/></li>
-        <li><img src="img/pruebase/1.jpg" alt="1" title="1" id="wows3_9"/></li>
-        <li><img src="img/pruebase/2.jpg" alt="2" title="2" id="wows3_10"/></li>
-        <li><img src="img/pruebase/3.jpg" alt="3" title="3" id="wows3_11"/></li>
-        <li><img src="img/exterior/1.jpg" alt="1" title="1" id="wows3_12"/></li>
-        <li><img src="img/exterior/2.jpg" alt="2" title="2" id="wows3_13"/></li>
-        <li><img src="img/exterior/3.jpg" alt="3" title="3" id="wows3_14"/></li>
-        <li><img src="img/montajei/1.jpg" alt="1" title="1" id="wows3_15"/></li>
-        <li><img src="img/montajei/2.jpg" alt="2" title="2" id="wows3_16"/></li>
-        <li><img src="img/montajei/3.jpg" alt="3" title="3" id="wows3_17"/></li>
-        <li><img src="img/montajei/4.jpg" alt="4" title="4" id="wows3_18"/></li>
-        <li><img src="img/montajei/5.jpg" alt="jquery carousel" title="5" id="wows3_19"/></li>
-        <li><img src="img/montajei/6.jpg" alt="6" title="6" id="wows3_20"/></li>
-    </ul></div>
-    <div class="ws_bullets">
-        <div>
-            <a href="#" title="1"><span><img src="img/montajee/1.jpg" alt="1"/>1</span></a>
-            <a href="#" title="2"><span><img src="img/montajee/2.jpg" alt="2"/>2</span></a>
-            <a href="#" title="3"><span><img src="img/montajee/3.jpg" alt="3"/>3</span></a>
-            <a href="#" title="4"><span><img src="img/montajee/4.jpg" alt="4"/>4</span></a>
-            <a href="#" title="5"><span><img src="img/montajee/5.jpg" alt="5"/>5</span></a>
-            <a href="#" title="6"><span><img src="img/montajee/6.jpg" alt="6"/>6</span></a>
-            <a href="#" title="7"><span><img src="img/montajee/7.jpg" alt="7"/>7</span></a>
-            <a href="#" title="8"><span><img src="img/montajee/8.jpg" alt="8"/>8</span></a>
-            <a href="#" title="9"><span><img src="img/montajee/9.jpg" alt="9"/>9</span></a>
-            <a href="#" title="1"><span><img src="img/pruebase/1.jpg" alt="1"/>10</span></a>
-            <a href="#" title="2"><span><img src="img/pruebase/2.jpg" alt="2"/>11</span></a>
-            <a href="#" title="3"><span><img src="img/pruebase/3.jpg" alt="3"/>12</span></a>
-            <a href="#" title="1"><span><img src="img/exterior/1.jpg" alt="1"/>13</span></a>
-            <a href="#" title="2"><span><img src="img/exterior/2.jpg" alt="2"/>14</span></a>
-            <a href="#" title="3"><span><img src="img/exterior/3.jpg" alt="3"/>15</span></a>
-            <a href="#" title="1"><span><img src="img/montajei/1.jpg" alt="1"/>16</span></a>
-            <a href="#" title="2"><span><img src="img/montajei/2.jpg" alt="2"/>17</span></a>
-            <a href="#" title="3"><span><img src="img/montajei/3.jpg" alt="3"/>18</span></a>
-            <a href="#" title="4"><span><img src="img/montajei/4.jpg" alt="4"/>19</span></a>
-            <a href="#" title="5"><span><img src="img/montajei/5.jpg" alt="5"/>20</span></a>
-            <a href="#" title="6"><span><img src="img/montajei/6.jpg" alt="6"/>21</span></a>
-        </div>
-    </div>
-    <div class="ws_shadow"></div>
-</div>  
+	<div class="container">
+		<div class="intro-text">
+			<span class="name"><font color="black"><h3><?php echo $text['170'];?></h3></font></span>
+		</div>
+		<div id="wowslider-container3">
+			<div class="ws_images"><ul>
+				<li><img src="img/montajee/1.jpg" alt="1" title="1" id="wows3_0"/></li>
+				<li><img src="img/montajee/2.jpg" alt="2" title="2" id="wows3_1"/></li>
+				<li><img src="img/montajee/3.jpg" alt="3" title="3" id="wows3_2"/></li>
+				<li><img src="img/montajee/4.jpg" alt="4" title="4" id="wows3_3"/></li>
+				<li><img src="img/montajee/5.jpg" alt="5" title="5" id="wows3_4"/></li>
+				<li><img src="img/montajee/6.jpg" alt="6" title="6" id="wows3_5"/></li>
+				<li><img src="img/montajee/7.jpg" alt="7" title="7" id="wows3_6"/></li>
+				<li><img src="img/montajee/8.jpg" alt="8" title="8" id="wows3_7"/></li>
+				<li><img src="img/montajee/9.jpg" alt="9" title="9" id="wows3_8"/></li>
+				<li><img src="img/pruebase/1.jpg" alt="1" title="1" id="wows3_9"/></li>
+				<li><img src="img/pruebase/2.jpg" alt="2" title="2" id="wows3_10"/></li>
+				<li><img src="img/pruebase/3.jpg" alt="3" title="3" id="wows3_11"/></li>
+				<li><img src="img/exterior/1.jpg" alt="1" title="1" id="wows3_12"/></li>
+				<li><img src="img/exterior/2.jpg" alt="2" title="2" id="wows3_13"/></li>
+				<li><img src="img/exterior/3.jpg" alt="3" title="3" id="wows3_14"/></li>
+				<li><img src="img/montajei/1.jpg" alt="1" title="1" id="wows3_15"/></li>
+				<li><img src="img/montajei/2.jpg" alt="2" title="2" id="wows3_16"/></li>
+				<li><img src="img/montajei/3.jpg" alt="3" title="3" id="wows3_17"/></li>
+				<li><img src="img/montajei/4.jpg" alt="4" title="4" id="wows3_18"/></li>
+				<li><img src="img/montajei/5.jpg" alt="jquery carousel" title="5" id="wows3_19"/></li>
+				<li><img src="img/montajei/6.jpg" alt="6" title="6" id="wows3_20"/></li>
+			</ul></div>
+			<div class="ws_bullets">
+				<div>
+					<a href="#" title="1"><span><img src="img/montajee/1.jpg" alt="1"/>1</span></a>
+					<a href="#" title="2"><span><img src="img/montajee/2.jpg" alt="2"/>2</span></a>
+					<a href="#" title="3"><span><img src="img/montajee/3.jpg" alt="3"/>3</span></a>
+					<a href="#" title="4"><span><img src="img/montajee/4.jpg" alt="4"/>4</span></a>
+					<a href="#" title="5"><span><img src="img/montajee/5.jpg" alt="5"/>5</span></a>
+					<a href="#" title="6"><span><img src="img/montajee/6.jpg" alt="6"/>6</span></a>
+					<a href="#" title="7"><span><img src="img/montajee/7.jpg" alt="7"/>7</span></a>
+					<a href="#" title="8"><span><img src="img/montajee/8.jpg" alt="8"/>8</span></a>
+					<a href="#" title="9"><span><img src="img/montajee/9.jpg" alt="9"/>9</span></a>
+					<a href="#" title="1"><span><img src="img/pruebase/1.jpg" alt="1"/>10</span></a>
+					<a href="#" title="2"><span><img src="img/pruebase/2.jpg" alt="2"/>11</span></a>
+					<a href="#" title="3"><span><img src="img/pruebase/3.jpg" alt="3"/>12</span></a>
+					<a href="#" title="1"><span><img src="img/exterior/1.jpg" alt="1"/>13</span></a>
+					<a href="#" title="2"><span><img src="img/exterior/2.jpg" alt="2"/>14</span></a>
+					<a href="#" title="3"><span><img src="img/exterior/3.jpg" alt="3"/>15</span></a>
+					<a href="#" title="1"><span><img src="img/montajei/1.jpg" alt="1"/>16</span></a>
+					<a href="#" title="2"><span><img src="img/montajei/2.jpg" alt="2"/>17</span></a>
+					<a href="#" title="3"><span><img src="img/montajei/3.jpg" alt="3"/>18</span></a>
+					<a href="#" title="4"><span><img src="img/montajei/4.jpg" alt="4"/>19</span></a>
+					<a href="#" title="5"><span><img src="img/montajei/5.jpg" alt="5"/>20</span></a>
+					<a href="#" title="6"><span><img src="img/montajei/6.jpg" alt="6"/>21</span></a>
+				</div>
+			</div>
+			<div class="ws_shadow"></div>
+		</div>  
+	</div> 
 </span> 
 
 
@@ -1303,7 +1500,9 @@ require_once('lang/'.$language.'.php');
 				<div class="row">
 				<div class="col-lg-12"> <!-- codigo para imagen de fondo-->
 				<div class="intro-text">
-				<h2> <font color="black"><?php echo $text['138'];?></font><h2>
+				<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['138'];?></h3></font></span>
+				</div>
 					 
 				<hr>
 				<h3><div style="text-transform: none"><font color="black"><?php echo $text['139'];?></font></div></h3> <!-- texto largo-->
@@ -1313,6 +1512,7 @@ require_once('lang/'.$language.'.php');
 						<div class="col-sm-4 portfolio-item"> 
 
 				<UL type=square>
+				
 				<h3><LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['140'];?></p></font></div></LI>
 				<br><br>
 				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['141'];?></p></font></div></LI>
