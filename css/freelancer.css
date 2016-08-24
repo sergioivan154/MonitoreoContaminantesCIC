@@ -5,7 +5,10 @@
  */
 body {
     overflow-x: hidden;
+	zoom: 75%;
 }
+
+
 p {
     font-size: 20px;
 }
@@ -171,6 +174,10 @@ section {
 section h2 {
     margin: 0;
     font-size: 3em;
+}
+
+#my{
+zoom: 75%;
 }
 
 ul li{

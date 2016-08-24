@@ -10,7 +10,9 @@ require_once('lang/'.$language.'.php');
 ?>
 
 
-
+HTML { 
+zoom:90%;
+}
 <!--ingles-->
 <head>
     <meta charset="utf-8">
@@ -96,13 +98,13 @@ require_once('lang/'.$language.'.php');
                         <a href="#Prototype"><?php echo $text['Prototipos'];?> </a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#index"><?php echo $text['Índice'];?> </a>
+                        <a href="#index"><?php echo $text['IMECA'];?> </a>
                     </li>
                     <li class="page-scroll">
                         <a href="#mapa"><?php echo $text['Mapa'];?> </a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#Gráfica"><?php echo $text['Gráfica'];?> </a>
+                        <a href="#Gráfica"><?php echo $text['Gráficas'];?> </a>
                     </li>
 					<li class="page-scroll">
                         <a href="#Predicción"><?php echo $text['Predicción'];?> </a>
@@ -432,6 +434,16 @@ require_once('lang/'.$language.'.php');
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-12 portfolio-item">
+					<a href="#portfolio6" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								<i class="fa fa-search-plus fa-3x"></i>
+							</div>
+						</div>
+						<img src="img/dispositivos/meet.png" width="230" height="230" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-12 portfolio-item">
 					<a href="#portfolio5" class="portfolio-link" data-toggle="modal">
 						<div class="caption">
 							<div class="caption-content">
@@ -531,6 +543,14 @@ require_once('lang/'.$language.'.php');
                 <div class="col-lg-12 text-center">
                     <div class="intro-text">
 						<span class="name"><font color="black"><h3><?php echo $text['75'];?></h3></font></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo 'A continuación se muestran dos herramientas interesantes que ayudan a digerir de mejor manera los datos, un mapa en donde se muestra la ubicación aproximada de los sensores así como la información generada en la última captura de los mismos. En la siguiente herramienta se muestra una tabla que despliega la información de la base de datos.';?></font></p></span>
 						<hr>
 					</div>
                 </div>
@@ -970,39 +990,40 @@ require_once('lang/'.$language.'.php');
 						<script async defer
 						  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGww_ToFfJk4kLL-g4D0IL6FxYBY2zRxQ&callback=initMap">
 						</script>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<style>
-		thead {color:black;}
-		tbody {color:black;}
-		table, th, td {
-			border: 1px solid black;
-		}
-		</style>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="intro-text">
-					<span class="name"><font color="black"><h3><?php echo $text['117'];?></h3></font></span>
+			<style>
+			thead {color:black;}
+			tbody {color:black;}
+			table, th, td {
+				border: 1px solid black;
+			}
+			</style>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="intro-text">
+						<span class="name"><font color="black"><h3><?php echo $text['117'];?></h3></font></span>
+					</div>
 				</div>
 			</div>
-		</div>
 		
-		<div class="row">
-			<center>
-				<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="80%" bgcolor="black">
-					<thead>
-						<tr>
-						<th><font color="black"><?php echo $text['124'];?></font></th>
-						<th><font color="black"><?php echo $text['125'];?></font></th>
-						<th><font color="black"><?php echo $text['126'];?></font></th>
-						<th><font color="black"><?php echo $text['127'];?></font></th>
-						<th><font color="black"><?php echo $text['128'];?></font></th>
-						</tr>
-					</thead>
-				</table>
-			</center>
+			<div class="row">
+				<center>
+					<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="80%" bgcolor="black">
+						<thead>
+							<tr>
+							<th><font color="black"><?php echo $text['124'];?></font></th>
+							<th><font color="black"><?php echo $text['125'];?></font></th>
+							<th><font color="black"><?php echo $text['126'];?></font></th>
+							<th><font color="black"><?php echo $text['127'];?></font></th>
+							<th><font color="black"><?php echo $text['128'];?></font></th>
+							</tr>
+						</thead>
+					</table>
+				</center>
+			</div>
 		</div>
     </section>
 	
@@ -1011,133 +1032,737 @@ require_once('lang/'.$language.'.php');
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="intro-text">
-						<span class="name"><font color="black"><h3><?php echo $text['Gráfica'];?></h3></font></span>
+						<span class="name"><font color="black"><h3><?php echo $text['Gráficas'];?></h3></font></span>
 						<hr>
 					</div>
                 </div>
             </div>
 			<div class="row">
-			<script src="js/Chart.js"></script>
-			<canvas id="myChart" width="400" height="150"></canvas>
-			<script>
-				
-			var ctx = document.getElementById("myChart");
-			var data = {
-				labels : ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio"],
-				datasets : [
-					{
-						label: "CO",
-						fillColor : "rgba(0, 165, 0, 0.2)",
-						backgroundColor: "rgba(0, 165, 0, 0.2)",
-						borderColor: "rgba(0, 165, 0, 1)",
-						borderCapStyle: 'butt',
-						borderDash: [],
-						borderDashOffset: 0.0,
-						borderJoinStyle: 'miter',
-						pointBorderColor: "rgba(75,192,192,1)",
-						pointBackgroundColor: "#fff",
-						pointBorderWidth: 1,
-						pointHoverRadius: 5,
-						pointHoverBackgroundColor: "rgba(75,192,192,1)",
-						pointHoverBorderColor: "rgba(220,220,220,1)",
-						strokeColor : "#6b9dfa",
-						pointColor : "#1e45d7",
-						pointStrokeColor : "#ff0",
-						pointHighlightFill : "#fff",
-						pointHighlightStroke : "rgba(220,220,220,1)",
-						data : [90,30,10,80,15,5,15]
-
-						
-					},
-					{
-						label: "CO2",
-						fillColor : "rgba(179, 0, 0, 0.2)",
-						backgroundColor: "rgba(179, 0, 0, 0.2)",
-						borderColor: "rgba(179, 0, 0, 1)",
-						borderCapStyle: 'butt',
-						borderDash: [],
-						borderDashOffset: 0.0,
-						borderJoinStyle: 'miter',
-						pointBorderColor: "rgba(75,192,192,1)",
-						pointBackgroundColor: "#fff",
-						pointBorderWidth: 1,
-						pointHoverRadius: 5,
-						pointHoverBackgroundColor: "rgba(75,192,192,1)",
-						pointHoverBorderColor: "rgba(220,220,220,1)",
-						strokeColor : "#6b9dfa",
-						strokeColor : "#e9e225",
-						pointColor : "#faab12",
-						pointStrokeColor : "#fff",
-						pointHighlightFill : "#fff",
-						pointHighlightStroke : "rgba(151,187,205,1)",
-						data : [40,50,70,40,85,55,15]
-					},
-					{
-						label: "NO2",
-						fillColor : "rgba(117, 0, 200, 0.2)",
-						backgroundColor: "rgba(117, 0, 200, 0.2)",
-						borderColor: "rgba(117, 0, 200, 1)",
-						borderCapStyle: 'butt',
-						borderDash: [],
-						borderDashOffset: 0.0,
-						borderJoinStyle: 'miter',
-						pointBorderColor: "rgba(75,192,192,1)",
-						pointBackgroundColor: "#fff",
-						pointBorderWidth: 1,
-						pointHoverRadius: 5,
-						pointHoverBackgroundColor: "rgba(75,192,192,1)",
-						pointHoverBorderColor: "rgba(220,220,220,1)",
-						strokeColor : "#6b9dfa",
-						pointColor : "#1e45d7",
-						pointStrokeColor : "#ff0",
-						pointHighlightFill : "#fff",
-						pointHighlightStroke : "rgba(220,220,220,1)",
-						data : [15,5,15]
-					},
-					{
-						label: "O3",
-						fillColor : "rgba(220,220,220,0.2)",
-						backgroundColor: "rgba(75,192,192,0.2)",
-						borderColor: "rgba(75,192,192,1)",
-						borderCapStyle: 'butt',
-						borderDash: [],
-						borderDashOffset: 0.0,
-						borderJoinStyle: 'miter',
-						pointBorderColor: "rgba(75,192,192,1)",
-						pointBackgroundColor: "#fff",
-						pointBorderWidth: 1,
-						pointHoverRadius: 5,
-						pointHoverBackgroundColor: "rgba(75,192,192,1)",
-						pointHoverBorderColor: "rgba(220,220,220,1)",
-						strokeColor : "#6b9dfa",
-						pointColor : "#1e45d7",
-						pointStrokeColor : "#ff0",
-						pointHighlightFill : "#fff",
-						pointHighlightStroke : "rgba(220,220,220,1)",
-						data : [90,30,5,15]
-					}
-				]
-			};
-			var myChart = new Chart(ctx, {
-				type: 'line',
-				data: data,
-				options: {
-					scales: {
-						xAxes: [{
-							display: false
-						}]
-					}
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo 'Otra herramienta utilizada en diferentes rubros son las gráficas, éstas son interesantes para nuestro propósito ya que nos ayudan a entender de mejor manera el comportamiento de del fenómeno de los contaminantes atmosféricos en la zona estudiada. Se observan cuatros gráficos que representan cuatro contaminantes atmosféricos capturados por el módulo 1 en 7 días y son actualizados con cada captura que es enviada al servidor.';?></font></p></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<?php 
+				/* Open connection to "zing_db" MySQL database. */
+				$mysqli = new mysqli("localhost", "airmxgen_meshliu", "libelium2007", "airmxgen_meshliu");
+				 
+				/* Check the connection. */
+				if (mysqli_connect_errno()) {
+					printf("Connect failed: %s\n", mysqli_connect_error());
+					exit();
 				}
-			});
+				/* Fetch result set from t_test table */
+			?>
+
+			<script>
+			<?php
+					$data=mysqli_query($mysqli,"SELECT id FROM sensorParser where id_wasp = 1  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myLabels1=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo '"'.$info['id'].'",'; /* The concatenation operator '.' is used here to create string values from our database names. */
+				?>];
+				<?php
+				//1
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 672");
+				?>
+				var myDataCO=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCOm1=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 2  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCOm2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCOm3=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT id FROM sensorParser where id_wasp = 1  and sensor = 'CO' ORDER BY sensorParser.timestamp DESC limit 672");
+				?>
+				var myLabels=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo '"'.$info['id'].'",'; /* The concatenation operator '.' is used here to create string values from our database names. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 672");
+				?>
+				var myDataCO2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCO2m1=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 2  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCO2m2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataCO2m3=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'NO2' ORDER BY sensorParser.timestamp DESC limit 672");
+				?>
+				var myDataNO2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'NO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataNO2m1=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 2  and sensor = 'NO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataNO2m2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3  and sensor = 'NO2' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataNO2m3=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'O3' ORDER BY sensorParser.timestamp DESC limit 672");
+				?>
+				var myDataO3=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'O3' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataO3m1=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 2  and sensor = 'O3' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataO3m2=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+				
+				<?php
+					$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3 and sensor = 'O3' ORDER BY sensorParser.timestamp DESC limit 95");
+				?>
+				var myDataO3m3=[<?php 
+					while($info=mysqli_fetch_array($data))
+						echo $info['value'].','; /* We use the concatenation operator '.' to add comma delimiters after each data value. */
+				?>];
+			
 			</script>
+		
+			<?php
+				/* Close the connection */
+				$mysqli->close(); 
+			?>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart");
+					var data = {
+						labels :myLabels,
+						datasets : [
+							{
+								label: "CO - ppm",	
+								fillColor : "rgba(0, 165, 0, 0.2)",
+								backgroundColor: "rgba(0, 165, 0, 0.2)",
+								borderColor: "rgba(0, 165, 0, 1)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(0, 165, 0, 0.2)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(0, 165, 0, 0.2)",
+								pointHoverBorderColor: "rgba(0, 165, 0, 0.2)",
+								strokeColor : "#6b9dfa",
+								pointColor : "#1e45d7",
+								pointStrokeColor : "#ff0",
+								pointHighlightFill : "#fff",
+								pointHighlightStroke : "rgba(0, 165, 0, 0.2)",
+								data : myDataCO							
+							}
+						]
+					};
+					var myChart = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
 			</div>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart2" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart2");
+					var data = {
+						labels :myLabels,
+						datasets : [
+							{
+								label: "CO2 - ppm",
+								fillColor : "rgba(179, 0, 0, 0.2)",
+								backgroundColor: "rgba(179, 0, 0, 0.2)",
+								borderColor: "rgba(179, 0, 0, 1)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(179, 0, 0, 0.2)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(179, 0, 0, 0.2)",
+								pointHoverBorderColor: "rgba(179, 0, 0, 0.2)",
+								strokeColor : "#6b9dfa",
+								strokeColor : "#e9e225",
+								pointColor : "#faab12",
+								pointStrokeColor : "#fff",
+								pointHighlightFill : "#fff",
+								pointHighlightStroke : "rgba(179, 0, 0, 0.2)",
+								data : myDataCO2
+							}
+						]
+					};
+					var myChart2 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart3" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart3");
+					var data = {
+						labels :myLabels,
+						datasets : [
+							{
+								label: "NO2 - ppb",
+								fillColor : "rgba(117, 0, 200, 0.2)",
+								backgroundColor: "rgba(117, 0, 200, 0.2)",
+								borderColor: "rgba(117, 0, 200, 1)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor:"rgba(117, 0, 200, 0.2)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(117, 0, 200, 0.2)",
+								pointHoverBorderColor: "rgba(117, 0, 200, 0.2)",
+								strokeColor : "#6b9dfa",
+								pointColor : "#1e45d7",
+								pointStrokeColor : "#ff0",
+								pointHighlightFill : "#fff",
+								pointHighlightStroke : "rgba(117, 0, 200, 0.2)",
+								data : myDataNO2
+							}
+						]
+					};
+					var myChart3 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart4" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart4");
+					var data = {
+						labels :myLabels,
+						datasets : [
+							{
+								label: "O3 - ppb",
+								fillColor : "rgba(220,220,220,0.2)",
+								backgroundColor: "rgba(75,192,192,0.2)",
+								borderColor: "rgba(75,192,192,1)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(75,192,192,1)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(75,192,192,1)",
+								pointHoverBorderColor: "rgba(220,220,220,1)",
+								strokeColor : "#6b9dfa",
+								pointColor : "#1e45d7",
+								pointStrokeColor : "#ff0",
+								pointHighlightFill : "#fff",
+								pointHighlightStroke : "rgba(220,220,220,1)",
+								data : myDataO3
+							}
+						]
+					};
+					var myChart4 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			<!--
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-text">
+						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5>< ?php //echo 'En las siguientes gráficas se muestran los contaminantes capturados por los tres módulos durante un día y se actualiza de la misma manera que la anterior.';? ></font></p></span>
+						<hr>
+					</div>
+                </div>
+            </div>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart5" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart5");
+					var data = {
+						labels :myLabels1,
+						datasets : [
+							{
+								label: "CO - 1 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor: "rgba(0, 165, 0, 0.4)",
+								borderColor:"rgba(0, 165, 0,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(0, 165, 0, 0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor:"rgba(0, 165, 0, 0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCOm1,
+								spanGaps: false,
+							},
+							{
+								label: "CO - 2 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:  "rgba(117, 0, 200, 0.4)",
+								borderColor: "rgba(117, 0, 200, 0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor:  "rgba(117, 0, 200,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(117, 0, 200,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCOm2,
+								spanGaps: false,
+							},
+							{
+								label: "CO - 3 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:"rgba(75,192,192,0.4)",
+								borderColor: "rgba(75,192,192,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(75,192,192,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(75,192,192,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCOm3,
+								spanGaps: false,
+							}
+						]
+					};
+					var myChart5 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart6" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart6");
+					var data = {
+						labels :myLabels1,
+						datasets : [
+							{
+								label: "CO2 - 1 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor: "rgba(0, 165, 0, 0.4)",
+								borderColor:"rgba(0, 165, 0,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(0, 165, 0, 0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor:"rgba(0, 165, 0, 0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCO2m1,
+								spanGaps: false,
+							},
+							{
+								label: "CO2 - 2 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:  "rgba(117, 0, 200, 0.4)",
+								borderColor: "rgba(117, 0, 200, 0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor:  "rgba(117, 0, 200,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(117, 0, 200,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCO2m2,
+								spanGaps: false,
+							},
+							{
+								label: "CO2 - 3 -ppm",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:"rgba(75,192,192,0.4)",
+								borderColor: "rgba(75,192,192,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(75,192,192,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(75,192,192,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataCO2m3,
+								spanGaps: false,
+							}
+						]
+					};
+					var myChart6 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart7" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart7");
+					var data = {
+						labels :myLabels1,
+						datasets : [
+							{
+								label: "NO - 1 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor: "rgba(0, 165, 0, 0.4)",
+								borderColor:"rgba(0, 165, 0,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(0, 165, 0, 0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor:"rgba(0, 165, 0, 0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataNO2m1,
+								spanGaps: false,
+							},
+							{
+								label: "NO - 2 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:  "rgba(117, 0, 200, 0.4)",
+								borderColor: "rgba(117, 0, 200, 0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor:  "rgba(117, 0, 200,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(117, 0, 200,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataNO2m2,
+								spanGaps: false,
+							},
+							{
+								label: "NO2 - 3 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:"rgba(75,192,192,0.4)",
+								borderColor: "rgba(75,192,192,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(75,192,192,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(75,192,192,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataNO2m3,
+								spanGaps: false,
+							}
+						]
+					};
+					var myChart7 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			<div class="row">
+				<script src="js/Chart.js"></script>
+				<canvas id="myChart8" width="600" height="150"></canvas>
+				<script>
+						
+					var ctx = document.getElementById("myChart8");
+					var data = {
+						labels :myLabels1,
+						datasets : [
+							{
+								label: "O3 - 1 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor: "rgba(0, 165, 0, 0.4)",
+								borderColor:"rgba(0, 165, 0,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(0, 165, 0, 0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor:"rgba(0, 165, 0, 0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataO3m1,
+								spanGaps: false,
+							},
+							{
+								label: "O3- 2 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:  "rgba(117, 0, 200, 0.4)",
+								borderColor: "rgba(117, 0, 200, 0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor:  "rgba(117, 0, 200,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(117, 0, 200,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataO3m2,
+								spanGaps: false,
+							},
+							{
+								label: "O3 - 3 -ppb",
+								fill: false,
+								lineTension: 0.1,
+								backgroundColor:"rgba(75,192,192,0.4)",
+								borderColor: "rgba(75,192,192,0.4)",
+								borderCapStyle: 'butt',
+								borderDash: [],
+								borderDashOffset: 0.0,
+								borderJoinStyle: 'miter',
+								pointBorderColor: "rgba(75,192,192,0.4)",
+								pointBackgroundColor: "#fff",
+								pointBorderWidth: 1,
+								pointHoverRadius: 5,
+								pointHoverBackgroundColor: "rgba(75,192,192,0.4)",
+								pointHoverBorderColor: "rgba(220,220,220,0.4)",
+								pointHoverBorderWidth: 2,
+								pointRadius: 1,
+								pointHitRadius: 10,
+								data: myDataO3m3,
+								spanGaps: false,
+							}
+						]
+					};
+					var myChart8 = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							scales: {
+								xAxes: [{
+									display: false
+								}]
+							}
+						}
+					});
+				</script>
+			</div>
+			-->
+		</div>
 
 	</section>
 	
 	<section id="Predicción">
 		<div class="container" >
 			<div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-left">
                     <div class="intro-text">
 						<span class="name"><font color="black"><h3><?php echo $text['Predicción'];?></h3></font></span>
 						<hr>
@@ -1160,10 +1785,47 @@ require_once('lang/'.$language.'.php');
 						<hr>
 					</div>
                 </div>
-            </div>
+            </div>			
+			<div class="row">
+				<center>
+					<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="80%" bgcolor="black">
+						<thead>
+							<tr>
+							<th><font color="black"><center><?php echo 'Contaminante';?></center></font></th>
+							<th><font color="black"><center><?php echo 'IMECAS';?></center></font></th>
+							<th><font color="black"><center><?php echo 'Calidad';?></center></font></th>
+							<th><font color="black"><center><?php echo 'Hora';?></center></font></th>
+							<th><font color="black"><center><?php echo 'Sensor';?></center></font></th>
+							</tr>
+						</thead>
+						<?php  
+						  $link = @mysql_connect("localhost", "airmxgen_meshliu","libelium2007")
+							  or die ("Error al conectar a la base de datos.");
+						  @mysql_select_db("airmxgen_meshliu", $link)
+							  or die ("Error al conectar a la base de datos.");
+
+						  $query = "SELECT contaminante, imecas, calidad, hora, sensor FROM prediccion ORDER BY prediccion.id DESC limit 9";
+						  $result = mysql_query($query);
+						  $numero = 0;
+						  while($row = mysql_fetch_array($result))
+						  {
+							  
+							echo "<tr><td width=\"15%\" bgcolor=\"\"><center><font color=\"black\" SIZE=5>".$row['contaminante']."</font ></center></td>";
+							echo "<td width=\"15%\" bgcolor=\"\"><center><font color=\"black\" SIZE=5>".$row['imecas']."</font ></center></td>";
+							echo "<td width=\"15%\" bgcolor=\"\"><center><font color=\"black\" SIZE=5>".$row['calidad']."</font ></center></td>";
+							echo "<td width=\"15%\" bgcolor=\"\"><center><font color=\"black\" SIZE=5>".$row['hora']."</font ></center></td>";
+							echo "<td width=\"15%\" bgcolor=\"\"><center><font color=\"black\" SIZE=5>".$row['sensor']."</font ></center></td></tr>";
+						  };
+						  
+						  mysql_free_result($result);
+						  mysql_close($link);
+					?>
+					</table>
+				</center>
+			</div>
 			<br>
 			<div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-left">
                     <div class="intro-text">
 						<span class="name"><font color="black"><h3><?php echo $text['Conclusión'];?></h3></font></span>
 						<hr>
@@ -1495,141 +2157,89 @@ require_once('lang/'.$language.'.php');
 
 
 	<section id="products"> <!--</div En esta seccion se agregaron el div class="row"> <div class="col-sm-4 portfolio-item, <p align="left">, </p>, <span class="skills">-->
-		<header>
-		<div class="container" ><!--<para centrar el texto al margen igual que los otros se agrego: <div class="container" >, <div class="row">, <div class="col-lg-12"> >-->
-				<div class="row">
-				<div class="col-lg-12"> <!-- codigo para imagen de fondo-->
-				<div class="intro-text">
-				<div class="intro-text">
-						<span class="name"><font color="black"><h3><?php echo $text['138'];?></h3></font></span>
-				</div>
-					 
-				<hr>
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['139'];?></font></div></h3> <!-- texto largo-->
-				<hr>
+			<header>
+				<div class="container" >
+				<div class="col-md-12 text-left">
+					<div class="row">
+							<div class="intro-text">
+								<span class="name"><font color="black"><h3><?php echo 'Productos del proyecto';?></h3></font></span>							 
+								<hr>
+								<h3><div style="text-transform: none"><font color="black"><?php echo 'Artículos Generados';?></font></div></h3> <!-- texto largo-->
+								<hr>
+								<div class="row">
+										<UL type=circle>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz y Maria Isabel Cajero Lázaro (2015). An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p></LI>							
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Miguel Sánchez Meraz, Felipe Ramírez Castañeda y Amadeo J. Argüelles Cruz (2015). Normalización de la carcasa para aplicaciones de monitoreo de Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p></LI>	
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro y Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmospheric Pollutants with a Classification Approach. MICAI 2015, 14th.';?></font></p></LI>	
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Eduardo Solórzano, Elena Sastré y Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.';?></font></p></LI>
+								</div> 						
+								<hr>		
+								<div class="row">
 
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> 
+											<h3><div style="text-transform: none"><font color="black"><?php echo 'Alumnos graduados de Maestría en Ciencias: ';?></font></div></h3> <!-- texto largo-->
+											<hr>
+											<UL type=circle>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Fócil Árias Carolina. Cómputo no convencional para la estimación del desempeño académico. Maestría en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: A130248. Titulada el día 9/julio/2015 y registrada en el Libro 3 Folio 102.';?></font></p></LI>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Velázquez Cruz Jesús Emmanuel. Clasificación de imágenes para el pre-diagnóstico de cáncer de mama aplicando cómputo no convencional Maestría en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: A130275. Titulado el día 8/julio/2015 y registrado en el Libro 3 Folio 102.';?></font></p></LI>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Alfaro Ponce Mariel. Reconocimiento de patrones espacio-tiempo en señales electrofisiológicas de los potenciales evocados utilizando redes neuronales dinámicas. Doctorado en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: B110878. Titulada el día 10/julio/2015 y registrada en el Libro 3 Folio 010.';?></font></p></LI>
 
-				<UL type=square>
-				
-				<h3><LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['140'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['141'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['142'];?></p></font></div></LI>
-				<br/><br/>
-				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['143'];?></p></font></div></LI>
-				</div> 
-				</h3> <!-- texto largo-->
-				
-			  
-				
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> 
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['144'];?></font></div></h3> <!-- texto largo-->
-				<hr>
-			   
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['145'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['146'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><font color="black"><p align="left"><?php echo $text['147'];?></p></font></div></LI>
-				</div> 
-					<br/><br/>
-				
+								</div> 
+								<hr>								
+								<div class="row">
+									
+										<h3><div style="text-transform: none"><font color="black"><?php echo 'Presentación de trabajos en congresos nacionales e internacionales ';?></font></div></h3>
+										<hr>
+										<UL type=circle>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Carolina Focil, Amadeo Argüelles y Itzama López. Computación no convencional para estimar el rendimiento académico en la Universidad los estudiantes de primer año. CTTC 2015, 11º Congreso Internacional de Tendencias Tecnológicas en Computación. Ciudad de México, octubre 12-16 octubre. 2015.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz y María Isabel Cajero Lázaro. An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, Conferencia Smart Cities Primera Internacional IEEE. Guadalajara Jalisco, Mexico. October 25-28 Octubre, 2015.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Miguel Sánchez Meraz, Felipe Ramírez Castañeda y Amadeo J. Argüelles Cruz. Normalización de la carcasa para aplicaciones de monitoreo Smart Cities. ISC2-2015, Primera Conferencia Internacional IEEE Smart Cities. Guadalajara Jalisco, México. 25-28 de de octubre de 2015.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Eduardo Solórzano - Alor, Amadeo José Argüelles Cruz, María Isabel Cajero - Lázaro y Miguel Sánchez - Meraz. An Embedded Application System for Data Collection of Atmospheric Pollutants with a Classification Approach. MICAI 2015, 14 de México Conferencia Internacional sobre Inteligencia Artificial. Cuernavaca Morelos, México, del 25 al 31 de octubre de 2015.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '5. Marina Vicario, Amadeo Argüelles, Pilar Gómez, Carlos Hernández cognitivos: Huellas de análisis y predicción de paradigma para el aprendizaje digital. ICALT 2015, 17ª Conferencia Internacional sobre Tecnologías Avanzadas de aprendizaje. Los Ángeles, EE.UU. , 28-29 de Septiembre.';?></font></p></LI>
 
+								</div>
+								<hr>
+								<div class="row">
 
-				</h3> <!-- texto largo-->
-			   
-			   
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> <!-- texto largo-->
-						
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['151'];?></font></div></h3>
-				<hr>
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['152'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['153'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['154'];?></p></font></div></LI>
-				<br/><br/>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['155'];?></p></font></div></LI>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['156'];?></p></font></div></LI>
-				</div>
-				<br/><br/>
+											<h3><div style="text-transform: none"><font color="black"><?php echo 'Artículos publicados';?></font></div></h3>
+											<hr>
+											<UL type=circle>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Itzama López - Yáñez, Cornelio Yáñez - Márquez, Oscar Camacho - Nieto, Mario Pérez - Aldape, Amadeo -José Argüelles - Cruz (2015 ). El aprendizaje colaborativo en los cursos de nivel de posgrado. Computación para el Aprendizaje Humano, Comportamiento y Colaboración en la Edición Especial de las redes móviles de Época y Social. Las computadoras en el comportamiento humano. 51 ( B ): 938-944. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Mario Matamoros de Luis, Amadeo J. Argüelles Cruz, V. Abril Uriarte Arcia, Cornelio Yáñez Márquez (2015 ) Influencia Verde tecnología de la información sobre el comportamiento del propietario del coche. Consideraciones para su apoyo Operativo de Colaboración en eLearning y Redes Sociales. Computación para el Aprendizaje Humano, Comportamiento y Colaboración en la Edición Especial de las redes móviles de Época y Social. Las computadoras en el comportamiento humano. 51 ( B ) : 792-802. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Mario Aldape Pérez, Cornelio Yáñez Márquez, Oscar Camacho Nieto, Itzama López Yáñez, Amadeo José Argüelles Cruz (2015 ). El aprendizaje colaborativo basado en modelos asociativos: aplicación a la clasificación de patrones en conjuntos de datos médica Computing para el Aprendizaje Humano, Comportamiento y Colaboración en el social y móvil Era redes Número especial. Las computadoras en el comportamiento humano. 51 ( B ): 771-779. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
+											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. M. Alfaro Ponce, I. Salgado, A. Arguelles, I. Chairez (2015 ). Adaptativo Identificador inciertos sistemas no lineales complejos basados ​​en redes neuronales continuas. Cartas de procesamiento neural. 43:133-153.';?></font></p></LI>
 
-				</h3> <!-- texto largo-->
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> <!-- texto largo-->
+								</div>
+								<hr>
+								<div class="row">
 
-				<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo $text['157'];?></p></font></div></h3>
-				<hr>
-				<UL type=square>
-				</h3>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['158'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['159'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['160'];?></p></font></div></LI>
-				<br/><br/>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['161'];?></p></font></div></LI>
-				</div>
-				</h3> <!-- texto largo-->
+										<h3><div style="text-transform: none"><font color="black"><?php echo 'Tesis en desarrollo: ';?></font></div></h3>
+										<hr>
+										<UL type=circle>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Solórzano Alór Eduardo. Boleta B140698. Modelos asociativos para monitoreo de contaminantes en ciudades inteligentes. Maestría en Tecnología de Cómputo. CIDETEC. Trabajo iniciado en agosto de 2014.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.';?></font></p></LI>
 
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> 
-						
+								</div>
+								<hr>
+								<h3><div style="text-transform: none"><font color="black"><?php echo 'Alumnos PIFI (BEIFI)';?></font></div></h3>
+								<hr>
+								<div class="row">
 
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['148'];?></font></div></h3>
-				<hr>
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['149'];?></font></p></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['150'];?></p></font></div></LI>
-				</div>
-				<br><br>
-				</h3>
-
-				
-				<h3><div style="text-transform: none"><font color="black"><?php echo $text['162'];?></font></div></h3>
-				<hr>
-				<div class="row">
-						<div class="col-sm-4 portfolio-item"> 
-
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['163'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['164'];?></p></font></div></LI>
-				<br><br>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['165'];?></p></font></div></LI>
-				<br/><br/>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['166'];?></p></font></div></LI>
-				<LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['167'];?></p></font></div></LI>
-				<br><br>
-				</div>
-				</h3>
-				
-				<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo $text['168'];?></p></font></div></h3>
-				<hr>
-				
-				<UL type=square>
-				<h3><LI><div style="text-transform: none"><p align="left"><font color="black"><?php echo $text['169'];?></p></font></div></LI>
-				<br><br>  
-				</h3>
-				</UL>
-				</div> 
-				</div> 
-				</div> 
-			</div> 
-			</div>
+										<UL type=circle>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Carolina Fócil Arias.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Jesús Emmanuel Velazquez Cruz.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Laura Elena Sastré García.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Monserrat Romero Hernández.';?></font></p></LI>
+										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '5. Sergio Iván López Monzón.';?></font></p></LI>
+								</div>
+								<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo 'Sitio www.airmx.net.';?></p></font></div></h3>
+								<hr>		
+								<span class="skills"><font color="black" SIZE=5><p align="center"><?php echo 'El presente sitio web fue desarrollado en conjunto por alumnos tesistas, BEIFI, y practicantes profesionales.';?></font></p>
+							</div>
 					</div>
 				</div>
-			</div>
-		</header>  
-	</section>
+				</div>
+			</header>  
+		</section>
 
 
 
@@ -1818,6 +2428,31 @@ require_once('lang/'.$language.'.php');
                             <img src="img/dispositivos/xbee.png" width="500" height="230" class="img-responsive img-centered" alt="">
                             <div class="intro-text">
 								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['199'];?></font></p></span>
+							</div>
+                             <br>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['200'];?></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	    <div class="portfolio-modal modal fade" id="portfolio6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3><?php echo 'Smart Metering Board';?></h3>
+                            <img src="img/dispositivos/meet.png" width="500" height="230" class="img-responsive img-centered" alt="">
+                            <div class="intro-text">
+								<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo 'Al igual que el gas sensor board, se trata de un circuito que ayuda a interpretar los valores de los sensores que en este caso son luminosidad y corriente. Que además cuenta con muchas más aplicaciones y sensores que pueden ser revisados en su sitio de internet.';?></font></p></span>
 							</div>
                              <br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><?php echo $text['200'];?></button>
