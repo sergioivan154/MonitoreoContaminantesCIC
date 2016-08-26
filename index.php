@@ -9,10 +9,6 @@ require_once('lang/'.$language.'.php');
 
 ?>
 
-
-HTML { 
-zoom:90%;
-}
 <!--ingles-->
 <head>
     <meta charset="utf-8">
@@ -526,11 +522,15 @@ zoom:90%;
 		<br>
 		<br>
 		<br>
-		<div class = col-sm-6>
+		<div class = col-sm-4>
 			<center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
 			</button></center>
 		</div>
-		<div class = col-sm-6>
+		<div class = col-sm-4>
+			<center><button onclick="location.href='http://www.riaat.ujat.mx/hablandoalaire/index.html'" target="_blank" class="btn btn-success btn-lg">Hablando al aire
+			</button></center>
+		</div>
+		<div class = col-sm-4>
 			<center><button onclick="location.href='http://www.aire.df.gob.mx/default.php'" target="_blank" class="btn btn-success btn-lg">SIMAT
 			</button></center>
 		</div>
@@ -559,188 +559,43 @@ zoom:90%;
 				<div id="map">
 					<div>
 						<script type="text/javascript">
-							var map;
-							function initMap() {
-								var myLatLng = {lat: 19.503298, lng: -99.147772};
-								var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
-								map = new google.maps.Map(document.getElementById('map'), {
-									center: myLatLng,
-									styles: styleArray,
-									zoom: 18
-
-								});
-								var marker = new google.maps.Marker({
-									position: map.getCenter(),
-									icon: {
-									  path: google.maps.SymbolPath.CIRCLE,
-									  scale: 10
-									},
-									draggable: true,
-									map: map
-								});
-								var goldStar = {
-									path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-									fillColor: 'yellow',
-									fillOpacity: 0.8,
-									scale: 1,
-									strokeColor: 'gold',
-									strokeWeight: 14
-								};
-								var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
-								var myLatLngSensor2 = {lat: 19.503311, lng: -99.147888};
-								var myLatLngSensor3 = {lat: 19.503039, lng: -99.147858};
-								var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
-								var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
-								infoString = "";
-								// Create a marker and set its position.
-	  //                        marcador 1
-								var marker1 = new google.maps.Marker({
-									map: map,
-									position: myLatLngSensor1,
-									animation: google.maps.Animation.DROP,
-									icon: {
-										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'white',
-										fillOpacity: 0.8,
-										scale: 10,
-										strokeColor: 'black',
-										strokeWeight: 5
-									},
-									clickable: true,
-									title: "<?php echo $text['76'];?>"
-								});
-
-								var infowindow1 = new google.maps.InfoWindow({
-									content: infoString
-								});
-							   marker1.addListener('click', function() {
-									infowindow1.open(map, marker1);
-								});
-								// marcador 2
-								var marker2 = new google.maps.Marker({
-									map: map,
-									position: myLatLngSensor2,
-									animation: google.maps.Animation.DROP,
-									icon: {
-										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'white',
-										fillOpacity: 0.8,
-										scale: 10,
-										strokeColor: 'black',
-										strokeWeight: 5
-									},
-									clickable: true,
-									title: "<?php echo $text['77'];?>"
-								});
-
-								var infowindow2 = new google.maps.InfoWindow({
-									content: infoString
-								});
-
-								marker2.addListener('click', function() {
-									infowindow2.open(map, marker2);
-								});
-								// marcador 3
-								var marker3 = new google.maps.Marker({
-									map: map,
-									position: myLatLngSensor3,
-									animation: google.maps.Animation.DROP,
-									icon: {
-										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'white',
-										fillOpacity: 0.8,
-										scale: 10,
-										strokeColor: 'black',
-										strokeWeight: 5
-									},
-									clickable: true,
-									title: "<?php echo $text['78'];?>"
-								});
-
-								var infowindow3 = new google.maps.InfoWindow({
-									content: infoString
-								});
-
-							   marker3.addListener('click', function() {
-									infowindow3.open(map, marker3);
-								});
-
-
-								// marcador 4
-								var marker4 = new google.maps.Marker({
-									map: map,
-									position: myLatLngSensor4,
-									animation: google.maps.Animation.DROP,
-									icon: {
-										path: google.maps.SymbolPath.CIRCLE,
-										fillColor: 'white',
-										fillOpacity: 0.8,
-										scale: 10,
-										strokeColor: 'black',
-										strokeWeight: 5
-									},
-									clickable: true,
-										title: "<?php echo $text['79'];?>"
-								});
-								var infowindow4 = new google.maps.InfoWindow({
-									content: infoString
-								});
-								marker4.addListener('click', function() {
-									infowindow4.open(map, marker4);
-								});
-
-								//5
-								var marker5 = new google.maps.Marker({
-									map: map,
-									position: myLatLngSensor5,
-									animation: google.maps.Animation.DROP,
-									icon: {
-									  path: google.maps.SymbolPath.CIRCLE,
-									  fillColor: 'white',
-										fillOpacity: 0.8,
-										scale: 10,
-										strokeColor: 'black',
-										strokeWeight: 5
-									},
-									clickable: true,
-									title: "<?php echo $text['80'];?>"
-								});
-
-								var infowindow5 = new google.maps.InfoWindow({
-									content: infoString
-								});
-
-								marker5.addListener('click', function() {
-									infowindow5.open(map, marker5);
-								});
-
-								function addInfoSensor1(info)
-								{
-									infowindow1.setContent(info);
-								}
-
-
-								function addInfoSensor2(info)
-								{
-									infowindow2.setContent(info);
-								}
-
-								function addInfoSensor3(info)
-								{
-									infowindow3.setContent(info);
-								}
-
-								function addInfoSensor4(info)
-								{
-									infowindow4.setContent(info);
-								}
-
-								function addInfoSensor5(info)
-								{
-									infowindow5.setContent(info);
-								}
+							
+								<?php 
+									$mysqli = new mysqli("localhost", "airmxgen_meshliu", "libelium2007", "airmxgen_meshliu");
+									 
+									/* Check the connection. */
+									if (mysqli_connect_errno()) {
+										printf("Connect failed: %s\n", mysqli_connect_error());
+										exit();
+									}
+								?>
 
 								<?php
+									$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 1  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 1");
+								?>
+								var CO2=<?php 
+									while($info=mysqli_fetch_array($data))
+										echo $info['value']; /* The concatenation operator '.' is used here to create string values from our database names. */
+								?>;
+								<?php
+									$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 2  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 1");
+								?>
+								var CO22=<?php 
+									while($info=mysqli_fetch_array($data))
+										echo $info['value']; /* The concatenation operator '.' is used here to create string values from our database names. */
+								?>;
+								<?php
+									$data=mysqli_query($mysqli,"SELECT value FROM sensorParser where id_wasp = 3  and sensor = 'CO2' ORDER BY sensorParser.timestamp DESC limit 1");
+								?>
+								var CO23=<?php 
+									while($info=mysqli_fetch_array($data))
+										echo $info['value']; /* The concatenation operator '.' is used here to create string values from our database names. */
+								?>;
+								<?php
+									/* Close the connection */
+									$mysqli->close(); 
+								?>
+;								<?php
 									$dbhost =  "localhost" ;
 									$dbuser = "airmxgen_meshliu";
 									$dbpass = "libelium2007";
@@ -770,50 +625,42 @@ zoom:90%;
 									{
 									  $sensor1 = "No hay información";
 									  die("Could not get data: ". mysql_error());
-									}
-
+									}						
 									$imagen = "img/Buena.jpg";
-									$color= " <br/> ";
+									$color= "";
+									$color2= "";
+									$color3= "";
 									while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 									{
 										$calidad = $row['CALIDAD'];
 										$calidadText = "Calidad";
-										if (strtolower($language) == 'en'){
-											$calidadText = "Quality";
 											switch (strtolower($calidad)) {
 												case 'buena':
-													$calidad = 'GOOD';
 													$imagen = "img/Buena.jpg";
-													$color= "green";
+													$color= 'green';
 													break;
 												case 'regular':
-													$calidad = 'REGULAR';
 													$imagen = "img/Mala.jpg";
-													$color= "yellow";
+													$color= 'yellow';
 													break;
 												case 'mala':
-													$calidad = 'BAD';
-													$color= "brown";
+													$color= 'brown';
 													break;
 												case 'muy mala':
-													$calidad = 'VERY BAD';
-													$color= "red";
+													$color= 'red';
 													break;
 
 												case 'extremadamente mala':
-													$calidad = 'EXTREMELY BAD';
-													$color= "purple";
+													$color= 'purple';
 													break;
 												default:
 												$imagen = "img/Buena.jpg";
 													# code...
 													break;
-											}
 										}
 										  $sensor1 = $sensor1.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
 									} 
-									
 									$sensor1 = $sensor1."Sensor 1 - Monitoreo Atmosférico"; 
 									echo ("addInfoSensor1('<div style = \'color: #000000\'>".json_encode($sensor1)."  </div>');\n"); 
 									mysql_close($conn);
@@ -843,31 +690,28 @@ zoom:90%;
 									{
 										$calidad = $row['CALIDAD'];
 										$calidadText = "Calidad";
-										if (strtolower($language) == 'en'){
-											$calidadText = "Quality";
 											switch (strtolower($calidad)) {
 												case 'buena':
-													$calidad = 'GOOD';
 													$imagen = "img/Buena.jpg";
+													$color2 = 'green';
 													break;
 												case 'regular':
-													$calidad = 'REGULAR';
 													 $imagen = "Mala.jpg";
+													 $color2 = 'yellow';
 													break;
 												case 'mala':
-													$calidad = 'BAD';
+													$color2 = 'brown';
 													break;
 												case 'muy mala':
-													$calidad = 'VERY BAD';
+													$color2 = 'red';
 													break;
 
 												case 'extremadamente mala':
-													$calidad = 'EXTREMELY BAD';
+													$color2 = 'purple';
 													break;
 												default:
 													# code...
 													break;
-											}
 										}
 										$sensor2 = $sensor2.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";
@@ -902,31 +746,28 @@ zoom:90%;
 									{
 										$calidad = $row['CALIDAD'];
 										$calidadText = "Calidad";
-										if (strtolower($language) == 'en'){
-											$calidadText = "Quality";
 											switch (strtolower($calidad)) {
 												case 'buena':
-													$calidad = 'GOOD';
 													$imagen = "img/excelente.jpg";
+													$color3 = 'green';
 													break;
 												case 'regular':
-													$calidad = 'REGULAR';
 													$imagen = "Mala.jpg";
+													$color3 = 'yellow';
 													break;
 												case 'mala':
-													$calidad = 'BAD';
+													$color3 = 'brown';
 													break;
 												case 'muy mala':
-													$calidad = 'VERY BAD';
+													$color3 = 'red';
 													break;
 
 												case 'extremadamente mala':
-													$calidad = 'EXTREMELY BAD';
+													$color3 = 'purple';
 													break;
 												default:
 													# code...
 													break;
-											}
 										}  
 										$sensor3 = $sensor3.
 										" {$row['Contaminante']}:{$row['PUNTOS_IMECA']} IMECA, ".$calidadText.": {$calidad} <br/> ";    
@@ -985,6 +826,193 @@ zoom:90%;
                                 echo ("addInfoSensor5('<div style = \'color: #000000\'>".json_encode($sensor5)."</div>');\n");
                                 mysql_close($conn);
 								?>
+							var map;
+							function initMap() {
+								var myLatLng = {lat: 19.503298, lng: -99.147772};
+								var styleArray =    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
+								map = new google.maps.Map(document.getElementById('map'), {
+									center: myLatLng,
+									styles: styleArray,
+									zoom: 18
+
+								});
+								var marker = new google.maps.Marker({
+									position: map.getCenter(),
+									icon: {
+									  path: google.maps.SymbolPath.CIRCLE,
+									  scale: 10
+									},
+									draggable: true,
+									map: map
+								});
+								var goldStar = {
+									path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+									fillColor: 'yellow',
+									fillOpacity: 0.8,
+									scale: 1,
+									strokeColor: 'gold',
+									strokeWeight: 14
+								};
+								var myLatLngSensor1 = {lat: 19.503298, lng: -99.147772};
+								var myLatLngSensor2 = {lat: 19.503311, lng: -99.147888};
+								var myLatLngSensor3 = {lat: 19.503039, lng: -99.147858};
+								var myLatLngSensor4 = {lat: 19.503009, lng: -99.147706};
+								var myLatLngSensor5 = {lat: 19.503014, lng: -99.147765};
+								infoString = "";
+								// Create a marker and set its position.
+	  //                        marcador 1
+								var color = '<?php echo $color; ?>';
+								var marker1 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor1,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: color,	
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['76'];?>"
+								});
+
+								var Sensor1 = '<div style = \'color: #000000\' > CO2: ' + CO2 + ' ppm<?php echo $sensor1; ?></div>';							
+								var infowindow1 = new google.maps.InfoWindow({
+									content: Sensor1
+								});
+							   marker1.addListener('click', function() {
+									infowindow1.open(map, marker1);
+								});
+								// marcador 2
+								var color2 = '<?php echo $color2; ?>';
+								var marker2 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor2,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: color2,
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['77'];?>"
+								});
+
+								var Sensor2 = '<div style = \'color: #000000\'> CO2: ' + CO22 + ' ppm<?php echo $sensor2; ?></div>';							
+								var infowindow2 = new google.maps.InfoWindow({
+									content: Sensor2
+								});
+								marker2.addListener('click', function() {
+									infowindow2.open(map, marker2);
+								});
+								// marcador 3
+								var color3 = '<?php echo $color3; ?>';
+								var marker3 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor3,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: color3,
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $text['78'];?>"
+								});
+
+								var Sensor3 = '<div style = \'color: #000000\'> CO2: ' + CO23 + ' ppm<?php echo $sensor3; ?></div>';							
+								var infowindow3 = new google.maps.InfoWindow({
+									content: Sensor3
+								});
+
+							   marker3.addListener('click', function() {
+									infowindow3.open(map, marker3);
+								});
+
+
+								// marcador 4
+								var marker4 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor4,
+									animation: google.maps.Animation.DROP,
+									icon: {
+										path: google.maps.SymbolPath.CIRCLE,
+										fillColor: 'white',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+										title: "<?php echo $text['79'];?>"
+								});
+								var Sensor4 = '<div style = \'color: #000000\'><?php echo $sensor4; ?></div>';							
+								var infowindow4 = new google.maps.InfoWindow({
+									content: Sensor4
+								});
+								marker4.addListener('click', function() {
+									infowindow4.open(map, marker4);
+								});
+
+								//5
+								var marker5 = new google.maps.Marker({
+									map: map,
+									position: myLatLngSensor5,
+									animation: google.maps.Animation.DROP,
+									icon: {
+									  path: google.maps.SymbolPath.CIRCLE,
+									  fillColor: 'white',
+										fillOpacity: 0.8,
+										scale: 10,
+										strokeColor: 'black',
+										strokeWeight: 5
+									},
+									clickable: true,
+									title: "<?php echo $sensor5;?>"
+								});
+								var Sensor5 = '<div style = \'color: #000000\'><?php echo $sensor5; ?></div>';							
+								var infowindow5 = new google.maps.InfoWindow({
+									content: Sensor5
+								});
+
+								marker5.addListener('click', function() {
+									infowindow5.open(map, marker5);
+								});
+								/*
+								function addInfoSensor1(info)
+								{
+									infowindow1.setContent(info);
+								}
+
+
+								function addInfoSensor2(info)
+								{
+									infowindow2.setContent(info);
+								}
+
+								function addInfoSensor3(info)
+								{
+									infowindow3.setContent(info);
+								}
+
+								function addInfoSensor4(info)
+								{
+									infowindow4.setContent(info);
+								}
+
+								function addInfoSensor5(info)
+								{
+									infowindow5.setContent(info);
+								}
+								*/
 							}
 						</script>
 						<script async defer
@@ -1794,7 +1822,7 @@ zoom:90%;
 							<th><font color="black"><center><?php echo 'Contaminante';?></center></font></th>
 							<th><font color="black"><center><?php echo 'IMECAS';?></center></font></th>
 							<th><font color="black"><center><?php echo 'Calidad';?></center></font></th>
-							<th><font color="black"><center><?php echo 'Hora';?></center></font></th>
+							<th><font color="black"><center><?php echo 'Fecha a predecir';?></center></font></th>
 							<th><font color="black"><center><?php echo 'Sensor';?></center></font></th>
 							</tr>
 						</thead>
