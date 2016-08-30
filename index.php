@@ -241,9 +241,7 @@ require_once('lang/'.$language.'.php');
 						<p ><?php echo $text['387'];?></p>
 						<br><br>
 						<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['388'];?></font></p></LI></span>	
-						<br><br>
-						<span class="skills"><LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['389'];?></font></p></LI></span>	
-						<br><br>					
+						<br><br>			
 						<div class="table-responsive row">
 							   <table class="table">
 									<tr>
@@ -380,7 +378,6 @@ require_once('lang/'.$language.'.php');
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="intro-text">
-						<span class="skills"><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo $text['397'];?></font></p></span>
 						<br><br>
 						<center><button onclick="location.href='http://www.libelium.com/'" target="_blank" class="btn btn-success btn-lg">Libelium
 						</button></center>
@@ -522,6 +519,10 @@ require_once('lang/'.$language.'.php');
 		<br>
 		<br>
 		<br>
+		<center>
+		<h3><font color="black"><?php echo 'Sitios de Interés';?></font></h3>
+		</center>
+		<hr><br>
 		<div class = col-sm-4>
 			<center><button onclick="location.href='http://www.dof.gob.mx/normasOficiales.php'" target="_blank" class="btn btn-success btn-lg">NOM's
 			</button></center>
@@ -1855,7 +1856,7 @@ require_once('lang/'.$language.'.php');
 			<div class="row">
                 <div class="col-lg-12 text-left">
                     <div class="intro-text">
-						<span class="name"><font color="black"><h3><?php echo $text['Conclusión'];?></h3></font></span>
+						<span class="name"><font color="black"><h3><?php echo $text['Conclusión y trabajo futuro'];?></h3></font></span>
 						<hr>
 					</div>
                 </div>
@@ -2195,69 +2196,36 @@ require_once('lang/'.$language.'.php');
 								<h3><div style="text-transform: none"><font color="black"><?php echo 'Artículos Generados';?></font></div></h3> <!-- texto largo-->
 								<hr>
 								<div class="row">
-										<UL type=circle>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz y Maria Isabel Cajero Lázaro (2015). An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p></LI>							
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Miguel Sánchez Meraz, Felipe Ramírez Castañeda y Amadeo J. Argüelles Cruz (2015). Normalización de la carcasa para aplicaciones de monitoreo de Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p></LI>	
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro y Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmospheric Pollutants with a Classification Approach. MICAI 2015, 14th.';?></font></p></LI>	
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Eduardo Solórzano, Elena Sastré y Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.';?></font></p></LI>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz y Maria Isabel Cajero Lázaro (2015). An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p>						
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Miguel Sánchez Meraz, Felipe Ramírez Castañeda y Amadeo J. Argüelles Cruz (2015). Normalización de la carcasa para aplicaciones de monitoreo de Smart Cities. ISC2-2015, IEEE Smart Cities.';?></font></p>	
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Eduardo Solórzano-Alor, Amadeo José Argüelles Cruz, María Isabel Cajero-Lazaro y Miguel Sánchez-Meraz (2015). An Embedded Application System for Data Collection of Atmospheric Pollutants with a Classification Approach. MICAI 2015, 14th.';?></font></p>	
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Eduardo Solórzano, Elena Sastré y Amadeo Argüelles (2015). Sistema de monitoreo de contaminantes atmosféricos en contextos cerrados con cómputo móvil y TICs Cancún Quintana Roo, México.';?></font></p>
 								</div> 						
 								<hr>		
 								<div class="row">
 
 											<h3><div style="text-transform: none"><font color="black"><?php echo 'Alumnos graduados de Maestría en Ciencias: ';?></font></div></h3> <!-- texto largo-->
 											<hr>
-											<UL type=circle>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Fócil Árias Carolina. Cómputo no convencional para la estimación del desempeño académico. Maestría en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: A130248. Titulada el día 9/julio/2015 y registrada en el Libro 3 Folio 102.';?></font></p></LI>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Velázquez Cruz Jesús Emmanuel. Clasificación de imágenes para el pre-diagnóstico de cáncer de mama aplicando cómputo no convencional Maestría en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: A130275. Titulado el día 8/julio/2015 y registrado en el Libro 3 Folio 102.';?></font></p></LI>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Alfaro Ponce Mariel. Reconocimiento de patrones espacio-tiempo en señales electrofisiológicas de los potenciales evocados utilizando redes neuronales dinámicas. Doctorado en Ciencias de la Computación. Centro de Investigación en Computación, IPN. Boleta: B110878. Titulada el día 10/julio/2015 y registrada en el Libro 3 Folio 010.';?></font></p></LI>
-
+											<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.';?></font></p>
 								</div> 
 								<hr>								
+
+
 								<div class="row">
-									
-										<h3><div style="text-transform: none"><font color="black"><?php echo 'Presentación de trabajos en congresos nacionales e internacionales ';?></font></div></h3>
-										<hr>
-										<UL type=circle>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Carolina Focil, Amadeo Argüelles y Itzama López. Computación no convencional para estimar el rendimiento académico en la Universidad los estudiantes de primer año. CTTC 2015, 11º Congreso Internacional de Tendencias Tecnológicas en Computación. Ciudad de México, octubre 12-16 octubre. 2015.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Eduardo Solorzano Alor, Amadeo José Argüelles Cruz y María Isabel Cajero Lázaro. An Embedded System Application to Monitoring Micro-climates Oriented to Smart Cities. ISC2-2015, Conferencia Smart Cities Primera Internacional IEEE. Guadalajara Jalisco, Mexico. October 25-28 Octubre, 2015.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Miguel Sánchez Meraz, Felipe Ramírez Castañeda y Amadeo J. Argüelles Cruz. Normalización de la carcasa para aplicaciones de monitoreo Smart Cities. ISC2-2015, Primera Conferencia Internacional IEEE Smart Cities. Guadalajara Jalisco, México. 25-28 de de octubre de 2015.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Eduardo Solórzano - Alor, Amadeo José Argüelles Cruz, María Isabel Cajero - Lázaro y Miguel Sánchez - Meraz. An Embedded Application System for Data Collection of Atmospheric Pollutants with a Classification Approach. MICAI 2015, 14 de México Conferencia Internacional sobre Inteligencia Artificial. Cuernavaca Morelos, México, del 25 al 31 de octubre de 2015.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '5. Marina Vicario, Amadeo Argüelles, Pilar Gómez, Carlos Hernández cognitivos: Huellas de análisis y predicción de paradigma para el aprendizaje digital. ICALT 2015, 17ª Conferencia Internacional sobre Tecnologías Avanzadas de aprendizaje. Los Ángeles, EE.UU. , 28-29 de Septiembre.';?></font></p></LI>
-
-								</div>
-								<hr>
-								<div class="row">
-
-											<h3><div style="text-transform: none"><font color="black"><?php echo 'Artículos publicados';?></font></div></h3>
-											<hr>
-											<UL type=circle>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Itzama López - Yáñez, Cornelio Yáñez - Márquez, Oscar Camacho - Nieto, Mario Pérez - Aldape, Amadeo -José Argüelles - Cruz (2015 ). El aprendizaje colaborativo en los cursos de nivel de posgrado. Computación para el Aprendizaje Humano, Comportamiento y Colaboración en la Edición Especial de las redes móviles de Época y Social. Las computadoras en el comportamiento humano. 51 ( B ): 938-944. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Mario Matamoros de Luis, Amadeo J. Argüelles Cruz, V. Abril Uriarte Arcia, Cornelio Yáñez Márquez (2015 ) Influencia Verde tecnología de la información sobre el comportamiento del propietario del coche. Consideraciones para su apoyo Operativo de Colaboración en eLearning y Redes Sociales. Computación para el Aprendizaje Humano, Comportamiento y Colaboración en la Edición Especial de las redes móviles de Época y Social. Las computadoras en el comportamiento humano. 51 ( B ) : 792-802. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Mario Aldape Pérez, Cornelio Yáñez Márquez, Oscar Camacho Nieto, Itzama López Yáñez, Amadeo José Argüelles Cruz (2015 ). El aprendizaje colaborativo basado en modelos asociativos: aplicación a la clasificación de patrones en conjuntos de datos médica Computing para el Aprendizaje Humano, Comportamiento y Colaboración en el social y móvil Era redes Número especial. Las computadoras en el comportamiento humano. 51 ( B ): 771-779. ISSN 0.747 a 5.632. F.I. 2.273.';?></font></p></LI>
-											<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. M. Alfaro Ponce, I. Salgado, A. Arguelles, I. Chairez (2015 ). Adaptativo Identificador inciertos sistemas no lineales complejos basados ​​en redes neuronales continuas. Cartas de procesamiento neural. 43:133-153.';?></font></p></LI>
-
-								</div>
-								<hr>
-								<div class="row">
-
 										<h3><div style="text-transform: none"><font color="black"><?php echo 'Tesis en desarrollo: ';?></font></div></h3>
 										<hr>
-										<UL type=circle>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Solórzano Alór Eduardo. Boleta B140698. Modelos asociativos para monitoreo de contaminantes en ciudades inteligentes. Maestría en Tecnología de Cómputo. CIDETEC. Trabajo iniciado en agosto de 2014.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.';?></font></p></LI>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Solórzano Alór Eduardo. Boleta B140698. Modelos asociativos para monitoreo de contaminantes en ciudades inteligentes. Maestría en Tecnología de Cómputo. CIDETEC. Trabajo iniciado en agosto de 2014.';?></font></p>
 
 								</div>
 								<hr>
 								<h3><div style="text-transform: none"><font color="black"><?php echo 'Alumnos PIFI (BEIFI)';?></font></div></h3>
 								<hr>
 								<div class="row">
-
-										<UL type=circle>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Carolina Fócil Arias.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Jesús Emmanuel Velazquez Cruz.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Laura Elena Sastré García.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Monserrat Romero Hernández.';?></font></p></LI>
-										<LI><p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '5. Sergio Iván López Monzón.';?></font></p></LI>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Carolina Fócil Arias.';?></font></p>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Jesús Emmanuel Velazquez Cruz.';?></font></p>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '3. Laura Elena Sastré García.';?></font></p>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '4. Monserrat Romero Hernández.';?></font></p>
+										<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '5. Sergio Iván López Monzón.';?></font></p>
 								</div>
 								<h3><div style="text-transform: none"><p align="center"><font color="black"><?php echo 'Sitio www.airmx.net.';?></p></font></div></h3>
 								<hr>		
