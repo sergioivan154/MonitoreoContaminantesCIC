@@ -2206,7 +2206,7 @@ require_once('lang/'.$language.'.php');
 
 											<h3><div style="text-transform: none"><font color="black"><?php echo 'Alumnos graduados de Maestría en Ciencias: ';?></font></div></h3> <!-- texto largo-->
 											<hr>
-											<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '2. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. Maestría en Ingeniería Civil ESIA. Trabajo iniciado en agosto de 2014.';?></font></p>
+											<p style=”text-align: justify;”><font color="black" SIZE=5><?php echo '1. Óscar Chávez Argüello. Boleta A140517. Estimación de la calidad del aire para ozono y dióxido de nitrógeno troposférico en espacios cerrados. Maestría en Ingeniería Civil ESIA. 30 de Mayo del 2016.';?></font></p>
 								</div> 
 								<hr>								
 
